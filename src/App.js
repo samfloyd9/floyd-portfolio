@@ -1,9 +1,11 @@
-// classnames - import className from 'classnames';
-// TwMerge - import { twMerge } from 'tail-wind';
-// Do I need to add the prop types library?
+import Button from './components/Button';
 
 function App() {
-  return <div>Hello, World!</div>
+  return (
+    <div>
+      <Button primary rounded>Click Me!</Button>
+    </div>
+  )
 }
 
 export default App;
