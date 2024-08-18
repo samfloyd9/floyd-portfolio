@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from './Button';
 
 function SearchBar({ onSubmit }) {
   const [term, setTerm] = useState('');
@@ -19,6 +20,7 @@ function SearchBar({ onSubmit }) {
       <form onSubmit={handleFormSubmit} className="flex flex-col">
         <label className="font-bold">Enter Search Term <span className="text-xs text-gray-500">(Press Enter)</span></label>
         <input value={term} onChange={handleChange} className="border border-solid border-gray-300 rounded-lg p-2"/>
+        <Button primary></Button>
       </form>
     </div>
   );

@@ -1,9 +1,9 @@
 import Link from "./Link";
 
-function Sidebar() {
+function Sidebar({  }) {
   
   const links = [
-    { label: 'Home', path: '/home' },
+    { label: 'Home', path: '/' },
     { label: 'Table', path: '/table' },
     { label: 'Testing', path: '/testing' },
   ]
@@ -22,7 +22,7 @@ function Sidebar() {
   })
 
   return (
-    <div className="sticky top-0 overflow-y-scroll flex flex-col items-start">
+    <div className="sticky top-0 overflow-x-scroll flex flex-row items-start space-x-6">
       {renderedLinks}
     </div>
   );

@@ -7,18 +7,18 @@ import TablePage from './pages/TablePage';
 
 function App() {  
   return (
-    <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+    <div className="container mx-auto flex flex-col mt-2">
       <Sidebar />
-      <div className="col-span-5">
-      <Route path="home">
+      <div className="">
+      <Route path="/">
         <HomePage />
       </Route>
       
-      <Route path="testing">
+      <Route path="/testing">
         <TestingPage />
       </Route>
 
-      <Route path="table">
+      <Route path="/table">
         <TablePage />
       </Route>
       </div>

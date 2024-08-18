@@ -11,9 +11,7 @@ function Link({ to, children, className, activeClassName }) {
     currentPath === to && activeClassName
   );
 
-  const handleClick = (event) => {
-    console.log(event);
-    
+  const handleClick = (event) => {    
     if (event.metaKey || event.ctrlKey) {
       return;
     }
@@ -23,7 +21,9 @@ function Link({ to, children, className, activeClassName }) {
   };
   
   return (
-    <a className={classes} onClick={handleClick}>{children}</a>
+    <a className={classes} onClick={handleClick} href={to}>
+      {children}
+    </a>
   );
 }
 
