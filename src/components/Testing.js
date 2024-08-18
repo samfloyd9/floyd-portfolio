@@ -54,6 +54,9 @@ function Testing() {
       <div>
         <SearchBar onSubmit={handleSubmit}/>
       </div>
+      <div>
+        <link href='https://samfloyd9.github.io/'>My Old Website</link>
+      </div>
     </div>
   );
 }

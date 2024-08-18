@@ -3,7 +3,7 @@ import Link from "./Link";
 function Sidebar() {
   
   const links = [
-    { label: 'Home', path: '/' },
+    { label: 'Home', path: '/home' },
     { label: 'Table', path: '/table' },
     { label: 'Testing', path: '/testing' },
   ]
