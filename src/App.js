@@ -1,11 +1,16 @@
-import Button from './components/Button';
+import Sidebar from "./components/SideBar";
+import Route from "./components/Route";
 
-function App() {
+import HomePage from "./pages/HomePage";
+import TestingPage from "./pages/TestingPage";
+
+function App() {  
   return (
     <div>
-      <Button primary rounded>Click Me!</Button>
+      <TestingPage />
+      <HomePage />
     </div>
-  )
+  );
 }
 
 export default App;
