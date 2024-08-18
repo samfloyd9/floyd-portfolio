@@ -6,6 +6,7 @@ function Link({ to, children, className, activeClassName }) {
   
   const classes = classNames(
     'text-blue-500',
+    'cursor-pointer',
     className,
     currentPath === to && activeClassName
   );

@@ -3,18 +3,9 @@ import Link from "./Link";
 function Sidebar() {
   
   const links = [
-    { label: 'Dropdown', path: '/' },
-    { label: 'Accordion', path: '/accordion' },
-    { label: 'Buttons', path: '/buttons' },
-    { label: 'Modal', path: '/modal' },
+    { label: 'Home', path: '/' },
     { label: 'Table', path: '/table' },
-    { label: 'Counter', path: '/counter' },
-    { label: 'Animals', path: '/animals' },
-    { label: 'Books', path: '/books' },
-    { label: 'Pictures', path: '/pictures' },
-    { label: 'RPS', path: '/rps' },
-    { label: 'Basketball Bible', path: '/basketball' },
-    { label: 'Slider', path: '/slider' },
+    { label: 'Testing', path: '/testing' },
   ]
   
   const renderedLinks = links.map((link) => {
