@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="container mx-auto flex flex-col mt-2">
       <Sidebar />
-      <div className="">
+      <div>
       <Route path="/">
         <HomePage />
       </Route>

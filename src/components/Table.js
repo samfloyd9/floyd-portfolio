@@ -15,7 +15,7 @@ function Table({ data, config, keyFn }) {
     
     const renderedCells = config.map((column) => {
       return (
-        <td className="p-2" key={column.label}>{column.render(rowData)}</td>
+        <td className="pr-2 text-center" key={column.label}>{column.render(rowData)}</td>
       );
     });
 
@@ -27,9 +27,9 @@ function Table({ data, config, keyFn }) {
   })
   
   return (
-    <table className="table-auto border-spacing-2">
-      <thead>
-        <tr className="border-b-2">
+    <table className="table-auto">
+      <thead className="bg-gray-200">
+        <tr className="border-b-2  border-black">
           {renderedHeaders}
         </tr>
       </thead>

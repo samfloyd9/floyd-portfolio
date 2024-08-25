@@ -6,7 +6,7 @@ import SearchBar from './SearchBar';
 function Testing() {
   const [ showContent, setShowContent ] = useState(true);
   const [ count, setCount ] = useState(0);
-  const [ searchList, setSearchList ] = useState([]);
+  const [ searchList, setSearchList ] = useState(['Jake Miller', 'Bobby Jones']);
 
   const handleClick = () => {
     setShowContent(!showContent);
@@ -33,10 +33,13 @@ function Testing() {
     setSearchList(updatedList)
   }
 
-  // let content = <div>This is default content</div>;
   let content = '';
   if (showContent) {
-    content = <div className="flex flex-col">{searchList}</div>;
+    const updatedList = searchList.map((item) => {
+      return <div>{item}</div>;
+    })
+
+    content = <div className="flex flex-col border p-2 m-2">{updatedList}</div>;
   }
 
   return (
@@ -44,7 +47,7 @@ function Testing() {
       <div>
         <SearchBar onSubmit={handleSubmit}/>
         {content}
-        <Button onClick={handleClick} primary rounded>Click to Hide Results</Button>
+        <Button onClick={handleClick} primary rounded>Click to Show Search History</Button>
       </div>
       <div className="flex flex-row">
         <Panel className="w-content">{count}</Panel>
