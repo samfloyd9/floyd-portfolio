@@ -7,7 +7,7 @@ function Table({ data, config, keyFn }) {
       return <Fragment key={column.label}>{column.header()}</Fragment>;
     }
     return (
-      <th className="mx-2 rounded" key={column.label}>{column.label}</th>
+      <th className="mx-2" key={column.label}>{column.label}</th>
     );
   })
 

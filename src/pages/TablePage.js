@@ -1,12 +1,25 @@
 import SortableTable from "../components/SortableTable";
+import Button from "../components/Button";
 import useSort from '../hooks/use-sort';
 import { data } from "../basketballData";
 import { useState } from "react";
-import PlayerCard from "../components/PlayerCard";
+import PlayerCardList from "../components/PlayerCardList";
 
 // https://blog.logrocket.com/creating-react-sortable-table/ ----> look at this for help
 
 function TablePage() {
+
+const [lineup, setLineup] = useState([]);
+
+const handleAddPlayerToLineup = (player) => {
+  const updatedLineup = [
+    ...lineup,
+    player
+  ]
+  
+  setLineup([updatedLineup])
+}
+
   const positionColorLogic = (data) => {
     switch (data.position) {
       case "PG":
@@ -61,7 +74,6 @@ function TablePage() {
           <img
             className="max-h-12 mr-4 rounded-lg"
             src={player.plyrPictureSrc}
-            alt={`Picture of ${player.name}`}
           />
           <div 
             // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
@@ -140,6 +152,7 @@ function TablePage() {
           return (
             <div
               className={`rounded m-1.5 p-1 ${badgeColorLogic(badge.color)}`}
+              key={Math.round(Math.random() * 99999)}
             >
               {badge.icon}
             </div>
@@ -152,6 +165,10 @@ function TablePage() {
         );
       },
     },
+    {
+      label: "+",
+      render: (player) => <Button onClick={() => handleAddPlayerToLineup(player)}>+</Button>,
+    },
   ];
 
   const keyFn = (player) => {
@@ -160,47 +177,47 @@ function TablePage() {
 
   const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(data, config);
 
-  const fakePlayerData = [
-    {
-      name: "Magic Johnson",
-      position: "PG",
-      year: "1986-87",
-      team: "LAL",
-      teamColor: "bg-purple-500",
-      teamColor2: "text-yellow-500",
-      pts75: 19,
-      ts: +3.1,
-      reb75: 9,
-      ast75: 12,
-      stk75: 3.1,
-      tov75: 4.3,
-      bpm: 9.2,
-      badges: [
-        {
-          icon: "",
-          color: "gold",
-        },
-        {
-          icon: "",
-          color: "silver",
-        },
-        {
-          icon: "",
-          color: "hof",
-        },
-        {
-          icon: "",
-          color: "bronze",
-        },
-        {
-          icon: "",
-          color: "gold",
-        },
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/johnsma02.jpg",
-    },
-  ]
+  // const fakePlayerData = [
+  //   {
+  //     name: "Magic Johnson",
+  //     position: "PG",
+  //     year: "1986-87",
+  //     team: "LAL",
+  //     teamColor: "bg-purple-500",
+  //     teamColor2: "text-yellow-500",
+  //     pts75: 19,
+  //     ts: +3.1,
+  //     reb75: 9,
+  //     ast75: 12,
+  //     stk75: 3.1,
+  //     tov75: 4.3,
+  //     bpm: 9.2,
+  //     badges: [
+  //       {
+  //         icon: "",
+  //         color: "gold",
+  //       },
+  //       {
+  //         icon: "",
+  //         color: "silver",
+  //       },
+  //       {
+  //         icon: "",
+  //         color: "hof",
+  //       },
+  //       {
+  //         icon: "",
+  //         color: "bronze",
+  //       },
+  //       {
+  //         icon: "",
+  //         color: "gold",
+  //       },
+  //     ],
+  //     plyrPictureSrc:
+  //       "https://www.basketball-reference.com/req/202106291/images/headshots/johnsma02.jpg",
+  //   },
+  // ]
 
   return (
     <div className="flex justify-center content-center mt-5 mb-5">
@@ -213,7 +230,7 @@ function TablePage() {
       <div className="overflow-scroll h-96">
         <SortableTable config={config} data={data} keyFn={keyFn} />
       </div>
-        <PlayerCard data={fakePlayerData} />
+        <PlayerCardList data={lineup} />
       </div>
     </div>
   );
