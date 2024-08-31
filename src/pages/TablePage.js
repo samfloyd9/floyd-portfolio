@@ -1,217 +1,12 @@
 import SortableTable from "../components/SortableTable";
 import useSort from '../hooks/use-sort';
+import { data } from "../basketballData";
 import { useState } from "react";
-import { ImTarget } from "react-icons/im"; // Accuracy or Range Indicator
-import { ImEqualizer } from "react-icons/im"; // Filter Icon
-import { ImFire } from "react-icons/im"; // Can heat up quick
-import { ImEarth } from "react-icons/im"; //International Players
-import { ImDribbble } from "react-icons/im"; // Good handle
-import { ImAidKit } from "react-icons/im"; // Injured
-import { ImLock } from "react-icons/im"; // Lockdown defender
-import { ImBug } from "react-icons/im"; // Pest on defense
-import { ImMagnet } from "react-icons/im"; // Rebound Magnet
-import { ImPowerCord } from "react-icons/im"; // Spark plug
-import { BsBricks } from "react-icons/bs"; // Brick Wall Screens
-import { BsCurrencyExchange } from "react-icons/bs"; // Dimer passer
-import { BiSolidMapPin } from "react-icons/bi"; // Pinpoint accuracy
-import { CiDumbbell } from "react-icons/ci"; // Strong Player
-import { FaFeatherAlt } from "react-icons/fa"; // Feathery Touch
-import { FaPlaneDeparture } from "react-icons/fa"; // Can Take flight
-import { FaTrafficLight } from "react-icons/fa"; // Stop and go speed
-// import { FaLocationCrosshairs } from "react-icons/fa6"; // Pinpoint accuracy
-// import { FaCrutch } from "react-icons/fa6"; // Injury
+import PlayerCard from "../components/PlayerCard";
+
+// https://blog.logrocket.com/creating-react-sortable-table/ ----> look at this for help
 
 function TablePage() {
-  const [hover, setHover] = useState(false);
-
-  // const handleBadgeHover = () => {
-  //   setHover(true);
-  // }
-
-  // const handleBadgeLeave = () => {
-  //   setHover(false);
-  // }
-
-  const data = [
-    {
-      name: "LeBron James",
-      position: "SF",
-      year: "2008-09",
-      team: "CLE",
-      teamColor: "bg-red-800",
-      teamColor2: "text-yellow-500",
-      pts75: 40.8,
-      ts: +4.7,
-      reb75: 10.9,
-      ast75: 10.4,
-      stk75: 4.0,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        {
-          icon: (
-            <div
-              // onMouseEnter={() => setHover(true)}
-              // onMouseLeave={() => setHover(false)}
-            >
-              <ImTarget />
-              {/* {hover ? (
-                <div className="absolute border rounded bg-gray-300">
-                  Deep Range Accuracy
-                </div>
-              ) : (
-                ""
-              )} */}
-            </div>
-          ),
-          color: "gold",
-        },
-        {
-          icon: (
-            <div>
-              <ImFire />
-            </div>
-          ),
-          color: "silver",
-        },
-        {
-          icon: <ImEarth />,
-          color: "hof",
-        },
-        {
-          icon: <ImDribbble />,
-          color: "bronze",
-        },
-        {
-          icon: <ImAidKit />,
-          color: "gold",
-        },
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/jamesle01.jpg",
-    },
-    {
-      name: "Michael Jordan",
-      position: "SG",
-      year: "1987-88",
-      team: "CHI",
-      teamColor: "bg-red-500",
-      teamColor2: "text-black",
-      pts75: 32,
-      ts: +3.5,
-      reb75: 6,
-      ast75: 6,
-      stk75: 3.0,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        <ImTarget />,
-        <ImFire />,
-        <ImEarth />,
-        <ImDribbble />,
-        <ImAidKit />,
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/jordami01.jpg",
-    },
-    {
-      name: "Kareem Abdul-Jabbar",
-      position: "C",
-      year: "1971-72",
-      team: "MIL",
-      teamColor: "bg-green-700",
-      teamColor2: "text-red-600",
-      pts75: 26,
-      ts: +8.5,
-      reb75: 12,
-      ast75: 4,
-      stk75: 3.0,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        <ImTarget />,
-        <ImFire />,
-        <ImEarth />,
-        <ImDribbble />,
-        <ImAidKit />,
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/abdulka01.jpg",
-    },
-    {
-      name: "Wilt Chamberlain",
-      position: "C",
-      year: "1966-67",
-      team: "PHI",
-      teamColor: "bg-blue-700",
-      teamColor2: "text-red-500",
-      pts75: 24,
-      ts: +12.5,
-      reb75: 22,
-      ast75: 8,
-      stk75: 8.0,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        <ImTarget />,
-        <ImFire />,
-        <ImEarth />,
-        <ImDribbble />,
-        <ImAidKit />,
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/chambwi01.jpg",
-    },
-    {
-      name: "Steph Curry",
-      position: "PG",
-      year: "2015-16",
-      team: "GSW",
-      teamColor: "bg-yellow-400",
-      teamColor2: "text-blue-700",
-      pts75: 30,
-      ts: -3.5,
-      reb75: 5,
-      ast75: 5,
-      stk75: 2.5,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        <ImTarget />,
-        <ImFire />,
-        <ImEarth />,
-        <ImDribbble />,
-        <ImAidKit />,
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/curryst01.jpg",
-    },
-    {
-      name: "Kevin Garnett",
-      position: "PF",
-      year: "2003-04",
-      team: "MIN",
-      teamColor: "bg-black",
-      teamColor2: "text-green-600",
-      pts75: 22,
-      ts: +3.1,
-      reb75: 14,
-      ast75: 5,
-      stk75: 4.5,
-      tov75: 4.3,
-      bpm: 13.2,
-      badges: [
-        <ImTarget />,
-        <ImFire />,
-        <ImEarth />,
-        <ImDribbble />,
-        <ImAidKit />,
-      ],
-      plyrPictureSrc:
-        "https://www.basketball-reference.com/req/202106291/images/headshots/garneke01.jpg",
-    },
-  ];
-
   const positionColorLogic = (data) => {
     switch (data.position) {
       case "PG":
@@ -232,7 +27,7 @@ function TablePage() {
   const tsColorLogic = (data) => {
     if (data.ts > 0) {
       return <div className="text-green-700">+{data.ts}</div>;
-    } else if (data.ts == 0) {
+    } else if (data.ts === 0) {
       return <div className="text-yellow-500">{data.ts}</div>;
     } else if (data.ts < 0) {
       return <div className="text-red-600">{data.ts}</div>;
@@ -257,8 +52,7 @@ function TablePage() {
   const config = [
     {
       label: "Rnk",
-      render: () => <div className="">{}</div>,
-      // sortValue: () => ,
+      render: () => <div>{(data.length) - 3}</div>,
     },
     {
       label: "Player",
@@ -269,7 +63,10 @@ function TablePage() {
             src={player.plyrPictureSrc}
             alt={`Picture of ${player.name}`}
           />
-          {player.name}
+          <div 
+            // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
+          >
+            {player.name}</div>
         </div>
       ),
       sortValue: (player) => player.name,
@@ -294,7 +91,7 @@ function TablePage() {
       label: "Team",
       render: (player) => (
         <div
-          className={`p-2 m-2 rounded-lg flex justify-center ${player.teamColor} ${player.teamColor2}`}
+          className={`text-sm p-1.5 m-2 rounded-lg flex justify-center ${player.teamColor} ${player.teamColor2}`}
         >
           {player.team}
         </div>
@@ -302,7 +99,7 @@ function TablePage() {
       sortValue: (player) => player.team,
     },
     {
-      label: "Pts/75",
+      label: "Pts",
       render: (player) => (player.pts75 * 0.75).toFixed(1),
       sortValue: (player) => player.pts75,
     },
@@ -312,22 +109,22 @@ function TablePage() {
       sortValue: (player) => player.ts,
     },
     {
-      label: "Rebs/75",
+      label: "Rebs",
       render: (player) => (player.reb75 * 0.75).toFixed(1),
       sortValue: (player) => player.reb75,
     },
     {
-      label: "Ast/75",
+      label: "Ast",
       render: (player) => (player.ast75 * 0.75).toFixed(1),
       sortValue: (player) => player.ast75,
     },
     {
-      label: "Stk/75",
+      label: "Stk",
       render: (player) => (player.stk75 * 0.75).toFixed(1),
       sortValue: (player) => player.stk75,
     },
     {
-      label: "Tov/75",
+      label: "Tov",
       render: (player) => (player.tov75 * 0.75).toFixed(1),
       sortValue: (player) => player.tov75,
     },
@@ -363,9 +160,61 @@ function TablePage() {
 
   const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(data, config);
 
+  const fakePlayerData = [
+    {
+      name: "Magic Johnson",
+      position: "PG",
+      year: "1986-87",
+      team: "LAL",
+      teamColor: "bg-purple-500",
+      teamColor2: "text-yellow-500",
+      pts75: 19,
+      ts: +3.1,
+      reb75: 9,
+      ast75: 12,
+      stk75: 3.1,
+      tov75: 4.3,
+      bpm: 9.2,
+      badges: [
+        {
+          icon: "",
+          color: "gold",
+        },
+        {
+          icon: "",
+          color: "silver",
+        },
+        {
+          icon: "",
+          color: "hof",
+        },
+        {
+          icon: "",
+          color: "bronze",
+        },
+        {
+          icon: "",
+          color: "gold",
+        },
+      ],
+      plyrPictureSrc:
+        "https://www.basketball-reference.com/req/202106291/images/headshots/johnsma02.jpg",
+    },
+  ]
+
   return (
-    <div className="flex justify-center items-center content-center mt-10">
-      <SortableTable config={config} data={data} keyFn={keyFn} />
+    <div className="flex justify-center content-center mt-5 mb-5">
+      <div className="flex flex-col">
+      <div className="flex flex-row">
+        <div>Position</div>
+        <div>Team</div>
+        <div>Team</div>
+      </div>
+      <div className="overflow-scroll h-96">
+        <SortableTable config={config} data={data} keyFn={keyFn} />
+      </div>
+        <PlayerCard data={fakePlayerData} />
+      </div>
     </div>
   );
 }

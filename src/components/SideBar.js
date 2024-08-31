@@ -1,10 +1,10 @@
 import Link from "./Link";
 
-function Sidebar({  }) {
+function Sidebar() {
   
   const links = [
     { label: 'Home', path: '/' },
-    { label: 'Table', path: '/table' },
+    { label: 'Basetball', path: '/basketball' },
     { label: 'Testing', path: '/testing' },
   ]
   
@@ -22,7 +22,7 @@ function Sidebar({  }) {
   })
 
   return (
-    <div className="sticky top-0 overflow-x-scroll flex flex-row items-start space-x-6">
+    <div className="sticky top-0 flex flex-row items-start mt-2 space-x-6 z-10 bg-white">
       {renderedLinks}
     </div>
   );

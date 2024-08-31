@@ -7,7 +7,7 @@ import TablePage from './pages/TablePage';
 
 function App() {  
   return (
-    <div className="container mx-auto flex flex-col mt-2">
+    <div className="container mx-auto flex flex-col">
       <Sidebar />
       <div>
       <Route path="/">
@@ -18,7 +18,7 @@ function App() {
         <TestingPage />
       </Route>
 
-      <Route path="/table">
+      <Route path="/basketball">
         <TablePage />
       </Route>
       </div>
