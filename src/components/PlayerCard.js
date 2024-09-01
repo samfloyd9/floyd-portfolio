@@ -1,21 +1,19 @@
-function PlayerCard({data}) {
-  
-  const playerCard = data.map((player) => {
-    return (
-      <div key={player.name}>
-        <div>
-          <img alt={`${player.name}`} src={`${player.plyrPictureSrc}`}/>
-        </div>
-        <div>{player.name}</div>
-        <div>{player.position}</div>
+import Button from "./Button";
+
+function PlayerCard({ playerData, handleDelete }) {
+  const renderedPlayerCard = (
+    <div>
+      <div>
+        { playerData.hasOwnProperty() ? <img alt={`${playerData.name}`} src={`${playerData.plyrPictureSrc}`}/> : "" }
       </div>
-    )
-  })
+      <div>{playerData.name}</div>
+      <div>{playerData.position}</div>
+      <Button onClick={() => handleDelete(playerData)} className="bg-red-300 rounded-xl">x</Button>
+    </div>
+  );
 
   return (
-    <div className="flex flex-row">
-      <div className="border p-7 m-2 flex w-36 h-48">{playerCard}</div>
-    </div>
+    <div className="border p-7 m-2 flex w-36">{renderedPlayerCard}</div>
   );
 }
 

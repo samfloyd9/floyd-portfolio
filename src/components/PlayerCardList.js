@@ -1,13 +1,21 @@
 import PlayerCard from "./PlayerCard";
 
-function PlayerCardList({ data }) {
+function PlayerCardList({ data, handleDelete }) {
 
-  const renderedPlayerCards = data.map((player) => {
-    
+  const keyFn = (player) => {
+    return player.name;
+  };
+
+  const renderedPlayerCardList = data.map((player) => {
+    return (
+      <PlayerCard key={keyFn(player)} handleDelete={handleDelete} playerData={player}/>
+    );
   })
 
   return (
-    <div></div>
+    <div className="flex flex-row">
+      {renderedPlayerCardList}
+    </div>
   );
 }
 

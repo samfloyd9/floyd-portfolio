@@ -1,6 +1,6 @@
 import SortableTable from "../components/SortableTable";
 import Button from "../components/Button";
-import useSort from '../hooks/use-sort';
+import useSort from "../hooks/use-sort";
 import { data } from "../basketballData";
 import { useState } from "react";
 import PlayerCardList from "../components/PlayerCardList";
@@ -8,17 +8,107 @@ import PlayerCardList from "../components/PlayerCardList";
 // https://blog.logrocket.com/creating-react-sortable-table/ ----> look at this for help
 
 function TablePage() {
+  const [lineup, setLineup] = useState([
+  {
+    name: "Select a PG from the list above"
+  },
+  {
+    name: "Select a SG from the list above"
+  },
+  {
+    name: "Select a SF from the list above"
+  },
+  {
+    name: "Select a PF from the list above"
+  },
+  {
+    name: "Select a C from the list above"
+  },
+  ]);
 
-const [lineup, setLineup] = useState([]);
+  const handleAddPlayerToLineup = (player) => {
+    // let filteredLineup = lineup.filter(
+    //   (playerData) => playerData.name !== player.name
+    // );
+    // const updatedLineup = [player, ...filteredLineup];
+    // setLineup(updatedLineup);
 
-const handleAddPlayerToLineup = (player) => {
-  const updatedLineup = [
-    ...lineup,
-    player
-  ]
-  
-  setLineup([updatedLineup])
-}
+    if (player.position === "PG") {
+      const newLineup = [...lineup];
+      newLineup.splice(0, 1, player);
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (player.position === "SG") {
+      const newLineup = [...lineup];
+      newLineup.splice(1, 1, player);
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (player.position === "SF") {
+      const newLineup = [...lineup];
+      newLineup.splice(2, 1, player);
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (player.position === "PF") {
+      const newLineup = [...lineup];
+      newLineup.splice(3, 1, player);
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (player.position === "C") {
+      const newLineup = [...lineup];
+      newLineup.splice(4, 1, player);
+      setLineup(newLineup);
+      console.log(newLineup);
+    }
+  };
+
+  const handleDelete = (playerData) => {
+    if (playerData.position === "PG") {
+      const newLineup = [...lineup];
+      newLineup.splice(0, 1, { name: "Select a PG from the list above" });
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (playerData.position === "SG") {
+      const newLineup = [...lineup];
+      newLineup.splice(1, 1, { name: "Select a SG from the list above" });
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (playerData.position === "SF") {
+      const newLineup = [...lineup];
+      newLineup.splice(2, 1, { name: "Select a SF from the list above" });
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (playerData.position === "PF") {
+      const newLineup = [...lineup];
+      newLineup.splice(3, 1, { name: "Select a PF from the list above" });
+      setLineup(newLineup);
+      console.log(newLineup);
+    } else if (playerData.position === "C") {
+      const newLineup = [...lineup];
+      newLineup.splice(4, 1, { name: "Select a C from the list above" });
+      setLineup(newLineup);
+      console.log(newLineup);
+    }
+  }
+
+  const handleReset = () => {
+    setLineup([
+      {
+        name: "Select a PG from the list above"
+      },
+      {
+        name: "Select a SG from the list above"
+      },
+      {
+        name: "Select a SF from the list above"
+      },
+      {
+        name: "Select a PF from the list above"
+      },
+      {
+        name: "Select a C from the list above"
+      },
+      ]);
+  }
 
   const positionColorLogic = (data) => {
     switch (data.position) {
@@ -65,7 +155,7 @@ const handleAddPlayerToLineup = (player) => {
   const config = [
     {
       label: "Rnk",
-      render: () => <div>{(data.length) - 3}</div>,
+      render: () => <div>{data.length - 3}</div>,
     },
     {
       label: "Player",
@@ -75,10 +165,11 @@ const handleAddPlayerToLineup = (player) => {
             className="max-h-12 mr-4 rounded-lg"
             src={player.plyrPictureSrc}
           />
-          <div 
-            // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
+          <div
+          // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
           >
-            {player.name}</div>
+            {player.name}
+          </div>
         </div>
       ),
       sortValue: (player) => player.name,
@@ -166,8 +257,10 @@ const handleAddPlayerToLineup = (player) => {
       },
     },
     {
-      label: "+",
-      render: (player) => <Button onClick={() => handleAddPlayerToLineup(player)}>+</Button>,
+      label: "Lineup",
+      render: (player) => (
+        <Button className="bg-green-300" onClick={() => handleAddPlayerToLineup(player)}>+</Button>
+      ),
     },
   ];
 
@@ -175,62 +268,21 @@ const handleAddPlayerToLineup = (player) => {
     return player.name;
   };
 
-  const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(data, config);
-
-  // const fakePlayerData = [
-  //   {
-  //     name: "Magic Johnson",
-  //     position: "PG",
-  //     year: "1986-87",
-  //     team: "LAL",
-  //     teamColor: "bg-purple-500",
-  //     teamColor2: "text-yellow-500",
-  //     pts75: 19,
-  //     ts: +3.1,
-  //     reb75: 9,
-  //     ast75: 12,
-  //     stk75: 3.1,
-  //     tov75: 4.3,
-  //     bpm: 9.2,
-  //     badges: [
-  //       {
-  //         icon: "",
-  //         color: "gold",
-  //       },
-  //       {
-  //         icon: "",
-  //         color: "silver",
-  //       },
-  //       {
-  //         icon: "",
-  //         color: "hof",
-  //       },
-  //       {
-  //         icon: "",
-  //         color: "bronze",
-  //       },
-  //       {
-  //         icon: "",
-  //         color: "gold",
-  //       },
-  //     ],
-  //     plyrPictureSrc:
-  //       "https://www.basketball-reference.com/req/202106291/images/headshots/johnsma02.jpg",
-  //   },
-  // ]
+  // const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(data, config);
 
   return (
     <div className="flex justify-center content-center mt-5 mb-5">
       <div className="flex flex-col">
-      <div className="flex flex-row">
-        <div>Position</div>
-        <div>Team</div>
-        <div>Team</div>
-      </div>
-      <div className="overflow-scroll h-96">
-        <SortableTable config={config} data={data} keyFn={keyFn} />
-      </div>
-        <PlayerCardList data={lineup} />
+        <div className="flex flex-row">
+          <div>Position</div>
+          <div>Team</div>
+          <div>Team</div>
+        </div>
+        <div className="overflow-scroll h-96">
+          <SortableTable config={config} data={data} keyFn={keyFn} />
+        </div>
+        <PlayerCardList data={lineup} handleDelete={handleDelete} />
+        <button className="bg-red-500 rounded-xl p-1.5 w-fit" onClick={handleReset}>Reset Linup</button>
       </div>
     </div>
   );
