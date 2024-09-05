@@ -4,7 +4,7 @@ function Sidebar() {
   
   const links = [
     { label: 'Home', path: '/' },
-    { label: 'Basetball', path: '/basketball' },
+    { label: 'Basketball', path: '/basketball' },
     { label: 'Testing', path: '/testing' },
   ]
   
