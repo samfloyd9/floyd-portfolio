@@ -95,21 +95,21 @@ function Table({ data, config, keyFn, posSelection, teamSelection }) {
     );
   });
 
-  const renderedPosAndTeamRows = posFilteredSecond.map((rowData) => {
-    const renderedPosandTeamCells = config.map((column) => {
-      return (
-        <td className="pr-2 text-center" key={column.label}>
-          {column.render(rowData)}
-        </td>
-      );
-    });
+  // const renderedPosAndTeamRows = posFilteredSecond.map((rowData) => {
+  //   const renderedPosandTeamCells = config.map((column) => {
+  //     return (
+  //       <td className="pr-2 text-center" key={column.label}>
+  //         {column.render(rowData)}
+  //       </td>
+  //     );
+  //   });
 
-    return (
-      <tr key={keyFn(rowData)} className="border-b">
-        {renderedPosandTeamCells}
-      </tr>
-    );
-  });
+  //   return (
+  //     <tr key={keyFn(rowData)} className="border-b">
+  //       {renderedPosandTeamCells}
+  //     </tr>
+  //   );
+  // });
 
   return (
     <table className="table-auto">

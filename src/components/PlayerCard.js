@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 // https://codepen.io/css_librarian/pen/mdRWVq for card idea
 
 function PlayerCard({ playerData, handleDelete }) {
@@ -16,57 +14,101 @@ function PlayerCard({ playerData, handleDelete }) {
     playerPosition = "C";
   }
 
-  const positionColorLogic = (data) => {
+  const positionStyleLogic = (data) => {
     switch (data.position) {
-      case "PG":
-        return "bg-blue-200";
-      case "SG":
-        return "bg-red-200";
-      case "SF":
-        return "bg-green-200";
-      case "PF":
-        return "bg-purple-200";
       case "C":
-        return "bg-yellow-200";
+        return "px-2";
+      default:
+        return "";
+    }
+  };
+
+  // const positionColorLogic = (data) => {
+  //   switch (data.position) {
+  //     case "PG":
+  //       return "bg-blue-300";
+  //     case "SG":
+  //       return "bg-red-300";
+  //     case "SF":
+  //       return "bg-green-300";
+  //     case "PF":
+  //       return "bg-purple-300";
+  //     case "C":
+  //       return "bg-yellow-300 px-2";
+  //     default:
+  //       return "bg-gray-200";
+  //   }
+  // };
+
+  // const bgImageLogic = (data) => {
+  //   switch (data.position) {
+  //     case "PG":
+  //       return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]";
+  //     case "SG":
+  //       return "bg-[url('https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg')]";
+  //     case "SF":
+  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg')]";
+  //     case "PF":
+  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
+  //     case "C":
+  //       return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
+  //     default:
+  //       return "bg-gray-200";
+  //   }
+  // };
+
+    const bgImageLogic = (data) => {
+    switch (data.cardColor) {
+      case "sapphire":
+        return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]";
+      case "ruby":
+        return "bg-[url('https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg')]";
+      case "emerald":
+        return "bg-[url('https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg')]";
+      case "amethyst":
+        return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
+      case "diamond":
+        return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
       default:
         return "bg-gray-200";
     }
   };
 
-  const bgImageLogic = (data) => {
-    switch (data.position) {
-      case "PG":
-        return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]";
-      case "SG":
-        return "bg-[url('https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg')]";
-      case "SF":
-        return "bg-[url('https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg')]";
-      case "PF":
-        return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
-      case "C":
-        return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
-      default:
-        return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
-    }
-  };
-
-  // Emeralnd (green) // https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg
-  // Diamond (yellow) 'https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg'
-  // Ruby (red) // https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg
-  // Sapphire (blue) https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg
-  // Amythest (purple )https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg
+  let wiltStyle = "";
+  if (playerData.name === "Wilt Chamberlain") {
+    wiltStyle = "mt-5";
+  }
 
   const renderedPlayerCard = (
-    <div className="bg-black relative shadow-xl px-2.5 rounded-lg">
+    <div className="bg-black relative shadow-xl px-1.5 min-h-64 rounded-lg">
       <div
-        className={`px-1.5 absolute top-0 -left-0 rounded-md ${positionColorLogic(
-          playerData
-        )} text-xl border-black border-2 border-solid p-1 text-black`}
+        className={`p-1 absolute top-0 right-0 rounded-md ${playerData.teamColor} ${playerData.teamColor2} ${positionStyleLogic(playerData)} text-md border-${playerData.teamColor3} border-2 border-solid`}
       >
         {playerPosition}
       </div>
+      <div
+        className={`absolute ${playerData.teamLogoStyling}`}
+      >
+        <img
+          alt={`${playerData.fullTeamName}`}
+          src={`${playerData.teamLogoSrc}`}
+          className={`${playerData.teamLogoStyling}} rounded-md shadow-lg`}
+        />
+      </div>
+      <div className="mt-2">
+        <div
+          className={`p-1.5 absolute bottom-0 -right-1 ${playerData.teamColor} text-sm ${playerData.teamColor2} rounded-md border-${playerData.teamColor3} border-2 border-solid p-1 text-black z-10 whitespace-nowrap`}
+        >
+          {(playerData.hasOwnProperty("plyrPictureSrc") && !playerData.hasOwnProperty("altName"))
+            ? `'${playerData.year.slice(-2)} ${playerData.name}`
+            : ""}
+          {(playerData.hasOwnProperty("plyrPictureSrc") && playerData.hasOwnProperty("altName"))
+            ? `'${playerData.year.slice(-2)} ${playerData.altName}`
+            : ""}
+        </div>
+      </div>
       <div>
-        {playerData.hasOwnProperty("plyrPictureSrc") ? (
+        <div>
           <img
             alt={`${playerData.name}`}
             src={
@@ -74,55 +116,45 @@ function PlayerCard({ playerData, handleDelete }) {
                 ? `${playerData.plyrCardPictureSrc}`
                 : `${playerData.plyrPictureSrc}`
             }
-            className="rounded-md shadow-lg"
+            className={`rounded-md shadow-lg my-1.5 max-h-60 ${wiltStyle} bg-blend-multiply`}
           />
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="absolute top-0 right-0">
-        {playerData.hasOwnProperty("plyrPictureSrc") ? (
-          <img
-            alt={`${playerData.fullTeamName}`}
-            src={`${playerData.teamLogoSrc}`}
-            className="rounded-md shadow-lg"
-          />
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="mt-2">
-        {playerData.hasOwnProperty("template") ? (
-          <div className="py-20 px-5">{playerData.template}</div>
-        ) : (
-          ""
-        )}
-        <div
-          className={`p-1.5 absolute bottom-0 -right-1 ${playerData.teamColor} text-sm ${playerData.teamColor2} rounded-md border-black border-2 border-solid p-1 text-black overflow-hidden whitespace-nowrap`}
-        >
-          {playerData.hasOwnProperty("plyrPictureSrc")
-            ? `'${playerData.year.slice(-2)} ${playerData.name}`
-            : ""}
         </div>
-        {/* className="card" */}
-        {/* <div className="uppercase relative h-80 w-52 border-solid border-red-700 border-8"> */}
-        {/* className="team-logo" */}
-        {/* <img alt={`${playerData.team}`} src={`${playerData.teamLogoSrc}`} className="absolute z-15 top-2.5 left-2.5"/> */}
-        {/* className="player" */}
-        {/* <img alt={`${playerData.name}`} src={`${playerData.plyrCardPictureSrc}`} className="absolute top-0 left-0 z-2 w-48 border-2 border-solid border-black" /> */}
-        {/* className="name" */}
-        {/* <div className="absolute bottom-10 right-0 w-2/3 h-8 text-center z-10 bg-yellow-400 border-solid border-black border-2"></div> */}
       </div>
     </div>
   );
 
-  // bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]
+  const playerTemplate = (
+    <div className="bg-white shadow-xl px-1.5 min-h-64 rounded-lg flex content-center justify-center text-center items-center">
+      {playerData.template}
+    </div>
+  );
 
   return (
-    <div
-      className={`shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
-    >
-      {renderedPlayerCard}
+    <div>
+      {playerData.hasOwnProperty("plyrPictureSrc") && (
+        <div>
+          <div
+            className={`${bgImageLogic(playerData)} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
+          >
+            {renderedPlayerCard}
+          </div>
+          <div className="flex justify-center">
+            <button
+              onClick={() => handleDelete(playerData)}
+              className="bg-red-300 text-xs rounded-lg px-1"
+            >
+              x
+            </button>
+          </div>
+        </div>
+      )}
+      {playerData.hasOwnProperty("template") && (
+        <div
+          className={`${bgImageLogic(playerData)} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
+        >
+          {playerTemplate}
+        </div>
+      )}
     </div>
   );
 }

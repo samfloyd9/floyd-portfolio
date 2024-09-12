@@ -1,5 +1,4 @@
 import PlayerCard from "./PlayerCard";
-import Button from "./Button";
 
 function PlayerCardList({ data, handleDelete }) {
   const keyFn = (player) => {
@@ -15,19 +14,6 @@ function PlayerCardList({ data, handleDelete }) {
       />
     );
   });
-
-  // {data.hasOwnProperty("plyrPictureSrc") ? (  
-  //   <div>
-  //     <button
-  //       onClick={() => handleDelete(data)}
-  //       className="bg-red-500 rounded-xl px-1.5"
-  //     >
-  //       x
-  //     </button>
-  //   </div>
-  // ) : (
-  //   ""
-  // )}
 
   return <div className="flex flex-row">{renderedPlayerCardList}</div>;
 }

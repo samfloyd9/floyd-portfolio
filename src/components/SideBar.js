@@ -22,7 +22,7 @@ function Sidebar() {
   })
 
   return (
-    <div className="sticky top-0 flex flex-row items-start mt-2 space-x-6 z-10 bg-white">
+    <div className="sticky top-0 flex flex-row items-start mt-2 p-2 space-x-6 z-20 bg-white">
       {renderedLinks}
     </div>
   );
