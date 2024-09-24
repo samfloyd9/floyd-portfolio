@@ -34,7 +34,7 @@ function Table({ data, config, keyFn, posSelection, teamSelection }) {
   const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => {
       return (
-        <td className="pr-2 text-center" key={column.label}>
+        <td className="text-center" key={column.label}>
           {column.render(rowData)}
         </td>
       );
@@ -50,7 +50,7 @@ function Table({ data, config, keyFn, posSelection, teamSelection }) {
   const renderedPositionRows = posFilteredData.map((rowData) => {
     const renderedPosCells = config.map((column) => {
       return (
-        <td className="pr-2 text-center" key={column.label}>
+        <td className="text-center" key={column.label}>
           {column.render(rowData)}
         </td>
       );
@@ -66,7 +66,7 @@ function Table({ data, config, keyFn, posSelection, teamSelection }) {
   const renderedTeamRows = teamFilteredData.map((rowData) => {
     const renderedTeamCells = config.map((column) => {
       return (
-        <td className="pr-2 text-center" key={column.label}>
+        <td className="text-center" key={column.label}>
           {column.render(rowData)}
         </td>
       );
@@ -82,7 +82,7 @@ function Table({ data, config, keyFn, posSelection, teamSelection }) {
   const renderedTeamAndPosRows = posFilteredSecond.map((rowData) => {
     const renderedTeamandPosCells = config.map((column) => {
       return (
-        <td className="pr-2 text-center" key={column.label}>
+        <td className="text-center" key={column.label}>
           {column.render(rowData)}
         </td>
       );

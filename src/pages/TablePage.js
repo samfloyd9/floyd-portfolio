@@ -2,6 +2,7 @@ import SortableTable from "../components/SortableTable";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
 import useSort from "../hooks/use-sort";
+import { useEffect } from "react";
 import { data } from "../basketballData";
 import { useState } from "react";
 import PlayerCardList from "../components/PlayerCardList";
@@ -9,15 +10,6 @@ import LineupRating from "../components/LineupRating";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
 // https://blog.logrocket.com/creating-react-sortable-table/ ----> look at this for help
-
-// create a dropdown that stores a team or position value
-// filter the big data array
-// copy the function from cars project
-
-// give each player a team rating object
-// go through each and add up the total for the lineup and give it a grade
-
-// make the numbers next to each player the actual order
 
 function TablePage({ setShowModal }) {
   const posOptions = [
@@ -101,9 +93,54 @@ function TablePage({ setShowModal }) {
     },
   ]);
 
-  // const handleRandomLineup = (player) => {
-    
-  // };
+  const handleRandomLineup = () => {
+    const pointGuardFilteredLineup = data.filter((player) =>
+      player.position.includes("PG")
+    );
+    const shootingGuardFilteredLineup = data.filter((player) =>
+      player.position.includes("SG")
+    );
+    const smallForwardFilteredLineup = data.filter((player) =>
+      player.position.includes("SF")
+    );
+    const powerForwardFilteredLineup = data.filter((player) =>
+      player.position.includes("PF")
+    );
+    const centerFilteredLineup = data.filter((player) =>
+      player.position.includes("C")
+    );
+    const randomPointGuardIndex = Math.floor(
+      Math.random() * pointGuardFilteredLineup.length
+    );
+    const randomShootingGuardIndex = Math.floor(
+      Math.random() * shootingGuardFilteredLineup.length
+    );
+    const randomSmallForwardIndex = Math.floor(
+      Math.random() * smallForwardFilteredLineup.length
+    );
+    const randomPowerForwardIndex = Math.floor(
+      Math.random() * powerForwardFilteredLineup.length
+    );
+    const randomCenterIndex = Math.floor(
+      Math.random() * centerFilteredLineup.length
+    );
+    const randomPointGuard = pointGuardFilteredLineup[randomPointGuardIndex];
+    const randomShootingGuard =
+      shootingGuardFilteredLineup[randomShootingGuardIndex];
+    const randomSmallForward =
+      smallForwardFilteredLineup[randomSmallForwardIndex];
+    const randomPowerForward =
+      powerForwardFilteredLineup[randomPowerForwardIndex];
+    const randomCenter = centerFilteredLineup[randomCenterIndex];
+
+    setLineup([
+      randomPointGuard,
+      randomShootingGuard,
+      randomSmallForward,
+      randomPowerForward,
+      randomCenter,
+    ]);
+  };
 
   const handleAddPlayerToLineup = (player) => {
     if (player.position === "PG") {
@@ -137,27 +174,37 @@ function TablePage({ setShowModal }) {
   const handleDelete = (playerData) => {
     if (playerData.position === "PG") {
       const newLineup = [...lineup];
-      newLineup.splice(0, 1, { template: "Select a PG from the list above" });
+      newLineup.splice(0, 1, {
+        template: "Select a PG from the list above",
+      });
       setLineup(newLineup);
       // console.log(newLineup);
     } else if (playerData.position === "SG") {
       const newLineup = [...lineup];
-      newLineup.splice(1, 1, { template: "Select a SG from the list above" });
+      newLineup.splice(1, 1, {
+        template: "Select a SG from the list above",
+      });
       setLineup(newLineup);
       // console.log(newLineup);
     } else if (playerData.position === "SF") {
       const newLineup = [...lineup];
-      newLineup.splice(2, 1, { template: "Select a SF from the list above" });
+      newLineup.splice(2, 1, {
+        template: "Select a SF from the list above",
+      });
       setLineup(newLineup);
       // console.log(newLineup);
     } else if (playerData.position === "PF") {
       const newLineup = [...lineup];
-      newLineup.splice(3, 1, { template: "Select a PF from the list above" });
+      newLineup.splice(3, 1, {
+        template: "Select a PF from the list above",
+      });
       setLineup(newLineup);
       // console.log(newLineup);
     } else if (playerData.position === "C") {
       const newLineup = [...lineup];
-      newLineup.splice(4, 1, { template: "Select a C from the list above" });
+      newLineup.splice(4, 1, {
+        template: "Select a C from the list above",
+      });
       setLineup(newLineup);
       // console.log(newLineup);
     }
@@ -182,6 +229,84 @@ function TablePage({ setShowModal }) {
       },
     ]);
     setSubmitLineup(false);
+  };
+
+  // useEffect(() => {
+  //   document.body.addEventListener("click", (event) => {
+  //     const composedPath = event.composedPath();
+  //     const composedPathCheck = composedPath[3].outerText.slice(0, -2);
+  //     console.log(event.composedPath());
+  //   });
+  // }, []);
+
+  const handleRandomPointGuard = () => {
+    const pointGuardFilteredLineup = data.filter((player) =>
+      player.position.includes("PG")
+    );
+    const randomPointGuardIndex = Math.floor(
+      Math.random() * pointGuardFilteredLineup.length
+    );
+    const randomPointGuard = pointGuardFilteredLineup[randomPointGuardIndex];
+    const newLineup = [...lineup];
+    newLineup.splice(0, 1, randomPointGuard);
+    setLineup(newLineup);
+    // console.log(newLineup);
+  };
+
+  const handleRandomShootingGuard = () => {
+    const shootingGuardFilteredLineup = data.filter((player) =>
+      player.position.includes("SG")
+    );
+    const randomShootingGuardIndex = Math.floor(
+      Math.random() * shootingGuardFilteredLineup.length
+    );
+    const randomShootingGuard =
+      shootingGuardFilteredLineup[randomShootingGuardIndex];
+    const newLineup = [...lineup];
+    newLineup.splice(1, 1, randomShootingGuard);
+    setLineup(newLineup);
+    // console.log(newLineup);
+  };
+
+  const handleRandomSmallForward = () => {
+    const smallForwardFilteredLineup = data.filter((player) =>
+      player.position.includes("SF")
+    );
+    const randomSmallForwardIndex = Math.floor(
+      Math.random() * smallForwardFilteredLineup.length
+    );
+    const randomSmallForward =
+      smallForwardFilteredLineup[randomSmallForwardIndex];
+    const newLineup = [...lineup];
+    newLineup.splice(2, 1, randomSmallForward);
+    setLineup(newLineup);
+  };
+
+  const handleRandomPowerForward = () => {
+    const powerForwardFilteredLineup = data.filter((player) =>
+      player.position.includes("PF")
+    );
+    const randomPowerForwardIndex = Math.floor(
+      Math.random() * powerForwardFilteredLineup.length
+    );
+    const randomPowerForward =
+      powerForwardFilteredLineup[randomPowerForwardIndex];
+    const newLineup = [...lineup];
+    newLineup.splice(3, 1, randomPowerForward);
+    setLineup(newLineup);
+  };
+
+  const handleRandomCenter = () => {
+    const centerFilteredLineup = data.filter((player) =>
+      player.position.includes("C")
+    );
+    const randomCenterIndex = Math.floor(
+      Math.random() * centerFilteredLineup.length
+    );
+    const randomCenter = centerFilteredLineup[randomCenterIndex];
+    const newLineup = [...lineup];
+    newLineup.splice(4, 1, randomCenter);
+    setLineup(newLineup);
   };
 
   // const positionColorLogic = (data) => {
@@ -220,11 +345,11 @@ function TablePage({ setShowModal }) {
 
   const tsColorLogic = (data) => {
     if (data.ts > 0) {
-      return <div className="text-green-700">+{data.ts}</div>;
+      return <div className="text-green-700">+{data.ts.toFixed(1)}</div>;
     } else if (data.ts === 0) {
-      return <div className="text-yellow-500">{data.ts}</div>;
+      return <div className="text-yellow-500">{data.ts.toFixed(1)}</div>;
     } else if (data.ts < 0) {
-      return <div className="text-red-600">{data.ts}</div>;
+      return <div className="text-red-600">{data.ts.toFixed(1)}</div>;
     }
   };
 
@@ -243,6 +368,170 @@ function TablePage({ setShowModal }) {
     }
   };
 
+  // teamOffChemRating: -2,
+  // teamDefChemRating: 1.5,
+  // teamTotalChemRating: -0.5,
+  // teamOffImpact: 5.75,
+  // teamDefImpact: 1.65,
+  // teamTotalImpact: 7.4,
+
+  const filteredOffChemistryLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamOffChemRating")
+  );
+
+  const lineupOffChemistryRatingNumber = filteredOffChemistryLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamOffChemRating;
+    }, 0);
+
+    //
+
+    const filteredDefChemistryLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamDefChemRating")
+  );
+
+  const lineupDefChemistryRatingNumber = filteredDefChemistryLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamDefChemRating;
+    }, 0);
+
+    //
+
+    const filteredTotalChemistryLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamTotalChemRating")
+  );
+
+  const lineupTotalChemistryRatingNumber = filteredTotalChemistryLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamTotalChemRating;
+    }, 0);
+
+    //
+
+    const filteredOffImpactLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamOffImpact")
+  );
+
+  const lineupOffImpactRatingNumber = filteredOffImpactLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamOffImpact;
+    }, 0);
+
+    //
+
+    const filteredDefImpactLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamDefImpact")
+  );
+
+  const lineupDefImpactRatingNumber = filteredDefImpactLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamDefImpact;
+    }, 0);
+
+    //
+
+    const filteredTotalImpactLineupRating = lineup.filter((player) =>
+    player.hasOwnProperty("teamTotalImpact")
+  );
+
+  const lineupTotalImpactRatingNumber = filteredTotalImpactLineupRating.reduce(
+    function (acc, player) {
+      return acc + player.teamTotalImpact;
+    }, 0);
+
+    //
+
+  // 18 through -2 
+  const lineupChemLogic = (chemRatingNum) => {
+    if (chemRatingNum > 6) {
+      return "A+";
+    } else if (chemRatingNum <= 6 && chemRatingNum > 5.5) {
+      return "A";
+    } else if (chemRatingNum <= 5.5 && chemRatingNum > 5) {
+      return "A-";
+    } else if (chemRatingNum <= 5 && chemRatingNum > 4.5) {
+      return "B+";
+    } else if (chemRatingNum <= 4.5 && chemRatingNum > 4) {
+      return "B";
+    } else if (chemRatingNum <= 4 && chemRatingNum > 3.5) {
+      return "B-";
+    } else if (chemRatingNum <= 3.5 && chemRatingNum > 3) {
+      return "C+";
+    } else if (chemRatingNum <= 3 && chemRatingNum > 2.5) {
+      return "C";
+    } else if (chemRatingNum <= 2.5 && chemRatingNum > 2) {
+      return "C-";
+    } else if (chemRatingNum <= 2 && chemRatingNum > 1.5) {
+      return "D+";
+    } else if (chemRatingNum <= 1.5 && chemRatingNum > 1) {
+      return "D";
+    } else if (chemRatingNum <= 1 && chemRatingNum > 0.5) {
+      return "D-";
+    } else if (chemRatingNum <= 0.5) {
+      return "F";
+    }
+  };
+
+  const chemistryColorLogic = (chemRatingNum) => {
+    if (chemRatingNum > 6) {
+          return "bg-cyan-300";
+    } else if (chemRatingNum <= 6 && chemRatingNum > 5.5) {
+      return "bg-lime-600";
+    } else if (chemRatingNum <= 5.5 && chemRatingNum > 5) {
+      return "bg-lime-500";
+    } else if (chemRatingNum <= 5 && chemRatingNum > 4.5) {
+      return "bg-lime-400";
+    } else if (chemRatingNum <= 4.5 && chemRatingNum > 4) {
+      return "bg-lime-300";
+    } else if (chemRatingNum <= 4 && chemRatingNum > 3.5) {
+      return "bg-lime-200";
+    } else if (chemRatingNum <= 3.5 && chemRatingNum > 3) {
+      return "bg-yellow-200";
+    } else if (chemRatingNum <= 3 && chemRatingNum > 2.5) {
+      return "bg-yellow-300";
+    } else if (chemRatingNum <= 2.5 && chemRatingNum > 2) {
+      return "bg-yellow-400";
+    } else if (chemRatingNum <= 2 && chemRatingNum > 1.5) {
+      return "bg-amber-500";
+    } else if (chemRatingNum <= 1.5 && chemRatingNum > 1) {
+      return "bg-orange-400";
+    } else if (chemRatingNum <= 1 && chemRatingNum > 0.5) {
+      return "bg-orange-500-";
+    } else if (chemRatingNum <= 0.5) {
+      return "bg-red-500";
+    }
+  };
+
+  // const chemistryColorLogic = (chemRatingNum) => {
+  //   if (chemRatingNum >= 9.5) {
+  //     return "cyan-300";
+  //   } else if (chemRatingNum >= 9 && chemRatingNum < 9.5) {
+  //     return "bg-lime-600";
+  //   } else if (chemRatingNum >= 8.5 && chemRatingNum < 9) {
+  //     return "bg-lime-500";
+  //   } else if (chemRatingNum >= 8 && chemRatingNum < 8.5) {
+  //     return "bg-lime-400";
+  //   } else if (chemRatingNum >= 7.5 && chemRatingNum < 8) {
+  //     return "bg-lime-300";
+  //   } else if (chemRatingNum >= 7 && chemRatingNum < 7.5) {
+  //     return "bg-lime-200";
+  //   } else if (chemRatingNum >= 6.5 && chemRatingNum < 7) {
+  //     return "bg-yellow-200";
+  //   } else if (chemRatingNum >= 6 && chemRatingNum < 6.5) {
+  //     return "bg-yellow-300";
+  //   } else if (chemRatingNum >= 5.5 && chemRatingNum < 6) {
+  //     return "bg-yellow-400";
+  //   } else if (chemRatingNum >= 5 && chemRatingNum < 5.5) {
+  //     return "bg-amber-500";
+  //   } else if (chemRatingNum >= 4.5 && chemRatingNum < 5) {
+  //     return "bg-orange-400";
+  //   } else if (chemRatingNum >= 4 && chemRatingNum < 4.5) {
+  //     return "bg-orange-500";
+  //   } else if (chemRatingNum >= 0 && chemRatingNum < 4) {
+  //     return "bg-red-500";
+  //   }
+  // };
+
   const config = [
     // {
     //   label: "Rnk",
@@ -255,6 +544,17 @@ function TablePage({ setShowModal }) {
     //     );
     //   }
     // },
+    {
+      label: "",
+      render: (player) => (
+        <button
+          className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
+          onClick={() => handleAddPlayerToLineup(player)}
+        >
+          +
+        </button>
+      ),
+    },
     {
       label: "Player",
       render: (player) => (
@@ -269,9 +569,9 @@ function TablePage({ setShowModal }) {
             // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
             >
               {player.name}
-              <span className="pointer-events-none absolute -bottom-7 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+              {/* <span className="pointer-events-none absolute -bottom-7 z-20 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
                 {player.nickname}
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
@@ -298,10 +598,10 @@ function TablePage({ setShowModal }) {
       label: "Team",
       render: (player) => (
         <div
-          className={`group relative text-sm p-1.5 m-2 rounded-lg ${player.teamColor} ${player.teamColor2}`}
+          className={`group pointer relative text-sm p-1.5 m-2 rounded-lg ${player.teamColor} ${player.teamColor2}`}
         >
           {player.team}
-          <span className="pointer-events-none absolute -top-7 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+          <span className="pointer-events-none pointer absolute -bottom-7 z-20 -left-5 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
             {player.fullTeamName}
           </span>
         </div>
@@ -310,7 +610,7 @@ function TablePage({ setShowModal }) {
     },
     {
       label: "Pts",
-      render: (player) => (player.pts75 * 0.75).toFixed(1),
+      render: (player) => (player.pts75).toFixed(1),
       sortValue: (player) => player.pts75,
     },
     {
@@ -355,7 +655,7 @@ function TablePage({ setShowModal }) {
               key={Math.round(Math.random() * 987654321)}
             >
               {badge.icon}
-              <span className="pointer-events-none absolute -top-7 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+              <span className="pointer-events-none absolute z-20 -bottom-7 -left-14 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100 text-ellipsis">
                 {badge.explanation}
               </span>
             </div>
@@ -368,48 +668,56 @@ function TablePage({ setShowModal }) {
         );
       },
     },
-    {
-      label: "Lineup",
-      render: (player) => (
-        <Button
-          className="bg-green-300 rounded-md"
-          onClick={() => handleAddPlayerToLineup(player)}
-        >
-          +
-        </Button>
-      ),
-    },
   ];
 
   const keyFn = (player) => {
     return player.name;
   };
 
+  console.log(lineupTotalChemistryRatingNumber);
+
   return (
     <div className="flex justify-center content-center mt-5 mb-5">
       <div className="flex flex-col">
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center">
           <div className="flex flex-row justify-between mb-4 items-center gap-5">
             <Dropdown
               onChange={handlePosSelect}
               value={posSelection}
               options={posOptions}
+              className="shadow-md"
             />
             <Dropdown
               onChange={handleTeamSelect}
               value={teamSelection}
               options={teamOptions}
+              className="shadow-md"
             />
-            <Button onClick={handleClick} className="rounded-lg" primary>
+            <Button onClick={handleClick} className="rounded-lg hover:bg-gray-200 shadow-md">
               <IoInformationCircleOutline className="text-xl mr-1" />
               Stats
             </Button>
-            <Button onClick="" className="rounded-lg" primary>
-              Generate Random Lineup
+            <Button onClick={handleRandomLineup} className="rounded-lg hover:bg-gray-200 shadow-md">
+              Random Lineup
+            </Button>
+            <Button onClick={handleRandomPointGuard} className="rounded-lg hover:bg-gray-200 shadow-md">
+              PG
+            </Button>
+            <Button onClick={handleRandomShootingGuard} className="rounded-lg hover:bg-gray-200 shadow-md">
+              SG
+            </Button>
+            <Button onClick={handleRandomSmallForward} className="rounded-lg hover:bg-gray-200 shadow-md">
+              SF
+            </Button>
+            <Button onClick={handleRandomPowerForward} className="rounded-lg hover:bg-gray-200 shadow-md">
+              PF
+            </Button>
+            <Button onClick={handleRandomCenter} className="rounded-lg hover:bg-gray-200 shadow-md">
+              C
             </Button>
           </div>
         </div>
-        <div className="overflow-scroll h-96 shadow-lg mb-4">
+        <div className="overflow-y-scroll overflow-x-scroll h-96 shadow-lg mb-4">
           <SortableTable
             config={config}
             data={data}
@@ -444,23 +752,32 @@ function TablePage({ setShowModal }) {
                 Reset Lineup
               </button>
             </div>
-            { submitLineup && 
-            <div className="flex flex-col items-center gap-5">
-              <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
-                <div className="font-bold underline mr-6">Team Chemistry:</div>
-                <div className="px-2.5 py-2 border bg-green-300 rounded-lg">
-                  A+
+            {submitLineup && (
+              <div className="flex flex-col items-center gap-5">
+                <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
+                  <div className="font-bold underline mr-6">
+                    Team Chemistry:
+                  </div>
+                  <div
+                    className={`px-2.5 py-2 border ${chemistryColorLogic(
+                      lineupTotalChemistryRatingNumber
+                    )} rounded-lg`}
+                  >
+                    {lineupChemLogic(lineupTotalChemistryRatingNumber)}
+                    {/* {lineupTotalChemistryRatingNumber.toFixed(1)} */}
+                  </div>
+                </div>
+                <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
+                  <div className="font-bold underline mr-6">
+                    Ovr Lineup Rating:
+                  </div>
+                  <div className="px-2.5 py-2 border bg-green-300 rounded-lg">
+                    {/* {lineupChemistryRatingNumber / 5} */}
+                    {lineupTotalImpactRatingNumber.toFixed(1)}
+                  </div>
                 </div>
               </div>
-              <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
-                <div className="font-bold underline mr-6">Ovr Lineup Rating:</div>
-                <div className="px-2.5 py-2 border bg-green-300 rounded-lg">
-                  {/* {lineupChemistryRatingNumber / 5} */}
-                  9.9
-                </div>
-              </div>
-            </div>
-            }
+            )}
           </div>
         </div>
       </div>

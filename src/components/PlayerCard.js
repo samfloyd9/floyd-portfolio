@@ -18,6 +18,10 @@ function PlayerCard({ playerData, handleDelete }) {
     switch (data.position) {
       case "C":
         return "px-2";
+      case "SF":
+        return "px-1";
+      case "PF":
+        return "px-1";
       default:
         return "";
     }
@@ -57,7 +61,7 @@ function PlayerCard({ playerData, handleDelete }) {
   //   }
   // };
 
-    const bgImageLogic = (data) => {
+  const bgImageLogic = (data) => {
     switch (data.cardColor) {
       case "sapphire":
         return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]";
@@ -74,6 +78,10 @@ function PlayerCard({ playerData, handleDelete }) {
     }
   };
 
+  // const randomPosButtonType = () => {
+
+  // }
+
   let wiltStyle = "";
   if (playerData.name === "Wilt Chamberlain") {
     wiltStyle = "mt-5";
@@ -82,13 +90,15 @@ function PlayerCard({ playerData, handleDelete }) {
   const renderedPlayerCard = (
     <div className="bg-black relative shadow-xl px-1.5 min-h-64 rounded-lg">
       <div
-        className={`p-1 absolute top-0 right-0 rounded-md ${playerData.teamColor} ${playerData.teamColor2} ${positionStyleLogic(playerData)} text-md border-${playerData.teamColor3} border-2 border-solid`}
+        className={`p-1 absolute top-0 right-0 rounded-md ${
+          playerData.teamColor
+        } ${playerData.teamColor2} ${positionStyleLogic(
+          playerData
+        )} text-md border-${playerData.teamColor3} border-2 border-solid`}
       >
         {playerPosition}
       </div>
-      <div
-        className={`absolute ${playerData.teamLogoStyling}`}
-      >
+      <div className={`absolute ${playerData.teamLogoStyling}`}>
         <img
           alt={`${playerData.fullTeamName}`}
           src={`${playerData.teamLogoSrc}`}
@@ -99,10 +109,12 @@ function PlayerCard({ playerData, handleDelete }) {
         <div
           className={`p-1.5 absolute bottom-0 -right-1 ${playerData.teamColor} text-sm ${playerData.teamColor2} rounded-md border-${playerData.teamColor3} border-2 border-solid p-1 text-black z-10 whitespace-nowrap`}
         >
-          {(playerData.hasOwnProperty("plyrPictureSrc") && !playerData.hasOwnProperty("altName"))
+          {playerData.hasOwnProperty("plyrPictureSrc") &&
+          !playerData.hasOwnProperty("altName")
             ? `'${playerData.year.slice(-2)} ${playerData.name}`
             : ""}
-          {(playerData.hasOwnProperty("plyrPictureSrc") && playerData.hasOwnProperty("altName"))
+          {playerData.hasOwnProperty("plyrPictureSrc") &&
+          playerData.hasOwnProperty("altName")
             ? `'${playerData.year.slice(-2)} ${playerData.altName}`
             : ""}
         </div>
@@ -129,12 +141,19 @@ function PlayerCard({ playerData, handleDelete }) {
     </div>
   );
 
+  // let currentPositionIndex = '';
+  // if (playerData.position === 'Point Guard' || playerData.position === 'PG') {
+  //   currentPositionIndex = 0;
+  // }
+
   return (
     <div>
       {playerData.hasOwnProperty("plyrPictureSrc") && (
         <div>
           <div
-            className={`${bgImageLogic(playerData)} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
+            className={`${bgImageLogic(
+              playerData
+            )} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
           >
             {renderedPlayerCard}
           </div>
@@ -145,14 +164,32 @@ function PlayerCard({ playerData, handleDelete }) {
             >
               x
             </button>
+            {/* <button
+              onClick={() => handleRandomPosition()}
+              className="bg-green-500 text-xs rounded-lg px-1 ml-2"
+            >
+              ?
+            </button> */}
           </div>
         </div>
       )}
       {playerData.hasOwnProperty("template") && (
-        <div
-          className={`${bgImageLogic(playerData)} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
-        >
-          {playerTemplate}
+        <div>
+          <div
+            className={`${bgImageLogic(
+              playerData
+            )} shadow-md rounded-xl border border-gray-300 p-2 m-2 flex w-48 justify-center`}
+          >
+            {playerTemplate}
+          </div>
+          {/* <div className="flex justify-center">
+            <button
+              onClick={() => handleRandomPosition()}
+              className="bg-green-500 text-xs rounded-lg px-1"
+            >
+              ?
+            </button>
+          </div> */}
         </div>
       )}
     </div>

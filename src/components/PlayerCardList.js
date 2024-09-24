@@ -1,6 +1,6 @@
 import PlayerCard from "./PlayerCard";
 
-function PlayerCardList({ data, handleDelete }) {
+function PlayerCardList({ data, handleDelete}) {
   const keyFn = (player) => {
     return player.name || player.template;
   };

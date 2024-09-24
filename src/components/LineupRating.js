@@ -42,7 +42,7 @@ function LineupRating({ lineup, submitLineup }) {
   );
   // Chemistry
   const filteredChemistryLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamChemistryRating")
+    player.hasOwnProperty("teamOffChemRating")
   );
 
   const lineupScoringRatingNumber = filteredScoringLineupRating.reduce(
@@ -128,12 +128,12 @@ function LineupRating({ lineup, submitLineup }) {
 
   //
 
-  const lineupChemistryRatingNumber = filteredChemistryLineupRating.reduce(
-    function (acc, player) {
-      return acc + player.teamChemistryRating;
-    },
-    0
-  );
+  // const lineupChemistryRatingNumber = filteredChemistryLineupRating.reduce(
+  //   function (acc, player) {
+  //     return acc + player.teamOffChemRating;
+  //   },
+  //   0
+  // );
 
   // Create a color code (simple) for the color of the bar
 
@@ -382,6 +382,24 @@ function LineupRating({ lineup, submitLineup }) {
 
   // ${teamRatingWidth(lineupScoringRatingNumber)}
 
+  // const finalLineupRatingNumber = (( 
+  //   (lineupScoringRatingNumber) +
+  //   (lineupEfficiencyRatingNumber) +
+  //   (lineupSpacingRatingNumber) +
+  //   (lineupFinishingRatingNumber) +
+  //   (lineupPassingRatingNumber) +
+  //   (lineupCreationRatingNumber) +
+  //   (lineupOffReboundingRatingNumber) +
+  //   (lineupInteriorDefRatingNumber) +
+  //   (lineupPerimeterDefRatingNumber) +
+  //   (lineupSwitchabilityRatingNumber) +
+  //   (lineupDefIntangiblesRatingNumber) +
+  //   (lineupDefPlaymakingRatingNumber) +
+  //   (lineupDefReboundingRatingNumber)
+  // ) / 130);
+
+  // console.log(finalLineupRatingNumber);
+
   return (
     <div className="">
       {submitLineup ? (
@@ -391,7 +409,7 @@ function LineupRating({ lineup, submitLineup }) {
               <div className="font-bold underline text-lg">Offense</div>
               <div className="flex flex-col">
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Scoring:</div>
+                  <div className="mr-5">Scoring:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
                     <div
                       className={`${widthLogic(
@@ -403,7 +421,7 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Efficiency:</div>
+                  <div className="mr-5">Efficiency:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
                     <div
                       className={`${widthLogic(
@@ -415,7 +433,7 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div>Spacing:</div>
+                  <div>Spacing:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
                     <div
                       className={`${widthLogic(
@@ -427,9 +445,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Finishing:</div>
+                  <div className="mr-5">Finishing:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupFinishingRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -439,9 +457,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Passing:</div>
+                  <div className="mr-5">Passing:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupPassingRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -451,9 +469,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Creation:</div>
+                  <div className="mr-5">Creation:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupCreationRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -463,9 +481,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Off Rebounding:</div>
+                  <div className="mr-5">Off Rebounding:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupOffReboundingRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -482,7 +500,7 @@ function LineupRating({ lineup, submitLineup }) {
                 <div className="flex flex-row content-center">
                   <div className="mr-5">Interior Def:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupInteriorDefRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -492,9 +510,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Perimeter Def:</div>
+                  <div className="mr-5">Perimeter Def:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupPerimeterDefRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -504,9 +522,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Switchability:</div>
+                  <div className="mr-5">Switchability:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupSwitchabilityRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -516,9 +534,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Def Intangibles:</div>
+                  <div className="mr-5">Def Intangibles:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupDefIntangiblesRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -528,9 +546,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Def Playmaking:</div>
+                  <div className="mr-5">Def Playmaking:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupDefPlaymakingRatingNumber
                       )} h-5 ${teamRatingColor(
@@ -540,9 +558,9 @@ function LineupRating({ lineup, submitLineup }) {
                   </div>
                 </div>
                 <div className="flex flex-row content-center">
-                <div className="mr-5">Def Rebounding:</div>
+                  <div className="mr-5">Def Rebounding:</div>
                   <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
-                  <div
+                    <div
                       className={`${widthLogic(
                         lineupDefReboundingRatingNumber
                       )} h-5 ${teamRatingColor(
