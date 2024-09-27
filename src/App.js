@@ -29,7 +29,7 @@ function App() {
   </Modal>;
 
 
-// container first div
+// container on first div
   return (
     <div className="mx-auto flex flex-col overflow-hidden">
       {showModal && modal}
