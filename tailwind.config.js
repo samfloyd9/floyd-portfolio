@@ -8,3 +8,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+// Google Fonts - Orbital and Righteous

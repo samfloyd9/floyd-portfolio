@@ -72,7 +72,7 @@ function Testing() {
         </div>
       </div>
       <div className="flex justify-center mt-24">
-        <a href="https://samfloyd9.github.io/" target="_blank" className="hover:text-blue-500">
+        <a href="https://samfloyd9.github.io/" target="_blank" rel="noreferrer" className="hover:text-blue-500">
           My Old Website
         </a>
       </div>
