@@ -1,3 +1,6 @@
+// npm install -g serve
+//   serve -s build
+
 import { useState } from "react";
 import { data } from "../basketballData";
 import SortableTable from "../components/SortableTable";
