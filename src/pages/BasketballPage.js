@@ -1,15 +1,11 @@
+import { useState } from "react";
+import { data } from "../basketballData";
 import SortableTable from "../components/SortableTable";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
-import useSort from "../hooks/use-sort";
-import { useEffect } from "react";
-import { data } from "../basketballData";
-import { useState } from "react";
 import PlayerCardList from "../components/PlayerCardList";
 import LineupRating from "../components/LineupRating";
 import { IoInformationCircleOutline } from "react-icons/io5";
-
-// https://blog.logrocket.com/creating-react-sortable-table/ ----> look at this for help
 
 function TablePage({ setShowModal }) {
   const posOptions = [
@@ -178,35 +174,30 @@ function TablePage({ setShowModal }) {
         template: "Select a PG from the list above",
       });
       setLineup(newLineup);
-      // console.log(newLineup);
     } else if (playerData.position === "SG") {
       const newLineup = [...lineup];
       newLineup.splice(1, 1, {
         template: "Select a SG from the list above",
       });
       setLineup(newLineup);
-      // console.log(newLineup);
     } else if (playerData.position === "SF") {
       const newLineup = [...lineup];
       newLineup.splice(2, 1, {
         template: "Select a SF from the list above",
       });
       setLineup(newLineup);
-      // console.log(newLineup);
     } else if (playerData.position === "PF") {
       const newLineup = [...lineup];
       newLineup.splice(3, 1, {
         template: "Select a PF from the list above",
       });
       setLineup(newLineup);
-      // console.log(newLineup);
     } else if (playerData.position === "C") {
       const newLineup = [...lineup];
       newLineup.splice(4, 1, {
         template: "Select a C from the list above",
       });
       setLineup(newLineup);
-      // console.log(newLineup);
     }
   };
 
@@ -231,14 +222,6 @@ function TablePage({ setShowModal }) {
     setSubmitLineup(false);
   };
 
-  // useEffect(() => {
-  //   document.body.addEventListener("click", (event) => {
-  //     const composedPath = event.composedPath();
-  //     const composedPathCheck = composedPath[3].outerText.slice(0, -2);
-  //     console.log(event.composedPath());
-  //   });
-  // }, []);
-
   const handleRandomPointGuard = () => {
     const pointGuardFilteredLineup = data.filter((player) =>
       player.position.includes("PG")
@@ -250,7 +233,6 @@ function TablePage({ setShowModal }) {
     const newLineup = [...lineup];
     newLineup.splice(0, 1, randomPointGuard);
     setLineup(newLineup);
-    // console.log(newLineup);
   };
 
   const handleRandomShootingGuard = () => {
@@ -265,7 +247,6 @@ function TablePage({ setShowModal }) {
     const newLineup = [...lineup];
     newLineup.splice(1, 1, randomShootingGuard);
     setLineup(newLineup);
-    // console.log(newLineup);
   };
 
   const handleRandomSmallForward = () => {
@@ -309,40 +290,6 @@ function TablePage({ setShowModal }) {
     setLineup(newLineup);
   };
 
-  // const positionColorLogic = (data) => {
-  //   switch (data.position) {
-  //     case "PG":
-  //       return "bg-blue-200";
-  //     case "SG":
-  //       return "bg-red-200";
-  //     case "SF":
-  //       return "bg-green-200";
-  //     case "PF":
-  //       return "bg-purple-200";
-  //     case "C":
-  //       return "bg-yellow-200";
-  //     default:
-  //       return "bg-gray-200";
-  //   }
-  // };
-
-  // const bgImageLogic = (data) => {
-  //   switch (data.position) {
-  //     case "PG":
-  //       return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')] text-white";
-  //     case "SG":
-  //       return "bg-[url('https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg')] text-white";
-  //     case "SF":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg')] text-white";
-  //     case "PF":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')] text-white";
-  //     case "C":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')] bold text-lg";
-  //     default:
-  //       return "bg-gray-200";
-  //   }
-  // };
-
   const tsColorLogic = (data) => {
     if (data.ts > 0) {
       return <div className="text-green-700">+{data.ts.toFixed(1)}</div>;
@@ -368,80 +315,26 @@ function TablePage({ setShowModal }) {
     }
   };
 
-  // teamOffChemRating: -2,
-  // teamDefChemRating: 1.5,
-  // teamTotalChemRating: -0.5,
-  // teamOffImpact: 5.75,
-  // teamDefImpact: 1.65,
-  // teamTotalImpact: 7.4,
-
-  const filteredOffChemistryLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamOffChemRating")
-  );
-
-  const lineupOffChemistryRatingNumber = filteredOffChemistryLineupRating.reduce(
-    function (acc, player) {
-      return acc + player.teamOffChemRating;
-    }, 0);
-
-    //
-
-    const filteredDefChemistryLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamDefChemRating")
-  );
-
-  const lineupDefChemistryRatingNumber = filteredDefChemistryLineupRating.reduce(
-    function (acc, player) {
-      return acc + player.teamDefChemRating;
-    }, 0);
-
-    //
-
-    const filteredTotalChemistryLineupRating = lineup.filter((player) =>
+  const filteredTotalChemistryLineupRating = lineup.filter((player) =>
     player.hasOwnProperty("teamTotalChemRating")
   );
-
-  const lineupTotalChemistryRatingNumber = filteredTotalChemistryLineupRating.reduce(
-    function (acc, player) {
+  const lineupTotalChemistryRatingNumber =
+    filteredTotalChemistryLineupRating.reduce(function (acc, player) {
       return acc + player.teamTotalChemRating;
     }, 0);
 
-    //
+  // ------------------------------------------------------------------------------------------
 
-    const filteredOffImpactLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamOffImpact")
-  );
-
-  const lineupOffImpactRatingNumber = filteredOffImpactLineupRating.reduce(
-    function (acc, player) {
-      return acc + player.teamOffImpact;
-    }, 0);
-
-    //
-
-    const filteredDefImpactLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamDefImpact")
-  );
-
-  const lineupDefImpactRatingNumber = filteredDefImpactLineupRating.reduce(
-    function (acc, player) {
-      return acc + player.teamDefImpact;
-    }, 0);
-
-    //
-
-    const filteredTotalImpactLineupRating = lineup.filter((player) =>
+  const filteredTotalImpactLineupRating = lineup.filter((player) =>
     player.hasOwnProperty("teamTotalImpact")
   );
-
   const lineupTotalImpactRatingNumber = filteredTotalImpactLineupRating.reduce(
     function (acc, player) {
       return acc + player.teamTotalImpact;
-    }, 0);
+    },
+    0
+  );
 
-    //
-
-  // 18 through -2 
   const lineupChemLogic = (chemRatingNum) => {
     if (chemRatingNum > 6) {
       return "A+";
@@ -474,7 +367,7 @@ function TablePage({ setShowModal }) {
 
   const chemistryColorLogic = (chemRatingNum) => {
     if (chemRatingNum > 6) {
-          return "bg-cyan-300";
+      return "bg-cyan-300";
     } else if (chemRatingNum <= 6 && chemRatingNum > 5.5) {
       return "bg-lime-600";
     } else if (chemRatingNum <= 5.5 && chemRatingNum > 5) {
@@ -502,48 +395,7 @@ function TablePage({ setShowModal }) {
     }
   };
 
-  // const chemistryColorLogic = (chemRatingNum) => {
-  //   if (chemRatingNum >= 9.5) {
-  //     return "cyan-300";
-  //   } else if (chemRatingNum >= 9 && chemRatingNum < 9.5) {
-  //     return "bg-lime-600";
-  //   } else if (chemRatingNum >= 8.5 && chemRatingNum < 9) {
-  //     return "bg-lime-500";
-  //   } else if (chemRatingNum >= 8 && chemRatingNum < 8.5) {
-  //     return "bg-lime-400";
-  //   } else if (chemRatingNum >= 7.5 && chemRatingNum < 8) {
-  //     return "bg-lime-300";
-  //   } else if (chemRatingNum >= 7 && chemRatingNum < 7.5) {
-  //     return "bg-lime-200";
-  //   } else if (chemRatingNum >= 6.5 && chemRatingNum < 7) {
-  //     return "bg-yellow-200";
-  //   } else if (chemRatingNum >= 6 && chemRatingNum < 6.5) {
-  //     return "bg-yellow-300";
-  //   } else if (chemRatingNum >= 5.5 && chemRatingNum < 6) {
-  //     return "bg-yellow-400";
-  //   } else if (chemRatingNum >= 5 && chemRatingNum < 5.5) {
-  //     return "bg-amber-500";
-  //   } else if (chemRatingNum >= 4.5 && chemRatingNum < 5) {
-  //     return "bg-orange-400";
-  //   } else if (chemRatingNum >= 4 && chemRatingNum < 4.5) {
-  //     return "bg-orange-500";
-  //   } else if (chemRatingNum >= 0 && chemRatingNum < 4) {
-  //     return "bg-red-500";
-  //   }
-  // };
-
   const config = [
-    // {
-    //   label: "Rnk",
-    //   render: function (player) {
-
-    //     // Cant pass in sortedData array cause it takes in config array
-
-    //     return (
-    //       <div>{data.indexOf(player) + 1}</div>
-    //     );
-    //   }
-    // },
     {
       label: "",
       render: (player) => (
@@ -567,6 +419,7 @@ function TablePage({ setShowModal }) {
           <div className="group relative">
             <div
             // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
+            className="text-sm lg:text-lg"
             >
               {player.name}
               {/* <span className="pointer-events-none absolute -bottom-7 z-20 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
@@ -591,7 +444,11 @@ function TablePage({ setShowModal }) {
     },
     {
       label: "Year",
-      render: (player) => player.year,
+      render: (player) => (
+        <div className="text-xs lg:text-lg">
+          {player.year}
+        </div>
+      ),
       sortValue: (player) => player.year,
     },
     {
@@ -610,7 +467,7 @@ function TablePage({ setShowModal }) {
     },
     {
       label: "Pts",
-      render: (player) => (player.pts75).toFixed(1),
+      render: (player) => player.pts75.toFixed(1),
       sortValue: (player) => player.pts75,
     },
     {
@@ -677,62 +534,88 @@ function TablePage({ setShowModal }) {
   console.log(lineupTotalChemistryRatingNumber);
 
   return (
-    <div className="flex justify-center content-center mt-5 mb-5">
+    <div className="flex justify-center content-center mb-5 mt-0 lg:mt-5">
       <div className="flex flex-col">
         <div className="flex flex-row justify-center">
-          <div className="flex flex-row justify-between mb-4 items-center gap-5">
-            <Dropdown
-              onChange={handlePosSelect}
-              value={posSelection}
-              options={posOptions}
-              className="shadow-md"
-            />
-            <Dropdown
-              onChange={handleTeamSelect}
-              value={teamSelection}
-              options={teamOptions}
-              className="shadow-md"
-            />
-            <Button onClick={handleClick} className="rounded-lg hover:bg-gray-200 shadow-md">
-              <IoInformationCircleOutline className="text-xl mr-1" />
-              Stats
-            </Button>
-            <Button onClick={handleRandomLineup} className="rounded-lg hover:bg-gray-200 shadow-md">
-              Random Lineup
-            </Button>
-            <Button onClick={handleRandomPointGuard} className="rounded-lg hover:bg-gray-200 shadow-md">
-              PG
-            </Button>
-            <Button onClick={handleRandomShootingGuard} className="rounded-lg hover:bg-gray-200 shadow-md">
-              SG
-            </Button>
-            <Button onClick={handleRandomSmallForward} className="rounded-lg hover:bg-gray-200 shadow-md">
-              SF
-            </Button>
-            <Button onClick={handleRandomPowerForward} className="rounded-lg hover:bg-gray-200 shadow-md">
-              PF
-            </Button>
-            <Button onClick={handleRandomCenter} className="rounded-lg hover:bg-gray-200 shadow-md">
-              C
-            </Button>
+          <div className="flex justify-between mb-4 items-center flex-col gap-2 lg:gap-5 lg:flex-row">
+            <div className="flex flex-row gap-4 items-center">
+              <Dropdown
+                onChange={handlePosSelect}
+                value={posSelection}
+                options={posOptions}
+                className="shadow-md"
+              />
+              <Dropdown
+                onChange={handleTeamSelect}
+                value={teamSelection}
+                options={teamOptions}
+                className="shadow-md"
+              />
+              <Button
+                onClick={handleClick}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                <IoInformationCircleOutline className="text-xl mr-1" />
+                Stats
+              </Button>
+            </div>
+            <div className="flex flex-row gap-2 items-center text-sm">
+              <Button
+                onClick={handleRandomLineup}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                Random Lineup
+              </Button>
+              <Button
+                onClick={handleRandomPointGuard}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                PG
+              </Button>
+              <Button
+                onClick={handleRandomShootingGuard}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                SG
+              </Button>
+              <Button
+                onClick={handleRandomSmallForward}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                SF
+              </Button>
+              <Button
+                onClick={handleRandomPowerForward}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                PF
+              </Button>
+              <Button
+                onClick={handleRandomCenter}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                C
+              </Button>
+            </div>
           </div>
         </div>
-        <div className="overflow-y-scroll overflow-x-scroll h-96 shadow-lg mb-4">
-          <SortableTable
-            config={config}
-            data={data}
-            keyFn={keyFn}
-            posSelection={posSelection}
-            teamSelection={teamSelection}
-          />
+        <div className="flex justify-start overflow-y-scroll overflow-x-scroll mx-auto w-1/3 shadow-lg mb-4 h-72 sm:w-1/2 md:w-3/4 lg:h-96 lg:w-fit">
+          <div >
+            <SortableTable
+              config={config}
+              data={data}
+              keyFn={keyFn}
+              posSelection={posSelection}
+              teamSelection={teamSelection}
+            />
+          </div>
         </div>
         <div className="flex justify-center mb-8">
           <PlayerCardList data={lineup} handleDelete={handleDelete} />
         </div>
-        <div className="flex flex-row justify-between">
-          <LineupRating lineup={lineup} submitLineup={submitLineup} />
-          <div className="flex flex-col">
-            <div className="flex flex-row gap-5 ">
+        <div className="flex justify-center flex-col lg:flex-row">
+          <div className="flex flex-col mx-auto">
+            <div className="flex flex-row gap-5 justify-center items-center mb-5">
               {lineup[0].hasOwnProperty("plyrPictureSrc") &&
                 lineup[1].hasOwnProperty("plyrPictureSrc") &&
                 lineup[2].hasOwnProperty("plyrPictureSrc") &&
@@ -746,14 +629,14 @@ function TablePage({ setShowModal }) {
                   </button>
                 )}
               <button
-                className="bg-red-500 rounded-xl p-2 w-fit h-fit text-white shadow-md mb-5"
+                className="bg-red-500 rounded-xl p-2 w-fit h-fit text-white shadow-md"
                 onClick={handleReset}
               >
                 Reset Lineup
               </button>
             </div>
             {submitLineup && (
-              <div className="flex flex-col items-center gap-5">
+              <div className="flex flex-col items-center gap-5 lg:flex-row lg:justify-center">
                 <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
                   <div className="font-bold underline mr-6">
                     Team Chemistry:
@@ -764,7 +647,6 @@ function TablePage({ setShowModal }) {
                     )} rounded-lg`}
                   >
                     {lineupChemLogic(lineupTotalChemistryRatingNumber)}
-                    {/* {lineupTotalChemistryRatingNumber.toFixed(1)} */}
                   </div>
                 </div>
                 <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
@@ -772,12 +654,12 @@ function TablePage({ setShowModal }) {
                     Ovr Lineup Rating:
                   </div>
                   <div className="px-2.5 py-2 border bg-green-300 rounded-lg">
-                    {/* {lineupChemistryRatingNumber / 5} */}
                     {lineupTotalImpactRatingNumber.toFixed(1)}
                   </div>
                 </div>
               </div>
             )}
+            <LineupRating lineup={lineup} submitLineup={submitLineup} />
           </div>
         </div>
       </div>

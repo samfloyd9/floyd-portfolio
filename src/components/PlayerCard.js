@@ -27,40 +27,6 @@ function PlayerCard({ playerData, handleDelete }) {
     }
   };
 
-  // const positionColorLogic = (data) => {
-  //   switch (data.position) {
-  //     case "PG":
-  //       return "bg-blue-300";
-  //     case "SG":
-  //       return "bg-red-300";
-  //     case "SF":
-  //       return "bg-green-300";
-  //     case "PF":
-  //       return "bg-purple-300";
-  //     case "C":
-  //       return "bg-yellow-300 px-2";
-  //     default:
-  //       return "bg-gray-200";
-  //   }
-  // };
-
-  // const bgImageLogic = (data) => {
-  //   switch (data.position) {
-  //     case "PG":
-  //       return "bg-[url('https://t3.ftcdn.net/jpg/01/80/42/34/360_F_180423436_zNNzuzuXFr8v2uzyurYoNdpVOnkCjUyY.jpg')]";
-  //     case "SG":
-  //       return "bg-[url('https://t3.ftcdn.net/jpg/02/83/50/58/360_F_283505879_AAiyGlpN2HGT4g7kvdGkhavhhRSPiswi.jpg')]";
-  //     case "SF":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/03/85/23/360_F_303852309_PnDlqRxgiNbOzBJqF28NY6BVLVPOmPr1.jpg')]";
-  //     case "PF":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
-  //     case "C":
-  //       return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
-  //     default:
-  //       return "bg-gray-200";
-  //   }
-  // };
-
   const bgImageLogic = (data) => {
     switch (data.cardColor) {
       case "sapphire":
@@ -77,10 +43,6 @@ function PlayerCard({ playerData, handleDelete }) {
         return "bg-gray-200";
     }
   };
-
-  // const randomPosButtonType = () => {
-
-  // }
 
   let wiltStyle = "";
   if (playerData.name === "Wilt Chamberlain") {
@@ -141,11 +103,6 @@ function PlayerCard({ playerData, handleDelete }) {
     </div>
   );
 
-  // let currentPositionIndex = '';
-  // if (playerData.position === 'Point Guard' || playerData.position === 'PG') {
-  //   currentPositionIndex = 0;
-  // }
-
   return (
     <div>
       {playerData.hasOwnProperty("plyrPictureSrc") && (
@@ -164,12 +121,6 @@ function PlayerCard({ playerData, handleDelete }) {
             >
               x
             </button>
-            {/* <button
-              onClick={() => handleRandomPosition()}
-              className="bg-green-500 text-xs rounded-lg px-1 ml-2"
-            >
-              ?
-            </button> */}
           </div>
         </div>
       )}
@@ -182,14 +133,6 @@ function PlayerCard({ playerData, handleDelete }) {
           >
             {playerTemplate}
           </div>
-          {/* <div className="flex justify-center">
-            <button
-              onClick={() => handleRandomPosition()}
-              className="bg-green-500 text-xs rounded-lg px-1"
-            >
-              ?
-            </button>
-          </div> */}
         </div>
       )}
     </div>

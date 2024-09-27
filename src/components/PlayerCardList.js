@@ -1,6 +1,6 @@
 import PlayerCard from "./PlayerCard";
 
-function PlayerCardList({ data, handleDelete}) {
+function PlayerCardList({ data, handleDelete }) {
   const keyFn = (player) => {
     return player.name || player.template;
   };
@@ -15,7 +15,7 @@ function PlayerCardList({ data, handleDelete}) {
     );
   });
 
-  return <div className="flex flex-row">{renderedPlayerCardList}</div>;
+  return <div className="flex flex-col lg:flex-row">{renderedPlayerCardList}</div>;
 }
 
 export default PlayerCardList;

@@ -2,7 +2,7 @@ import Testing from '../components/Testing'
 
 function TestingPage() {
   return (
-    <div>
+    <div className="p-5">
       <Testing />
     </div>
   );

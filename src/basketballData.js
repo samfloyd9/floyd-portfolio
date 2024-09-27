@@ -29,7 +29,7 @@ import { GiEmbrassedEnergy } from "react-icons/gi"; // High Energy Defender
 // Rebounding
 import { ImMagnet } from "react-icons/im"; // Rebound Magnet
 
-// Other
+// Other Badges
 // import { ImAidKit } from "react-icons/im"; // Injured or Injury
 // import { BsBricks } from "react-icons/bs"; // Brick Wall Screener
 // import { CiDumbbell } from "react-icons/ci"; // Strong Player
@@ -3673,6 +3673,202 @@ export const data = [
     teamLogoStyling: trailblazersCurrentLogoStyling,
   },
 ];
+
+const modalData = [
+  {
+    value: "Pts",
+    info: "Points Per 75 Possessions",
+  },
+  {
+    value: "rTS%",
+    info: "Relative True Shooting Percentage",
+  },
+  {
+    value: "Reb",
+    info: "Rebounds Per 75 Possessions",
+  },
+  {
+    value: "Ast",
+    info: "Assists Per 75 Possessions",
+  },
+  {
+    value: "Stk",
+    info: "Steals and Blocks Per 75 Possessions",
+  },
+  {
+    value: "Tov",
+    info: "Turnovers Per 75 Possessions",
+  },
+  {
+    value: "BPM",
+    info: "Box Plus Minus",
+  },
+];
+
+const offBadgesData = [
+  {
+    value: <ImTarget />,
+    info: "Dead Eye Shooter",
+  },
+  {
+    value: <MdOutlineSportsKabaddi />,
+    info: "Tough Shot Maker",
+  },
+  {
+    value: <MdSportsHandball />,
+    info: "Lob/Putback/Dunk Master",
+  },
+  {
+    value: <FaWifi />,
+    info: "Limitless Range",
+  },
+  {
+    value: <FaHatWizard />,
+    info: "Middy Magician",
+  },
+  {
+    value: <GiWhistle />,
+    info: "Foul Drawer",
+  },
+  {
+    value: <GiBodyBalance />,
+    info: "Acrobatic Finisher",
+  },
+  {
+    value: <GiWreckingBall />,
+    info: "Contact Finisher",
+  },
+  {
+    value: <FaTools />,
+    info: "Post Move Technician",
+  },
+];
+
+const defBadgesData = [
+  {
+    value: <FaLock />,
+    info: "Lockdown Post Defender",
+  },
+  {
+    value: <GiHandcuffs />,
+    info: "Perimeter Handcuffs",
+  },
+  {
+    value: <ImBug />,
+    info: "Defensive Pest",
+  },
+  {
+    value: <SiAdblock />,
+    info: "Shot Block Artist",
+  },
+  {
+    value: <RiTeamFill />,
+    info: "Switchable Specialist",
+  },
+  {
+    value: <FaAnchor />,
+    info: "Defensive Anchor",
+  },
+  {
+    value: <GiMonsterGrasp />,
+    info: "Pick Pocket/Interceptor",
+  },
+  {
+    value: <GiBrain />,
+    info: "High IQ Defender",
+  },
+  {
+    value: <GiEmbrassedEnergy />,
+    info: "High Energy Defender",
+  },
+];
+
+const otherBadgesData = [
+  {
+    value: <TbEngine />,
+    info: "Offensive Engine",
+  },
+  {
+    value: <RiHandCoinLine />,
+    info: "Dime Dropper",
+  },
+  {
+    value: <ImEarth />,
+    info: "Offensive Gravity",
+  },
+  {
+    value: <ImDribbble />,
+    info: "Houdini Handles",
+  },
+  {
+    value: <ImMagnet />,
+    info: "Rebound Magent",
+  },
+];
+
+const showModalList = modalData.map((option) => {
+  return (
+    <div key={option.value} className="flex flex-row mb-5">
+      <div className="font-bold underline mr-2">{option.value}:</div>
+      <div>{option.info}</div>
+    </div>
+  );
+});
+
+const showOffBadges = offBadgesData.map((option) => {
+  return (
+    <div key={option.info} className="flex flex-row">
+      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
+      <div>{option.info}</div>
+    </div>
+  );
+});
+
+const showDefBadges = defBadgesData.map((option) => {
+  return (
+    <div key={option.info} className="flex flex-row">
+      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
+      <div>{option.info}</div>
+    </div>
+  );
+});
+
+const showOtherBadges = otherBadgesData.map((option) => {
+  return (
+    <div key={option.info} className="flex flex-row">
+      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
+      <div>{option.info}</div>
+    </div>
+  );
+});
+
+export const showAllBadgeInfo = 
+  <div className="flex flex-col text-xs lg:flex-row">
+    <div className="flex flex-col">{showModalList}</div>
+    <div className="ml-10">{showOffBadges}</div>
+    <div className="ml-10">{showDefBadges}</div>
+    <div className="ml-10">
+      <div className="mb-5">{showOtherBadges}</div>
+      <div className="flex flex-col">
+        <div className="flex flex-row">
+          <div className="mb-1.5 mr-3 rounded px-2 bg-purple-600">H</div>
+          <div>Hall of Fame</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="mb-1.5 mr-3 rounded px-2 bg-yellow-300">G</div>
+          <div>Gold</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="mb-1.5 mr-3 rounded px-2 bg-gray-300">S</div>
+          <div>Silver</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="mb-1.5 mr-3 rounded px-2 bg-yellow-600">B</div>
+          <div>Bronze</div>
+        </div>
+      </div>
+    </div>
+  </div>;
 
 // *****************************************************************
 // *****************************************************************

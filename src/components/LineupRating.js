@@ -40,10 +40,6 @@ function LineupRating({ lineup, submitLineup }) {
   const filteredDefReboundingLineupRating = lineup.filter((player) =>
     player.hasOwnProperty("teamDefRebounding")
   );
-  // Chemistry
-  const filteredChemistryLineupRating = lineup.filter((player) =>
-    player.hasOwnProperty("teamOffChemRating")
-  );
 
   const lineupScoringRatingNumber = filteredScoringLineupRating.reduce(
     function (acc, player) {
@@ -128,15 +124,6 @@ function LineupRating({ lineup, submitLineup }) {
 
   //
 
-  // const lineupChemistryRatingNumber = filteredChemistryLineupRating.reduce(
-  //   function (acc, player) {
-  //     return acc + player.teamOffChemRating;
-  //   },
-  //   0
-  // );
-
-  // Create a color code (simple) for the color of the bar
-
   const teamRatingColor = (data) => {
     if ((data / 5).toFixed(1) >= 9.5) {
       return "bg-cyan-300";
@@ -152,14 +139,6 @@ function LineupRating({ lineup, submitLineup }) {
       return "bg-red-500";
     }
   };
-
-  // const teamRatingWidth = (data) => {
-  //   const widthNumber = ((data / 5) * 10);
-  //   const final = (widthNumber + "%");
-  //   console.log(final);
-  //   return `w-[${final}%]`
-  // }
-  // console.log(teamRatingWidth(lineupScoringRatingNumber));
 
   const widthLogic = (data) => {
     switch ((data / 5).toFixed(1)) {
@@ -380,31 +359,11 @@ function LineupRating({ lineup, submitLineup }) {
     }
   };
 
-  // ${teamRatingWidth(lineupScoringRatingNumber)}
-
-  // const finalLineupRatingNumber = (( 
-  //   (lineupScoringRatingNumber) +
-  //   (lineupEfficiencyRatingNumber) +
-  //   (lineupSpacingRatingNumber) +
-  //   (lineupFinishingRatingNumber) +
-  //   (lineupPassingRatingNumber) +
-  //   (lineupCreationRatingNumber) +
-  //   (lineupOffReboundingRatingNumber) +
-  //   (lineupInteriorDefRatingNumber) +
-  //   (lineupPerimeterDefRatingNumber) +
-  //   (lineupSwitchabilityRatingNumber) +
-  //   (lineupDefIntangiblesRatingNumber) +
-  //   (lineupDefPlaymakingRatingNumber) +
-  //   (lineupDefReboundingRatingNumber)
-  // ) / 130);
-
-  // console.log(finalLineupRatingNumber);
-
   return (
-    <div className="">
+    <div className="mt-5">
       {submitLineup ? (
         <div className="flex flex-col">
-          <div className="flex flex-row justify-start gap-16">
+          <div className="flex justify-start flex-col w-fit lg:flex-row lg:w-full lg:gap-10">
             <div className="mb-8">
               <div className="font-bold underline text-lg">Offense</div>
               <div className="flex flex-col">
@@ -494,7 +453,7 @@ function LineupRating({ lineup, submitLineup }) {
                 </div>
               </div>
             </div>
-            <div className="mb-2">
+            <div className="">
               <div className="font-bold underline text-lg">Defense</div>
               <div className="flex flex-col">
                 <div className="flex flex-row content-center">
@@ -572,24 +531,6 @@ function LineupRating({ lineup, submitLineup }) {
               </div>
             </div>
           </div>
-          {/* <div className="flex flex-row justify-end">
-            <div className="border border-gray-400 p-4 h-fit rounded-md flex flex-col justify-center items-center content-center">
-              <div className="font-bold underline mb-4">
-                Team Chemistry
-              </div>
-              <div className="px-3 py-2.5 border bg-green-300 rounded-lg">
-                9.9
-              </div>
-            </div>
-            <div className="border border-gray-400 p-4 ml-24 h-fit rounded-md flex flex-col justify-center items-center content-center">
-              <div className="font-bold underline mb-4">
-                Lineup Rating
-              </div>
-              <div className="px-3 py-2.5 border bg-green-300 rounded-lg">
-                A+
-              </div>
-            </div>
-          </div> */}
         </div>
       ) : (
         ""

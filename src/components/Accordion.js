@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 function Accordion({ items }) {
@@ -10,20 +10,25 @@ function Accordion({ items }) {
     } else {
       setExpandedIndex(nextIndex);
     }
-  }
+  };
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex;
 
-    const content = isExpanded && <div className="border-b p-5">{item.content}</div>;
+    const content = isExpanded && (
+      <div className="border-b p-5">{item.content}</div>
+    );
 
-    const icon = <span>
-      {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
-    </span>
+    const icon = (
+      <span>{isExpanded ? <GoChevronDown /> : <GoChevronLeft />}</span>
+    );
 
     return (
       <div key={item.id}>
-        <div className="flex p-3 justify-between bg-gray-50 border-b items-center cursor-pointer" onClick={() => handleClick(index)}>
+        <div
+          className="flex p-3 justify-between bg-gray-50 border-b items-center cursor-pointer"
+          onClick={() => handleClick(index)}
+        >
           {item.label}
           {icon}
         </div>
@@ -32,9 +37,7 @@ function Accordion({ items }) {
     );
   });
 
-  return (
-    <div className="border-x border-t rounded">{renderedItems}</div>
-  );
+  return <div className="border-x border-t rounded">{renderedItems}</div>;
 }
 
 export default Accordion;
