@@ -33,7 +33,7 @@ function Sidebar() {
   });
 
   return (
-    <div className={`sticky top-0 flex flex-row justify-center items-center ${sideBarColorLogic(currentPath)} p-2 gap-10 z-20 mt-0 lg:mt-2`}>
+    <div className={`sticky top-0 flex flex-row justify-center items-center ${sideBarColorLogic(currentPath)} p-2 gap-10 z-20 mt-0 lg:mt-2 lg:gap-24`}>
       {renderedLinks}
     </div>
   );

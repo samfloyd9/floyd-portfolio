@@ -2,7 +2,7 @@ import React from 'react'
 
 const FootballPage = () => {
   return (
-    <div>FootballPage</div>
+    <div className="flex justify-center items-center content-center">Work in progress...</div>
   )
 }
 
