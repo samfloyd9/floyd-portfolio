@@ -175,18 +175,16 @@ const sixersThird = "red-500";
 const sixersCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Philadelphia-76ers-logo.png";
 const sixersCurrentLogoStyling = "h-11 top-1 -left-3.5";
-const sixersCurrentLogoSize = "";
+// const sixersCurrentLogoSize = "";
 // ------------------------------------------- //
 const cavaliersPrimary = "bg-red-900";
 const cavaliersSecondary = "text-white";
 const cavaliersThird = "yellow-400";
-const cavaliersCurrentLogo = "";
-const cavaliersCurrentLogoStyling = "h-12 top-0 left-0";
-const cavaliersCurrentLogoSize = "";
+// const cavaliersCurrentLogo = "";
+// const cavaliersCurrentLogoStyling = "h-12 top-0 left-0";
 const cavaliersThrowbackLogo =
   "https://content.sportslogos.net/logos/6/222/full/cleveland_cavaliers_logo_primary_20046125.png";
 const cavaliersThrowbackLogoStyling = "h-8 top-1 -left-2";
-// const cavaliersThrowbackLogoSize = "h-8 top-1 -left-5";
 // ------------------------------------------- //
 const hornetsPrimary = "bg-cyan-400";
 const hornetsSecondary = "text-blue-700";
