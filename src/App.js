@@ -8,6 +8,7 @@ import TestingPage from "./pages/TestingPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
 import { showAllBadgeInfo } from './basketballData'
+import BankingPage from "./pages/BankingPage";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -49,6 +50,10 @@ function App() {
 
         <Route path="/football">
           <FootballPage />
+        </Route>
+
+        <Route path="/jsm_banking">
+          <BankingPage />
         </Route>
       </div>
     </div>

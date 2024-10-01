@@ -6,6 +6,7 @@ function Sidebar() {
 
   const links = [
     { label: "Home", path: "/" },
+    { label: "Banking", path: "/jsm_banking" },
     { label: "Basketball", path: "/basketball" },
     { label: "Football", path: "/football" },
     { label: "*Testing*", path: "/testing" },
@@ -33,7 +34,7 @@ function Sidebar() {
   });
 
   return (
-    <div className={`sticky top-0 flex flex-row justify-center items-center ${sideBarColorLogic(currentPath)} p-2 gap-10 z-20 mt-0 lg:mt-2 lg:gap-24`}>
+    <div className={`sticky top-0 flex flex-row justify-around items-center ${sideBarColorLogic(currentPath)} py-2 gap-2 z-20 mt-0 lg:mt-2 lg:gap-24 lg:justify-center`}>
       {renderedLinks}
     </div>
   );
