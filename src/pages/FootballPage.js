@@ -600,7 +600,6 @@ function FootballPage({ setShowModal }) {
 export default FootballPage;
 
 // Handle Reset
-{
   /* <div className="flex justify-center flex-col">
   <div className="flex flex-row gap-5 justify-center items-center mb-5">
     <button
@@ -611,10 +610,8 @@ export default FootballPage;
     </button>
   </div>
 </div>; */
-}
 
 // Random Lineup and Random Positions
-{
   /* <div className="flex flex-row gap-2 items-center text-sm">
   <Button
     // onClick={handleRandomLineup}
@@ -629,4 +626,3 @@ export default FootballPage;
     PG
   </Button>
 </div>; */
-}
