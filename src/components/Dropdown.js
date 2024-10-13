@@ -38,7 +38,7 @@ function Dropdown({ options, value, onChange }) {
       <div
         className="hover:bg-sky-100 rounded cursor-pointer p-1"
         onClick={() => handleOptionClick(option)}
-        key={option.value}
+        key={option.value || option.label}
       >
         {option.label}
       </div>
@@ -46,7 +46,7 @@ function Dropdown({ options, value, onChange }) {
   });
 
   return (
-    <div ref={divElement} className="relative z-10 w-fit lg:w-52">
+    <div ref={divElement} className="relative z-10 w-full text-nowrap lg:w-52">
       <Panel
         className="flex justify-between items-center cursor-pointer w-fit"
         onClick={handleClick}

@@ -1,32 +1,15 @@
 // https://codepen.io/css_librarian/pen/mdRWVq for card idea
 
 function FootballPlayerCard({ playerData, handleDelete }) {
-  // let playerPosition = "";
-  // if (playerData.position === "PG") {
-  //   playerPosition = "PG";
-  // } else if (playerData.position === "SG") {
-  //   playerPosition = "SG";
-  // } else if (playerData.position === "SF") {
-  //   playerPosition = "SF";
-  // } else if (playerData.position === "PF") {
-  //   playerPosition = "PF";
-  // } else if (playerData.position === "C") {
-  //   playerPosition = "C";
-  // }
+  const positionStyleLogic = (data) => {
+    switch (data.position) {
+      case "C":
+        return "px-1.5";
+    }
+  };
 
-  // const positionStyleLogic = (data) => {
-  //   switch (data.position) {
-  //     case "C":
-  //       return "px-2";
-  //     case "SF":
-  //       return "px-1";
-  //     case "PF":
-  //       return "px-1";
-  //     default:
-  //       return "";
-  //   }
-  // };
 
+  // "bg-[url('https://t4.ftcdn.net/jpg/05/06/04/57/360_F_506045729_Jswvv9LBHIJyOqOl6CZaMp3q36XEzfu6.jpg')]"
   const bgImageLogic = (data) => {
     switch (data.cardColor) {
       case "sapphire":
@@ -39,6 +22,10 @@ function FootballPlayerCard({ playerData, handleDelete }) {
         return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
       case "diamond":
         return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
+      case "citrine":
+        return "bg-[url('https://i.pinimg.com/736x/c6/d1/8f/c6d18f9d3c666f01bb9fccb75d9b2bb7.jpg')]";
+      case "canary":
+        return "bg-[url('https://www.shutterstock.com/image-photo/beautiful-yellow-sapphire-gemstoneyellow-background-260nw-694629484.jpg')]";
       default:
         return "bg-gray-200";
     }
@@ -46,42 +33,34 @@ function FootballPlayerCard({ playerData, handleDelete }) {
 
   // ${playerData.teamColor} ${playerData.teamColor2} ${positionStyleLogic(playerData)} border-${playerData.teamColor3} ----> 2nd div
   const renderedPlayerCard = (
-    <div className="bg-black relative shadow-xl px-1.5 min-h-28 rounded-lg">
+    <div className="bg-black relative shadow-xl px-1.5 min-h-28 mx-auto max-w-[88px] rounded-lg">
       <div
-        className={`p-0.5 absolute top-0 right-0 rounded-md text-[9px] border-2 bg-black text-white border-gray-400 border-solid`}>
-        {playerData.overallRating}
+        className={`p-0.5 absolute top-0 mx-auto right-0 rounded-md ${positionStyleLogic(playerData)} text-[9px] border-2 bg-${playerData.teamPrimary} text-${playerData.teamSecondary} border-${playerData.teamAlternate} border-solid`}
+      >
+        {playerData.position}
       </div>
-      {/* <div className={`absolute ${playerData.teamLogoStyling}`}>
+      <div className={`absolute mx-auto ${playerData.teamLogoStyling}`}>
         <img
           alt={`${playerData.fullTeamName}`}
-          src={`${playerData.teamLogoSrc}`}
+          src={`${playerData.teamLogo}`}
           className={`${playerData.teamLogoStyling}} rounded-md shadow-lg`}
         />
-      </div> */}
+      </div>
       <div className="mt-2">
         <div
-          className={`p-1 absolute bottom-0 -right-1 ${playerData.teamPrimary} text-[8px] ${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} border-2 border-solid bg-black text-white border-gray-400 p-0.5 z-10 whitespace-nowrap`}
+          className={`p-1 absolute bottom-0 -right-1 bg-${playerData.teamPrimary} text-[8px] text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} border-2 border-solid p-0.5 z-5 whitespace-nowrap`}
         >
-          {/* {playerData.hasOwnProperty("plyrPictureSrc")
-            ? `'${playerData.year.slice(-2)} ${playerData.name}`
-            : ""} */}
-          {/* {playerData.hasOwnProperty("plyrPictureSrc") &&
-          playerData.hasOwnProperty("altName")
-            ? `'${playerData.year.slice(-2)} ${playerData.altName}`
-            : ""} */}
-            {playerData.position} - {playerData.lastName}
+          {playerData.hasOwnProperty("plyrPictureSrc")
+            ? `'${playerData.year.slice(-2)} ${playerData.firstName.charAt(0)}. ${playerData.lastName}`
+            : ""}
         </div>
       </div>
       <div>
         <div>
           <img
             alt="NFL Player"
-            src={
-              playerData.hasOwnProperty("plyrCardPictureSrc")
-                ? `${playerData.plyrCardPictureSrc}`
-                : `${playerData.plyrPictureSrc}`
-            }
-            className={`rounded-md shadow-lg my-1.5 max-h-24 bg-blend-multiply`}
+            src={`${playerData.plyrPictureSrc}`}
+            className={`rounded-md shadow-lg my-1.5 max-h-[100px] max-w-[100px] bg-blend-multiply`}
           />
         </div>
       </div>
@@ -99,7 +78,9 @@ function FootballPlayerCard({ playerData, handleDelete }) {
       {playerData.hasOwnProperty("teamPlayStyle") && (
         <div>
           <div
-            className={`shadow-md rounded-xl border border-gray-300 ${bgImageLogic(playerData)} p-2 m-0.5 flex w-24 justify-center`}
+            className={`shadow-md rounded-xl border border-gray-300 ${bgImageLogic(
+              playerData
+            )} px-0 py-1.5 m-0.5 flex w-24 justify-center`}
           >
             {renderedPlayerCard}
           </div>

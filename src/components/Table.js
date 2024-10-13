@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function Table({ data, config, keyFn, posSelection, teamSelection }) {
+function Table({ data, config, keyFn, posSelection, teamSelection, unitSelection }) {
   const renderedHeaders = config.map((column) => {
     if (column.header) {
       return <Fragment key={column.label}>{column.header()}</Fragment>;

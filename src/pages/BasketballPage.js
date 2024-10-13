@@ -554,6 +554,8 @@ function TablePage({ setShowModal }) {
                 options={teamOptions}
                 className="shadow-md"
               />
+
+              <div className="hidden sm:hidden lg:content xl:content 2xl:content">
               <Button
                 onClick={handleClick}
                 className="rounded-lg hover:bg-gray-200 shadow-md"
@@ -561,6 +563,19 @@ function TablePage({ setShowModal }) {
                 <IoInformationCircleOutline className="text-xl mr-1" />
                 Stats
               </Button>
+              </div>
+
+
+              <div className="content sm:content lg:hidden xl:hidden 2xl:hidden">
+              <Button
+                onClick={handleClick}
+                className="rounded-lg hover:bg-gray-200 shadow-md"
+              >
+                <IoInformationCircleOutline className="text-xl mr-1" />
+              </Button>
+              </div>
+
+
             </div>
             <div className="flex flex-row gap-2 items-center text-sm">
               <Button

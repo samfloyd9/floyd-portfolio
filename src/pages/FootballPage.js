@@ -1,30 +1,66 @@
 import { useState } from "react";
 import { footballData } from "../footballData";
-import SortableTable from "../components/SortableTable";
+import SortableFootballTable from "../components/SortableFootballTable";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import React from "react";
 import FootballLineup from "../components/FootballLineup";
+import FootballPlayerCardList from "../components/FootballPlayerCardList";
+import { FaCheck } from "react-icons/fa";
 
 function FootballPage({ setShowModal }) {
-  const posOptions = [
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSidebarView = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleCloseSidebar = () => {
+    setIsOpen(false);
+  };
+
+  const [unitSelection, setUnitSelection] = useState({
+    label: "Offense",
+    value: "OFF",
+  });
+
+  const unit = [
+    { label: "Offense", value: "OFF" },
+    { label: "Defense", value: "DEF" },
+  ];
+
+  // posOptions
+
+  const offPosOptions = [
     { label: "All Positions", value: "All Positions" },
+
     { label: "Quarterback", value: "QB" },
     { label: "Running Back", value: "RB" },
     { label: "Fullback", value: "FB" },
+
     { label: "Tight End", value: "TE" },
     { label: "Wide Reciever", value: "WR" },
+
     { label: "Left Tackle", value: "LT" },
     { label: "Left Guard", value: "LG" },
     { label: "Center", value: "C" },
     { label: "Right Guard", value: "RG" },
     { label: "Right Tackle", value: "RT" },
-    //
-    { label: "Defensive End", value: "DE" },
-    { label: "Defensive Tackle", value: "DT" },
-    { label: "Outside Linebacker", value: "OLB" },
-    { label: "Inside Linebacker", value: "ILB" },
+  ];
+
+  const defPosOptions = [
+    { label: "All Positions", value: "All Positions" },
+
+    { label: "Right Defensive End", value: "RDE" },
+    { label: "Left Defensive End", value: "LDE" },
+    { label: "Right Defensive Tackle", value: "RDT" },
+    { label: "Left Defensive Tackle", value: "LDT" },
+
+    { label: "Left Outside Linebacker", value: "LOLB" },
+    { label: "Right Outside Linebacker", value: "ROLB" },
+    { label: "Middle Linebacker", value: "MLB" },
+
     { label: "Cornerback", value: "CB" },
     { label: "Strong Safety", value: "SS" },
     { label: "Free Safety", value: "FS" },
@@ -41,14 +77,14 @@ function FootballPage({ setShowModal }) {
     { label: "Miami Dolphins", value: "MIA" },
     { label: "New York Giants", value: "CHI" },
     { label: "Las Vegas Raiders", value: "LV" },
-    { label: "Arizona Carindals", value: "ARI" },
+    { label: "Arizona Cardinals", value: "ARI" },
     { label: "Baltimore Ravens", value: "BAL" },
     { label: "Washington Redskins", value: "WAS" },
     { label: "Buffalo Bills", value: "BUF" },
     { label: "New York Jets", value: "NYJ" },
     { label: "Los Angeles Rams", value: "LAR" },
     { label: "Los Angeles Chargers", value: "LAC" },
-    { label: "Minnesotta Vikings", value: "MIN" },
+    { label: "Minnesota Vikings", value: "MIN" },
     { label: "Detroit Lions", value: "DET" },
     { label: "Atlanta Falcons", value: "ATL" },
     { label: "San Fransisco 49ers", value: "SF" },
@@ -57,21 +93,72 @@ function FootballPage({ setShowModal }) {
     { label: "Cleveland Browns", value: "CLE" },
     { label: "Seattle Seahawks", value: "SEA" },
     { label: "Houston Texans", value: "HOU" },
-    { label: "Indianaplis Colts", value: "IND" },
+    { label: "Indianapolis Colts", value: "IND" },
     { label: "Tennessee Titans", value: "TEN" },
     { label: "Tampa Bay Buccaneers", value: "TB" },
     { label: "Carolina Panthers", value: "CAR" },
     { label: "Denver Broncos", value: "DEN" },
-    { label: "Cincinnatti Bengals", value: "CIN" },
-    { label: "Jaxsonville Jaguars", value: "JAX" },
+    { label: "Cincinnati Bengals", value: "CIN" },
+    { label: "Jacksonville Jaguars", value: "JAX" },
   ];
 
-  const [posSelection, setPosSelection] = useState("All Positions");
-  const [teamSelection, setTeamSelection] = useState("All Teams");
+  const [offPlaySelection, setOffPlaySelection] = useState({
+    label: "I Formation Pro",
+    rbTotal: 1,
+    teTotal: 1,
+    wrTotal: 2,
+  });
+  const [defPlaySelection, setDefPlaySelection] = useState({
+    label: "3-4",
+    mlbTotal: 2,
+    cbTotal: 2,
+  });
 
-  const handleClick = () => {
-    setShowModal(true);
-  };
+  const offPlays = [
+    { label: "I Formation Pro", rbTotal: 1, teTotal: 1, wrTotal: 2 },
+    { label: "I Formation Tight", rbTotal: 1, teTotal: 2, wrTotal: 1 },
+    { label: "I Formation Slot", rbTotal: 1, wrTotal: 3 },
+    { label: "I Formation Hulk", rbTotal: 2, teTotal: 2 },
+
+    { label: "Full House Wide", rbTotal: 2, wrTotal: 2 },
+    { label: "Full House Tight", rbTotal: 2, teTotal: 2 },
+
+    { label: "Wing-T Wide", rbTotal: 2, wrTotal: 2 },
+    { label: "Wing-T Tight", rbTotal: 2, teTotal: 2 },
+
+    { label: "Pistol Spread", rbTotal: 1, wrTotal: 4 },
+    { label: "Pistol Bunch", rbTotal: 1, teTotal: 1, wrTotal: 3 },
+    { label: "Pistol Strong", rbTotal: 2, wrTotal: 3 },
+    { label: "Pistol Ace", rbTotal: 1, teTotal: 2, wrTotal: 2 },
+    { label: "Pistol Full House", rbTotal: 2, teTotal: 1, wrTotal: 2 },
+    { label: "Pistol Strong Tight", rbTotal: 2, teTotal: 1, wrTotal: 2 },
+    { label: "Pistol Wing Tight", rbTotal: 2, teTotal: 2, wrTotal: 1 },
+
+    { label: "Power I", rbTotal: 2, teTotal: 1, wrTotal: 1 },
+
+    { label: "Strong I Wide", rbTotal: 1, teTotal: 1, wrTotal: 2 },
+    { label: "Strong I Tight", rbTotal: 1, teTotal: 2, wrTotal: 1 },
+
+    { label: "Wildcat Pro", rbTotal: 2, teTotal: 1, wrTotal: 2 },
+    { label: "Wildcat Unbalanced", rbTotal: 2, teTotal: 2, wrTotal: 1 },
+
+    // Single Back and Shotgun
+  ];
+
+  const defPlays = [{ label: "3-4", value: "3-4" }];
+
+  const [posSelection, setPosSelection] = useState({
+    label: "All Positions",
+    value: "All Positions",
+  });
+  const [teamSelection, setTeamSelection] = useState({
+    label: "All Teams",
+    value: "All Teams",
+  });
+
+  // const handleClick = () => {
+  //   setShowModal(true);
+  // };
 
   const handlePosSelect = (option) => {
     setPosSelection(option);
@@ -135,6 +222,12 @@ function FootballPage({ setShowModal }) {
     },
   ]);
 
+  const [tightEnd3, setTightEnd3] = useState([
+    {
+      template: "Select a TE from the list",
+    },
+  ]);
+
   const [quarterback, setQuarterback] = useState([
     {
       template: "Select a QB from the list",
@@ -159,65 +252,465 @@ function FootballPage({ setShowModal }) {
     },
   ]);
 
-  // const handleRandomLineup = () => {
-  //   const pointGuardFilteredLineup = data.filter((player) =>
-  //     player.position.includes("PG")
-  //   );
-  //   const shootingGuardFilteredLineup = data.filter((player) =>
-  //     player.position.includes("SG")
-  //   );
-  //   const smallForwardFilteredLineup = data.filter((player) =>
-  //     player.position.includes("SF")
-  //   );
-  //   const powerForwardFilteredLineup = data.filter((player) =>
-  //     player.position.includes("PF")
-  //   );
-  //   const centerFilteredLineup = data.filter((player) =>
-  //     player.position.includes("C")
-  //   );
-  //   const randomPointGuardIndex = Math.floor(
-  //     Math.random() * pointGuardFilteredLineup.length
-  //   );
-  //   const randomShootingGuardIndex = Math.floor(
-  //     Math.random() * shootingGuardFilteredLineup.length
-  //   );
-  //   const randomSmallForwardIndex = Math.floor(
-  //     Math.random() * smallForwardFilteredLineup.length
-  //   );
-  //   const randomPowerForwardIndex = Math.floor(
-  //     Math.random() * powerForwardFilteredLineup.length
-  //   );
-  //   const randomCenterIndex = Math.floor(
-  //     Math.random() * centerFilteredLineup.length
-  //   );
-  //   const randomPointGuard = pointGuardFilteredLineup[randomPointGuardIndex];
-  //   const randomShootingGuard =
-  //     shootingGuardFilteredLineup[randomShootingGuardIndex];
-  //   const randomSmallForward =
-  //     smallForwardFilteredLineup[randomSmallForwardIndex];
-  //   const randomPowerForward =
-  //     powerForwardFilteredLineup[randomPowerForwardIndex];
-  //   const randomCenter = centerFilteredLineup[randomCenterIndex];
+  // ------------------------------------------------------------------------------------
+  // --------------------------       Defense         ----------------------------------
+  // ------------------------------------------------------------------------------------
 
-  //   setLineup([
-  //     randomPointGuard,
-  //     randomShootingGuard,
-  //     randomSmallForward,
-  //     randomPowerForward,
-  //     randomCenter,
-  //   ]);
-  // };
+  const [noseTackle, setNoseTackle] = useState([
+    {
+      template: "Select a NT from the list",
+    },
+  ]);
+
+  const [leftDefensiveTackle, setLeftDefensiveTackle] = useState([
+    {
+      template: "Select a LDT from the list",
+    },
+  ]);
+
+  const [rightDefensiveTackle, setRightDefensiveTackle] = useState([
+    {
+      template: "Select a RDT from the list",
+    },
+  ]);
+
+  const [leftDefensiveEnd, setLeftDefensiveEnd] = useState([
+    {
+      template: "Select a LDE from the list",
+    },
+  ]);
+
+  const [rightDefensiveEnd, setRightDefensiveEnd] = useState([
+    {
+      template: "Select a RDE from the list",
+    },
+  ]);
+
+  const [rightOutsideLinebacker, setRightOutsideLinebacker] = useState([
+    {
+      template: "Select a ROLB from the list",
+    },
+  ]);
+
+  const [leftOutsideLinebacker, setLeftOutsideLinebacker] = useState([
+    {
+      template: "Select a LOLB from the list",
+    },
+  ]);
+
+  const [middleLinebacker1, setMiddleLinebacker1] = useState([
+    {
+      template: "Select a MLB from the list",
+    },
+  ]);
+
+  const [middleLinebacker2, setMiddleLinebacker2] = useState([
+    {
+      template: "Select a MLB from the list",
+    },
+  ]);
+
+  const [freeSafety, setFreeSafety] = useState([
+    {
+      template: "Select a FS from the list",
+    },
+  ]);
+
+  const [strongSafety, setStrongSafety] = useState([
+    {
+      template: "Select a SS from the list",
+    },
+  ]);
+
+  const [cornerback1, setCornerback1] = useState([
+    {
+      template: "Select a CB from the list",
+    },
+  ]);
+
+  const [cornerback2, setCornerback2] = useState([
+    {
+      template: "Select a CB from the list",
+    },
+  ]);
+
+  const [cornerback3, setCornerback3] = useState([
+    {
+      template: "Select a CB from the list",
+    },
+  ]);
+
+  const [cornerback4, setCornerback4] = useState([
+    {
+      template: "Select a CB from the list",
+    },
+  ]);
+
+  const handleRandomLineup = () => {
+    const quarterbackFilteredLineup = footballData.filter((player) =>
+      player.position.includes("QB")
+    );
+
+    const runningbackFilteredLineup = footballData.filter((player) =>
+      player.position.includes("RB")
+    );
+
+    const fullBackFilteredLineup = footballData.filter((player) =>
+      player.position.includes("FB")
+    );
+    const tightEndFilteredLineup = footballData.filter((player) =>
+      player.position.includes("TE")
+    );
+    const receiverFilteredLineup = footballData.filter((player) =>
+      player.position.includes("WR")
+    );
+    const leftTackleFilteredLineup = footballData.filter((player) =>
+      player.position.includes("LT")
+    );
+    const leftGuardFilteredLineup = footballData.filter((player) =>
+      player.position.includes("LG")
+    );
+
+    const centerFilteredLineup = footballData.filter(function (player) {
+      return player.position === "C";
+    });
+    // const centerFilteredLineup = footballData.filter((player) =>
+    //   player.position.includes("C")
+    // );
+
+    const rightGuardFilteredLineup = footballData.filter((player) =>
+      player.position.includes("RG")
+    );
+    const rightTackleFilteredLineup = footballData.filter((player) =>
+      player.position.includes("RT")
+    );
+    const noseTackleFilteredLineup = footballData.filter((player) =>
+      player.position.includes("NT")
+    );
+    const rightDefensiveTackleFilteredLineup = footballData.filter((player) =>
+      player.position.includes("RDT")
+    );
+    const leftDefensiveTackleFilteredLineup = footballData.filter((player) =>
+      player.position.includes("LDT")
+    );
+    const rightDefensiveEndFilteredLineup = footballData.filter((player) =>
+      player.position.includes("RDE")
+    );
+    const leftDefensiveEndFilteredLineup = footballData.filter((player) =>
+      player.position.includes("LDE")
+    );
+    const leftOutsideLinebackerFilteredLineup = footballData.filter((player) =>
+      player.position.includes("LOLB")
+    );
+    const rightOutsideLinebackerFilteredLineup = footballData.filter((player) =>
+      player.position.includes("ROLB")
+    );
+    const middleLinebackerFilteredLineup = footballData.filter((player) =>
+      player.position.includes("MLB")
+    );
+    const strongSafetyFilteredLineup = footballData.filter((player) =>
+      player.position.includes("SS")
+    );
+    const freeSafetyFilteredLineup = footballData.filter((player) =>
+      player.position.includes("FS")
+    );
+    const cornerbackFilteredLineup = footballData.filter((player) =>
+      player.position.includes("CB")
+    );
+
+    const randomQuarterbackIndex = Math.floor(
+      Math.random() * quarterbackFilteredLineup.length
+    );
+    const randomRunningbackIndex = Math.floor(
+      Math.random() * runningbackFilteredLineup.length
+    );
+    const randomFullBackIndex = Math.floor(
+      Math.random() * fullBackFilteredLineup.length
+    );
+    const randomTightEndIndex = Math.floor(
+      Math.random() * tightEndFilteredLineup.length
+    );
+    const randomReceiverIndex = Math.floor(
+      Math.random() * receiverFilteredLineup.length
+    );
+    const randomLeftTackleIndex = Math.floor(
+      Math.random() * leftTackleFilteredLineup.length
+    );
+    const randomLeftGuardIndex = Math.floor(
+      Math.random() * leftGuardFilteredLineup.length
+    );
+    const randomCenterIndex = Math.floor(
+      Math.random() * centerFilteredLineup.length
+    );
+    const randomRightGuardIndex = Math.floor(
+      Math.random() * rightGuardFilteredLineup.length
+    );
+    const randomRightTackleIndex = Math.floor(
+      Math.random() * rightTackleFilteredLineup.length
+    );
+    const randomNoseTackleIndex = Math.floor(
+      Math.random() * noseTackleFilteredLineup.length
+    );
+    const randomRightDefensiveTackleIndex = Math.floor(
+      Math.random() * rightDefensiveTackleFilteredLineup.length
+    );
+    const randomLeftDefensiveTackleIndex = Math.floor(
+      Math.random() * leftDefensiveTackleFilteredLineup.length
+    );
+    const randomLeftDefensiveEndIndex = Math.floor(
+      Math.random() * leftDefensiveEndFilteredLineup.length
+    );
+    const randomRightDefensiveEndIndex = Math.floor(
+      Math.random() * rightDefensiveEndFilteredLineup.length
+    );
+    const randomRightOutsideLinebackerIndex = Math.floor(
+      Math.random() * rightOutsideLinebackerFilteredLineup.length
+    );
+    const randomLeftOutsideLinebackerIndex = Math.floor(
+      Math.random() * leftOutsideLinebackerFilteredLineup.length
+    );
+    const randomMiddleLinebackerIndex = Math.floor(
+      Math.random() * middleLinebackerFilteredLineup.length
+    );
+    const randomFreeSafetyIndex = Math.floor(
+      Math.random() * freeSafetyFilteredLineup.length
+    );
+    const randomStrongSafetyIndex = Math.floor(
+      Math.random() * strongSafetyFilteredLineup.length
+    );
+    const randomCornerbackIndex = Math.floor(
+      Math.random() * cornerbackFilteredLineup.length
+    );
+
+    const randomQuarterback = quarterbackFilteredLineup[randomQuarterbackIndex];
+    const randomRunningback = runningbackFilteredLineup[randomRunningbackIndex];
+    const randomFullBack = fullBackFilteredLineup[randomFullBackIndex];
+    const randomTightEnd = tightEndFilteredLineup[randomTightEndIndex];
+    const randomReceiver = receiverFilteredLineup[randomReceiverIndex];
+    const randomLeftTackle = leftTackleFilteredLineup[randomLeftTackleIndex];
+    const randomLeftGuard = leftGuardFilteredLineup[randomLeftGuardIndex];
+    const randomCenter = centerFilteredLineup[randomCenterIndex];
+    const randomRightGuard = rightGuardFilteredLineup[randomRightGuardIndex];
+    const randomRightTackle = rightTackleFilteredLineup[randomRightTackleIndex];
+
+    const randomNoseTackle = noseTackleFilteredLineup[randomNoseTackleIndex];
+    const randomRightDefensiveTackle =
+      rightDefensiveTackleFilteredLineup[randomRightDefensiveTackleIndex];
+    const randomLeftDefensiveTackle =
+      leftDefensiveTackleFilteredLineup[randomLeftDefensiveTackleIndex];
+    const randomRightDefensiveEnd =
+      rightDefensiveEndFilteredLineup[randomRightDefensiveEndIndex];
+    const randomLeftDefensiveEnd =
+      leftDefensiveEndFilteredLineup[randomLeftDefensiveEndIndex];
+    const randomRightOutsideLinebacker =
+      rightOutsideLinebackerFilteredLineup[randomRightOutsideLinebackerIndex];
+    const randomLeftOutsideLinebacker =
+      leftOutsideLinebackerFilteredLineup[randomLeftOutsideLinebackerIndex];
+    const randomMiddleLinebacker =
+      middleLinebackerFilteredLineup[randomMiddleLinebackerIndex];
+    const randomFreeSafety = freeSafetyFilteredLineup[randomFreeSafetyIndex];
+    const randomStrongSafety =
+      strongSafetyFilteredLineup[randomStrongSafetyIndex];
+    const randomCornerback = cornerbackFilteredLineup[randomCornerbackIndex];
+
+    // ---------------------------------
+    const runningbackAltFilteredLineup = runningbackFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomRunningback.name;
+      }
+    );
+    const randomRunningbackAltIndex = Math.floor(
+      Math.random() * runningbackAltFilteredLineup.length
+    );
+    const randomAltRunningback =
+      runningbackAltFilteredLineup[randomRunningbackAltIndex];
+    // ---------------------------------
+    const middleLinebackerAltFilteredLineup = middleLinebackerFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomMiddleLinebacker.name;
+      }
+    );
+    // console.log(middleLinebackerAltFilteredLineup);
+    const randomMiddleLinebackerAltIndex = Math.floor(
+      Math.random() * middleLinebackerAltFilteredLineup.length
+    );
+    const randomAltMiddleLinebacker =
+    middleLinebackerAltFilteredLineup[randomMiddleLinebackerAltIndex];
+    // ---------------------------------
+    const tightEndAltFilteredLineup = tightEndFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomTightEnd.name;
+      }
+    );
+
+    // console.log(middleLinebackerAltFilteredLineup);
+    const randomTightEndAltIndex = Math.floor(
+      Math.random() * tightEndAltFilteredLineup.length
+    );
+    const randomAltTightEnd = tightEndAltFilteredLineup[randomTightEndAltIndex]; // IMPORTANT
+
+    const tightEndThirdFilteredLineup = tightEndAltFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomAltTightEnd.name;
+      }
+    );
+
+    const randomTightEndThirdIndex = Math.floor(
+      Math.random() * tightEndThirdFilteredLineup.length
+    );
+    const randomThirdTightEnd = tightEndThirdFilteredLineup[randomTightEndThirdIndex]; // IMPORTANT
+
+    // ---------------------------------
+
+    const receiverAltFilteredLineup = receiverFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomReceiver.name;
+      }
+    );
+
+    // console.log(middleLinebackerAltFilteredLineup);
+    const randomReceiverAltIndex = Math.floor(
+      Math.random() * receiverAltFilteredLineup.length
+    );
+    const randomAltReceiver = receiverAltFilteredLineup[randomReceiverAltIndex]; // IMPORTANT
+
+
+
+
+
+    const receiverThirdFilteredLineup = receiverAltFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomAltReceiver.name;
+      }
+    );
+
+    const randomReceiverThirdIndex = Math.floor(
+      Math.random() * receiverThirdFilteredLineup.length
+    );
+    const randomThirdReceiver = receiverThirdFilteredLineup[randomReceiverThirdIndex]; // IMPORTANT
+
+
+
+
+
+    const receiverFourthFilteredLineup = receiverThirdFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomThirdReceiver.name;
+      }
+    );
+
+    const randomReceiverFourthIndex = Math.floor(
+      Math.random() * receiverFourthFilteredLineup.length
+    );
+    const randomFourthReceiver = receiverFourthFilteredLineup[randomReceiverFourthIndex]; // IMPORTANT
+
+    // ---------------------------------
+
+
+    const cornerbackAltFilteredLineup = cornerbackFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomCornerback.name;
+      }
+    );
+
+    // console.log(middleLinebackerAltFilteredLineup);
+    const randomCornerbackAltIndex = Math.floor(
+      Math.random() * cornerbackAltFilteredLineup.length
+    );
+    const randomAltCornerback = cornerbackAltFilteredLineup[randomCornerbackAltIndex]; // IMPORTANT
+
+
+
+
+
+    const cornerbackThirdFilteredLineup = cornerbackAltFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomAltCornerback.name;
+      }
+    );
+
+    const randomCornerbackThirdIndex = Math.floor(
+      Math.random() * cornerbackThirdFilteredLineup.length
+    );
+    const randomThirdCornerback = cornerbackThirdFilteredLineup[randomCornerbackThirdIndex]; // IMPORTANT
+
+
+
+
+
+    const cornerbackFourthFilteredLineup = cornerbackThirdFilteredLineup.filter(
+      function (player) {
+        return player.name !== randomThirdCornerback.name;
+      }
+    );
+
+    const randomCornerbackFourthIndex = Math.floor(
+      Math.random() * cornerbackFourthFilteredLineup.length
+    );
+    const randomFourthCornerback = cornerbackFourthFilteredLineup[randomCornerbackFourthIndex]; // IMPORTANT
+
+    // ---------------------------------
+
+    if (unitSelection.value === "OFF") {
+      setQuarterback([randomQuarterback]);
+
+      setRunningback1([randomRunningback]);
+      setRunningback2([randomAltRunningback]);
+
+      setFullBack([randomFullBack]);
+
+      setReciever1([randomReceiver]);
+      setReciever2([randomAltReceiver]);
+      setReciever3([randomThirdReceiver]);
+      setReciever4([randomFourthReceiver]);
+
+      setTightEnd1([randomTightEnd]);
+      setTightEnd2([randomAltTightEnd]);
+      setTightEnd3([randomThirdTightEnd]);
+
+      setOffensiveLine([
+        randomLeftTackle,
+        randomLeftGuard,
+        randomCenter,
+        randomRightGuard,
+        randomRightTackle,
+      ]);
+    } else if (unitSelection.value === "DEF") {
+      setNoseTackle([randomNoseTackle]);
+      setRightDefensiveTackle([randomRightDefensiveTackle]);
+      setLeftDefensiveTackle([randomLeftDefensiveTackle]);
+      setRightDefensiveEnd([randomRightDefensiveEnd]);
+      setLeftDefensiveEnd([randomLeftDefensiveEnd]);
+      setRightOutsideLinebacker([randomRightOutsideLinebacker]);
+      setLeftOutsideLinebacker([randomLeftOutsideLinebacker]);
+
+      setMiddleLinebacker1([randomMiddleLinebacker]);
+      setMiddleLinebacker2([randomAltMiddleLinebacker]);
+
+      setFreeSafety([randomFreeSafety]);
+      setStrongSafety([randomStrongSafety]);
+
+      setCornerback1([randomCornerback]);
+      setCornerback2([randomAltCornerback]);
+      setCornerback3([randomThirdCornerback]);
+      setCornerback4([randomFourthCornerback]);
+    }
+  };
 
   const handleAddPlayerToLineup = (player) => {
     if (player.position === "QB") {
       const newLineup = [...quarterback];
       newLineup.splice(0, 1, player);
       setQuarterback(newLineup);
-    } else if (player.position === "FB") {
+    }
+    // -----------------------------------------------
+    else if (player.position === "FB") {
       const newLineup = [...fullBack];
       newLineup.splice(0, 1, player);
       setFullBack(newLineup);
-    } else if (player.position === "LT") {
+    }
+    // -----------------------------------------------
+    else if (player.position === "LT") {
       const newLineup = [...offensiveLine];
       newLineup.splice(0, 1, player);
       setOffensiveLine(newLineup);
@@ -237,174 +730,472 @@ function FootballPage({ setShowModal }) {
       const newLineup = [...offensiveLine];
       newLineup.splice(4, 1, player);
       setOffensiveLine(newLineup);
-    } else if (player.position === "RB") {
-      if (
-        player.name !== runningback1[0].name &&
-        player.name !== runningback2[0].name
-      ) {
+    }
+    // -----------------------------------------------
+    else if (player.position === "RB") {
+      if (offPlaySelection.rbTotal === 1) {
+        const newLineup = [...runningback1];
+        newLineup.splice(0, 1, player);
+        setRunningback1(newLineup);
+      } else if (offPlaySelection.rbTotal === 2) {
         if (
-          runningback2[0].hasOwnProperty("template") &&
-          runningback1[0].hasOwnProperty("template")
+          player.name !== runningback1[0].name &&
+          player.name !== runningback2[0].name
         ) {
-          const newLineup = [...runningback1];
-          newLineup.splice(0, 1, player);
-          setRunningback1(newLineup);
-        } else if (
-          runningback2[0].hasOwnProperty("template") &&
-          runningback1[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...runningback2];
-          newLineup.splice(0, 1, player);
-          setRunningback2(newLineup);
-        } else if (
-          runningback2[0].hasOwnProperty("name") &&
-          runningback1[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...runningback1];
-          newLineup.splice(0, 1, player);
-          setRunningback1(newLineup);
-        } else if (
-          runningback2[0].hasOwnProperty("name") &&
-          runningback1[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...runningback2];
-          newLineup.splice(0, 1, player);
-          setRunningback2(newLineup);
-        }
-      }
-    } else if (player.position === "WR") {
-      if (
-        player.name !== reciever1[0].name &&
-        player.name !== reciever2[0].name &&
-        player.name !== reciever3[0].name &&
-        player.name !== reciever4[0].name
-      ) {
-        // For 2 WR sets
-        // if (((reciever2[0].hasOwnProperty("template")) && (reciever1[0].hasOwnProperty("template")))) {
-        //   const newLineup = [...reciever1];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever1(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("template")) && (reciever1[0].hasOwnProperty("name")))) {
-        //   const newLineup = [...reciever2];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever2(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("name")) && (reciever1[0].hasOwnProperty("template")))) {
-        //   const newLineup = [...reciever1];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever1(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("name")) && (reciever1[0].hasOwnProperty("name")))) {
-        //   const newLineup = [...reciever2];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever2(newLineup);
-        // }
-
-        // For 3 WR sets
-        // if (((reciever2[0].hasOwnProperty("template")) && (reciever1[0].hasOwnProperty("template")))) {
-        //   const newLineup = [...reciever1];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever1(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("template")) && (reciever1[0].hasOwnProperty("name")))) {
-        //   const newLineup = [...reciever2];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever2(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("name")) && (reciever1[0].hasOwnProperty("name")) && (reciever3[0].hasOwnProperty("template")))) {
-        //   const newLineup = [...reciever3];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever3(newLineup);
-        // } else if (((reciever2[0].hasOwnProperty("name")) && (reciever1[0].hasOwnProperty("name")) && (reciever3[0].hasOwnProperty("name")))) {
-        //   const newLineup = [...reciever3];
-        //   newLineup.splice(0, 1, player);
-        //   setReciever3(newLineup);
-        // }
-
-        // For 4 WR sets
-        if (
-          reciever2[0].hasOwnProperty("template") &&
-          reciever1[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...reciever1];
-          newLineup.splice(0, 1, player);
-          setReciever1(newLineup);
-        } else if (
-          reciever2[0].hasOwnProperty("template") &&
-          reciever1[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...reciever2];
-          newLineup.splice(0, 1, player);
-          setReciever2(newLineup);
-        } else if (
-          reciever2[0].hasOwnProperty("name") &&
-          reciever1[0].hasOwnProperty("name") &&
-          reciever3[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...reciever3];
-          newLineup.splice(0, 1, player);
-          setReciever3(newLineup);
-        } else if (
-          reciever2[0].hasOwnProperty("name") &&
-          reciever1[0].hasOwnProperty("name") &&
-          reciever3[0].hasOwnProperty("name") &&
-          reciever4[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...reciever4];
-          newLineup.splice(0, 1, player);
-          setReciever4(newLineup);
-        } else if (
-          reciever2[0].hasOwnProperty("name") &&
-          reciever1[0].hasOwnProperty("name") &&
-          reciever3[0].hasOwnProperty("name") &&
-          reciever4[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...reciever4];
-          newLineup.splice(0, 1, player);
-          setReciever4(newLineup);
-        }
-      }
-    } else if (player.position === "TE") {
-      if (
-        player.name !== tightEnd1[0].name &&
-        player.name !== tightEnd2[0].name
-      ) {
-        if (
-          tightEnd2[0].hasOwnProperty("template") &&
-          tightEnd1[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...tightEnd1];
-          newLineup.splice(0, 1, player);
-          setTightEnd1(newLineup);
-        } else if (
-          tightEnd2[0].hasOwnProperty("template") &&
-          tightEnd1[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...tightEnd2];
-          newLineup.splice(0, 1, player);
-          setTightEnd2(newLineup);
-        } else if (
-          tightEnd2[0].hasOwnProperty("name") &&
-          tightEnd1[0].hasOwnProperty("template")
-        ) {
-          const newLineup = [...tightEnd1];
-          newLineup.splice(0, 1, player);
-          setTightEnd1(newLineup);
-        } else if (
-          tightEnd2[0].hasOwnProperty("name") &&
-          tightEnd1[0].hasOwnProperty("name")
-        ) {
-          const newLineup = [...tightEnd2];
-          newLineup.splice(0, 1, player);
-          setTightEnd2(newLineup);
+          if (
+            runningback2[0].hasOwnProperty("template") &&
+            runningback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...runningback1];
+            newLineup.splice(0, 1, player);
+            setRunningback1(newLineup);
+          } else if (
+            runningback2[0].hasOwnProperty("template") &&
+            runningback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...runningback2];
+            newLineup.splice(0, 1, player);
+            setRunningback2(newLineup);
+          } else if (
+            runningback2[0].hasOwnProperty("name") &&
+            runningback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...runningback1];
+            newLineup.splice(0, 1, player);
+            setRunningback1(newLineup);
+          } else if (
+            runningback2[0].hasOwnProperty("name") &&
+            runningback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...runningback2];
+            newLineup.splice(0, 1, player);
+            setRunningback2(newLineup);
+          }
         }
       }
     }
-    // else if (((player.position === 'WR') && (reciever1[0].hasOwnProperty("name")) && (reciever2[0].hasOwnProperty("template")) && (!(player.name === reciever1.name)))) {
-    //   const newLineup = [...reciever2];
-    //   newLineup.splice(0, 1, player);
-    //   setReciever2(newLineup);
-    // } else if (((player.position === 'WR') && (reciever1[0].hasOwnProperty("name")) && (reciever2[0].hasOwnProperty("name")) && (!(player.name === reciever1.name)))) {
-    //   const newLineup = [...reciever2];
-    //   newLineup.splice(0, 1, player);
-    //   setReciever2(newLineup);
-    // }
+    // -----------------------------------------------
+    else if (player.position === "WR") {
+      if (offPlaySelection.wrTotal === 1) {
+        const newLineup = [...reciever1];
+        newLineup.splice(0, 1, player);
+        setReciever1(newLineup);
+      } else if (offPlaySelection.wrTotal === 2) {
+        if (
+          player.name !== reciever1[0].name &&
+          player.name !== reciever2[0].name
+        ) {
+          if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever1];
+            newLineup.splice(0, 1, player);
+            setReciever1(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever2];
+            newLineup.splice(0, 1, player);
+            setReciever2(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever1];
+            newLineup.splice(0, 1, player);
+            setReciever1(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever2];
+            newLineup.splice(0, 1, player);
+            setReciever2(newLineup);
+          }
+        }
+      } else if (offPlaySelection.wrTotal === 3) {
+        if (
+          player.name !== reciever1[0].name &&
+          player.name !== reciever2[0].name &&
+          player.name !== reciever3[0].name
+        ) {
+          if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever1];
+            newLineup.splice(0, 1, player);
+            setReciever1(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever2];
+            newLineup.splice(0, 1, player);
+            setReciever2(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name") &&
+            reciever3[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever3];
+            newLineup.splice(0, 1, player);
+            setReciever3(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name") &&
+            reciever3[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever3];
+            newLineup.splice(0, 1, player);
+            setReciever4(newLineup);
+          }
+        }
+      } else if (offPlaySelection.wrTotal === 4) {
+        if (
+          player.name !== reciever1[0].name &&
+          player.name !== reciever2[0].name &&
+          player.name !== reciever3[0].name &&
+          player.name !== reciever4[0].name
+        ) {
+          if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever1];
+            newLineup.splice(0, 1, player);
+            setReciever1(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("template") &&
+            reciever1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever2];
+            newLineup.splice(0, 1, player);
+            setReciever2(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name") &&
+            reciever3[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever3];
+            newLineup.splice(0, 1, player);
+            setReciever3(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name") &&
+            reciever3[0].hasOwnProperty("name") &&
+            reciever4[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...reciever4];
+            newLineup.splice(0, 1, player);
+            setReciever4(newLineup);
+          } else if (
+            reciever2[0].hasOwnProperty("name") &&
+            reciever1[0].hasOwnProperty("name") &&
+            reciever3[0].hasOwnProperty("name") &&
+            reciever4[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...reciever4];
+            newLineup.splice(0, 1, player);
+            setReciever4(newLineup);
+          }
+        }
+      }
+    }
+
+    // -----------------------------------------------
+    else if (player.position === "TE") {
+      if (offPlaySelection.teTotal === 1) {
+        const newLineup = [...tightEnd1];
+        newLineup.splice(0, 1, player);
+        setTightEnd1(newLineup);
+      } else if (offPlaySelection.teTotal === 2) {
+        if (
+          player.name !== tightEnd1[0].name &&
+          player.name !== tightEnd2[0].name
+        ) {
+          if (
+            tightEnd2[0].hasOwnProperty("template") &&
+            tightEnd1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...tightEnd1];
+            newLineup.splice(0, 1, player);
+            setTightEnd1(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("template") &&
+            tightEnd1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...tightEnd2];
+            newLineup.splice(0, 1, player);
+            setTightEnd2(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("name") &&
+            tightEnd1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...tightEnd1];
+            newLineup.splice(0, 1, player);
+            setTightEnd1(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("name") &&
+            tightEnd1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...tightEnd2];
+            newLineup.splice(0, 1, player);
+            setTightEnd2(newLineup);
+          }
+        }
+      } else if (offPlaySelection.teTotal === 3) {
+        if (
+          player.name !== tightEnd1[0].name &&
+          player.name !== tightEnd2[0].name &&
+          player.name !== tightEnd3[0].name
+        ) {
+          if (
+            tightEnd2[0].hasOwnProperty("template") &&
+            tightEnd1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...tightEnd1];
+            newLineup.splice(0, 1, player);
+            setTightEnd1(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("template") &&
+            tightEnd1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...tightEnd2];
+            newLineup.splice(0, 1, player);
+            setTightEnd2(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("name") &&
+            tightEnd1[0].hasOwnProperty("name") &&
+            tightEnd3[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...tightEnd3];
+            newLineup.splice(0, 1, player);
+            setTightEnd3(newLineup);
+          } else if (
+            tightEnd2[0].hasOwnProperty("name") &&
+            tightEnd1[0].hasOwnProperty("name") &&
+            tightEnd3[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...tightEnd3];
+            newLineup.splice(0, 1, player);
+            setTightEnd3(newLineup);
+          }
+        }
+      }
+    }
+
+    // -----------------------------------------------
+    // -----------------------------------------------
+    // -----------------------------------------------
+    else if (player.position === "NT") {
+      const newLineup = [...noseTackle];
+      newLineup.splice(0, 1, player);
+      setNoseTackle(newLineup);
+    } else if (player.position === "RDT") {
+      const newLineup = [...rightDefensiveTackle];
+      newLineup.splice(0, 1, player);
+      setRightDefensiveTackle(newLineup);
+    } else if (player.position === "LDT") {
+      const newLineup = [...leftDefensiveTackle];
+      newLineup.splice(0, 1, player);
+      setLeftDefensiveTackle(newLineup);
+    } else if (player.position === "RDE") {
+      const newLineup = [...rightDefensiveEnd];
+      newLineup.splice(0, 1, player);
+      setRightDefensiveEnd(newLineup);
+    } else if (player.position === "LDE") {
+      const newLineup = [...leftDefensiveEnd];
+      newLineup.splice(0, 1, player);
+      setLeftDefensiveEnd(newLineup);
+    } else if (player.position === "ROLB") {
+      const newLineup = [...rightOutsideLinebacker];
+      newLineup.splice(0, 1, player);
+      setRightOutsideLinebacker(newLineup);
+    } else if (player.position === "LOLB") {
+      const newLineup = [...leftOutsideLinebacker];
+      newLineup.splice(0, 1, player);
+      setLeftOutsideLinebacker(newLineup);
+    } else if (player.position === "MLB") {
+      if (defPlaySelection.mlbTotal === 1) {
+        const newLineup = [...middleLinebacker1];
+        newLineup.splice(0, 1, player);
+        setMiddleLinebacker1(newLineup);
+      } else if (defPlaySelection.mlbTotal === 2) {
+        if (
+          player.name !== middleLinebacker1[0].name &&
+          player.name !== middleLinebacker2[0].name
+        ) {
+          if (
+            middleLinebacker2[0].hasOwnProperty("template") &&
+            middleLinebacker1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...middleLinebacker1];
+            newLineup.splice(0, 1, player);
+            setMiddleLinebacker1(newLineup);
+          } else if (
+            middleLinebacker2[0].hasOwnProperty("template") &&
+            middleLinebacker1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...middleLinebacker2];
+            newLineup.splice(0, 1, player);
+            setMiddleLinebacker2(newLineup);
+          } else if (
+            middleLinebacker2[0].hasOwnProperty("name") &&
+            middleLinebacker1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...middleLinebacker1];
+            newLineup.splice(0, 1, player);
+            setMiddleLinebacker1(newLineup);
+          } else if (
+            middleLinebacker2[0].hasOwnProperty("name") &&
+            middleLinebacker1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...middleLinebacker2];
+            newLineup.splice(0, 1, player);
+            setMiddleLinebacker2(newLineup);
+          }
+        }
+      }
+    } else if (player.position === "FS") {
+      const newLineup = [...freeSafety];
+      newLineup.splice(0, 1, player);
+      setFreeSafety(newLineup);
+    } else if (player.position === "SS") {
+      const newLineup = [...strongSafety];
+      newLineup.splice(0, 1, player);
+      setStrongSafety(newLineup);
+    } else if (player.position === "CB") {
+      if (defPlaySelection.cbTotal === 1) {
+        const newLineup = [...cornerback1];
+        newLineup.splice(0, 1, player);
+        setCornerback1(newLineup);
+      } else if (defPlaySelection.cbTotal === 2) {
+        if (
+          player.name !== cornerback1[0].name &&
+          player.name !== cornerback2[0].name
+        ) {
+          if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback1];
+            newLineup.splice(0, 1, player);
+            setCornerback1(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback2];
+            newLineup.splice(0, 1, player);
+            setCornerback2(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback1];
+            newLineup.splice(0, 1, player);
+            setCornerback1(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback2];
+            newLineup.splice(0, 1, player);
+            setCornerback2(newLineup);
+          }
+        }
+      } else if (defPlaySelection.cbTotal === 3) {
+        if (
+          player.name !== cornerback1[0].name &&
+          player.name !== cornerback2[0].name &&
+          player.name !== cornerback3[0].name
+        ) {
+          if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback1];
+            newLineup.splice(0, 1, player);
+            setCornerback1(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback2];
+            newLineup.splice(0, 1, player);
+            setCornerback2(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name") &&
+            cornerback3[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback3];
+            newLineup.splice(0, 1, player);
+            setCornerback3(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name") &&
+            cornerback3[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback3];
+            newLineup.splice(0, 1, player);
+            setCornerback3(newLineup);
+          }
+        }
+      } else if (defPlaySelection.cbTotal === 4) {
+        if (
+          player.name !== cornerback1[0].name &&
+          player.name !== cornerback2[0].name &&
+          player.name !== cornerback3[0].name &&
+          player.name !== cornerback4[0].name
+        ) {
+          if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback1];
+            newLineup.splice(0, 1, player);
+            setCornerback1(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("template") &&
+            cornerback1[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback2];
+            newLineup.splice(0, 1, player);
+            setCornerback2(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name") &&
+            cornerback3[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback3];
+            newLineup.splice(0, 1, player);
+            setCornerback3(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name") &&
+            cornerback3[0].hasOwnProperty("name") &&
+            cornerback4[0].hasOwnProperty("template")
+          ) {
+            const newLineup = [...cornerback4];
+            newLineup.splice(0, 1, player);
+            setCornerback4(newLineup);
+          } else if (
+            cornerback2[0].hasOwnProperty("name") &&
+            cornerback1[0].hasOwnProperty("name") &&
+            cornerback3[0].hasOwnProperty("name") &&
+            cornerback4[0].hasOwnProperty("name")
+          ) {
+            const newLineup = [...cornerback4];
+            newLineup.splice(0, 1, player);
+            setCornerback4(newLineup);
+          }
+        }
+      }
+    }
   };
 
   // const handleDelete = (playerData) => {
@@ -441,26 +1232,44 @@ function FootballPage({ setShowModal }) {
   //   }
   // };
 
-  // const handleReset = () => {
-  //   setLineup([
-  //     {
-  //       template: "Select a PG from the list above",
-  //     },
-  //     {
-  //       template: "Select a SG from the list above",
-  //     },
-  //     {
-  //       template: "Select a SF from the list above",
-  //     },
-  //     {
-  //       template: "Select a PF from the list above",
-  //     },
-  //     {
-  //       template: "Select a C from the list above",
-  //     },
-  //   ]);
-  //   setSubmitLineup(false);
-  // };
+  const handleReset = () => {
+    if (unitSelection.value === "OFF") {
+      setQuarterback([{ template: "Select a QB from the list" }]);
+      setRunningback1([{ template: "Select a RB from the list" }]);
+      setRunningback2([{ template: "Select a RB from the list" }]);
+      setFullBack([{ template: "Select a FB from the list" }]);
+      setReciever1([{ template: "Select a WR from the list" }]);
+      setReciever2([{ template: "Select a WR from the list" }]);
+      setReciever3([{ template: "Select a WR from the list" }]);
+      setReciever4([{ template: "Select a WR from the list" }]);
+      setTightEnd1([{ template: "Select a TE from the list" }]);
+      setTightEnd2([{ template: "Select a TE from the list" }]);
+      setTightEnd3([{ template: "Select a TE from the list" }]);
+      setOffensiveLine([
+        { template: "Select a LT from the list" },
+        { template: "Select a LG from the list" },
+        { template: "Select a C from the list" },
+        { template: "Select a RG from the list" },
+        { template: "Select a RT from the list" },
+      ]);
+    } else if (unitSelection.value === "DEF") {
+      setNoseTackle([{ template: "Select a NT from the list" }]);
+      setRightDefensiveTackle([{ template: "Select a RDT from the list" }]);
+      setLeftDefensiveTackle([{ template: "Select a LDT from the list" }]);
+      setRightDefensiveEnd([{ template: "Select a RDE from the list" }]);
+      setLeftDefensiveEnd([{ template: "Select a LDE from the list" }]);
+      setRightOutsideLinebacker([{ template: "Select a ROLB from the list" }]);
+      setLeftOutsideLinebacker([{ template: "Select a LOLB from the list" }]);
+      setMiddleLinebacker1([{ template: "Select a MLB from the list" }]);
+      setMiddleLinebacker2([{ template: "Select a MLB from the list" }]);
+      setFreeSafety([{ template: "Select a FS from the list" }]);
+      setStrongSafety([{ template: "Select a SS from the list" }]);
+      setCornerback1([{ template: "Select a CB from the list" }]);
+      setCornerback2([{ template: "Select a CB from the list" }]);
+      setCornerback3([{ template: "Select a CB from the list" }]);
+      setCornerback4([{ template: "Select a CB from the list" }]);
+    }
+  };
 
   // const handleRandomPointGuard = () => {
   //   const pointGuardFilteredLineup = data.filter((player) =>
@@ -478,14 +1287,103 @@ function FootballPage({ setShowModal }) {
   const config = [
     {
       label: "",
-      render: (player) => (
-        <button
-          className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
-          onClick={() => handleAddPlayerToLineup(player)}
-        >
-          +
-        </button>
-      ),
+      render: function (player) {
+        const playerPositionArray = (player) => {
+          if (player.position === "QB") {
+            return quarterback[0].name === player.name;
+          } else if (player.position === "FB") {
+            return fullBack[0].name === player.name;
+          } else if (player.position === "LT") {
+            return offensiveLine[0].name === player.name;
+          } else if (player.position === "LG") {
+            return offensiveLine[1].name === player.name;
+          } else if (player.position === "C") {
+            return offensiveLine[2].name === player.name;
+          } else if (player.position === "RG") {
+            return offensiveLine[3].name === player.name;
+          } else if (player.position === "RT") {
+            return offensiveLine[4].name === player.name;
+          } else if (player.position === "RB") {
+            if (runningback1[0].name === player.name) {
+              return true;
+            } else if (runningback2[0].name === player.name) {
+              return true;
+            }
+          } else if (player.position === "TE") {
+            if (tightEnd1[0].name === player.name) {
+              return true;
+            } else if (tightEnd2[0].name === player.name) {
+              return true;
+            } else if (tightEnd3[0].name === player.name) {
+              return true;
+            }
+          } else if (player.position === "WR") {
+            if (reciever1[0].name === player.name) {
+              return true;
+            } else if (reciever2[0].name === player.name) {
+              return true;
+            } else if (reciever3[0].name === player.name) {
+              return true;
+            } else if (reciever4[0].name === player.name) {
+              return true;
+            }
+          } else if (player.position === "RDT") {
+            return rightDefensiveTackle[0].name === player.name;
+          } else if (player.position === "LDT") {
+            return leftDefensiveTackle[0].name === player.name;
+          } else if (player.position === "RDE") {
+            return rightDefensiveEnd[0].name === player.name;
+          } else if (player.position === "LDE") {
+            return leftDefensiveEnd[0].name === player.name;
+          } else if (player.position === "NT") {
+            return noseTackle[0].name === player.name;
+          } else if (player.position === "LOLB") {
+            return leftOutsideLinebacker[0].name === player.name;
+          } else if (player.position === "ROLB") {
+            return rightOutsideLinebacker[0].name === player.name;
+          } else if (player.position === "FS") {
+            return freeSafety[0].name === player.name;
+          } else if (player.position === "SS") {
+            return strongSafety[0].name === player.name;
+          } else if (player.position === "MLB") {
+            if (middleLinebacker1[0].name === player.name) {
+              return true;
+            } else if (middleLinebacker2[0].name === player.name) {
+              return true;
+            }
+          } else if (player.position === "CB") {
+            if (cornerback1[0].name === player.name) {
+              return true;
+            } else if (cornerback2[0].name === player.name) {
+              return true;
+            } else if (cornerback3[0].name === player.name) {
+              return true;
+            } else if (cornerback4[0].name === player.name) {
+              return true;
+            }
+          }
+        };
+
+        return (
+          <>
+            {playerPositionArray(player) ? (
+              <button
+                className="bg-blue-300 rounded-md mx-auto px-1.5 py-1.5 flex items-center border"
+                onClick={() => handleAddPlayerToLineup(player)}
+              >
+                <FaCheck className="text-sm" />
+              </button>
+            ) : (
+              <button
+                className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
+                onClick={() => handleAddPlayerToLineup(player)}
+              >
+                +
+              </button>
+            )}
+          </>
+        );
+      },
     },
     {
       label: "Player",
@@ -544,42 +1442,83 @@ function FootballPage({ setShowModal }) {
     return player.name;
   };
 
+  const handleOffPlay = (option) => {
+    setOffPlaySelection(option);
+
+    if (offPlaySelection.label === 'I Formation Pro') {
+      setTightEnd2([{ template: "Select a TE from the list" }]);
+      setTightEnd3([{ template: "Select a TE from the list" }]);
+      setReciever3([{ template: "Select a WR from the list" }]);
+      setReciever4([{ template: "Select a WR from the list" }]);
+      setRunningback2([{ template: "Select a RB from the list" }]);
+    } 
+  };
+
+  const handleDefPlay = (option) => {
+    setDefPlaySelection(option);
+
+    if (defPlaySelection.label === '3-4') {
+      setCornerback3([{ template: "Select a CB from the list" }]);
+      setCornerback4([{ template: "Select a CB from the list" }]);
+      setRightDefensiveTackle([{ template: "Select a RDT from the list" }]);
+      setLeftDefensiveTackle([{ template: "Select a LDT from the list" }]);
+    }
+  };
+
   return (
     <div className="flex h-screen justify-between content-between items-between">
-      <div className="flex items-center flex-col w-1/3 gap-2 lg:gap-5 lg:flex-col">
-        <div className="flex flex-row gap-4 items-center w-full">
-          <Dropdown
-            onChange={handleTeamSelect}
-            value={teamSelection}
-            options={teamOptions}
-            className="shadow-md"
-          />
-          <Dropdown
-            onChange={handlePosSelect}
-            value={posSelection}
-            options={posOptions}
-            className="shadow-md"
-          />
-          <Button
-            onClick={handleClick}
-            className="rounded-lg hover:bg-gray-200 shadow-md flex justify-center"
-          >
-            <IoInformationCircleOutline className="text-xl mr-1" />
-          </Button>
-        </div>
+      {isOpen && (
+        <div className="absolute top-0 left-0 lg:w-1/3 w-screen gap-2 pt-4 bg-white z-50">
+          <div className="flex flex-row gap-3 items-center w-full mb-4 px-4">
+            <Dropdown
+              onChange={handleTeamSelect}
+              value={teamSelection}
+              options={teamOptions}
+              className="shadow-md"
+            />
 
-        <div className="flex justify-start overflow-y-scroll overflow-x-scroll shadow-lg mb-4 w-full h-full">
-          <SortableTable
-            config={config}
-            data={footballData}
-            keyFn={keyFn}
-            posSelection={posSelection}
-            teamSelection={teamSelection}
-          />
-        </div>
-      </div>
+            {unitSelection.value === "OFF" ||
+            unitSelection.value === undefined ? (
+              <Dropdown
+                onChange={handlePosSelect}
+                value={posSelection}
+                options={offPosOptions}
+                className="shadow-md"
+              />
+            ) : (
+              <Dropdown
+                onChange={handlePosSelect}
+                value={posSelection}
+                options={defPosOptions}
+                className="shadow-md"
+              />
+            )}
 
-      <div className="flex flex-col items-center justify-center mx-auto w-full">
+            <Button
+              danger
+              className="rounded-md hover:bg-red-400"
+              onClick={handleCloseSidebar}
+            >
+              x
+            </Button>
+          </div>
+
+          <div className="overflow-y-scroll overflow-x-scroll h-screen shadow-lg bg-white">
+            <SortableFootballTable
+              config={config}
+              data={footballData}
+              keyFn={keyFn}
+              posSelection={posSelection}
+              teamSelection={teamSelection}
+              unitSelection={unitSelection}
+            />
+          </div>
+        </div>
+      )}
+
+      <div
+        className={`flex items-start mt-11 justify-center content-start w-full sm:bg-red-500 lg:bg-white`}
+      >
         <FootballLineup
           offensiveLine={offensiveLine}
           quarterback={quarterback}
@@ -592,6 +1531,38 @@ function FootballPage({ setShowModal }) {
           reciever4={reciever4}
           tightEnd1={tightEnd1}
           tightEnd2={tightEnd2}
+          tightEnd3={tightEnd3}
+          //
+          noseTackle={noseTackle}
+          rightDefensiveTackle={rightDefensiveTackle}
+          leftDefensiveTackle={leftDefensiveTackle}
+          leftDefensiveEnd={leftDefensiveEnd}
+          rightDefensiveEnd={rightDefensiveEnd}
+          rightOutsideLinebacker={rightOutsideLinebacker}
+          leftOutsideLinebacker={leftOutsideLinebacker}
+          middleLinebacker1={middleLinebacker1}
+          middleLinebacker2={middleLinebacker2}
+          freeSafety={freeSafety}
+          strongSafety={strongSafety}
+          cornerback1={cornerback1}
+          cornerback2={cornerback2}
+          cornerback3={cornerback3}
+          cornerback4={cornerback4}
+          offPlaySelection={offPlaySelection}
+          setOffPlaySelection={setOffPlaySelection}
+          offPlays={offPlays}
+          defPlaySelection={defPlaySelection}
+          setDefPlaySelection={setDefPlaySelection}
+          defPlays={defPlays}
+          //
+          handleSidebarView={handleSidebarView}
+          handleReset={handleReset}
+          handleRandomLineup={handleRandomLineup}
+          unitSelection={unitSelection}
+          setUnitSelection={setUnitSelection}
+          unit={unit}
+          handleOffPlay={handleOffPlay}
+          handleDefPlay={handleDefPlay}
         />
       </div>
     </div>
@@ -600,7 +1571,7 @@ function FootballPage({ setShowModal }) {
 export default FootballPage;
 
 // Handle Reset
-  /* <div className="flex justify-center flex-col">
+/* <div className="flex justify-center flex-col">
   <div className="flex flex-row gap-5 justify-center items-center mb-5">
     <button
       className="bg-red-500 rounded-xl p-2 w-fit h-fit text-white shadow-md"
@@ -612,7 +1583,7 @@ export default FootballPage;
 </div>; */
 
 // Random Lineup and Random Positions
-  /* <div className="flex flex-row gap-2 items-center text-sm">
+/* <div className="flex flex-row gap-2 items-center text-sm">
   <Button
     // onClick={handleRandomLineup}
     className="rounded-lg hover:bg-gray-200 shadow-md"
