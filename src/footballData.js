@@ -12,9 +12,9 @@ const billsAlternate = "red-600";
 const billsCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/giphcy6ie9mxbnldntsf";
 const billsCurrentLogoStyling = "h-8 top-0 left-0";
 
-const dolphinsPrimary = "teal-400";
+const dolphinsPrimary = "[#008E97]";
 const dolphinsSecondary = "white";
-const dolphinsAlternate = "orange-600";
+const dolphinsAlternate = "[#FC4C02]";
 const dolphinsCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/lits6p8ycthy9to70bnt";
 const dolphinsCurrentLogoStyling = "h-9 top-0 -left-1";
 

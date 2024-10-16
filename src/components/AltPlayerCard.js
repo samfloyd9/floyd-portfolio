@@ -27,6 +27,13 @@ function AltPlayerCard({ playerData }) {
     }
   };
 
+  const playerNameLength = (playerData) => {
+    if (playerData.lastName.length > 7) {
+      return "text-[4px]"
+    } else {
+      return "text-[5px]"
+    }
+  }
 
 
   const renderedPlayerCard = (
@@ -42,7 +49,7 @@ function AltPlayerCard({ playerData }) {
         />
       </div>
       <div
-        className={`p-0.5 px-1 absolute -bottom-0.5 bg-${playerData.teamPrimary} text-[6px] text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} border-1 border-solid z-5 whitespace-nowrap`}
+        className={`p-0.5 px-1 absolute left-0 bottom-0 bg-${playerData.teamPrimary} ${playerNameLength(playerData)} text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} w-10 text-center border-1 border-solid z-5 whitespace-nowrap my-auto`}
       >
         {playerData.hasOwnProperty("plyrPictureSrc")
           ? `${playerData.firstName.charAt(0)}. ${playerData.lastName}`

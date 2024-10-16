@@ -1517,7 +1517,7 @@ function FootballPage({ setShowModal }) {
       )}
 
       <div
-        className={`flex items-start mt-11 justify-center content-start w-full sm:bg-red-500 lg:bg-white`}
+        className={`flex items-start mt-11 justify-center content-start w-full lg:bg-white`}
       >
         <FootballLineup
           offensiveLine={offensiveLine}

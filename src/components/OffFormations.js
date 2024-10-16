@@ -41,13 +41,18 @@ function OffFormations({
   const iFormationPro = (
     <>
       <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
-        <div className="flex flex-row w-full">
-          <div className="bg-white items-center content-center mx-auto">
+        
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <>{altGhostPlayer}</>
+          <div className="1`justify-center items-center content-center">
             <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="flex justify-center items-center content-center mt-8">
+            <AltPlayerCardList data={tightEnd1} />
           </div>
         </div>
 
-        <div className="flex flex-row bg-white">
+        <div className="flex flex-row">
           <div className="flex w-1/3 justify-start items-start sm:-mt-16">
             <div className="">
               <AltPlayerCardList data={reciever2} />
@@ -56,17 +61,15 @@ function OffFormations({
 
           <div className="w-1/3"></div>
 
-          <div className="w-1/3 content-end flex justify-between items-end bg-white sm:-mt-16">
-            <div className="flex">
-              <AltPlayerCardList data={tightEnd1} />
-            </div>
+          <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
             <div className="flex justify-end">
               <AltPlayerCardList data={reciever1} />
             </div>
           </div>
+
         </div>
 
-        <div className="flex flex-col items-center -mt-16 sm:mt-0 content-center mx-auto bg-white">
+        <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
           <div className="">
             <AltPlayerCardList data={quarterback} />
           </div>
@@ -79,8 +82,10 @@ function OffFormations({
         </div>
       </div>
 
+      {/* --------------------------------------------------------------------------------------- */}
+
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
-        <div className="flex flex-row justify-between bg-red-white w-full">
+        <div className="flex flex-row justify-between w-full">
           <div className="flex bg-white w-full">
             <FootballPlayerCardList data={reciever2} />
           </div>
