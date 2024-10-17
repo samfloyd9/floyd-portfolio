@@ -30,10 +30,14 @@ function AltPlayerCard({ playerData }) {
   };
 
   const playerNameLength = (playerData) => {
-    if (playerData.lastName.length > 7) {
-      return "text-[4px]"
+    if (playerData.hasOwnProperty('lastName')) {
+      if (playerData.lastName.length > 7) {
+        return "text-[4px]"
+      } else {
+        return "text-[5px]"
+      }
     } else {
-      return "text-[5px]"
+      return;
     }
   }
 
