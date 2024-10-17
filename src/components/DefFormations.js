@@ -5,8 +5,8 @@ import FootballPlayerCardList from "./FootballPlayerCardList";
 
 function DefFormations({
   noseTackle,
-  rightDefensiveTackle,
-  leftDefensiveTackle,
+  // rightDefensiveTackle,
+  // leftDefensiveTackle,
   leftDefensiveEnd,
   rightDefensiveEnd,
   rightOutsideLinebacker,
@@ -17,31 +17,31 @@ function DefFormations({
   strongSafety,
   cornerback1,
   cornerback2,
-  cornerback3,
-  cornerback4,
+  // cornerback3,
+  // cornerback4,
   defPlaySelection,
 }) {
-  const ghostPlayer = (
-    <div>
-      <div className={` border-white p-2 m-0.5 flex w-24 justify-center`}>
-        <div className="bg-white text-white px-1.5 min-h-28 text-xs flex content-center justify-center text-center items-center">
-          GHOST
-        </div>
-      </div>
-    </div>
-  );
+  // const ghostPlayer = (
+  //   <div>
+  //     <div className={` border-white p-2 m-0.5 flex w-24 justify-center`}>
+  //       <div className="bg-white text-white px-1.5 min-h-28 text-xs flex content-center justify-center text-center items-center">
+  //         GHOST
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 
-  const altGhostPlayer = (
-    <div>
-      <div
-        className={`border-white px-[1px] py-0.5 m-0.5 flex w-12 justify-center`}
-      >
-        <div className="bg-white text-white px-0.5 min-h-14 text-xs flex content-center justify-center text-center items-center">
-          GHOST
-        </div>
-      </div>
-    </div>
-  );
+  // const altGhostPlayer = (
+  //   <div>
+  //     <div
+  //       className={`border-white px-[1px] py-0.5 m-0.5 flex w-12 justify-center`}
+  //     >
+  //       <div className="bg-white text-white px-0.5 min-h-14 text-xs flex content-center justify-center text-center items-center">
+  //         GHOST
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 
   const threeFour = (
     <>

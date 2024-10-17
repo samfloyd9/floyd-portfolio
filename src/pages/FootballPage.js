@@ -3,10 +3,10 @@ import { footballData } from "../footballData";
 import SortableFootballTable from "../components/SortableFootballTable";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
-import { IoInformationCircleOutline } from "react-icons/io5";
+// import { IoInformationCircleOutline } from "react-icons/io5";
 import React from "react";
 import FootballLineup from "../components/FootballLineup";
-import FootballPlayerCardList from "../components/FootballPlayerCardList";
+// import FootballPlayerCardList from "../components/FootballPlayerCardList";
 import { FaCheck } from "react-icons/fa";
 
 function FootballPage({ setShowModal }) {
