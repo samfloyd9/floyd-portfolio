@@ -5,6 +5,8 @@ function FootballPlayerCard({ playerData, handleDelete }) {
     switch (data.position) {
       case "C":
         return "px-1.5";
+      default:
+        return "";
     }
   };
 

@@ -3,6 +3,8 @@ function AltPlayerCard({ playerData }) {
     switch (data.position) {
       case "C":
         return "px-1";
+      default:
+        return "";
     }
   };
 
