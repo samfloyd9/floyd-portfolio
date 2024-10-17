@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */ 
+
 import AltPlayerCardList from "./AltPlayerCardList";
 import FootballPlayerCardList from "./FootballPlayerCardList";
 

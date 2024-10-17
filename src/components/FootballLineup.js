@@ -1,8 +1,7 @@
-import { useState } from "react";
 import OffFormations from "./OffFormations";
 import DefFormations from "./DefFormations";
 import Dropdown from "./Dropdown";
-import { IoInformationCircleOutline } from "react-icons/io5";
+// import { IoInformationCircleOutline } from "react-icons/io5";
 import Button from "./Button";
 import { GrPowerReset } from "react-icons/gr";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
