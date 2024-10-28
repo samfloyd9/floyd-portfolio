@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import { useState } from "react";
-import Panel from "../components/Panel";
+// import Panel from "../components/Panel";
 import SearchBar from "./SearchBar";
 
 function Testing() {
@@ -74,7 +74,7 @@ export default Testing;
 // **************************************
 // Render of the buttons and count panel
 // **************************************
-{/* <div className="flex flex-col mt-24 w-fit justify-center">
+/* <div className="flex flex-col mt-24 w-fit justify-center">
 <Panel className="w-content">{count}</Panel>
 <div className="flex flex-row gap-5 mt-5">
   <Button onClick={handleIncrement} secondary rounded>
@@ -87,4 +87,4 @@ export default Testing;
     Reset
   </Button>
 </div>
-</div> */}
+</div> */

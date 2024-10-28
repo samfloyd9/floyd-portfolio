@@ -429,23 +429,23 @@ function OffFormations({
     </>
   );
 
-  const wingTWide = <div></div>;
+  // const wingTWide = <div></div>;
 
-  const wingTTight = <div></div>;
+  // const wingTTight = <div></div>;
 
-  const pistolSpread = <div></div>;
+  // const pistolSpread = <div></div>;
 
-  const pistolBunch = <div></div>;
+  // const pistolBunch = <div></div>;
 
-  const pistolStrong = <div></div>;
+  // const pistolStrong = <div></div>;
 
-  const pistolAce = <div></div>;
+  // const pistolAce = <div></div>;
 
-  const pistolFullHouse = <div></div>;
+  // const pistolFullHouse = <div></div>;
 
-  const pistolStrongTight = <div></div>;
+  // const pistolStrongTight = <div></div>;
 
-  const pistolWingTight = <div></div>;
+  // const pistolWingTight = <div></div>;
 
   const powerI = (
     <div>
