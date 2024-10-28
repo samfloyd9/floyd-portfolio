@@ -50,7 +50,7 @@ function FootballPlayerCard({ playerData, handleDelete }) {
       </div>
       <div className="mt-2">
         <div
-          className={`p-1 absolute bottom-0 left-0 w-20 text-center bg-${playerData.teamPrimary} text-[8px] text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} border-2 border-solid p-0.5 z-5 whitespace-nowrap`}
+          className={`p-1 absolute bottom-0 left-0 text-center bg-${playerData.teamPrimary} text-[8px] text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} border-2 border-solid p-0.5 w-full z-5 whitespace-nowrap`}
         >
           {playerData.hasOwnProperty("plyrPictureSrc")
             ? `'${playerData.year.slice(-2)} ${playerData.firstName.charAt(0)}. ${playerData.lastName}`

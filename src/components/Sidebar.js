@@ -25,7 +25,7 @@ function Sidebar() {
       <Link
         key={link.label}
         to={link.path}
-        className={`mb-2 ${sideBarColorLogic(currentPath)}`}
+        className={`mb-2 ${sideBarColorLogic(currentPath)} orbitron-regular`}
         activeClassName={`font-bold border-l-4 border-blue-500 pl-2 ${sideBarColorLogic(currentPath)}`}
       >
         {link.label}
@@ -34,7 +34,7 @@ function Sidebar() {
   });
 
   return (
-    <div className={`sticky top-0 flex flex-row justify-around items-center ${sideBarColorLogic(currentPath)} py-2 gap-2 z-20 mt-0 lg:mt-2 lg:gap-24 lg:justify-center`}>
+    <div className={`sticky top-0 flex flex-row justify-around items-center ${sideBarColorLogic(currentPath)} py-2 gap-2 z-20 mt-0 lg:gap-24 lg:justify-center`}>
       {renderedLinks}
     </div>
   );

@@ -188,12 +188,12 @@ function FootballLineup({
 
         {(unitSelection.label === "Offense" ||
           unitSelection.label === undefined) &&
-          offPlaySelection.label === "Full House Wide" && (
+          offPlaySelection.label === "Full House" && (
             <OffFormations
               offensiveLine={offensiveLine}
               quarterback={quarterback}
               runningback1={runningback1}
-              runningback2={runningback2}
+              tightEnd1={tightEnd1}
               fullBack={fullBack}
               reciever1={reciever1}
               reciever2={reciever2}
@@ -201,22 +201,7 @@ function FootballLineup({
             />
           )}
 
-        {(unitSelection.label === "Offense" ||
-          unitSelection.label === undefined) &&
-          offPlaySelection.label === "Full House Tight" && (
-            <OffFormations
-              offensiveLine={offensiveLine}
-              quarterback={quarterback}
-              runningback1={runningback1}
-              runningback2={runningback2}
-              fullBack={fullBack}
-              tightEnd1={tightEnd1}
-              tightEnd2={tightEnd2}
-              offPlaySelection={offPlaySelection}
-            />
-          )}
-
-        {(unitSelection.label === "Offense" ||
+        {/* {(unitSelection.label === "Offense" ||
           unitSelection.label === undefined) &&
           offPlaySelection.label === "Wing-T Wide" && (
             <OffFormations
@@ -349,7 +334,7 @@ function FootballLineup({
               tightEnd2={tightEnd2}
               offPlaySelection={offPlaySelection}
             />
-          )}
+          )} */}
 
         {(unitSelection.label === "Offense" ||
           unitSelection.label === undefined) &&
@@ -362,7 +347,6 @@ function FootballLineup({
               runningback2={runningback2}
               reciever1={reciever1}
               tightEnd1={tightEnd1}
-              tightEnd2={tightEnd2}
               offPlaySelection={offPlaySelection}
             />
           )}
@@ -432,6 +416,60 @@ function FootballLineup({
             defPlaySelection.label === undefined) && (
             <DefFormations
               noseTackle={noseTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              rightOutsideLinebacker={rightOutsideLinebacker}
+              leftOutsideLinebacker={leftOutsideLinebacker}
+              middleLinebacker1={middleLinebacker1}
+              middleLinebacker2={middleLinebacker2}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "4-3" && (
+            <DefFormations
+              rightDefensiveTackle={rightDefensiveTackle}
+              leftDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              rightOutsideLinebacker={rightOutsideLinebacker}
+              leftOutsideLinebacker={leftOutsideLinebacker}
+              middleLinebacker1={middleLinebacker1}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "3-3-5" && (
+            <DefFormations
+              noseTackle={noseTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              rightOutsideLinebacker={rightOutsideLinebacker}
+              leftOutsideLinebacker={leftOutsideLinebacker}
+              middleLinebacker1={middleLinebacker1}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              cornerback3={cornerback3}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "4-4" && (
+            <DefFormations
               rightDefensiveTackle={rightDefensiveTackle}
               leftDefensiveTackle={leftDefensiveTackle}
               leftDefensiveEnd={leftDefensiveEnd}
@@ -440,6 +478,75 @@ function FootballLineup({
               leftOutsideLinebacker={leftOutsideLinebacker}
               middleLinebacker1={middleLinebacker1}
               middleLinebacker2={middleLinebacker2}
+              freeSafety={freeSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "46" && (
+            <DefFormations
+              noseTackle={noseTackle}
+              leftDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              rightOutsideLinebacker={rightOutsideLinebacker}
+              leftOutsideLinebacker={leftOutsideLinebacker}
+              middleLinebacker1={middleLinebacker1}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "5-2" && (
+            <DefFormations
+              noseTackle={noseTackle}
+              rightDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              middleLinebacker1={middleLinebacker1}
+              middleLinebacker2={middleLinebacker2}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "Nickle" && (
+            <DefFormations
+              rightDefensiveTackle={rightDefensiveTackle}
+              leftDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              rightOutsideLinebacker={rightOutsideLinebacker}
+              leftOutsideLinebacker={leftOutsideLinebacker}
+              freeSafety={freeSafety}
+              strongSafety={strongSafety}
+              cornerback1={cornerback1}
+              cornerback2={cornerback2}
+              cornerback3={cornerback3}
+              defPlaySelection={defPlaySelection}
+            />
+          )}
+
+          {unitSelection.label === "Defense" &&
+          defPlaySelection.label === "Dime" && (
+            <DefFormations
+              rightDefensiveTackle={rightDefensiveTackle}
+              leftDefensiveTackle={leftDefensiveTackle}
+              leftDefensiveEnd={leftDefensiveEnd}
+              rightDefensiveEnd={rightDefensiveEnd}
+              middleLinebacker1={middleLinebacker1}
               freeSafety={freeSafety}
               strongSafety={strongSafety}
               cornerback1={cornerback1}

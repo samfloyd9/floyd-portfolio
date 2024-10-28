@@ -361,7 +361,7 @@ function LineupRating({ lineup, submitLineup }) {
 
   return (
     <div className="mt-5">
-      {submitLineup ? (
+      {((submitLineup) && ((lineup[0].hasOwnProperty('name')) && (lineup[1].hasOwnProperty('name')) && (lineup[2].hasOwnProperty('name')) && (lineup[3].hasOwnProperty('name')) && (lineup[4].hasOwnProperty('name')))) ? (
         <div className="flex flex-col">
           <div className="flex justify-start flex-col w-fit lg:flex-row lg:w-full lg:gap-10">
             <div className="mb-8">

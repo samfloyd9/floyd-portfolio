@@ -103,7 +103,7 @@ function Table({ data, config, keyFn, posSelection, teamSelection, unitSelection
       <thead className="bg-gray-200">
         <tr className="border-b-2  border-black">{renderedHeaders}</tr>
       </thead>
-      <tbody>
+      <tbody className="">
         {teamSelection.value === "All Teams" &&
           !(posSelection.value === "All Positions") &&
           renderedPositionRows}

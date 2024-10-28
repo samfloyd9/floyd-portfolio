@@ -118,21 +118,20 @@ function FootballPage({ setShowModal }) {
     { label: "I Formation Pro", rbTotal: 1, teTotal: 1, wrTotal: 2 },
     { label: "I Formation Tight", rbTotal: 1, teTotal: 2, wrTotal: 1 },
     { label: "I Formation Slot", rbTotal: 1, wrTotal: 3 },
-    { label: "I Formation Hulk", rbTotal: 2, teTotal: 2 },
+    { label: "I Formation Hulk", rbTotal: 1, teTotal: 3 },
 
-    { label: "Full House Wide", rbTotal: 2, wrTotal: 2 },
-    { label: "Full House Tight", rbTotal: 2, teTotal: 2 },
+    { label: "Full House", rbTotal: 2, wrTotal: 2 },
 
-    { label: "Wing-T Wide", rbTotal: 2, wrTotal: 2 },
-    { label: "Wing-T Tight", rbTotal: 2, teTotal: 2 },
+    // { label: "Wing-T Wide", rbTotal: 2, wrTotal: 2 },
+    // { label: "Wing-T Tight", rbTotal: 2, teTotal: 2 },
 
-    { label: "Pistol Spread", rbTotal: 1, wrTotal: 4 },
-    { label: "Pistol Bunch", rbTotal: 1, teTotal: 1, wrTotal: 3 },
-    { label: "Pistol Strong", rbTotal: 2, wrTotal: 3 },
-    { label: "Pistol Ace", rbTotal: 1, teTotal: 2, wrTotal: 2 },
-    { label: "Pistol Full House", rbTotal: 2, teTotal: 1, wrTotal: 2 },
-    { label: "Pistol Strong Tight", rbTotal: 2, teTotal: 1, wrTotal: 2 },
-    { label: "Pistol Wing Tight", rbTotal: 2, teTotal: 2, wrTotal: 1 },
+    // { label: "Pistol Spread", rbTotal: 1, wrTotal: 4 },
+    // { label: "Pistol Bunch", rbTotal: 1, teTotal: 1, wrTotal: 3 },
+    // { label: "Pistol Strong", rbTotal: 2, wrTotal: 3 },
+    // { label: "Pistol Ace", rbTotal: 1, teTotal: 2, wrTotal: 2 },
+    // { label: "Pistol Full House", rbTotal: 2, teTotal: 1, wrTotal: 2 },
+    // { label: "Pistol Strong Tight", rbTotal: 2, teTotal: 1, wrTotal: 2 },
+    // { label: "Pistol Wing Tight", rbTotal: 2, teTotal: 2, wrTotal: 1 },
 
     { label: "Power I", rbTotal: 2, teTotal: 1, wrTotal: 1 },
 
@@ -145,7 +144,16 @@ function FootballPage({ setShowModal }) {
     // Single Back and Shotgun
   ];
 
-  const defPlays = [{ label: "3-4", value: "3-4" }];
+  const defPlays = [
+    { label: "3-4", value: "3-4", mlbTotal: 2, cbTotal: 2 },
+    { label: "4-3", value: "4-3", mlbTotal: 1, cbTotal: 2},
+    { label: "3-3-5", value: "3-3-5", mlbTotal: 1, cbTotal: 3},
+    { label: "4-4", value: "4-4", mlbTotal: 2, cbTotal: 2},
+    { label: "46", value: "46", mlbTotal: 1, cbTotal: 2},
+    { label: "5-2", value: "5-2", mlbTotal: 2, cbTotal: 2},
+    { label: "Nickle", value: "Nickle", mlbTotal: 0, cbTotal: 3},
+    { label: "Dime", value: "Dime", mlbTotal: 1, cbTotal: 4},
+  ];
 
   const [posSelection, setPosSelection] = useState({
     label: "All Positions",
@@ -1517,7 +1525,7 @@ function FootballPage({ setShowModal }) {
       )}
 
       <div
-        className={`flex items-start mt-11 justify-center content-start w-full lg:bg-white`}
+        className={`flex items-start mt-11 justify-center content-center w-full lg:bg-white`}
       >
         <FootballLineup
           offensiveLine={offensiveLine}
@@ -1548,6 +1556,7 @@ function FootballPage({ setShowModal }) {
           cornerback2={cornerback2}
           cornerback3={cornerback3}
           cornerback4={cornerback4}
+          //
           offPlaySelection={offPlaySelection}
           setOffPlaySelection={setOffPlaySelection}
           offPlays={offPlays}
@@ -1569,31 +1578,3 @@ function FootballPage({ setShowModal }) {
   );
 }
 export default FootballPage;
-
-// Handle Reset
-/* <div className="flex justify-center flex-col">
-  <div className="flex flex-row gap-5 justify-center items-center mb-5">
-    <button
-      className="bg-red-500 rounded-xl p-2 w-fit h-fit text-white shadow-md"
-      // onClick={handleReset}
-    >
-      Reset Lineup
-    </button>
-  </div>
-</div>; */
-
-// Random Lineup and Random Positions
-/* <div className="flex flex-row gap-2 items-center text-sm">
-  <Button
-    // onClick={handleRandomLineup}
-    className="rounded-lg hover:bg-gray-200 shadow-md"
-  >
-    Random Lineup
-  </Button>
-  <Button
-    // onClick={handleRandomPointGuard}
-    className="rounded-lg hover:bg-gray-200 shadow-md"
-  >
-    PG
-  </Button>
-</div>; */

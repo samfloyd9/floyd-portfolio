@@ -2,4 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Danfo&family=Fontdiner+Swanky&family=Geo:ital@0;1&family=Griffy&family=Londrina+Sketch&family=Orbitron:wght@400..900&display=swap'); */
+
+/* .londrina-sketch-regular {
+  font-family: "Londrina Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .orbitron-regular {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .fontdiner-swanky-regular {
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .griffy-regular {
+  font-family: "Griffy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .geo-regular {
+  font-family: "Geo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .danfo-regular {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+} */

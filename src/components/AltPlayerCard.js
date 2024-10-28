@@ -55,7 +55,7 @@ function AltPlayerCard({ playerData }) {
         />
       </div>
       <div
-        className={`p-0.5 px-1 absolute left-0 bottom-0 bg-${playerData.teamPrimary} ${playerNameLength(playerData)} text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} w-10 text-center border-1 border-solid z-5 whitespace-nowrap my-auto`}
+        className={`p-0.5 px-1 absolute left-0 bottom-0 bg-${playerData.teamPrimary} ${playerNameLength(playerData)} text-${playerData.teamSecondary} rounded-md border-${playerData.teamAlternate} w-full text-center border-1 border-solid z-5 whitespace-nowrap my-auto`}
       >
         {playerData.hasOwnProperty("plyrPictureSrc")
           ? `${playerData.firstName.charAt(0)}. ${playerData.lastName}`

@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import TestingPage from "./pages/TestingPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
-import { showAllBadgeInfo } from './basketballData'
+import { showAllBadgeInfo } from "./basketballData";
 import BankingPage from "./pages/BankingPage";
 
 function App() {
@@ -25,37 +25,48 @@ function App() {
     </div>
   );
 
-  const modal = <Modal onClose={handleClose} actionBar={actionBar}>
-    {showAllBadgeInfo}
-  </Modal>;
+  const modal = (
+    <Modal onClose={handleClose} actionBar={actionBar}>
+      {showAllBadgeInfo}
+    </Modal>
+  );
 
-
-// container on first div
+  // container on first div
   return (
     <div className="mx-auto flex flex-col overflow-hidden">
       {showModal && modal}
-      <Sidebar />
-      <div>
+      <>
         <Route path="/">
-          <HomePage />
+          <div className="h-screen">
+            <Sidebar />
+            <HomePage />
+          </div>
         </Route>
 
         <Route path="/testing">
+          <Sidebar />
           <TestingPage />
         </Route>
 
         <Route path="/basketball">
+          <Sidebar />
           <BasketballPage setShowModal={setShowModal} />
         </Route>
 
         <Route path="/football">
-          <FootballPage />
+        <div className="h-screen">
+            <Sidebar />
+            <FootballPage />
+          </div>
         </Route>
 
         <Route path="/jsm_banking">
-          <BankingPage />
+          <div className="h-screen">
+            <Sidebar />
+            <BankingPage />
+          </div>
         </Route>
-      </div>
+      </>
     </div>
   );
 }

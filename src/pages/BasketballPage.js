@@ -1,5 +1,4 @@
-// npm install -g serve
-//   serve -s build
+import { FaCheck } from "react-icons/fa";
 
 import { useState } from "react";
 import { data } from "../basketballData";
@@ -401,14 +400,47 @@ function TablePage({ setShowModal }) {
   const config = [
     {
       label: "",
-      render: (player) => (
-        <button
-          className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
-          onClick={() => handleAddPlayerToLineup(player)}
-        >
-          +
-        </button>
-      ),
+      render: function (player) {
+        const playerPositionArray = (player) => {
+          if (player.position === "PG") {
+            return lineup[0].name === player.name;
+          } else if (player.position === "SG") {
+            return lineup[1].name === player.name;
+          } else if (player.position === "SF") {
+            return lineup[2].name === player.name;
+          } else if (player.position === "PF") {
+            return lineup[3].name === player.name;
+          } else if (player.position === "C") {
+            return lineup[4].name === player.name;
+          };
+        };
+
+        return (
+          <>
+            {playerPositionArray(player) ? (
+              <button
+                className="bg-blue-300 rounded-md mx-auto px-1.5 py-1.5 flex items-center border"
+                onClick={() => handleAddPlayerToLineup(player)}
+              >
+                <FaCheck className="text-sm" />
+              </button>
+            ) : (
+              <button
+                className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
+                onClick={() => handleAddPlayerToLineup(player)}
+              >
+                +
+              </button>
+            )}
+          </>
+        );
+      },
+        // <button
+        //   className="bg-green-200 rounded-md mx-1.5 px-2 py-0.5 flex items-center border"
+        //   onClick={() => handleAddPlayerToLineup(player)}
+        // >
+        //   +
+        // </button>
     },
     {
       label: "Player",
@@ -653,7 +685,7 @@ function TablePage({ setShowModal }) {
                 Reset Lineup
               </button>
             </div>
-            {submitLineup && (
+            {((submitLineup) && ((lineup[0].hasOwnProperty('name')) && (lineup[1].hasOwnProperty('name')) && (lineup[2].hasOwnProperty('name')) && (lineup[3].hasOwnProperty('name')) && (lineup[4].hasOwnProperty('name')))) && (
               <div className="flex flex-col items-center gap-5 lg:flex-row lg:justify-center">
                 <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
                   <div className="font-bold underline mr-6">

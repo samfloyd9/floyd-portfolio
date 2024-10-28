@@ -41,10 +41,9 @@ function OffFormations({
   const iFormationPro = (
     <>
       <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
-        
         <div className="flex flex-row w-full justify-center items-center content-center">
           <>{altGhostPlayer}</>
-          <div className="1`justify-center items-center content-center">
+          <div className="justify-center items-center content-center">
             <AltPlayerCardList data={offensiveLine} />
           </div>
           <div className="flex justify-center items-center content-center mt-8">
@@ -66,7 +65,6 @@ function OffFormations({
               <AltPlayerCardList data={reciever1} />
             </div>
           </div>
-
         </div>
 
         <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
@@ -117,1060 +115,741 @@ function OffFormations({
   );
 
   const iFormationTight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="flex justify-center items-center content-center">
+            <AltPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="1`justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="flex justify-center items-center content-center mt-8">
+            <AltPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
+
+        <div className="flex flex-row">
+          <div className="flex w-1/3 justify-start items-start sm:-mt-16"></div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
+            <div className="flex justify-end">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
+          <div className="">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white justify-start w-full">
+            {ghostPlayer}
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="mt-14">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <FootballPlayerCardList data={reciever1} />
+          </div>
+        </div>
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-
-      <div className="absolute top-48 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 right-[30px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[460px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
 
   const iFormationSlot = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-center">
+          <div className="flex w-1/4 justify-start items-start sm:-mt-16">
+            <div className="">
+              <AltPlayerCardList data={reciever2} />
+            </div>
+          </div>
+
+          <div className="w-1/4"></div>
+          <div className="w-1/4"></div>
+
+          <div className="flex w-1/4 sm:-mt-16 justify-between">
+            <div className="flex mt-8">
+              <AltPlayerCardList data={reciever3} />
+            </div>
+            <div className="flex">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center -mt-24 sm:-mt-8 md:-mt-8 content-center mx-auto ">
+          <div className="">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white w-full">
+            <FootballPlayerCardList data={reciever2} />
+          </div>
+          <div className="bg-white w-full flex justify-end">
+            <>{ghostPlayer}</>
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 left-[585px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever3}
-          // handleDelete={handleDelete}
-        />
-      </div>
+          <div className="bg-white w-full mt-14 flex justify-end">
+            <FootballPlayerCardList data={reciever3} />
+          </div>
 
-      <div className="absolute top-[460px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
+          <div className="bg-white w-full content-end flex justify-end">
+            <FootballPlayerCardList data={reciever1} />
+          </div>
+        </div>
+
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 
   const iFormationHulk = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="hidden sm:contents md:contents lg:contents xl:contents 2xl:contents">
+            {altGhostPlayer}
+          </div>
+          <div className="flex justify-center items-center content-center">
+            <AltPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="flex justify-center items-center content-center">
+            <AltPlayerCardList data={tightEnd3} />
+          </div>
+          <div className="hidden sm:contents md:contents lg:contents xl:contents 2xl:contents">
+            <div className="flex justify-center items-center content-center mt-8">
+              <AltPlayerCardList data={tightEnd1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center sm:-mt-4 md:-mt-4 content-center mx-auto ">
+          <div className="flex flex-row gap-20 sm:gap-0 md:gap-0 lg:gap-0 xl:gap-0 2xl:gap-0">
+            <div className="flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">
+              {altGhostPlayer}
+            </div>
+            <div className="">
+              <AltPlayerCardList data={quarterback} />
+            </div>
+            <div className="flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">
+              <AltPlayerCardList data={tightEnd1} />
+            </div>
+          </div>
+
+          <div className="">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-center w-full">
+          {ghostPlayer}
+          <div className="">
+            <FootballPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={tightEnd3} />
+          </div>
+          <div className="mt-14">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
 
-      <div className="absolute top-64 right-[30px]">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-
-      <div className="absolute top-48 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 right-[725px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 right-[525px]">
-        <FootballPlayerCardList
-          data={tightEnd3}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[460px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
 
-  const fullHouseWide = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+  const fullHouse = (
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+        </div>
+
+        <div className="flex flex-row">
+          <div className="flex w-1/3 justify-start items-start sm:-mt-16">
+            <div className="">
+              <AltPlayerCardList data={reciever2} />
+            </div>
+          </div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
+            <div className="flex justify-end">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center content-center mx-auto -mt-[65px] sm:-mt-0">
+          <div className="">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+          <div className="flex flex-row gap-24">
+            <div className="">
+              <AltPlayerCardList data={fullBack} />
+            </div>
+            <div className="">
+              <AltPlayerCardList data={tightEnd1} />
+            </div>
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white w-full">
+            <FootballPlayerCardList data={reciever2} />
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <FootballPlayerCardList data={reciever1} />
+          </div>
+        </div>
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[460px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+        <div className="flex flex-col items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
 
-      <div className="absolute top-[460px] right-[560px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
+          <div className="flex flex-row gap-48">
+            <div className="">
+              <FootballPlayerCardList data={tightEnd1} />
+            </div>
+            <div className="">
+              <FootballPlayerCardList data={fullBack} />
+            </div>
+          </div>
+
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 
-  const fullHouseTight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const wingTWide = <div></div>;
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const wingTTight = <div></div>;
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[460px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const pistolSpread = <div></div>;
 
-      <div className="absolute top-52 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-52 left-[603px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const pistolBunch = <div></div>;
 
-      <div className="absolute top-[460px] right-[560px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
+  const pistolStrong = <div></div>;
 
-  const wingTWide = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const pistolAce = <div></div>;
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const pistolFullHouse = <div></div>;
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+  const pistolStrongTight = <div></div>;
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[595px] right-[225px]">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const wingTTight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[595px] right-[225px]">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-52 right-[725px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolSpread = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 left-[590px]">
-        <FootballPlayerCardList
-          data={reciever3}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 right-[115px]">
-        <FootballPlayerCardList
-          data={reciever4}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolBunch = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[330px] right-[25px]">
-        <FootballPlayerCardList
-          data={reciever3}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolStrong = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 right-[115px]">
-        <FootballPlayerCardList
-          data={reciever3}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[475px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolAce = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 left-[603px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolFullHouse = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[450px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[600px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[525px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[525px] right-[560px]">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolStrongTight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[475px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
-
-  const pistolWingTight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[475px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[630px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[475px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 left-[603px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
-  );
+  const pistolWingTight = <div></div>;
 
   const powerI = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
-      </div>
+    <div>
+      <>
+        <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+          <div className="flex flex-row w-full justify-center items-center content-center">
+            <>{altGhostPlayer}</>
+            <div className="justify-center items-center content-center">
+              <AltPlayerCardList data={offensiveLine} />
+            </div>
+            <div className="flex justify-center items-center content-center mt-8">
+              <AltPlayerCardList data={tightEnd1} />
+            </div>
+          </div>
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+          <div className="flex flex-row">
+            <div className="flex w-1/3 justify-start items-start sm:-mt-16">
+              <div className="">
+                <AltPlayerCardList data={reciever1} />
+              </div>
+            </div>
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+            <div className="w-1/3"></div>
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-[595px] right-72">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+            <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
+              <div className="flex justify-end">
+                <>{altGhostPlayer}</>
+              </div>
+            </div>
+          </div>
 
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+          <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
+            <div className="">
+              <AltPlayerCardList data={quarterback} />
+            </div>
+            <div className="flex flex-row gap-8">
+              <>{altGhostPlayer}</>
+              <div className="">
+                <AltPlayerCardList data={fullBack} />
+              </div>
+              <div className="">
+                <AltPlayerCardList data={runningback2} />
+              </div>
+            </div>
+            <div className="">
+              <AltPlayerCardList data={runningback1} />
+            </div>
+          </div>
+        </div>
 
-      <div className="absolute top-[460px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
+        {/* --------------------------------------------------------------------------------------- */}
+
+        <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+          <div className="flex flex-row justify-between w-full">
+            <div className="flex bg-white justify-start w-full">
+              <FootballPlayerCardList data={reciever1} />
+            </div>
+            {ghostPlayer}
+            <div className="bg-white">
+              <FootballPlayerCardList data={offensiveLine} />
+            </div>
+            <div className="">
+              <FootballPlayerCardList data={tightEnd1} />
+            </div>
+            <div className="bg-white w-full content-end flex justify-end">
+              {ghostPlayer}
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center content-center mx-auto bg-white">
+            <div className="">
+              <FootballPlayerCardList data={quarterback} />
+            </div>
+
+            <div className="flex flex-row gap-24">
+              <>{ghostPlayer}</>
+              <div className="">
+                <FootballPlayerCardList data={fullBack} />
+              </div>
+              <div className="">
+                <FootballPlayerCardList data={runningback2} />
+              </div>
+            </div>
+
+            <div className="">
+              <FootballPlayerCardList data={runningback1} />
+            </div>
+          </div>
+        </div>
+      </>
     </div>
   );
 
   const strongIWide = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <>{altGhostPlayer}</>
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="flex justify-center items-center content-center mt-8">
+            <AltPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
+
+        <div className="flex flex-row">
+          <div className="flex w-1/3 justify-start items-start sm:-mt-16">
+            <div className="">
+              <AltPlayerCardList data={reciever2} />
+            </div>
+          </div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
+            <div className="flex justify-end">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
+          <div className="">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+          <div className="ml-32">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white w-full">
+            <FootballPlayerCardList data={reciever2} />
+          </div>
+          <>{ghostPlayer}</>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="mt-14">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <FootballPlayerCardList data={reciever1} />
+          </div>
+        </div>
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
+          <div className="ml-72">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[460px] right-[275px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
 
   const strongITight = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="flex justify-center items-center content-center">
+            <AltPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="1`justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="flex justify-center items-center content-center mt-8">
+            <AltPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
+
+        <div className="flex flex-row">
+          <div className="flex w-1/3 justify-start items-start sm:-mt-16"></div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 content-end justify-end items-end sm:-mt-16">
+            <div className="flex justify-end">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
+          <div className="">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+          <div className="ml-32">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[325px]">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white justify-start w-full">
+            {ghostPlayer}
+          </div>
+          <div className="mt-14">
+            <FootballPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <FootballPlayerCardList data={reciever1} />
+          </div>
+        </div>
 
-      <div className="absolute top-[595px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
+          </div>
+          <div className="ml-72">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-
-      <div className="absolute top-64 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-64 left-[603px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[460px] right-[275px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
 
   const wildcatPro = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          {altGhostPlayer}
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
+
+        <div className="flex flex-row mt-36 sm:mt-0">
+          <div className="flex w-1/3 justify-start items-start">
+            <div className="">
+              <AltPlayerCardList data={reciever2} />
+            </div>
+          </div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 justify-end">
+            <div className="flex justify-end sm:-mt-16">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+            <div className="flex">
+              <AltPlayerCardList data={quarterback} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center content-center mx-auto bg-white gap-3 -mt-52 sm:-mt-16">
+          <div className="ml-60">
+            <AltPlayerCardList data={runningback2} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-64 right-2">
-        <FootballPlayerCardList
-          data={quarterback}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-64 left-[590px]">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white w-full mt-32">
+            <FootballPlayerCardList data={reciever2} />
+          </div>
+          {ghostPlayer}
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <div className="flex flex-row justify-between">
+              <div>
+                <FootballPlayerCardList data={reciever1} />
+              </div>
+              <div className="mt-32">
+                <FootballPlayerCardList data={quarterback} />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div className="absolute top-[350px] right-[200px]">
-        <FootballPlayerCardList
-          data={reciever2}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col items-center content-center mx-auto bg-white gap-8 -mt-32">
+          <div className="ml-[500px]">
+            <FootballPlayerCardList data={runningback2} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-
-      <div className="absolute top-[495px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-52 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
 
   const wildcatUnbalanced = (
-    <div className="flex justify-center flex-col items-center content-center">
-      <div className="absolute top-48">
-        <FootballPlayerCardList
-          data={offensiveLine}
-          // handleDelete={handleDelete}
-        />
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="mt-8">
+            <AltPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={tightEnd1} />
+          </div>
+        </div>
+
+        <div className="flex flex-row mt-36 sm:mt-0">
+          <div className="flex w-1/3 justify-start items-start">
+            <div className="">
+              <div className="">
+                <AltPlayerCardList data={runningback2} />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 justify-end">
+            <div className="flex justify-end sm:-mt-16">
+              <AltPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center content-center mx-auto bg-white gap-3 -mt-52 sm:-mt-16">
+          <div className="ml-60">
+            <AltPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <AltPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute top-48 right-2">
-        <FootballPlayerCardList
-          data={reciever1}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      {/* --------------------------------------------------------------------------------------- */}
 
-      <div className="absolute top-[495px]">
-        <FootballPlayerCardList
-          data={runningback1}
-          // handleDelete={handleDelete}
-        />
-      </div>
-      <div className="absolute top-48 left-[480px]">
-        <FootballPlayerCardList
-          data={runningback2}
-          // handleDelete={handleDelete}
-        />
-      </div>
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex bg-white w-full mt-32">
+            <FootballPlayerCardList data={runningback2} />
+          </div>
+          <div className="mt-16">
+            <FootballPlayerCardList data={tightEnd2} />
+          </div>
+          <div className="bg-white">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={tightEnd1} />
+          </div>
+          <div className="bg-white w-full content-end flex justify-end">
+            <div className="flex flex-row justify-between">
+              <div>
+                <FootballPlayerCardList data={reciever1} />
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div className="absolute top-52 right-32">
-        <FootballPlayerCardList
-          data={tightEnd1}
-          // handleDelete={handleDelete}
-        />
+        <div className="flex flex-col items-center content-center mx-auto bg-white gap-8 -mt-32">
+          <div className="ml-[500px]">
+            <FootballPlayerCardList data={fullBack} />
+          </div>
+          <div className="">
+            <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
       </div>
-      <div className="absolute top-64 left-[603px]">
-        <FootballPlayerCardList
-          data={tightEnd2}
-          // handleDelete={handleDelete}
-        />
-      </div>
-
-      <div className="absolute top-[350px] right-[200px]">
-        <FootballPlayerCardList
-          data={fullBack}
-          // handleDelete={handleDelete}
-        />
-      </div>
-    </div>
+    </>
   );
-
-  // const template = (
-  //   <div className="flex justify-center flex-col items-center content-center">
-  //   <div className="absolute top-48">
-  //     <FootballPlayerCardList
-  //       data={offensiveLine}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-
-  //   <div className="absolute top-48 right-2">
-  //     <FootballPlayerCardList
-  //       data={reciever1}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  //   <div className="absolute top-48 left-[480px]">
-  //     <FootballPlayerCardList
-  //       data={reciever2}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  //   <div className="absolute top-[425px] left-[550px]">
-  //     <FootballPlayerCardList
-  //       data={reciever3}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  //   <div className="absolute top-[425px] right-10">
-  //     <FootballPlayerCardList
-  //       data={reciever4}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-
-  //   <div className="absolute top-[325px]">
-  //     <FootballPlayerCardList
-  //       data={quarterback}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-
-  //   <div className="absolute top-[595px]">
-  //     <FootballPlayerCardList
-  //       data={runningback1}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  //   <div className="absolute top-[595px] right-72">
-  //     <FootballPlayerCardList
-  //       data={runningback2}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-
-  //   <div className="absolute top-64 right-32">
-  //     <FootballPlayerCardList
-  //       data={tightEnd1}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  //   <div className="absolute top-64 left-[603px]">
-  //     <FootballPlayerCardList
-  //       data={tightEnd2}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-
-  //   <div className="absolute top-[460px]">
-  //     <FootballPlayerCardList
-  //       data={fullBack}
-  //       // handleDelete={handleDelete}
-  //     />
-  //   </div>
-  // </div>
-  // );
 
   return (
     <div>
@@ -1180,18 +859,18 @@ function OffFormations({
       {offPlaySelection.label === "I Formation Tight" && iFormationTight}
       {offPlaySelection.label === "I Formation Slot" && iFormationSlot}
       {offPlaySelection.label === "I Formation Hulk" && iFormationHulk}
-      {offPlaySelection.label === "Full House Wide" && fullHouseWide}
-      {offPlaySelection.label === "Full House Tight" && fullHouseTight}
-      {offPlaySelection.label === "Wing-T Wide" && wingTWide}
-      {offPlaySelection.label === "Wing-T Tight" && wingTTight}
+      {offPlaySelection.label === "Full House" && fullHouse}
 
+      {/* {offPlaySelection.label === "Wing-T Wide" && wingTWide}
+      {offPlaySelection.label === "Wing-T Tight" && wingTTight} */}
+{/* 
       {offPlaySelection.label === "Pistol Spread" && pistolSpread}
       {offPlaySelection.label === "Pistol Bunch" && pistolBunch}
       {offPlaySelection.label === "Pistol Strong" && pistolStrong}
       {offPlaySelection.label === "Pistol Ace" && pistolAce}
       {offPlaySelection.label === "Pistol Full House" && pistolFullHouse}
       {offPlaySelection.label === "Pistol Strong Tight" && pistolStrongTight}
-      {offPlaySelection.label === "Pistol Wing Tight" && pistolWingTight}
+      {offPlaySelection.label === "Pistol Wing Tight" && pistolWingTight} */}
 
       {offPlaySelection.label === "Power I" && powerI}
 

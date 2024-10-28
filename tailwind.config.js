@@ -5,11 +5,12 @@ export const content = [
   "./src/**/*.{js,jsx,ts,tsx}",
 ]
 export const theme = {
-  // colors: {
-  //   ...colors,
-  // },
+    // colors: {
+    //   'dolphinsPrimary': '#008E97'
+    // },
   extend: {},
 }
+
 export const plugins = []
 
 // Google Fonts - Orbital and Righteous
