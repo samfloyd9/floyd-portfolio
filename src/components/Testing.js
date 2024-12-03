@@ -127,7 +127,7 @@ function Testing() {
       fetchData();
     }
   }, [data]);
-
+  // data in the dependency array
 
 
   useEffect(() => {
@@ -149,13 +149,15 @@ function Testing() {
       fetchData();
     }
   }, [term]);
+  // term in dependency array
 
-  function convertMinutesToHoursAndMinutes(totalMinutes) {
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
+  // function to convert movie minutes into hours
+  // function convertMinutesToHoursAndMinutes(totalMinutes) {
+  //   const hours = Math.floor(totalMinutes / 60);
+  //   const minutes = totalMinutes % 60;
 
-    return `${hours} hr ${minutes} min`;
-  }
+  //   return `${hours} hr ${minutes} min`;
+  // }
 
   const handleTitleLength = (title) => {
     if (title.length > 12) {
@@ -309,6 +311,7 @@ function Testing() {
                   </div>
                 );
               }
+              return
             })
           ) : (
             <div></div>
@@ -356,14 +359,14 @@ function Testing() {
                     </div>
                   </div>
 
-                  {showContent && (
+                  {/* {showContent && (
                     <div className="flex flex-col w-[372px]">
                       <p className="m-2">
                         {convertMinutesToHoursAndMinutes(movie.runtime)}
                       </p>
                       <p className="p-1 w-full">{movie.overview}</p>
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
