@@ -9,7 +9,7 @@ function Sidebar() {
     { label: "Banking", path: "/jsm_banking" },
     { label: "Basketball", path: "/basketball" },
     { label: "Football", path: "/football" },
-    { label: "*Testing*", path: "/testing" },
+    { label: "Movies/TV", path: "/media" },
   ];
 
   const sideBarColorLogic = (currentPath) => {

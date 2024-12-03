@@ -1279,19 +1279,6 @@ function FootballPage({ setShowModal }) {
     }
   };
 
-  // const handleRandomPointGuard = () => {
-  //   const pointGuardFilteredLineup = data.filter((player) =>
-  //     player.position.includes("PG")
-  //   );
-  //   const randomPointGuardIndex = Math.floor(
-  //     Math.random() * pointGuardFilteredLineup.length
-  //   );
-  //   const randomPointGuard = pointGuardFilteredLineup[randomPointGuardIndex];
-  //   const newLineup = [...lineup];
-  //   newLineup.splice(0, 1, randomPointGuard);
-  //   setLineup(newLineup);
-  // };
-
   const config = [
     {
       label: "",

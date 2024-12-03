@@ -2,6 +2,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import { IoIosDocument } from "react-icons/io";
 
 function HomePage() {
   return (
@@ -68,6 +69,17 @@ function HomePage() {
         >
           <div className="bg-white p-0.5 rounded-md">
             <BiSolidPhoneCall className="bg-white text-2xl" />
+          </div>
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1v07kKujtbX-ep5lfdB0esPm_yubGBOzm/view?usp=sharing"
+          className="hover:pointer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="bg-white p-0.5 rounded-md">
+            <IoIosDocument className="bg-white text-2xl" />
           </div>
         </a>
       </div>

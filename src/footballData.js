@@ -1,24 +1,24 @@
 // -----------------------------------------------
 
-const patriotsPrimary = "blue-900";
-const patriotsSecondary = "red-500";
-const patriotsAlternate = "gray-300";
+const patriotsPrimary = "black";
+const patriotsSecondary = "white";
+const patriotsAlternate = "black";
 const patriotsCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/moyfxx3dq5pio4aiftnc";
 const patriotsCurrentLogoStyling = "h-9 -top-0.5 left-0.5";
 
-const billsPrimary = "blue-700";
+const billsPrimary = "black";
 const billsSecondary = "white";
-const billsAlternate = "red-600";
+const billsAlternate = "black";
 const billsCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/giphcy6ie9mxbnldntsf";
 const billsCurrentLogoStyling = "h-8 top-0 left-0";
 
-const dolphinsPrimary = "teal-500";
+const dolphinsPrimary = "black";
 const dolphinsSecondary = "white";
-const dolphinsAlternate = "orange-600";
+const dolphinsAlternate = "black";
 const dolphinsCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/lits6p8ycthy9to70bnt";
 const dolphinsCurrentLogoStyling = "h-9 top-0 -left-1";
 
-const jetsPrimary = "green-800";
+const jetsPrimary = "black";
 const jetsSecondary = "white";
 const jetsAlternate = "black";
 const jetsCurrentLogo = "https://static.www.nfl.com/image/upload/f_auto/league/vdqo4iiufmdrimkaxslj";
@@ -689,7 +689,7 @@ export const footballData = [
     plyrPictureSrc: 'https://bvmsports.com/wp-content/uploads/2022/07/Marvin-Harrison-Super-Bowl-Credit-Matthew-Emmons-USA-TODAY-Sports.jpg',
     teamPrimary: coltsPrimary,
     teamSecondary: coltsSecondary,
-    teamAlternate: coltsCurrentLogo,
+    teamAlternate: coltsAlternate,
     teamLogo: coltsCurrentLogo,
     teamLogoStyling: coltsCurrentLogoStyling,
     cardColor: 'sapphire',
@@ -1562,7 +1562,7 @@ export const footballData = [
     lastName: "Kuechly",
     year: "2020",
     position: 'MLB',
-    unit: 'OFF',
+    unit: 'DEF',
     team: 'CAR',
     fullTeamName: carolinaPanthers,
     aproximateValue: 98,

@@ -43,7 +43,7 @@ function App() {
           </div>
         </Route>
 
-        <Route path="/testing">
+        <Route path="/media">
           <Sidebar />
           <TestingPage />
         </Route>
