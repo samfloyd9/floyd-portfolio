@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { MdExpandMore } from "react-icons/md";
+// import { MdExpandMore } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { IoInformationCircleOutline } from "react-icons/io5";
@@ -62,7 +62,7 @@ function Testing() {
 
   const [detailedMedia, setDetailedMedia] = useState([]);
 
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  // const [favoriteMovies, setFavoriteMovies] = useState([]);
 
   const onSubmit = (term) => {
     let inputStr = term;
@@ -72,9 +72,9 @@ function Testing() {
     setTerm(outputStr);
   };
 
-  const handleClick = () => {
-    setShowContent(!showContent);
-  };
+  // const handleClick = () => {
+  //   setShowContent(!showContent);
+  // };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
