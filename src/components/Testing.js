@@ -57,7 +57,7 @@ function Testing() {
   const [term, setTerm] = useState("");
   const [input, setInput] = useState("");
 
-  const [showContent, setShowContent] = useState(false);
+  // const [showContent, setShowContent] = useState(false);
   const [movieList, setMovieList] = useState([]);
 
   const [detailedMedia, setDetailedMedia] = useState([]);
@@ -311,10 +311,9 @@ function Testing() {
                   </div>
                 );
               }
-              return
             })
           ) : (
-            <div></div>
+            <div>Enter Search Term for movies, tv shows or people</div>
           )}
         </div>
       </div>
