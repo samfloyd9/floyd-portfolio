@@ -73,7 +73,7 @@ function HomePage() {
         </a>
 
         <a
-          href="https://drive.google.com/file/d/1Fg973bGcJkR15DX32tkBdnuZ3Lk2j4-y/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1Fg973bGcJkR15DX32tkBdnuZ3Lk2j4-y/view?usp=sharing"
           className="hover:pointer"
           target="_blank"
           rel="noreferrer"
