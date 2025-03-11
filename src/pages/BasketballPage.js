@@ -502,7 +502,7 @@ function TablePage({ setShowModal }) {
     },
     {
       label: "Pts",
-      render: (player) => player.pts75.toFixed(1),
+      render: (player) => (player.pts75 * 0.75).toFixed(1),
       sortValue: (player) => player.pts75,
     },
     {

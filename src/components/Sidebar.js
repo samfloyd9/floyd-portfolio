@@ -10,6 +10,7 @@ function Sidebar() {
     { label: "Basketball", path: "/basketball" },
     { label: "Football", path: "/football" },
     { label: "Movies/TV", path: "/media" },
+    { label: "Parcheesi", path: "/parcheesi" },
   ];
 
   const sideBarColorLogic = (currentPath) => {

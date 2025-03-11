@@ -9,6 +9,7 @@ import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
 import { showAllBadgeInfo } from "./basketballData";
 import BankingPage from "./pages/BankingPage";
+import ParcheesiPage from "./pages/ParcheesiPage";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -64,6 +65,13 @@ function App() {
           <div className="h-screen">
             <Sidebar />
             <BankingPage />
+          </div>
+        </Route>
+
+        <Route path="/parcheesi">
+          <div className="h-screen">
+            <Sidebar />
+            <ParcheesiPage />
           </div>
         </Route>
       </>

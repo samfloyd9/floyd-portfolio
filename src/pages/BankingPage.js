@@ -1,4 +1,5 @@
 import { MdOutlineSettings } from "react-icons/md";
+import Random from "../components/Random";
 
 function BankingPage() {
   return (
