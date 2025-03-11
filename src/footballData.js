@@ -1171,7 +1171,7 @@ export const footballData = [
     overallRating: 99,
     teamPlayStyle: 'Elusive Power-Back',
     plyrHeadshotSrc: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/409815_v9_aa.jpg',
-    plyrPictureSrc: 'https://www.blackpast.org/wp-content/uploads/prodimages/files/blackpast_images/payton_walter.jpg',
+    plyrPictureSrc: 'https://dearwisewomen.blog/wp-content/uploads/2021/07/payton_walter.jpg',
     teamPrimary: bearsPrimary,
     teamSecondary: bearsSecondary,
     teamAlternate: bearsAlternate,
