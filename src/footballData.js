@@ -1156,7 +1156,6 @@ export const footballData = [
     teamLogoStyling: lionsCurrentLogoStyling,
     cardColor: 'sapphire',
   },
-
   {
     name: 'Walter Payton',
     firstName: "Walter",

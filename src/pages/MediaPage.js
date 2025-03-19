@@ -1,11 +1,11 @@
 import Testing from '../components/Testing'
 
-function TestingPage() {
+function MediaPage() {
   return (
-    <div className="p-5">
+    <div className="px-5 pb-5">
       <Testing />
     </div>
   );
 }
 
-export default TestingPage;
+export default MediaPage;

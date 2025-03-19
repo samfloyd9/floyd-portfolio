@@ -39,6 +39,10 @@ function PlayerCard({ playerData, handleDelete }) {
         return "bg-[url('https://t4.ftcdn.net/jpg/03/07/23/93/360_F_307239339_H1NCevU1LdJ37VEpslZuZOCZhJssljJt.jpg')]";
       case "diamond":
         return "bg-[url('https://t4.ftcdn.net/jpg/01/61/68/99/360_F_161689955_EpKC0KL9j377yZPjRrmm4mc1sXxuKG9P.jpg')]";
+      case "citrine":
+        return "bg-[url('https://i.pinimg.com/736x/c6/d1/8f/c6d18f9d3c666f01bb9fccb75d9b2bb7.jpg')]";
+      case "canary":
+        return "bg-[url('https://www.shutterstock.com/image-photo/beautiful-yellow-sapphire-gemstoneyellow-background-260nw-694629484.jpg')]";
       default:
         return "bg-gray-200";
     }
@@ -47,6 +51,14 @@ function PlayerCard({ playerData, handleDelete }) {
   let wiltStyle = "";
   if (playerData.name === "Wilt Chamberlain") {
     wiltStyle = "mt-5";
+  }
+  let pettitStyle = "";
+  if (playerData.name === "Bob Pettit") {
+    pettitStyle = "mt-4";
+  }
+  let embiidStyle = "";
+  if (playerData.name === "Joel Embiid") {
+    pettitStyle = "mt-2";
   }
 
   const renderedPlayerCard = (
@@ -90,7 +102,7 @@ function PlayerCard({ playerData, handleDelete }) {
                 ? `${playerData.plyrCardPictureSrc}`
                 : `${playerData.plyrPictureSrc}`
             }
-            className={`rounded-md shadow-lg my-1.5 max-h-60 ${wiltStyle} bg-blend-multiply`}
+            className={`rounded-md shadow-lg my-1.5 max-h-60 ${wiltStyle} ${pettitStyle} ${embiidStyle} bg-blend-multiply`}
           />
         </div>
       </div>

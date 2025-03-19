@@ -4,7 +4,7 @@ import Modal from "./components/Modal";
 import Button from "./components/Button";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
-import TestingPage from "./pages/TestingPage";
+import MediaPage from "./pages/MediaPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
 import { showAllBadgeInfo } from "./basketballData";
@@ -46,7 +46,7 @@ function App() {
 
         <Route path="/media">
           <Sidebar />
-          <TestingPage />
+          <MediaPage />
         </Route>
 
         <Route path="/basketball">
