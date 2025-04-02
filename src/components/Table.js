@@ -17,11 +17,11 @@ function Table({ data, config, keyFn, posSelection, teamSelection, unitSelection
   );
 
   const teamFilteredData = data.filter((player) =>
-    player.team.includes(teamSelection.value)
+    player.franchise.includes(teamSelection.value)
   );
 
   const teamFilteredFirst = data.filter((player) =>
-    player.team.includes(teamSelection.value)
+    player.franchise.includes(teamSelection.value)
   );
 
   const posFilteredSecond = teamFilteredFirst.filter((player) =>

@@ -1,4 +1,7 @@
+import { IoInformationCircleOutline } from "react-icons/io5";
+import { FaTrashCan } from "react-icons/fa6";
 import { useState, useEffect } from "react";
+import TvFavoriteButton from "./TvFavoriteButton";
 import {
   createList,
   addToList,
@@ -10,6 +13,9 @@ import {
   removeMovieFromList,
 } from "../api/tmdbapi";
 
+import { getFavoriteTvShows } from "../api/tmdbapi";
+import RatingControl from "./RatingControl";
+
 function MediaLists({
   sessionId,
   setAccountId,
@@ -18,6 +24,10 @@ function MediaLists({
   lists,
   movies,
   setMovies,
+  setSelectedMedia,
+  favoriteTvShows,
+  setFavoriteTvShows,
+  refreshFavoriteTvShows,
 }) {
   const [listName, setListName] = useState("");
   const [listDescription, setListDescription] = useState("");
@@ -27,6 +37,7 @@ function MediaLists({
   const [editedDescription, setEditedDescription] = useState("");
 
   const [selectedList, setSelectedList] = useState(null);
+  const [showTvShows, setShowTvShows] = useState(false);
 
   useEffect(() => {
     if (sessionId && !accountId) {
@@ -55,36 +66,33 @@ function MediaLists({
       ]);
       setListName("");
       setListDescription("");
-      alert("Watchlist created successfully!");
+      alert("Collection created successfully!");
     } else {
-      alert("Failed to create watchlist.");
+      alert("Failed to create collection.");
     }
   };
 
-  // ✅ Handle Deleting a Watchlist
   const handleDeleteList = async (listId) => {
     const confirmed = window.confirm(
-      "Are you sure you want to delete this watchlist?"
+      "Are you sure you want to delete this collection?"
     );
     if (!confirmed) return;
 
     const success = await deleteList(sessionId, listId);
     if (success) {
       setLists(lists.filter((list) => list.id !== listId)); // Remove from state
-      alert("Watchlist deleted successfully!");
+      alert("Collection deleted successfully!");
     } else {
-      alert("Failed to delete watchlist.");
+      alert("Failed to delete collection.");
     }
   };
 
-  // Handle Editing a Watchlist
   const handleEditList = (list) => {
     setEditingList(list.id);
     setEditedName(list.name);
     setEditedDescription(list.description);
   };
 
-  // Handle Saving the "Edited" Watchlist
   const handleSaveEdit = async (listId) => {
     if (!editedName.trim()) {
       alert("Please enter a valid name.");
@@ -111,13 +119,12 @@ function MediaLists({
         )
       );
       setEditingList(null);
-      alert("Watchlist updated successfully!");
+      alert("Collection updated successfully!");
     } else {
-      alert("Failed to update watchlist.");
+      alert("Failed to update collection.");
     }
   };
 
-  // ✅ Handle Viewing Movies in a Watchlist
   const handleViewMovies = async (listId) => {
     if (movies[listId]) {
       setSelectedList(selectedList === listId ? null : listId); // Toggle visibility
@@ -129,7 +136,10 @@ function MediaLists({
     setSelectedList(listId);
   };
 
-  // ✅ Remove a movie from a watchlist
+  const handleShowTvShows = () => {
+    setShowTvShows(!showTvShows);
+  };
+
   const handleRemoveMovie = async (listId, movieId) => {
     const confirmed = window.confirm(
       "Are you sure you want to remove this movie?"
@@ -143,21 +153,26 @@ function MediaLists({
         ...prevMovies,
         [listId]: prevMovies[listId].filter((movie) => movie.id !== movieId),
       }));
-      alert("Movie removed from watchlist!");
+      alert("Movie removed from collection!");
     } else {
       alert("Failed to remove movie.");
     }
   };
 
+  useEffect(() => {
+    if (sessionId && accountId) {
+      getFavoriteTvShows(sessionId, accountId).then(setFavoriteTvShows);
+    }
+  }, [sessionId, accountId]);
+
   return (
     <div className="p-5">
-      <h1 className="text-2xl font-bold mb-4">My TMDB Watchlists</h1>
+      <h1 className="text-2xl font-bold mb-4">Movie Collections</h1>
 
-      {/* Create Watchlist Form */}
       <div className="mb-5">
         <input
           type="text"
-          placeholder="Watchlist Name"
+          placeholder="Collection Name"
           value={listName}
           onChange={(e) => setListName(e.target.value)}
           className="p-2 border rounded-md w-64"
@@ -173,11 +188,10 @@ function MediaLists({
           onClick={handleCreateList}
           className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
         >
-          Create Watchlist
+          Create Collection
         </button>
       </div>
 
-      {/* List of Watchlists */}
       {lists.length > 0 ? (
         <ul className="mt-4">
           {lists.map((list) => (
@@ -246,26 +260,52 @@ function MediaLists({
                     </div>
                   </div>
 
-                  {/* Show Movies Inside Watchlist */}
                   {selectedList === list.id && (
-                    <div className="mt-3 grid grid-cols-4 gap-3">
+                    <div className="mt-3 flex flex-wrap gap-1.5">
                       {movies[list.id]?.length > 0 ? (
-                        movies[list.id].map((movie) => (
-                          <div key={movie.id} className="border p-2 rounded-md">
+                        movies[list.id]
+                        .sort((a, b) => b.vote_average - a.vote_average)
+                        .map((movie) => (
+                          <div
+                            key={movie.id}
+                            className="border p-2 rounded-md max-w-[216px]"
+                          >
                             <img
                               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
                               alt={movie.title}
-                              className="w-full rounded-md"
+                              className="w-[200px] rounded-md"
                             />
-                            <p className="text-sm mt-1">{movie.title}</p>
-                            <button
-                              onClick={() =>
-                                handleRemoveMovie(list.id, movie.id)
-                              }
-                              className="mt-2 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"
-                            >
-                              Remove
-                            </button>
+                            <div className="flex flex-row justify-between mt-1">
+                              {" "}
+                              <p className="text-md">{movie.title}</p>
+                              <RatingControl
+                                sessionId={sessionId}
+                                mediaId={movie.id}
+                                mediaType={"movie"} // "movie" or "tv"
+                                showRatingEdit={false}
+                              />
+                            </div>
+                            <div className="flex gap-2 justify-end items-center">
+                              <button className="mt-2">
+                                <IoInformationCircleOutline
+                                  className="text-3xl border-2 shadow-md rounded-md hover:bg-gray-500"
+                                  onClick={() =>
+                                    setSelectedMedia({
+                                      id: movie.id,
+                                      media_type: movie.media_type,
+                                    })
+                                  }
+                                />
+                              </button>
+                              <button
+                                onClick={() =>
+                                  handleRemoveMovie(list.id, movie.id)
+                                }
+                                className="mt-2 p-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+                              >
+                                <FaTrashCan />
+                              </button>
+                            </div>
                           </div>
                         ))
                       ) : (
@@ -281,8 +321,74 @@ function MediaLists({
           ))}
         </ul>
       ) : (
-        <p>No watchlists found.</p>
+        <p>No collections found.</p>
       )}
+
+      <div className="mt-8">
+        <div className="flex flex-row justify-between w-full">
+          <h2 className="text-2xl font-bold mb-3">Favorite TV Shows</h2>
+          <button
+            onClick={handleShowTvShows}
+            className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          >
+            {showTvShows ? "Hide Tv Shows" : "View Tv Shows"}
+          </button>
+        </div>
+
+        {showTvShows && favoriteTvShows.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {favoriteTvShows
+            .sort((a, b) => b.vote_average - a.vote_average)
+            .map((show) => (
+              <div key={show.id} className="shadow-md p-2 max-w-[216px] rounded">
+                <img
+                  src={
+                    show.poster_path
+                      ? `https://image.tmdb.org/t/p/w200/${show.poster_path}`
+                      : `https://cdn.vectorstock.com/i/1000v/13/51/movie-and-film-poster-design-template-background-vector-41551351.jpg`
+                  }
+                  alt={show.name}
+                  className="rounded w-[200px]"
+                />
+                <div className="flex flex-row justify-between items-center">
+                  <div>
+                    <p className="mt-2 text-sm font-medium max-w-[170px] flex flex-wrap">{show.name}</p>
+                    <p className="text-xs text-gray-500">
+                      ({show.first_air_date?.slice(0, 4)})
+                    </p>
+                  </div>
+                  <div>
+                    <RatingControl
+                      sessionId={sessionId}
+                      mediaId={show.id}
+                      mediaType={"tv"} // "movie" or "tv"
+                      showRatingEdit={false}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row gap-2 justify-end">
+                  <button
+                    onClick={() =>
+                      setSelectedMedia({
+                        id: show.id,
+                        media_type: "tv",
+                      })
+                    }
+                  >
+                    <IoInformationCircleOutline className="text-xl border-2 shadow-md rounded-md hover:bg-gray-300" />
+                  </button>
+                  <TvFavoriteButton
+                    sessionId={sessionId}
+                    accountId={accountId}
+                    tvId={show.id}
+                    refreshFavoriteTvShows={refreshFavoriteTvShows}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

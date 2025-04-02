@@ -2,7 +2,8 @@ import { MdAdd } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import LoginButton from "./LoginButton";
 import { useState } from "react";
-import { addMovieToList, getMoviesInList } from "../api/tmdbapi";
+import { addToList, getMoviesInList, favoriteMedia } from "../api/tmdbapi";
+import TvFavoriteButton from "./TvFavoriteButton";
 
 function MediaSearch({
   setTerm,
@@ -17,13 +18,16 @@ function MediaSearch({
   getRequestToken,
   sessionId,
   lists,
-  setLists,
-  movies,
   setMovies,
+  showWatchlistModal,
+  setShowWatchlistModal,
+  setSelectedMovie,
+  selectedMovie,
+  handleAddToList,
+  handleSelectList,
+  accountId,
+  refreshFavoriteTvShows
 }) {
-  const [selectedMovie, setSelectedMovie] = useState(null);
-  const [showWatchlistModal, setShowWatchlistModal] = useState(false);
-
   const totalSearchPages = mediaPages?.total_pages;
 
   const onSubmit = (term) => {
@@ -49,42 +53,6 @@ function MediaSearch({
   const handleChange = (event) => {
     setInput(event.target.value);
   };
-
-  // ✅ Open modal to select a watchlist when adding a movie
-  const handleAddToList = (movieId) => {
-    setSelectedMovie(movieId);
-    setShowWatchlistModal(true);
-  };
-
-  const handleSelectList = async (listId) => {
-    if (!selectedMovie) return;
-
-    const success = await addMovieToList(sessionId, listId, selectedMovie);
-    if (success) {
-      alert("Movie added to watchlist!");
-
-      // ✅ Fetch updated movie list after adding
-      const updatedMovies = await getMoviesInList(listId);
-      setMovies((prevMovies) => ({
-        ...prevMovies,
-        [listId]: updatedMovies, // Update state so UI refreshes immediately
-      }));
-    } else {
-      alert("Failed to add movie.");
-    }
-
-    setShowWatchlistModal(false);
-    setSelectedMovie(null);
-  };
-
-  // // ✅ Update the watchlist when a new movie is added
-  // const handleMovieAdded = async (listId) => {
-  //   const updatedMovies = await getMoviesInList(listId);
-  //   setMovies((prevMovies) => ({
-  //     ...prevMovies,
-  //     [listId]: updatedMovies, // Refresh movie list in UI
-  //   }));
-  // };
 
   return (
     <div>
@@ -211,10 +179,12 @@ function MediaSearch({
                     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                       <div className="bg-white p-5 rounded-md">
                         <h3 className="text-lg font-bold mb-2">
-                          Select a Watchlist
+                          Select a Collection for Movie
                         </h3>
+
                         {lists.length > 0 ? (
                           <ul>
+                            {/* ✅ Filter the lists based on selected media type */}
                             {lists.map((list) => (
                               <li key={list.id} className="mb-2">
                                 <button
@@ -227,8 +197,9 @@ function MediaSearch({
                             ))}
                           </ul>
                         ) : (
-                          <p>No watchlists found. Create one first!</p>
+                          <p>No collections found. Create one first!</p>
                         )}
+
                         <button
                           onClick={() => setShowWatchlistModal(false)}
                           className="mt-3 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
@@ -266,9 +237,6 @@ function MediaSearch({
 
                     <div className="relative">
                       <div className="flex flex-row">
-                        <button className="right-5 top-6 absolute">
-                          <MdAdd className="text-lg border-2 shadow-md rounded-md" />
-                        </button>
                         <button className="right-0 top-6 absolute">
                           <IoInformationCircleOutline
                             className="text-lg border-2 shadow-md rounded-md"
@@ -310,12 +278,9 @@ function MediaSearch({
 
                     <div className="relative">
                       <div className="flex flex-row">
-                        <button className="right-5 top-8 absolute">
-                          <MdAdd className="text-lg border-2 shadow-md rounded-md" />
-                        </button>
-                        <button className="right-0 top-8 absolute">
+                        <button className="right-0 -bottom-12 absolute">
                           <IoInformationCircleOutline
-                            className="text-lg border-2 shadow-md rounded-md"
+                            className="text-lg border-2 shadow-md rounded-md hover:bg-gray-300"
                             onClick={() =>
                               setSelectedMedia({
                                 id: media.id,
@@ -324,6 +289,14 @@ function MediaSearch({
                             }
                           />
                         </button>
+                        <div className="right-6 -bottom-12 absolute">
+                          <TvFavoriteButton
+                            sessionId={sessionId}
+                            accountId={accountId}
+                            tvId={media.id}
+                            refreshFavoriteTvShows={refreshFavoriteTvShows}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>

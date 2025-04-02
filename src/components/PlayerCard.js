@@ -42,7 +42,9 @@ function PlayerCard({ playerData, handleDelete }) {
       case "citrine":
         return "bg-[url('https://i.pinimg.com/736x/c6/d1/8f/c6d18f9d3c666f01bb9fccb75d9b2bb7.jpg')]";
       case "canary":
-        return "bg-[url('https://www.shutterstock.com/image-photo/beautiful-yellow-sapphire-gemstoneyellow-background-260nw-694629484.jpg')]";
+        return "bg-[url('https://i.etsystatic.com/6172334/r/il/f9f1ae/1983782947/il_570xN.1983782947_8a46.jpg')]";
+      case "aqua":
+        return "bg-[url('https://www.waldemarjewellers.com.au/wp-content/uploads/2024/02/aqumarine-rough-gemstone.jpg')]";
       default:
         return "bg-gray-200";
     }

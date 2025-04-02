@@ -1,7 +1,31 @@
 import { MdAdd } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 
-function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
+import TvFavoriteButton from "./TvFavoriteButton";
+import RatingControl from "./RatingControl";
+
+import { useState } from "react";
+
+function MediaCard({
+  detailedMedia,
+  tvShow,
+  person,
+  selectedMedia,
+  setShowWatchlistModal,
+  showWatchlistModal,
+  lists,
+  handleAddToList,
+  handleSelectList,
+  accountId,
+  sessionId,
+  refreshFavoriteTvShows,
+}) {
+  const [showRatingEdit, setShowRatingEdit] = useState(false);
+
+  const handleShowRatingEdit = () => {
+    setShowRatingEdit(!showRatingEdit);
+  };
+
   const handleTitleLength = (title) => {
     if (title.length > 24) {
       return <p className="text-sm">{title}</p>;
@@ -34,9 +58,13 @@ function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
             />
             <div className="flex flex-row w-full justify-between content-between items-center mt-2">
               <div className="w-1/4">
-                <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md">
-                  10
-                </div>
+                {/* <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md"></div> */}
+                <RatingControl
+                  sessionId={sessionId}
+                  mediaId={movie.id}
+                  mediaType={"movie"} // "movie" or "tv"
+                  showRatingEdit={showRatingEdit}
+                />
               </div>
 
               <div className="w-1/2">
@@ -52,10 +80,55 @@ function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
 
               <div className="flex flex-col w-1/4 justify-end items-end">
                 <div className="gap-2 flex flex-row">
-                  <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
-                  <CiEdit className="text-3xl border-2 shadow-md rounded-md" />
+                  <button
+                    // className="right-5 bottom-0 absolute"
+                    onClick={handleShowRatingEdit}
+                  >
+                    <CiEdit className="text-3xl hover:bg-gray-300" />
+                  </button>
+                  <button
+                    // className="right-5 bottom-0 absolute"
+                    onClick={() => handleAddToList(movie.id)}
+                  >
+                    <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
+                  </button>
                 </div>
               </div>
+
+              {showWatchlistModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                  <div className="bg-white p-5 rounded-md">
+                    <h3 className="text-lg font-bold mb-2">
+                      Select a Collection for Movie
+                    </h3>
+
+                    {lists.length > 0 ? (
+                      <ul>
+                        {/* ✅ Filter the lists based on selected media type */}
+                        {lists.map((list) => (
+                          <li key={list.id} className="mb-2">
+                            <button
+                              onClick={() => handleSelectList(list.id)}
+                              className="px-3 py-1 bg-gray-300 rounded-md hover:bg-gray-400"
+                            >
+                              {list.name}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>No collections found. Create one first!</p>
+                    )}
+
+                    <button
+                      onClick={() => setShowWatchlistModal(false)}
+                      className="mt-3 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -82,9 +155,15 @@ function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
             />
             <div className="flex flex-row w-full justify-between content-between items-center mt-2">
               <div className="w-1/4">
-                <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md">
+                {/* <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md">
                   10
-                </div>
+                </div> */}
+                <RatingControl
+                  sessionId={sessionId}
+                  mediaId={show.id}
+                  mediaType={"tv"} // "movie" or "tv"
+                  showRatingEdit={showRatingEdit}
+                />
               </div>
 
               <div className="w-1/2">
@@ -106,8 +185,19 @@ function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
 
               <div className="flex flex-col w-1/4 justify-end items-end">
                 <div className="gap-2 flex flex-row">
-                  <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
-                  <CiEdit className="text-3xl border-2 shadow-md rounded-md" />
+                  <button
+                    // className="right-5 bottom-0 absolute"
+                    onClick={handleShowRatingEdit}
+                    className="hover:bg-gray-300"
+                  >
+                    <CiEdit className="text-3xl" />
+                  </button>
+                  <TvFavoriteButton
+                    sessionId={sessionId}
+                    accountId={accountId}
+                    tvId={show.id}
+                    refreshFavoriteTvShows={refreshFavoriteTvShows}
+                  />
                 </div>
               </div>
             </div>
@@ -180,12 +270,11 @@ function MediaCard({ detailedMedia, tvShow, person, selectedMedia }) {
 
   return (
     <div className="flex flex-row">
-      {(detailedMedia &&
-        selectedMedia.media_type === "movie") && (movieCard)}
+      {detailedMedia && selectedMedia.media_type === "movie" && movieCard}
 
-      {(tvShow && selectedMedia.media_type === "tv") && (tvCard)}
+      {tvShow && selectedMedia.media_type === "tv" && tvCard}
 
-      {(person && selectedMedia.media_type === "person") && (personCard)}
+      {person && selectedMedia.media_type === "person" && personCard}
     </div>
   );
 }

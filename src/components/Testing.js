@@ -9,7 +9,7 @@ import MediaCard from "./MediaCard";
 import MediaSearch from "./MediaSearch";
 import MediaLists from "./MediaLists";
 import { useState, useEffect } from "react";
-import { getUserLists, getAccountId } from "../api/tmdbapi";
+import { getUserLists, getAccountId, addToList, getMoviesInList, getFavoriteTvShows } from "../api/tmdbapi";
 
 function Testing() {
   const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0";
@@ -33,6 +33,12 @@ function Testing() {
   const [tvCastAndCrew, setTvCastAndCrew] = useState([]);
   const [currentSearchPage, setCurrentSearchPage] = useState(1);
 
+  const [showWatchlistModal, setShowWatchlistModal] = useState(false);
+
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  const [favoriteTvShows, setFavoriteTvShows] = useState([]);
+
   const [movies, setMovies] = useState({});
 
   const [sessionId, setSessionId] = useState(
@@ -41,6 +47,11 @@ function Testing() {
   const [accountId, setAccountId] = useState(
     localStorage.getItem("tmdb_account_id")
   );
+  // const [lists, setLists] = useState({
+  //   movies: [],
+  //   tvShows: [],
+  // });
+
   const [lists, setLists] = useState([]);
 
   const getOptions = {
@@ -241,6 +252,33 @@ function Testing() {
     }
   };
 
+  const handleAddToList = (mediaId) => {
+    setSelectedMovie(mediaId);
+    setShowWatchlistModal(true);
+  };
+  
+
+  const handleSelectList = async (listId) => {
+    console.log("Adding to List ID:", listId);
+  
+    const success = await addToList(sessionId, listId, selectedMovie);
+  
+    if (success) {
+      alert('Movie added to collection!');
+  
+      const updatedMovies = await getMoviesInList(listId);
+      setMovies((prevMovies) => ({
+        ...prevMovies,
+        [listId]: updatedMovies, // ✅ Update UI immediately
+      }));
+    } else {
+      alert(`Failed to add movie`);
+    }
+  
+    setShowWatchlistModal(false);
+    setSelectedMovie(null);
+  };
+
   useEffect(() => {
     if (sessionId && !accountId) {
       getAccountId(sessionId).then((id) => {
@@ -253,6 +291,10 @@ function Testing() {
       getUserLists(sessionId, accountId).then(setLists);
     }
   }, [sessionId, accountId]);
+
+  const refreshFavoriteTvShows = () => {
+    getFavoriteTvShows(sessionId, accountId).then(setFavoriteTvShows);
+  };
 
   return (
     <div>
@@ -272,6 +314,15 @@ function Testing() {
         setLists={setLists}
         movies={movies}
         setMovies={setMovies}
+        accountId={accountId}
+        selectedMedia={selectedMedia}
+        showWatchlistModal={showWatchlistModal}
+        setShowWatchlistModal={setShowWatchlistModal}
+        handleAddToList={handleAddToList}
+        handleSelectList={handleSelectList}
+        selectedMovie={selectedMovie}
+        setSelectedMovie={setSelectedMovie}
+        refreshFavoriteTvShows={refreshFavoriteTvShows}
       />
       <div className="flex flex-row items-center gap-5">
         <MediaCard
@@ -279,6 +330,14 @@ function Testing() {
           tvShow={tvShow}
           person={person}
           selectedMedia={selectedMedia}
+          showWatchlistModal={showWatchlistModal}
+          setShowWatchlistModal={setShowWatchlistModal}
+          lists={lists}
+          handleAddToList={handleAddToList}
+          handleSelectList={handleSelectList}
+          accountId={accountId}
+          sessionId={sessionId}
+          refreshFavoriteTvShows={refreshFavoriteTvShows}
         />
         <MediaPanel
           detailedMedia={detailedMedia}
@@ -299,6 +358,10 @@ function Testing() {
         setLists={setLists}
         movies={movies}
         setMovies={setMovies}
+        setSelectedMedia={setSelectedMedia}
+        favoriteTvShows={favoriteTvShows}
+        setFavoriteTvShows={setFavoriteTvShows}
+        refreshFavoriteTvShows={refreshFavoriteTvShows}
       />
     </div>
   );
