@@ -9,7 +9,7 @@ import MediaCard from "./MediaCard";
 import MediaSearch from "./MediaSearch";
 import MediaLists from "./MediaLists";
 import { useState, useEffect } from "react";
-import { getUserLists, getAccountId, addToList, getMoviesInList, getFavoriteTvShows } from "../api/tmdbapi";
+import { getUserLists, getAccountId, addToList, getMoviesInList, getFavoriteTvShows } from "../../api/tmdbapi";
 
 function Testing() {
   const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0";

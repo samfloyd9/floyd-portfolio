@@ -1,13 +1,13 @@
-import Sidebar from "./components/Sidebar";
-import Route from "./components/Route";
-import Modal from "./components/Modal";
-import Button from "./components/Button";
+import Sidebar from "./components/shared/Sidebar";
+import Route from "./components/shared/Route";
+import Modal from "./components/shared/Modal";
+import Button from "./components/shared/Button";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import MediaPage from "./pages/MediaPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
-import { showAllBadgeInfo } from "./basketballData";
+import { showAllBadgeInfo } from "./data/basketballData";
 import BankingPage from "./pages/BankingPage";
 import ParcheesiPage from "./pages/ParcheesiPage";
 

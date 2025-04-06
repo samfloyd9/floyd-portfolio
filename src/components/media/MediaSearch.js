@@ -1,8 +1,7 @@
 import { MdAdd } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
-import LoginButton from "./LoginButton";
-import { useState } from "react";
-import { addToList, getMoviesInList, favoriteMedia } from "../api/tmdbapi";
+import LoginButton from "./LoginButton"
+import { addToList, getMoviesInList, favoriteMedia } from "../../api/tmdbapi";
 import TvFavoriteButton from "./TvFavoriteButton";
 
 function MediaSearch({
@@ -59,12 +58,13 @@ function MediaSearch({
       <div className="mb-5 flex flex-row items-end gap-5">
         <div className="flex flex-row justify-center items-center content-center">
           <form onSubmit={handleFormSubmit} className="flex flex-col">
-            <label className="font-bold">Enter Search Term</label>
+            <label className="font-bold">Movies, TV Shows, Cast & Crew</label>
             <div className="flex flex-row gap-5">
               <input
                 value={input}
                 onChange={handleChange}
                 className="border border-solid border-gray-300 rounded-lg p-2 w-60"
+                placeholder="Search..."
               />
               <button
                 className="w-fit px-1.5 bg-gray-300 border-2 hover:bg-blue-500 hover:text-white rounded-lg"

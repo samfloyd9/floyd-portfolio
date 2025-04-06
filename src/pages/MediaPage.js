@@ -1,4 +1,4 @@
-import Testing from '../components/Testing'
+import Testing from '../components/media/Testing'
 
 function MediaPage() {
   return (

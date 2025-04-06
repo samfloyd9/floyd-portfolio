@@ -1,6 +1,4 @@
-// https://1000logos.net/san-antonio-spurs-logo/
-
-// Shooting/Scoring Badges
+// Imports for Shooting/Scoring Badges
 import { ImTarget } from "react-icons/im"; // Deadeye Shooter
 import { MdOutlineSportsKabaddi } from "react-icons/md"; // Tough Shot Maker
 import { MdSportsHandball } from "react-icons/md"; // Lob/Putback/Dunk Master
@@ -11,13 +9,13 @@ import { GiBodyBalance } from "react-icons/gi"; // Acrobatic Finisher
 import { GiWreckingBall } from "react-icons/gi"; // Contact Finisher
 import { FaTools } from "react-icons/fa"; // Post Move Technician
 
-// Passing/Playmaking
+// Imports for Passing/Playmaking Badges
 import { TbEngine } from "react-icons/tb"; // Offensive Engine
 import { RiHandCoinLine } from "react-icons/ri"; // Dime Dropper
 import { ImEarth } from "react-icons/im"; // Offensive Gravity
 import { ImDribbble } from "react-icons/im"; // Houdini Handles
 
-// Defense
+// Imports for Defensive Badges
 import { FaLock } from "react-icons/fa"; // Lockdown Post Defender
 import { GiHandcuffs } from "react-icons/gi"; // Perimeter Handcuffs
 import { ImBug } from "react-icons/im"; // Defensive Pest
@@ -28,7 +26,7 @@ import { GiMonsterGrasp } from "react-icons/gi"; // Pick Pocket/Interceptor
 import { GiBrain } from "react-icons/gi"; // High IQ Defender
 import { GiEmbrassedEnergy } from "react-icons/gi"; // High Energy Defender
 
-// Rebounding
+// Rebounding Badge
 import { ImMagnet } from "react-icons/im"; // Rebound Magnet
 
 // Card Border Colors
@@ -41,7 +39,7 @@ const YELLOW = "canary";
 const ORANGE = "citrine";
 const LIGHT_BLUE = "aqua";
 
-// ------------------------------------------- //
+// --------------------- LAKERS ---------------------- //
 const lakersPrimary = "bg-purple-700";
 const lakersSecondary = "text-yellow-400";
 const lakersThird = "white";
@@ -55,7 +53,7 @@ const lakersThrowbackLogoStyling = "h-16 -top-1 -left-1";
 const minneapolisPrimary = "bg-blue-400";
 const minneapolisSecondary = "text-white";
 const minneapolisThird = "yellow-400";
-// ------------------------------------------- //
+// --------------------- SUNS ---------------------- //
 const sunsPrimary = "bg-orange-600";
 const sunsSecondary = "text-purple-900";
 const sunsThird = "white";
@@ -80,7 +78,7 @@ const sunsAltThrowbackLogoStyling = "h-12 top-0.5 -left-3";
 //   "https://static.wikia.nocookie.net/sports-logos5931/images/0/06/Phoenix-suns_1969-1992_a.png/revision/latest?cb=20170618121847";
 // const sunsTeamLogoStyling = "h-12 top-0.5 -left-1.5";
 
-// ------------------------------------------- //
+// --------------------- WARRIORS ---------------------- //
 const warriorsPrimary = "bg-blue-600";
 const warriorsSecondary = "text-yellow-300";
 const warriorsThird = "white";
@@ -100,7 +98,7 @@ const warriorsOldSchoolLogoStyling = "h-12 top-1 left-0";
 
 const warriorsAltThrowbackLogo = "https://loodibee.com/wp-content/uploads/san-francisco-warriors-1969-1971.png";
 const warriorsAltThrowbackLogoStyling = "h-16 -top-1.5 -left-2";
-// ------------------------------------------- //
+// --------------------- SUNS ---------------------- //
 const spursPrimary = "bg-black";
 const spursSecondary = "text-gray-300";
 const spursThird = "white";
@@ -111,27 +109,36 @@ const sanAntonioSpurs = "San Antonio Spurs";
 const spursThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/01/San-Antonio-Spurs-Logo-1989-700x394.png";
 const spursThrowbackLogoStyling = "h-7 top-2 left-1.5";
 
-// ------------------------------------------- //
+// --------------------- SUNS ---------------------- //
 const timberwolvesPrimary = "bg-black";
 const timberwolvesSecondary = "text-green-300";
 const timberwolvesThird = "blue-500";
 const timberwolvesCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Minnesota-Timberwolves-Logo-2017-Present.png";
-const timberwolvesCurrentLogoStyling = "h-12 top-0 -left-5";
+const timberwolvesCurrentLogoStyling = "h-12 top-0.5 -left-4";
 const minnesotaTimberwolves = "Minnesota Timberwolves";
 const timberwolvesThrowbackLogo = "https://images.squarespace-cdn.com/content/v1/5e8b9cb09666a61f4584fa8f/1589520318300-Q2JQB48T39PB4R5RVNKD/MinnesotaTimberwolves_LogoDesign3.png";
 const timberwolvesThrowbackLogoStyling = "h-12 top-0 left-0";
 
-// ------------------------------------------- //
+// --------------------- JAZZ ---------------------- //
 const jazzPrimary = "bg-purple-700";
 const jazzSecondary = "text-cyan-300";
 const jazzThird = "green-700";
 const jazzCurrentLogo =
-  "https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_19973688.png";
-const jazzCurrentLogoStyling = "h-10 top-0.5 -left-0.5";
+  "https://i1.wp.com/www.retroseasons.com/retroimages/Utah_Jazz_logo.png";
+const jazzCurrentLogoStyling = "h-14 -top-1.5 left-1";
 const utahJazz = "Utah Jazz";
 const newOrleansJazz = "New Orleans Jazz";
-// ------------------------------------------- //
+
+const jazzAltLogo = "https://i.namu.wiki/i/vZVwdb2rjDHHUKTFBNWvUT8UvKPkhDne6emshp8pJm44K4duBqOvjFP_4UMgaKvIQJdKhlTku_KSw8Rn2oF-GA.svg";
+const jazzAltLogoStyling = "h-10 top-0.5 -left-0.5";
+
+const jazzAltThrowbackLogo = "https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_19973688.png";
+const jazzAltThrowbackLogoStyling = "h-10 top-0.5 -left-0.5";
+
+const jazzThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Utah-Jazz-Logo-1980-1996.png";
+const jazzThrowbackLogoStyling = "h-10 top-0.5 -left-0.5";
+// --------------------- TRAIL BLAZERS ---------------------- //
 const trailblazersPrimary = "bg-red-600";
 const trailblazersSecondary = "text-black";
 const trailblazersThird = "white-400";
@@ -139,7 +146,14 @@ const trailblazersCurrentLogo =
   "https://i.pinimg.com/originals/7d/07/ea/7d07eaa72e74a2def63540ac7d55ba0f.png";
 const trailblazersCurrentLogoStyling = "h-11 top-1 left-1";
 const portlandTrailblazers = "Portland Trailblazers";
-// ------------------------------------------- //
+
+const trailblazersThrowbackLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Portland-Trail-Blazers-Logo-1970_01.png/1200px-Portland-Trail-Blazers-Logo-1970_01.png";
+const trailblazersThrowbackLogoStyling = "h-[72px] top-0 left-1";
+
+const trailblazersAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/sco/thumb/7/74/Portland_Trail_Blazers.svg/640px-Portland_Trail_Blazers.svg.png";
+const trailblazersAltThrowbackLogoStyling = "h-12 top-1 left-0";
+
+// --------------------- GRIZZLIES ---------------------- //
 const grizzliesPrimary = "bg-blue-800";
 const grizzliesSecondary = "text-blue-300";
 const grizzliesThird = "yellow-500";
@@ -147,7 +161,15 @@ const grizzliesCurrentLogo =
   "https://cdn.iconscout.com/icon/free/png-256/free-memphis-grizzlies-logo-icon-download-in-svg-png-gif-file-formats--nba-basketball-game-sport-ball-pack-logos-icons-1593220.png?f=webp&w=256";
 const grizzliesCurrentLogoStyling = "h-14 top-0.5 -left-1.5";
 const memphisGrizzlies = "Memphis Grizzlies";
-// ------------------------------------------- //
+const vancouverGrizzlies = "Vancouver Grizzlies";
+
+const grizzliesThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/06/Vancouver-Grizzlies-Logo-2001.png";
+const grizzliesThrowbackLogoStyling = "h-10 top-1 -left-2";
+
+const grizzliesAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Vancouver_Grizzlies_logo.svg/1200px-Vancouver_Grizzlies_logo.svg.png";
+const grizzliesAltThrowbackLogoStyling = "h-10 top-0.5 -left-1.5";
+
+// --------------------- THUNDER ---------------------- //
 const thunderPrimary = "bg-blue-600";
 const thunderSecondary = "text-white";
 const thunderThird = "orange-400";
@@ -175,7 +197,7 @@ const supersonicsAltThird = "red";
 const supersonicsThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1975-500x333.png";
 const supersonicsThrowbackLogoStyling = "h-16 -top-1.5 -left-4";
 
-// ------------------------------------------- //
+// --------------------- MAVERICKS ---------------------- //
 const mavericksPrimary = "bg-blue-600";
 const mavericksSecondary = "text-gray-300";
 const mavericksThird = "blue-800";
@@ -183,15 +205,30 @@ const mavericksCurrentLogo =
   "https://www.mavs.com/wp-content/themes/mavs/images/logo.svg";
 const mavericksCurrentLogoStyling = "h-11 top-1 left-1";
 const dallasMavericks = "Dallas Mavericks";
-// ------------------------------------------- //
+
+const mavericksThrowbackLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KDALM-1981.gif";
+const mavericksThrowbackLogoStyling = "h-20 top-0 left-0.5";
+
+// --------------------- ROCKETS ---------------------- //
 const rocketsPrimary = "bg-red-600";
 const rocketsSecondary = "text-yellow-300";
 const rocketsThird = "white";
 const rocketsCurrentLogo =
-  "https://seeklogo.com/images/H/houston-rockets-logo-1AD80DE2AF-seeklogo.com.png";
-const rocketsCurrentLogoStyling = "h-14 top-0 left-1";
+  "https://loodibee.com/wp-content/uploads/nba-houston-rockets-logo-2020.png";
+const rocketsCurrentLogoStyling = "h-14 -top-0.5 left-0.5";
 const houstonRockets = "Houston Rockets";
-// ------------------------------------------- //
+
+const rocketsThrowbackLogo = "https://loodibee.com/wp-content/uploads/houston-rockets-1995-2003.png";
+const rocketsThrowbackLogoStyling = "h-[72px] -top-2 -left-1";
+
+const rocketsAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/fr/thumb/0/09/Houston_Rockets_logo_1972.png/244px-Houston_Rockets_logo_1972.png";
+const rocketsAltThrowbackLogoStyling = "h-12 top-0.5 left-0.5";
+
+const rocketsAltLogo = "https://seeklogo.com/images/H/houston-rockets-logo-1AD80DE2AF-seeklogo.com.png";
+const rocketsAltLogoStyling = "h-14 top-0 left-1";
+
+// --------------------- CLIPPERS ---------------------- //
 const clippersPrimary = "bg-blue-600";
 const clippersSecondary = "text-white";
 const clippersThird = "red-500";
@@ -214,7 +251,7 @@ const bravesAltThird = "black";
 const bravesAltLogo =
   "https://1000logos.net/wp-content/uploads/2018/06/Buffalo-Braves-Logo-500x313.png";
 const bravesAltLogoStyling = "h-11 top-1 -left-5";
-// ------------------------------------------- //
+// --------------------- NUGGETS ---------------------- //
 const nuggetsPrimary = "bg-blue-600";
 const nuggetsSecondary = "text-yellow-300";
 const nuggetsThird = "red-600";
@@ -235,16 +272,22 @@ const nuggetsAltLogoStyling = "h-8 top-1 left-1";
 const nuggetsOldSchoolLogo = "https://lh3.googleusercontent.com/proxy/AWyP3I8bjz-CHZtFbG-SkyKfo0NClwYqMZTY5Kn98JjdsClL__siivhXRAyruK6f6at3_dZ4CEDSNR2qcOZ7oq6Fv93atijerw-qAH2dTW1CHxJztfP7KoPJ3KBzU9aXH2ARMPNuJQ";
 const nuggetsOldSchoolLogoStyling = "h-10 top-1 left-1";
 
-// ------------------------------------------- //
+// --------------------- PELICANS ---------------------- //
 const pelicansPrimary = "bg-blue-900";
 const pelicansSecondary = "text-yellow-500";
-const pelicansThird = "red-600";
+const pelicansThird = "red-700";
 const pelicansCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-new-orleans-pelicans-logo.png";
 const pelicansCurrentLogoStyling = "h-14 -top-0.5 -left-1";
 const newOrleansPelicans = "New Orleans Pelicans";
 const newOrleansHornets = "New Orleans Hornets";
-// ------------------------------------------- //
+
+const pelicansThrowbackLogo = "https://basketballjerseyarchive.com/static/logos/vuXMJedmPFcUryi/new-orleans-pelicans-2008-2013-logo.png";
+const pelicansThrowbackLogoStyling = "h-12 top-1 left-1";
+const pelicansAltPrimary = "bg-blue-500";
+const pelicansAltSecondary = "text-yellow-500";
+const pelicansAltThird = "blue-800";
+// --------------------- KINGS ---------------------- //
 const kingsPrimary = "bg-purple-700";
 const kingsSecondary = "text-white";
 const kingsThird = "white";
@@ -264,7 +307,10 @@ const kingsOldSchoolLogoStyling = "h-12 top-0 -left-5";
 const kingsThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Sacramento-Kings-Logo-1995-2016.png";
 const kingsThrowbackLogoStyling = "h-14 -top-1 -left-7";
 
-// ------------------------------------------- //
+const kingsAltLogo = "https://www.statmuse.com/_image?href=https%3A%2F%2Fcdn.statmuse.com%2Fimg%2Fnba%2Fplayers%2Fold_nba_sac_1986_1994--wtq4da1g.png&w=250&h=250&f=webp";
+const kingsAltLogoStyling = "h-11 top-0.5 left-1.5";
+
+// --------------------- CELTICS ---------------------- //
 
 const celticsPrimary = "bg-green-700";
 const celticsSecondary = "text-white";
@@ -278,7 +324,7 @@ const celticsThrowbackLogoStyling = "h-11 top-1.5 left-1.5";
 const celticsAltLogo = "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png";
 const celticsAltLogoStyling = "h-11 top-1.5 left-1.5";
 
-// ------------------------------------------- //
+// --------------------- PISTONS ---------------------- //
 const pistonsPrimary = "bg-blue-600";
 const pistonsSecondary = "text-red-500";
 const pistonsThird = "white";
@@ -286,7 +332,17 @@ const pistonsCurrentLogo =
   "https://1000logos.net/wp-content/uploads/2017/08/Detroit-Pistons-logo.png";
 const pistonsCurrentLogoStyling = "h-11 top-1.5 -left-3";
 const detroitPistons = "Detroit Pistons";
-// ------------------------------------------- //
+
+const pistonsThrowbackLogo = "https://loodibee.com/wp-content/uploads/detroit-pistons-1957-1971.png";
+const pistonsThrowbackLogoStyling = "h-16 -top-0.5 -left-0.5";
+
+const pistonsAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/commons/4/4e/Logo_of_the_Detroit_Pistons_%282005%E2%80%932017%29.png";
+const pistonsAltThrowbackLogoStyling = "h-11 top-1 left-0";
+
+const pistonsAltLogo = "https://content.sportslogos.net/logos/6/223/full/detroit_pistons_logo_primary_19976102.png";
+const pistonsAltLogoStyling = "h-11 top-0.5 left-1";
+
+// --------------------- 76ers ---------------------- //
 const sixersPrimary = "bg-blue-600";
 const sixersSecondary = "text-white";
 const sixersThird = "red-500";
@@ -312,7 +368,7 @@ const sixersOldSchoolLogoStyling = "h-16 -top-1 left-0";
 const sixersAltLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KPHI7-1998.gif";
 const sixersAltLogoStyling = "h-14 top-1 left-1";
 
-// ------------------------------------------- //
+// --------------------- CAVALIERS ---------------------- //
 const cavaliersPrimary = "bg-red-900";
 const cavaliersSecondary = "text-white";
 const cavaliersThird = "yellow-400";
@@ -334,7 +390,7 @@ const cavaliersOldSchoolLogoStyling = "h-8 -top-1 left-2";
 
 const cavaliersCurrentLogo = "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-2017.png";
 const cavaliersCurrentLogoStyling = "h-16 -top-1 -left-8";
-// ------------------------------------------- //
+// --------------------- HORNETS ---------------------- //
 const hornetsPrimary = "bg-cyan-400";
 const hornetsSecondary = "text-blue-700";
 const hornetsThird = "purple-700";
@@ -346,15 +402,26 @@ const charlotteHornets = "Charlotte Hornets";
 const hornetsCurrentLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Charlotte_Hornets_%282014%29.svg/1200px-Charlotte_Hornets_%282014%29.svg.png";
 const hornetsCurrentLogoStyling = "h-12 top-1 left-1";
 
-// ------------------------------------------- //
+const cougarsLogo = "https://sportsteamhistory.com/wp-content/uploads/2020/03/carolina_cougars_1971-1974.png";
+const cougarsLogoStyling = "h-12 top-1 left-1";
+
+const cougarsPrimary = "bg-green-600";
+const cougarsSecondary = "text-white";
+const cougarsThird = "blue-600";
+
+// --------------------- MAGIC ---------------------- //
 const magicPrimary = "bg-blue-600";
 const magicSecondary = "text-white";
 const magicThird = "black";
+const orlandoMagic = "Orlando Magic";
 const magicCurrentLogo =
   "https://content.sportslogos.net/logos/6/217/full/orlando_magic_logo_primary_20017625.png";
 const magicCurrentLogoStyling = "h-11 top-1 left-1";
-const orlandoMagic = "Orlando Magic";
-// ------------------------------------------- //
+
+const magicThrowbackLogo = "https://static.cdnlogo.com/logos/o/33/orlando-magic.png";
+const magicThrowbackLogoStyling = "h-20 -top-3 -left-1.5";
+
+// --------------------- HAWKS ---------------------- //
 const hawksPrimary = "bg-red-600";
 const hawksSecondary = "text-yellow-300";
 const hawksThird = "white";
@@ -363,7 +430,19 @@ const hawksCurrentLogo =
 const hawksCurrentLogoStyling = "h-11 top-1 -left-3";
 const atlantaHawks = "Atlanta Hawks";
 const stLouisHawks = "St. Louis Hawks"
-// ------------------------------------------- //
+
+const hawksAltLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KATLH-2008.gif";
+const hawksAltLogoStyling = "h-16 -top-1 left-0";
+
+const hawksAltThrowbackLogo = "https://content.sportslogos.net/logos/6/220/full/atlanta_hawks_logo_primary_19712182.png";
+const hawksAltThrowbackLogoStyling = "h-11 top-1 -left-0.5";
+
+const hawksThrowbackLogo = "https://www.ajc.com/resizer/ywbYPp1GRuBc-aWgZKwCBPGp4Gw=/arc-anglerfish-arc2-prod-ajc/public/4GLQOGNQ6JBENE64BRXBXPBKJM.png";
+const hawksThrowbackLogoStyling = "h-11 top-1 -left-0.5";
+
+const hawksOldSchoolLogo = "https://lh6.googleusercontent.com/proxy/sTiz0hf1xB4Fw0drm0cceGTEKJ267OA4X_ILnkaghRvoASHKolrwdoydJx1mgqIteCoudBZdbLvY7GE9GBo_3qtt6VS1XjL4G3ojdGvGhdv2Yhk79Ph-sYqmCzGpTo8fRtV_FefIIQ";
+const hawksOldSchoolLogoStyling = "h-12 top-1 left-0.5";
+// --------------------- HEAT ---------------------- //
 const heatPrimary = "bg-black";
 const heatSecondary = "text-red-500";
 const heatThird = "white";
@@ -373,7 +452,7 @@ const heatCurrentLogoStyling = "h-14 top-1 left-2";
 const miamiHeat = "Miami Heat";
 const heatThrowbackLogo = "https://seeklogo.com/images/M/miami-heat-1988-1999-logo-51CCA09C8B-seeklogo.com.png";
 const heatThrowbackLogoStyling = "h-14 top-1 left-2";
-// ------------------------------------------- //
+// --------------------- RAPTORS ---------------------- //
 const raptorsPrimary = "bg-red-600";
 const raptorsSecondary = "text-white";
 const raptorsThird = "black";
@@ -381,15 +460,31 @@ const raptorsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612761/2021/09/Toronto-Raptors.svg";
 const raptorsCurrentLogoStyling = "h-12 top-0 left-0";
 const torontoRaptors = "Toronto Raptors";
-// ------------------------------------------- //
+
+const raptorsAltLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Toronto_Raptors_logo.svg/800px-Toronto_Raptors_logo.svg.png";
+const raptorsAltLogoStyling = "h-12 top-0 left-0";
+
+const raptorsThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Toronto-Raptors-Logo-1996-2008.png";
+const raptorsThrowbackLogoStyling = "h-12 top-0 -left-2.5";
+
+const raptorsAltThrowbackLogo = "https://www.buffalorising.com/wp-content/uploads/2020/10/Toronto-Raptors-emblem.png";
+const raptorsAltThrowbackLogoStyling = "h-12 top-0 -left-2.5";
+
+// --------------------- PACERS ---------------------- //
 const pacersPrimary = "bg-blue-700";
 const pacersSecondary = "text-yellow-400";
 const pacersThird = "white";
 const pacersCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo.png";
-const pacersCurrentLogoStyling = "h-12 top-0 left-0";
+const pacersCurrentLogoStyling = "h-14 top-0 left-0";
 const indianaPacers = "Indiana Pacers";
-// ------------------------------------------- //
+
+const pacersThrowbackLogo = "https://loodibee.com/wp-content/uploads/indiana-pacers-1967-1976.png";
+const pacersThrowbackLogoStyling = "h-16 -top-1 -left-1.5";
+
+const pacersAltThrowbackLogo = "https://a.espncdn.com/guid/547fc042-3e02-4795-9637-9ab84322b625/logos/primary_logo_on_primary_color.png";
+const pacersAltThrowbackLogoStyling = "h-12 top-0 left-0";
+// --------------------- BUCKS ---------------------- //
 const bucksPrimary = "bg-green-800";
 const bucksSecondary = "text-yellow-500";
 const bucksThird = "black";
@@ -397,7 +492,17 @@ const bucksCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-milwaukee-bucks-logo.png";
 const bucksCurrentLogoStyling = "h-14 top-0 left-0";
 const milwaukeeBucks = "Milwuakee Bucks";
-// ------------------------------------------- //
+
+const bucksThrowbackLogo = "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19698490.png";
+const bucksThrowbackLogoStyling = "h-14 top-0 -left-0.5";
+
+const bucksAltThrowbackLogo = "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19946491.png";
+const bucksAltThrowbackLogoStyling = "h-14 top-0.5 left-0";
+
+const bucksAltLogo = "https://basketballjerseyarchive.com/static/logos/21ekAeEzhoJ2uqS/milwaukee-bucks-2006-2015-logo.png";
+const bucksAltLogoStyling = "h-14 top-0.5 left-1";
+
+// --------------------- KNICKS ---------------------- //
 const knicksPrimary = "bg-blue-600";
 const knicksSecondary = "text-orange-600";
 const knicksThird = "white";
@@ -405,7 +510,14 @@ const knicksCurrentLogo =
   "https://content.sportslogos.net/logos/6/216/full/new_york_knicks_logo_primary_19938358.png";
 const knicksCurrentLogoStyling = "h-11 top-1 left-0";
 const newYorkKnicks = "New York Knicks";
-// ------------------------------------------- //
+
+const knicksThrowbackLogo = "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1964.png?im=Resize=(480)";
+const knicksThrowbackLogoStyling = "h-16 -top-1 -left-4";
+
+const knicksAltThrowbackLogo = "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1983.png";
+const knicksAltThrowbackLogoStyling = "h-16 -top-1 -left-4";
+
+// --------------------- NETS ---------------------- //
 const netsPrimary = "bg-black";
 const netsSecondary = "text-gray-200";
 const netsThird = "white";
@@ -413,9 +525,25 @@ const netsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612751/2024/07/BKN_Primary.svg";
 const netsCurrentLogoStyling = "h-11 top-0.5 left-0.5";
 const brooklynNets = "Brooklyn Nets";
+
 const newYorkNets = "New York Nets";
+const netsAltPrimary = "bg-blue-900";
+const netsAltSecondary = "text-white";
+const netsAltThird = "red-500";
 const newJerseyNets = "New Jersey Nets"
-// ------------------------------------------- //
+
+const netsThrowbackLogo = "https://loodibee.com/wp-content/uploads/new-jersey-nets-1978-1990.png";
+const netsThrowbackLogoStyling = "h-14 -top-0.5 -left-0.5";
+
+const netsAltThrowbackLogo = "https://loodibee.com/wp-content/uploads/new-jersey-nets-1990-1997-300x300.png";
+const netsAltThrowbackLogoStyling = "h-14 top-0.5 left-0";
+
+const netsAltLogo = "https://basketballjerseyarchive.com/static/logos/XGt9nHgoRMjWLGp/brooklyn-nets-1997-2012-logo.png";
+const netsAltLogoStyling = "h-11 top-0.5 left-1";
+
+const netsOldSchoolLogo = "https://lh3.googleusercontent.com/proxy/86tCgwFJyS_TdpohAvxjf_OqIN2VgWQA7wQ9wMNq96Th5E7clWay2eSciWi8SRVGOZDbmFDCL1F_V7DiQs5-uObv1A8W02iSzva749bZjkmBpXpy__6UFpY512q_xsc0wx3n18qJ32K_8UQ";
+const netsOldSchoolLogoStyling = "h-11 top-0.5 left-0.5";
+// --------------------- WIZARDS ---------------------- //
 const wizardsPrimary = "bg-blue-700";
 const wizardsSecondary = "text-red-500";
 const wizardsThird = "white";
@@ -435,7 +563,7 @@ const wizardsAltLogoStyling = 'h-14 top-0 left-0';
 
 const washingtonWizards = "Washington Wizards";
 const washingtonBullets = "Washington Bullets";
-// ------------------------------------------- //
+// --------------------- BULLS ---------------------- //
 const bullsPrimary = "bg-red-600";
 const bullsSecondary = "text-black-300";
 const bullsThird = "white";
@@ -639,9 +767,9 @@ export const data = [
     ts: +7.0,
     reb75: 18.6,
     ast75: 5.2,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <FaTools />,
@@ -709,8 +837,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/abdulka01.jpg",
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/e6/83/39/e68339332b644fed9091cc813e346b65.jpg",
-    teamLogoSrc: bucksCurrentLogo,
-    teamLogoStyling: bucksCurrentLogoStyling,
+      teamLogoSrc: bucksThrowbackLogo,
+      teamLogoStyling: bucksThrowbackLogoStyling,
   },
   {
     name: "Wilt Chamberlain",
@@ -727,9 +855,9 @@ export const data = [
     ts: +14.9,
     reb75: 19.4,
     ast75: 6.2,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdSportsHandball />,
@@ -1032,9 +1160,9 @@ export const data = [
         explanation: "Lockdown Post Defender",
       },
       {
-        icon: <RiTeamFill />,
+        icon: <GiMonsterGrasp />,
         color: "gold",
-        explanation: "Switchable Specialist",
+        explanation: "Pick Pocket/Interceptor",
       },
     ],
     teamScoring: 8,
@@ -1062,8 +1190,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/olajuha01.jpg",
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/15/da/04/15da04256253d97d453743eeee0abf60.jpg",
-    teamLogoSrc: rocketsCurrentLogo,
-    teamLogoStyling: rocketsCurrentLogoStyling,
+    teamLogoSrc: rocketsAltThrowbackLogo,
+    teamLogoStyling: rocketsAltThrowbackLogoStyling,
   },
   {
     name: "Magic Johnson",
@@ -1432,9 +1560,9 @@ export const data = [
     ts: +9.4,
     reb75: 4.9,
     ast75: 4.0,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <ImTarget />,
@@ -1784,9 +1912,9 @@ export const data = [
     ts: -1.4,
     reb75: 24.7,
     ast75: 4.7,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdSportsHandball />,
@@ -1794,39 +1922,39 @@ export const data = [
         explanation: "Lob/Putback/Dunk Master",
       },
       {
+        icon: <RiHandCoinLine />,
+        color: "gold",
+        explanation: "Dime Dropper",
+      },
+      {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
       },
       {
         icon: <SiAdblock />,
-        color: "hof",
+        color: "goat",
         explanation: "Shot Block Artist",
       },
       {
         icon: <FaAnchor />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Anchor",
       },
       {
         icon: <GiBrain />,
-        color: "hof",
+        color: "goat",
         explanation: "High IQ Defender",
       },
       {
         icon: <FaLock />,
-        color: "hof",
+        color: "goat",
         explanation: "Lockdown Post Defender",
       },
       {
         icon: <GiEmbrassedEnergy />,
-        color: "hof",
+        color: "goat",
         explanation: "High Energy Defender",
-      },
-      {
-        icon: <RiTeamFill />,
-        color: "gold",
-        explanation: "Switchable Specialist",
       },
     ],
     teamScoring: 2,
@@ -1951,11 +2079,11 @@ export const data = [
     year: "1975-76",
     team: "NYA",
     franchise: "BRK",
-    fullTeamName: "New York Nets",
-    teamColor: netsPrimary,
-    teamColor2: netsSecondary,
-    teamColor3: netsThird,
-    cardColor: "diamond",
+    fullTeamName: newYorkNets,
+    teamColor: netsAltPrimary,
+    teamColor2: netsAltSecondary,
+    teamColor3: netsAltThird,
+    cardColor: WHITE,
     pts75: 25.8,
     ts: +5.2,
     reb75: 14,
@@ -2030,8 +2158,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/ervinju01.jpg",
     plyrCardPictureSrc:
       "https://cdn.nba.com/manage/2020/10/julius-erving-nets-392x588.jpg",
-    teamLogoSrc: netsCurrentLogo,
-    teamLogoStyling: netsCurrentLogoStyling,
+    teamLogoSrc: netsOldSchoolLogo,
+    teamLogoStyling: netsOldSchoolLogoStyling,
   },
   {
     name: "Oscar Robertson",
@@ -2048,9 +2176,9 @@ export const data = [
     ts: +9.8,
     reb75: 8,
     ast75: 8.9,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <FaHatWizard />,
@@ -2305,9 +2433,9 @@ export const data = [
     team: "NOH",
     franchise: "NOP",
     fullTeamName: newOrleansHornets,
-    teamColor: pelicansPrimary,
-    teamColor2: pelicansSecondary,
-    teamColor3: pelicansThird,
+    teamColor: pelicansAltPrimary,
+    teamColor2: pelicansAltSecondary,
+    teamColor3: pelicansAltThird,
     cardColor: "diamond",
     pts75: 22.4,
     ts: +3.6,
@@ -2383,8 +2511,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/paulch01.jpg",
     plyrCardPictureSrc:
       "https://cdn.bleacherreport.net/images_root/slides/photos/000/549/883/106599662_original.jpg?1291737327",
-    teamLogoSrc: pelicansCurrentLogo,
-    teamLogoStyling: pelicansCurrentLogoStyling,
+    teamLogoSrc: pelicansThrowbackLogo,
+    teamLogoStyling: pelicansThrowbackLogoStyling,
   },
   {
     name: "James Harden",
@@ -2471,8 +2599,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/hardeja01.jpg",
     plyrCardPictureSrc:
       "https://www.amarillo.com/gcdn/authoring/2015/03/15/NAGN/ghows-TX-5a3ff5cb-5f4e-4be9-a5e1-2b2fefc92bde-49165afd.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp",
-    teamLogoSrc: rocketsCurrentLogo,
-    teamLogoStyling: rocketsCurrentLogoStyling,
+    teamLogoSrc: rocketsAltLogo,
+    teamLogoStyling: rocketsAltLogoStyling,
   },
   {
     name: "Kawhi Leonard",
@@ -2559,8 +2687,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/leonaka01.jpg",
     plyrCardPictureSrc:
       "https://cdn.images.express.co.uk/img/dynamic/4/590x/secondary/Kawhi-Leonard-1559573.jpg?r=1539846480454",
-    teamLogoSrc: raptorsCurrentLogo,
-    teamLogoStyling: raptorsCurrentLogoStyling,
+    teamLogoSrc: raptorsAltThrowbackLogo,
+    teamLogoStyling: raptorsAltThrowbackLogoStyling,
   },
   {
     name: "David Robinson",
@@ -3087,8 +3215,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/howardw01.jpg",
     plyrCardPictureSrc:
       "https://www.nydailynews.com/wp-content/uploads/migration/2012/03/19/EY2IF6Q7ZLWL7VSRKP3LDMGD64.jpg?w=1024",
-    teamLogoSrc: magicCurrentLogo,
-    teamLogoStyling: magicCurrentLogoStyling,
+    teamLogoSrc: magicThrowbackLogo,
+    teamLogoStyling: magicThrowbackLogoStyling,
   },
   {
     name: "Bob Pettit",
@@ -3105,9 +3233,9 @@ export const data = [
     ts: +2.1,
     reb75: 14.8,
     ast75: 2.6,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <ImTarget />,
@@ -3175,8 +3303,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/pettibo01.jpg",
     plyrCardPictureSrc:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bob_Pettit_1961.jpeg/1200px-Bob_Pettit_1961.jpeg",
-    teamLogoSrc: hawksCurrentLogo,
-    teamLogoStyling: hawksCurrentLogoStyling,
+    teamLogoSrc: hawksOldSchoolLogo,
+    teamLogoStyling: hawksOldSchoolLogoStyling,
   },
   {
     name: "Reggie Miller",
@@ -3263,8 +3391,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/millere01.jpg",
     plyrCardPictureSrc:
       "https://m.media-amazon.com/images/S/pv-target-images/71e20a72b46a0ab2e48a746ad829afe1f6ac838e88bbe4675c43e0399045573c.jpg",
-    teamLogoSrc: pacersCurrentLogo,
-    teamLogoStyling: pacersCurrentLogoStyling,
+    teamLogoSrc: pacersAltThrowbackLogo,
+    teamLogoStyling: pacersAltThrowbackLogoStyling,
   },
   {
     name: "Elvin Hayes",
@@ -3439,8 +3567,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/ewingpa01.jpg",
     plyrCardPictureSrc:
       "https://i.pinimg.com/474x/86/da/64/86da64cf5589e9029c8a2826c684e11b.jpg",
-    teamLogoSrc: knicksCurrentLogo,
-    teamLogoStyling: knicksCurrentLogoStyling,
+    teamLogoSrc: knicksAltThrowbackLogo,
+    teamLogoStyling: knicksAltThrowbackLogoStyling,
   },
   {
     name: "Karl Malone",
@@ -3892,9 +4020,9 @@ export const data = [
     ts: +8.1,
     reb75: 14.9,
     ast75: 3.3,
-    stk75: "NA",
-    tov75: "NA",
-    bpm: "NaN", // estimated 9.0
+    stk75: null,
+    tov75: null,
+    bpm: null, // estimated 9.0
     badges: [
       {
         icon: <FaTools />,
@@ -4175,12 +4303,12 @@ export const data = [
       },
       {
         icon: <FaHatWizard />,
-        color: "gold",
+        color: "hof",
         explanation: "Middy Magician",
       },
       {
         icon: <GiBodyBalance />,
-        color: "gold",
+        color: "hof",
         explanation: "Acrobatic Finisher",
       },
       {
@@ -4190,7 +4318,7 @@ export const data = [
       },
       {
         icon: <TbEngine />,
-        color: "gold",
+        color: "hof",
         explanation: "Offensive Engine",
       },
       {
@@ -4249,9 +4377,9 @@ export const data = [
     ts: +1.3,
     reb75: 14.9,
     ast75: 3.7,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -4339,9 +4467,9 @@ export const data = [
     ts: +0.2,
     reb75: 8.0,
     ast75: 6.7,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -4501,8 +4629,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://pbs.twimg.com/media/DXOTyuOWkAIgICu?format=jpg&name=4096x4096",
-    teamLogoSrc: rocketsCurrentLogo,
-    teamLogoStyling: rocketsCurrentLogoStyling,
+    teamLogoSrc: rocketsAltThrowbackLogo,
+    teamLogoStyling: rocketsAltThrowbackLogoStyling,
   },
   {
     name: "Artis Gilmore",
@@ -4681,8 +4809,10 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://i.pinimg.com/236x/77/17/9e/77179e36b6a1623ca51ec17d129956c8.jpg",
-    teamLogoSrc: netsCurrentLogo,
-    teamLogoStyling: netsCurrentLogoStyling,
+    // teamLogoSrc: netsAltLogo,
+    // teamLogoStyling: netsAltLogoStyling,
+    teamLogoSrc: netsAltLogo,
+    teamLogoStyling: netsAltLogoStyling,
   },
   {
     name: "Kevin McHale",
@@ -4969,9 +5099,9 @@ export const data = [
     ts: +1.4,
     reb75: 4.1,
     ast75: 6.3,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -5490,8 +5620,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://media.gq.com/photos/5f6a1464568fd2aedb01831c/master/pass/GettyImages-450442872.jpg",
-    teamLogoSrc: trailblazersCurrentLogo,
-    teamLogoStyling: trailblazersCurrentLogoStyling,
+    teamLogoSrc: trailblazersThrowbackLogo,
+    teamLogoStyling: trailblazersThrowbackLogoStyling,
   },
   {
     name: "Dolph Schayes",
@@ -5508,9 +5638,9 @@ export const data = [
     ts: +5.9,
     reb75: 12.1,
     ast75: 2.6,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <ImTarget />,
@@ -5688,9 +5818,9 @@ export const data = [
     ts: +1.7,
     reb75: 5.8,
     ast75: 2.2,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -5850,8 +5980,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/94/a1/84/94a1842206fdb5757d4e339bf505f7dd.jpg",
-    teamLogoSrc: pistonsCurrentLogo,
-    teamLogoStyling: pistonsCurrentLogoStyling,
+    teamLogoSrc: pistonsAltLogo,
+    teamLogoStyling: pistonsAltLogoStyling,
   },
   {
     name: "Dave Cowens",
@@ -5868,9 +5998,9 @@ export const data = [
     ts: +0.7,
     reb75: 14.4,
     ast75: 3.6,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -6210,8 +6340,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://www.the-sun.com/wp-content/uploads/sites/6/2023/09/user-expressly-acknowledges-agrees-downloading-846995559.jpg?strip=all&w=640",
-    teamLogoSrc: rocketsCurrentLogo,
-    teamLogoStyling: rocketsCurrentLogoStyling,
+    teamLogoSrc: rocketsThrowbackLogo,
+    teamLogoStyling: rocketsThrowbackLogoStyling,
   },
   {
     name: "Walt Frazier",
@@ -6228,9 +6358,9 @@ export const data = [
     ts: +5.7,
     reb75: 6.2,
     ast75: 5.3,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <FaHatWizard />,
@@ -6565,8 +6695,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/45/ee/58/45ee58e0337b5948ef4044f3dfb8f0c6.jpg",
-    teamLogoSrc: bucksCurrentLogo,
-    teamLogoStyling: bucksCurrentLogoStyling,
+    teamLogoSrc: bucksThrowbackLogo,
+    teamLogoStyling: bucksThrowbackLogoStyling,
   },
   {
     name: "Paul Pierce",
@@ -6713,9 +6843,9 @@ export const data = [
         explanation: "High Energy Defender",
       },
       {
-        icon: <RiTeamFill />,
+        icon: <GiMonsterGrasp />,
         color: "gold",
-        explanation: "Switchable Specialist",
+        explanation: "Pick Pocket/Interceptor",
       },
     ],
     teamScoring: 8.75,
@@ -7393,9 +7523,9 @@ export const data = [
     ts: +3.6,
     reb75: 3.7,
     ast75: 2.1,
-    stk75: "NaN",
-    tov75: "NaN",
-    bpm: "NaN",
+    stk75: null,
+    tov75: null,
+    bpm: null,
     badges: [
       {
         icon: <FaHatWizard />,
@@ -7924,7 +8054,7 @@ export const data = [
     reb75: 16.3,
     ast75: 6.4,
     stk75: 2.2,
-    tov75: "NaN",
+    tov75: null,
     bpm: 4.4,
     badges: [
       {
@@ -8261,8 +8391,8 @@ export const data = [
     // PlayerCard
     plyrCardPictureSrc:
       "https://render.fineartamerica.com/images/rendered/default/print/5.5/8/break/images/artworkimages/medium/3/brandon-roy-rocky-widner.jpg",
-    teamLogoSrc: trailblazersCurrentLogo,
-    teamLogoStyling: trailblazersCurrentLogoStyling,
+    teamLogoSrc: trailblazersAltThrowbackLogo,
+    teamLogoStyling: trailblazersAltThrowbackLogoStyling,
   },
   {
     name: "Paul George",
@@ -8526,9 +8656,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/reedwi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://i.pinimg.com/736x/61/37/b1/6137b11b1d801df07fa840bc9c2f8e36.jpg",
     teamLogoSrc: knicksCurrentLogo,
     teamLogoStyling: knicksCurrentLogoStyling,
   },
@@ -8614,9 +8744,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/stojape01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://i.pinimg.com/736x/48/12/78/481278e38c3f66f4be8ca87eb3359cee.jpg",
     teamLogoSrc: kingsCurrentLogo,
     teamLogoStyling: kingsCurrentLogoStyling,
   },
@@ -8702,9 +8832,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/johnske02.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://heavy.com/wp-content/uploads/2024/11/GettyImages-1921633603.jpg?quality=65&strip=all&w=385",
     teamLogoSrc: sunsCurrentLogo,
     teamLogoStyling: sunsCurrentLogoStyling,
   },
@@ -8790,10 +8920,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/lucasje01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-        teamLogoSrc: kingsOldSchoolLogo,
+    plyrCardPictureSrc: "https://cdn.nba.com/manage/2022/02/GettyImages-98147478-scaled.jpg",
+    // "https://render.fineartamerica.com/images/rendered/default/poster/6.5/8/break/images-medium/2-jerry-lucas-legendary-basketball-star-everett.jpg",
+    teamLogoSrc: kingsOldSchoolLogo,
     teamLogoStyling: kingsOldSchoolLogoStyling,
   },
   {
@@ -8878,11 +9009,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/cartevi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: raptorsCurrentLogo,
-    teamLogoStyling: raptorsCurrentLogoStyling,
+    plyrCardPictureSrc: "https://www.elitegamingleagues.com/wp-content/uploads/2024/08/image_4b09bc3e-432f-4282-a1d4-5e362cd95584_720x.webp",
+    teamLogoSrc: raptorsThrowbackLogo,
+    teamLogoStyling: raptorsThrowbackLogoStyling,
   },
   {
     name: "Grant Hill",
@@ -8966,9 +9097,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hillgr01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://townsquare.media/site/44/files/2023/11/attachment-GettyImages-1637346.jpg?w=630&q=75",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -9054,9 +9185,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/nancela01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/suns/sites/suns/files/slam_dunk_84_03.jpg",
     teamLogoSrc: sunsCurrentLogo,
     teamLogoStyling: sunsCurrentLogoStyling,
   },
@@ -9142,7 +9273,7 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/pricema01.jpg",
     // PlayerCard
     plyrCardPictureSrc: "https://i.pinimg.com/736x/f1/14/77/f11477566410c7cb376f29df2db4a653.jpg",
     teamLogoSrc: cavaliersAltLogo,
@@ -9230,9 +9361,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/goberru01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.amomama.com/0adbc0dd91111b8524fb9eee8068659a.jpeg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -9318,9 +9449,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/billuch01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.vox-cdn.com/uploads/chorus_image/image/38311270/20131105_kkt_ai5_151.0.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -9406,9 +9537,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/jonessa01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://goldenrankings.com/Basketball%20Pictures/NBA%20Finals/1960/sam-jones.jpg",
     teamLogoSrc: celticsCurrentLogo,
     teamLogoStyling: celticsCurrentLogoStyling,
   },
@@ -9494,22 +9625,110 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/dantlad01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.nba.com/teams/uploads/sites/1610612762/2023/11/GettyImages-499320108.jpg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
   {
     name: "Bobby Jones",
     position: "PF",
-    year: "0000-00",
+    year: "1976-77",
     team: "DEN",
     franchise: "DEN",
     fullTeamName: denverNuggets,
     teamColor: nuggetsPrimary,
     teamColor2: nuggetsSecondary,
     teamColor3: nuggetsThird,
+    cardColor: BLUE,
+    pts75: 22.1,
+    ts: +9.4,
+    reb75: 12.1,
+    ast75: 4.7,
+    stk75: 6.2,
+    tov75: 3.5,
+    bpm: 7.0,
+    badges: [
+      {
+        icon: <MdSportsHandball />,
+        color: "bronze",
+        explanation: "Lob/Putback/Dunk Master",
+      },
+      {
+        icon: <MdOutlineSportsKabaddi />,
+        color: "bronze",
+        explanation: "Tough Shot Maker",
+      },
+      {
+        icon: <FaTools />,
+        color: "bronze",
+        explanation: "Post Move Technician",
+      },
+      {
+        icon: <ImMagnet />,
+        color: "bronze",
+        explanation: "Rebound Magnet",
+      },
+      {
+        icon: <SiAdblock />,
+        color: "bronze",
+        explanation: "Shot Block Artist",
+      },
+      {
+        icon: <FaAnchor />,
+        color: "bronze",
+        explanation: "Defensive Anchor",
+      },
+      {
+        icon: <RiTeamFill />,
+        color: "bronze",
+        explanation: "Switchable Specialist",
+      },
+      {
+        icon: <FaLock />,
+        color: "bronze",
+        explanation: "Lockdown Post Defender",
+      },
+    ],
+    teamScoring: 8.75,
+    teamEfficiency: 5.5,
+    teamSpacing: 7.5,
+    teamFinishing: 9.75,
+    teamPassing: 7.5,
+    teamCreation: 7,
+    teamOffRebounding: 5,
+    //
+    teamInteriorDef: 3,
+    teamPerimeterDef: 8.5,
+    teamSwitchability: 4.5,
+    teamDefIntangibles: 7,
+    teamDefPlaymaking: 7.75,
+    teamDefRebounding: 7,
+    //
+    teamOffChemRating: 0,
+    teamDefChemRating: 0.65,
+    teamTotalChemRating: 0.65,
+    teamOffImpact: 3.37,
+    teamDefImpact: 0.5,
+    teamTotalImpact: 3.9,
+    // Headshot
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/jonesbo01.jpg",
+    // PlayerCard
+    plyrCardPictureSrc: "https://media.gettyimages.com/id/499320452/photo/landover-md-bobby-jones-of-the-denver-nuggets-looks-on-against-the-washington-bullets-during.jpg?s=612x612&w=0&k=20&c=n_7Fkmcg-5Z2Yp4GOuG-KwDnQwlG0ijB0s3m4_aAKyI=",
+    teamLogoSrc: nuggetsOldSchoolLogo,
+    teamLogoStyling: nuggetsCurrentLogoStyling,
+  },
+  {
+    name: "Tiny Archibald",
+    position: "PG",
+    year: "1972-73",
+    team: "KCO",
+    franchise: "SAC",
+    fullTeamName: "Kansas City-Omaha Kings",
+    teamColor: royalsPrimary,
+    teamColor2: royalsSecondary,
+    teamColor3: royalsThird,
     cardColor: BLUE,
     pts75: 0.0,
     ts: +0,
@@ -9582,99 +9801,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/architi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: nuggetsCurrentLogo,
-    teamLogoStyling: nuggetsCurrentLogoStyling,
-  },
-  {
-    name: "Tiny Archibald",
-    position: "PG",
-    year: "0000-00",
-    team: "SAC",
-    franchise: "SAC",
-    fullTeamName: sacramentoKings,
-    teamColor: kingsPrimary,
-    teamColor2: kingsSecondary,
-    teamColor3: kingsThird,
-    cardColor: PURPLE,
-    pts75: 0.0,
-    ts: +0,
-    reb75: 0.0,
-    ast75: 0.0,
-    stk75: 0.0,
-    tov75: 0.0,
-    bpm: 0.0,
-    badges: [
-      {
-        icon: <MdSportsHandball />,
-        color: "bronze",
-        explanation: "Lob/Putback/Dunk Master",
-      },
-      {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "bronze",
-        explanation: "Tough Shot Maker",
-      },
-      {
-        icon: <FaTools />,
-        color: "bronze",
-        explanation: "Post Move Technician",
-      },
-      {
-        icon: <ImMagnet />,
-        color: "bronze",
-        explanation: "Rebound Magnet",
-      },
-      {
-        icon: <SiAdblock />,
-        color: "bronze",
-        explanation: "Shot Block Artist",
-      },
-      {
-        icon: <FaAnchor />,
-        color: "bronze",
-        explanation: "Defensive Anchor",
-      },
-      {
-        icon: <RiTeamFill />,
-        color: "bronze",
-        explanation: "Switchable Specialist",
-      },
-      {
-        icon: <FaLock />,
-        color: "bronze",
-        explanation: "Lockdown Post Defender",
-      },
-    ],
-    teamScoring: 8.75,
-    teamEfficiency: 5.5,
-    teamSpacing: 7.5,
-    teamFinishing: 9.75,
-    teamPassing: 7.5,
-    teamCreation: 7,
-    teamOffRebounding: 5,
-    //
-    teamInteriorDef: 3,
-    teamPerimeterDef: 8.5,
-    teamSwitchability: 4.5,
-    teamDefIntangibles: 7,
-    teamDefPlaymaking: 7.75,
-    teamDefRebounding: 7,
-    //
-    teamOffChemRating: 0,
-    teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
-    teamOffImpact: 3.37,
-    teamDefImpact: 0.5,
-    teamTotalImpact: 3.9,
-    // Headshot
-    plyrPictureSrc: "",
-    // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: "***",
-    teamLogoStyling: "***",
+    plyrCardPictureSrc: "https://i.pinimg.com/236x/82/15/68/821568b756b8b89457959856935020e1.jpg",
+    teamLogoSrc: kingsAltLogo,
+    teamLogoStyling: kingsAltLogoStyling,
   },
   {
     name: "Marc Gasol",
@@ -9758,9 +9889,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/gasolma01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://pbs.twimg.com/media/GFNA0qxWUAAxdog.jpg",
     teamLogoSrc: grizzliesCurrentLogo,
     teamLogoStyling: grizzliesCurrentLogoStyling,
   },
@@ -9846,25 +9977,25 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/worthja01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://media.gettyimages.com/id/1301565577/photo/james-worthy-small-forward-and-power-forward-for-the-los-angeles-lakers-prepares-to-shoot-a.jpg?s=612x612&w=0&k=20&c=okLC1CeD7z5ov6XdEdtuZz107GmNwdwsaWulwek9e9w=",
     teamLogoSrc: lakersCurrentLogo,
     teamLogoStyling: lakersCurrentLogoStyling,
   },
   {
     name: "Jeff Hornacek",
     position: "SG",
-    year: "0000-00",
-    team: "UTA",
-    franchise: "UTA",
-    fullTeamName: utahJazz,
-    teamColor: jazzPrimary,
-    teamColor2: jazzSecondary,
-    teamColor3: jazzThird,
+    year: "1991-92",
+    team: "PHX",
+    franchise: "PHX",
+    fullTeamName: phoenixSuns,
+    teamColor: sunsPrimary,
+    teamColor2: sunsSecondary,
+    teamColor3: sunsThird,
     cardColor: PURPLE,
     pts75: 0.0,
-    ts: +0,
+    ts: +7.3,
     reb75: 0.0,
     ast75: 0.0,
     stk75: 0.0,
@@ -9934,11 +10065,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hornaje01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: jazzCurrentLogo,
-    teamLogoStyling: jazzCurrentLogoStyling,
+    plyrCardPictureSrc: "https://media.gettyimages.com/id/533091524/photo/phoenix-suns-jeff-hornacek-in-action-vs-los-angeles-lakers-at-the-forum-inglewood-ca-credit.jpg?s=612x612&w=0&k=20&c=qmO9v7KeIjxUpnuWg8lgymljZY8QfBurs01HUmxf_8g=",
+    teamLogoSrc: sunsAltLogo,
+    teamLogoStyling: sunsAltLogoStyling,
   },
   {
     name: "Chris Mullin",
@@ -10022,9 +10153,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/mullich01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://a.espncdn.com/photo/2020/0501/r694836_864x1296_2-3.jpg",
     teamLogoSrc: warriorsThrowbackLogo,
     teamLogoStyling: warriorsThrowbackLogoStyling,
   },
@@ -10110,16 +10241,16 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/isselda01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://images.squarespace-cdn.com/content/v1/5361973ee4b0482b3e2dd960/00de6197-7388-4d95-bf8e-621d2696bf5e/dan+issel5.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
   {
     name: "DeMar DeRozan",
     position: "SG",
-    year: "0000-00",
+    year: "2016-17",
     team: "TOR",
     franchise: "TOR",
     fullTeamName: torontoRaptors,
@@ -10128,7 +10259,7 @@ export const data = [
     teamColor3: raptorsThird,
     cardColor: RED,
     pts75: 0.0,
-    ts: +0,
+    ts: +0.8,
     reb75: 0.0,
     ast75: 0.0,
     stk75: 0.0,
@@ -10198,9 +10329,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/derozde01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://images.complex.com/complex/image/upload/v1723878217/sanity-new/gcd1isd5icolkmjwdagg.jpg-134288337.jpg",
     teamLogoSrc: raptorsCurrentLogo,
     teamLogoStyling: raptorsCurrentLogoStyling,
   },
@@ -10286,9 +10417,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/aldrila01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/legacy/photos/463404129.jpg",
     teamLogoSrc: trailblazersCurrentLogo,
     teamLogoStyling: trailblazersCurrentLogoStyling,
   },
@@ -10374,9 +10505,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/vandeki01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://pm1.aminoapps.com/7232/cbf061d720fe03b9f47225839532b63bc56e587dr1-346-500v2_00.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -10462,23 +10593,23 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hardati01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://external-preview.redd.it/1xwrgmigjPFI8AZuzE7Nig_cwqAby5_T1PrWj2xiUKE.jpg?auto=webp&s=120e6cab6aeb632231129173a018cb8c318f8756",
     teamLogoSrc: warriorsThrowbackLogo,
     teamLogoStyling: warriorsThrowbackLogoStyling,
   },
   {
     name: "Billy Cunningham",
     position: "SF",
-    year: "0000-00",
-    team: "PHI",
-    franchise: "PHI",
-    fullTeamName: philadelphiaSeventySixers,
-    teamColor: sixersPrimary,
-    teamColor2: sixersSecondary,
-    teamColor3: sixersThird,
-    cardColor: BLUE,
+    year: "1972-73",
+    team: "CAR",
+    franchise: "CHA",
+    fullTeamName: "Carolina Cougars (ABA)",
+    teamColor: cougarsPrimary,
+    teamColor2: cougarsSecondary,
+    teamColor3: cougarsThird,
+    cardColor: GREEN,
     pts75: 0.0,
     ts: +0,
     reb75: 0.0,
@@ -10550,11 +10681,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/cunnibi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: sixersCurrentLogo,
-    teamLogoStyling: sixersCurrentLogoStyling,
+    plyrCardPictureSrc: "https://from-way-downtown.com/wp-content/uploads/2021/11/img_1273.jpg?w=1568",
+    teamLogoSrc: cougarsLogo,
+    teamLogoStyling: cougarsLogoStyling,
   },
   {
     name: "Vern Mikkelsen",
@@ -10638,9 +10769,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/mikkeve01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://images.findagrave.com/photos/2013/325/120671417_138514884678.jpg?size=photos250",
     teamLogoSrc: lakersCurrentLogo,
     teamLogoStyling: lakersCurrentLogoStyling,
   },
@@ -10726,9 +10857,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/laniebo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://assets.sbnation.com/assets/961384/Bob_Lanier_72_home.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -10814,9 +10945,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/willide01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://lh3.googleusercontent.com/proxy/kf3zXwCIvoB6Opey34g6p1qp-flf4KqsVG5681OIROAoh9kH70GigiJJhdbPdTT7lkSk8SMOMwFImYF1JGjJ9NjTVHzOoX1GTQ",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -10902,9 +11033,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hudsolo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://i.redd.it/t55959ja9wob1.jpg",
     teamLogoSrc: hawksCurrentLogo,
     teamLogoStyling: hawksCurrentLogoStyling,
   },
@@ -11078,9 +11209,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/wallara01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://media.gettyimages.com/id/1695394/photo/east-rutherford-nj-rasheed-wallace-of-the-portland-trail-blazers-smiles-during-the-nba-game.jpg?s=612x612&w=0&k=20&c=BuAps7M23GpeXG1dNyiImbiklULlLHKFfwdW0eCAnF4=",
     teamLogoSrc: trailblazersCurrentLogo,
     teamLogoStyling: trailblazersCurrentLogoStyling,
   },
@@ -11166,11 +11297,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/westppa01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: "***",
-    teamLogoStyling: "***",
+    plyrCardPictureSrc: "https://minutemedia-ressh.cloudinary.com/image/upload/v1695294154/shape/cover/sport/2bc71822d47a8b46fb36ae4d97a5554115c41ba394f58f390b3119b677dff1ff.jpg",
+    teamLogoSrc: sunsThrowbackLogo,
+    teamLogoStyling: sunsThrowbackLogoStyling,
   },
   {
     name: "Alex English",
@@ -11254,9 +11385,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/englial01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/denver-nuggets-alex-english-scott-cunningham.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -11342,9 +11473,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/lowryky01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://cdn.hoopsrumors.com/files/2017/05/USATSI_10007349_168380616_lowres.jpg",
     teamLogoSrc: raptorsCurrentLogo,
     teamLogoStyling: raptorsCurrentLogoStyling,
   },
@@ -11430,9 +11561,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/thurmna01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/465782518_9061177107248115_675755627296593274_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=LaAd0GskMfMQ7kNvgEMhDpb&_nc_oc=Adm2mp05k5oW4sJv8YIt45A_7WmKkM7iv0ryXgbNc2K2tt9OSVlRme3e0t3-AotIKPVnxmDizLvbo56XxyFuaLFn&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=I_-DyJEVgP0SPnzCN8Av0A&oh=00_AYGeRCQmZo1pHvFq5Nr5kVKtpOj3aNBVuZjr3_OkI25EwQ&oe=67F47A14",
     teamLogoSrc: warriorsAltThrowbackLogo,
     teamLogoStyling: warriorsAltThrowbackLogoStyling,
   },
@@ -11518,7 +11649,7 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/iversal01.jpg",
     // PlayerCard
     plyrCardPictureSrc: "https://i.pinimg.com/474x/3e/11/1d/3e111d226cdf794a9348178f26823c9c.jpg",
     teamLogoSrc: sixersAltLogo,
@@ -11606,9 +11737,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/anthoca01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://imageio.forbes.com/specials-images/imageserve/646b9b77976ffbea12b502f7/Denver-Nuggets-v-Los-Angeles-Lakers--Game-2/0x0.jpg?crop=1998,2996,x0,y0,safe&height=1066&width=711&fit=bounds",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -11782,9 +11913,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/eatonma01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://people.com/thmb/L7Cp7PQ7YkSnqf4dt8vbUJalVHU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(678x19:680x21)/Mark-Eaton--0a4a4552eafe43e39dd975d1648d2329.jpg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -11870,9 +12001,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/thompkl01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://i.pinimg.com/474x/ce/84/38/ce843800d2b0dc28095cf7299c963567.jpg",
     teamLogoSrc: warriorsCurrentLogo,
     teamLogoStyling: warriorsCurrentLogoStyling,
   },
@@ -11958,11 +12089,11 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/maravpe01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
-    teamLogoSrc: "***",
-    teamLogoStyling: "***",
+    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/magic/sites/magic/files/sg7_1.jpg",
+    teamLogoSrc: jazzThrowbackLogo,
+    teamLogoStyling: jazzThrowbackLogoStyling,
   },
       {
     name: "Draymond Green",
@@ -12046,9 +12177,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/greendr01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://www.usatoday.com/gcdn/presto/2019/10/02/USAT/0d38cd04-4bce-475b-8fd0-65210a6aa7ea-USP_NBA__Playoffs-Golden_State_Warriors_at_Portlan.JPG",
     teamLogoSrc: warriorsCurrentLogo,
     teamLogoStyling: warriorsCurrentLogoStyling,
   },
@@ -12134,9 +12265,9 @@ export const data = [
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "",
+    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/dumarjo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "",
+    plyrCardPictureSrc: "https://michigansportshof.org/mshof/wp-content/uploads/2019/01/joe-dumars.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },

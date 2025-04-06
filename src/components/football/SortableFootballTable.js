@@ -1,6 +1,6 @@
 import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
 import FootballTable from "./FootballTable";
-import useSort from "../hooks/use-sort";
+import useSort from "../../hooks/use-sort";
 
 function SortableTable(props) {
   const { config, data } = props;

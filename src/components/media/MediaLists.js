@@ -11,9 +11,9 @@ import {
   editList,
   getMoviesInList,
   removeMovieFromList,
-} from "../api/tmdbapi";
+  getFavoriteTvShows,
+} from "../../api/tmdbapi";
 
-import { getFavoriteTvShows } from "../api/tmdbapi";
 import RatingControl from "./RatingControl";
 
 function MediaLists({

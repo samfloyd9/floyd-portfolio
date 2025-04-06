@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { languages } from "../languages";
+import { languages } from "./languages";
 import { IoClose } from "react-icons/io5"; // Import Close Icon
 
 function MediaPanel({

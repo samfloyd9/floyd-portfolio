@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
-import { favoriteMedia } from "../api/tmdbapi"; // Make sure this is imported
+import { favoriteMedia } from "../../api/tmdbapi"; // Make sure this is imported
 const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0"; // or import this if centralized
 
 function TvFavoriteButton({ sessionId, accountId, tvId, refreshFavoriteTvShows }) {

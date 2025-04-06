@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { rateMedia, getMediaRating } from "../api/tmdbapi";
+import { rateMedia, getMediaRating } from "../../api/tmdbapi";
 
 const RatingControl = ({ sessionId, mediaId, mediaType, showRatingEdit }) => {
   const [rating, setRating] = useState(null);

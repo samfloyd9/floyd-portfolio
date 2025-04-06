@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { footballData } from "../footballData";
-import SortableFootballTable from "../components/SortableFootballTable";
-import Button from "../components/Button";
-import Dropdown from "../components/Dropdown";
-// import { IoInformationCircleOutline } from "react-icons/io5";
+import { footballData } from "../data/footballData";
+import SortableFootballTable from "../components/football/SortableFootballTable";
+import Button from "../components/shared/Button";
+import Dropdown from "../components/shared/Dropdown";
 import React from "react";
-import FootballLineup from "../components/FootballLineup";
-// import FootballPlayerCardList from "../components/FootballPlayerCardList";
+import FootballLineup from "../components/football/FootballLineup";
 import { FaCheck } from "react-icons/fa";
 
 function FootballPage({ setShowModal }) {
@@ -75,7 +73,7 @@ function FootballPage({ setShowModal }) {
     { label: "Kansas City Chiefs", value: "KAN" },
     { label: "Philadelphia Eagles", value: "PHI" },
     { label: "Miami Dolphins", value: "MIA" },
-    { label: "New York Giants", value: "CHI" },
+    { label: "New York Giants", value: "NYG" },
     { label: "Las Vegas Raiders", value: "LV" },
     { label: "Arizona Cardinals", value: "ARI" },
     { label: "Baltimore Ravens", value: "BAL" },

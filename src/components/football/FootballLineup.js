@@ -1,8 +1,8 @@
 import OffFormations from "./OffFormations";
 import DefFormations from "./DefFormations";
-import Dropdown from "./Dropdown";
+import Dropdown from "../shared/Dropdown";
 // import { IoInformationCircleOutline } from "react-icons/io5";
-import Button from "./Button";
+import Button from "../shared/Button";
 import { GrPowerReset } from "react-icons/gr";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 
@@ -64,7 +64,7 @@ function FootballLineup({
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="flex flex-row mb-11 justify-center items-center z-30">
+      <div className="flex flex-row mb-11 justify-center items-center z-20">
         <div className="flex flex-col gap-5 lg:flex-row items-center">
           <div className="flex flex-row gap-5">
             {(unitSelection.label === "Offense" ||

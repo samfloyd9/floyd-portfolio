@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import Dice from "../components/Dice";
-import DiceSelection from "../components/DiceSelection";
+import Dice from "../components/parcheesi/Dice";
+import DiceSelection from "../components/parcheesi/DiceSelection";
 
 import {
   GiInvertedDice1,
@@ -11,8 +11,8 @@ import {
   GiInvertedDice5,
   GiInvertedDice6,
 } from "react-icons/gi";
-import ParcheesiVersion2 from "../components/ParcheesiVersion2";
-import OptionsMenu from "../components/OptionsMenu";
+import ParcheesiVersion2 from "../components/parcheesi/ParcheesiVersion2";
+import OptionsMenu from "../components/parcheesi/OptionsMenu";
 
 function ParcheesiPage() {
   const [pawns, setPawns] = useState([
