@@ -5,14 +5,14 @@ import { MdSportsHandball } from "react-icons/md"; // Lob/Putback/Dunk Master
 import { FaWifi } from "react-icons/fa"; // Limitless 3-Pt Range
 import { FaHatWizard } from "react-icons/fa"; // Middy Magician
 import { GiWhistle } from "react-icons/gi"; // Foul Drawer
-import { GiBodyBalance } from "react-icons/gi"; // Acrobatic Finisher
+import { GiBodyBalance } from "react-icons/gi"; // Acrobatic/Finesse Finisher
 import { GiWreckingBall } from "react-icons/gi"; // Contact Finisher
 import { FaTools } from "react-icons/fa"; // Post Move Technician
 
 // Imports for Passing/Playmaking Badges
 import { TbEngine } from "react-icons/tb"; // Offensive Engine
 import { RiHandCoinLine } from "react-icons/ri"; // Dime Dropper
-import { ImEarth } from "react-icons/im"; // Offensive Gravity
+import { ImEarth } from "react-icons/im"; // Off-Ball Gravity
 import { ImDribbble } from "react-icons/im"; // Houdini Handles
 
 // Imports for Defensive Badges
@@ -595,12 +595,12 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
       },
       {
         icon: <GiWreckingBall />,
-        color: "hof",
+        color: "goat",
         explanation: "Contact Finisher",
       },
       {
@@ -610,17 +610,17 @@ export const data = [
       },
       {
         icon: <TbEngine />,
-        color: "hof",
+        color: "goat",
         explanation: "Offensive Engine",
       },
       {
         icon: <RiHandCoinLine />,
-        color: "hof",
+        color: "goat",
         explanation: "Dime Dropper",
       },
       {
         icon: <RiTeamFill />,
-        color: "hof",
+        color: "goat",
         explanation: "Switchable Specialist",
       },
       {
@@ -684,18 +684,18 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
-        explanation: "Acrobatic Finisher",
+        color: "goat",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdSportsHandball />,
@@ -709,12 +709,12 @@ export const data = [
       },
       {
         icon: <GiHandcuffs />,
-        color: "hof",
+        color: "goat",
         explanation: "Perimeter Handcuffs",
       },
       {
         icon: <GiMonsterGrasp />,
-        color: "hof",
+        color: "goat",
         explanation: "Pick Pocket/Interceptor",
       },
       {
@@ -773,18 +773,18 @@ export const data = [
     badges: [
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
       },
       {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
-        explanation: "Tough Shot Maker",
+        icon: <GiBodyBalance />,
+        color: "goat",
+        explanation: "Finesse Finisher",
       },
       {
-        icon: <GiWreckingBall />,
-        color: "hof",
-        explanation: "Contact Finisher",
+        icon: <MdOutlineSportsKabaddi />,
+        color: "goat",
+        explanation: "Unblockable Finisher",
       },
       {
         icon: <MdSportsHandball />,
@@ -793,18 +793,18 @@ export const data = [
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
+      },
+      {
+        icon: <SiAdblock />,
+        color: "goat",
+        explanation: "Shot Block Artist",
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
-      },
-      {
-        icon: <SiAdblock />,
-        color: "hof",
-        explanation: "Shot Block Artist",
       },
       {
         icon: <FaAnchor />,
@@ -860,14 +860,14 @@ export const data = [
     bpm: null,
     badges: [
       {
+        icon: <FaTools />,
+        color: "goat",
+        explanation: "Post Move Technician",
+      },
+      {
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
-      },
-      {
-        icon: <FaTools />,
-        color: "hof",
-        explanation: "Post Move Technician",
       },
       {
         icon: <GiWreckingBall />,
@@ -881,22 +881,22 @@ export const data = [
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
       },
       {
         icon: <SiAdblock />,
-        color: "hof",
+        color: "goat",
         explanation: "Shot Block Artist",
       },
       {
         icon: <FaAnchor />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Anchor",
       },
       {
         icon: <FaLock />,
-        color: "hof",
+        color: "goat",
         explanation: "Lockdown Post Defender",
       },
     ],
@@ -950,37 +950,37 @@ export const data = [
     badges: [
       {
         icon: <ImTarget />,
-        color: "hof",
+        color: "goat",
         explanation: "Deep Range Deadeye",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
       },
       {
         icon: <FaWifi />,
-        color: "hof",
+        color: "goat",
         explanation: "Limitless Range",
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImEarth />,
-        color: "hof",
-        explanation: "Offensive Gravity",
+        color: "goat",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImDribbble />,
-        color: "hof",
+        color: "hof",  
         explanation: "Houdini Handles",
       },
       {
         icon: <TbEngine />,
-        color: "gold",
+        color: "hof",
         explanation: "Offensive Engine",
       },
       {
@@ -1042,39 +1042,39 @@ export const data = [
         explanation: "Middy Magician",
       },
       {
-        icon: <MdSportsHandball />,
-        color: "gold",
-        explanation: "Lob/Putback/Dunk Master",
-      },
-      {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
       },
       {
+        icon: <RiHandCoinLine />,
+        color: "gold",
+        explanation: "Dime Dropper",
+      },
+      {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
+      },
+      {
+        icon: <FaAnchor />,
+        color: "goat",
+        explanation: "Defensive Anchor",
+      },
+      {
+        icon: <GiBrain />,
+        color: "goat",
+        explanation: "High IQ Defender",
+      },
+      {
+        icon: <GiEmbrassedEnergy />,
+        color: "goat",
+        explanation: "High Energy Defender",
       },
       {
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
-      },
-      {
-        icon: <FaAnchor />,
-        color: "hof",
-        explanation: "Defensive Anchor",
-      },
-      {
-        icon: <GiBrain />,
-        color: "hof",
-        explanation: "High IQ Defender",
-      },
-      {
-        icon: <GiEmbrassedEnergy />,
-        color: "hof",
-        explanation: "High Energy Defender",
       },
     ],
     teamScoring: 7.5,
@@ -1126,7 +1126,7 @@ export const data = [
     badges: [
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
       },
       {
@@ -1146,17 +1146,17 @@ export const data = [
       },
       {
         icon: <FaAnchor />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Anchor",
       },
       {
         icon: <SiAdblock />,
-        color: "hof",
+        color: "goat",
         explanation: "Shot Block Artist",
       },
       {
         icon: <FaLock />,
-        color: "hof",
+        color: "goat",
         explanation: "Lockdown Post Defender",
       },
       {
@@ -1215,7 +1215,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaTools />,
@@ -1406,12 +1406,12 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImEarth />,
         color: "hof",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <RiHandCoinLine />,
@@ -1675,7 +1675,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "hof",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImMagnet />,
@@ -1768,7 +1768,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "hof",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <TbEngine />,
@@ -1851,7 +1851,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImDribbble />,
@@ -2012,7 +2012,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdSportsHandball />,
@@ -2100,7 +2100,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -2188,7 +2188,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaTools />,
@@ -2282,7 +2282,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "gold",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImMagnet />,
@@ -2453,7 +2453,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <TbEngine />,
@@ -2551,7 +2551,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <TbEngine />,
@@ -2566,7 +2566,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "gold",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImDribbble />,
@@ -2810,7 +2810,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -3343,7 +3343,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaHatWizard />,
@@ -3353,7 +3353,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "hof",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <GiHandcuffs />,
@@ -3685,7 +3685,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -3861,7 +3861,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -3944,7 +3944,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaHatWizard />,
@@ -4204,7 +4204,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -4309,7 +4309,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaTools />,
@@ -4389,7 +4389,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaHatWizard />,
@@ -4484,7 +4484,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <RiHandCoinLine />,
@@ -4744,7 +4744,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <TbEngine />,
@@ -4941,7 +4941,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "gold",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <FaHatWizard />,
@@ -4951,7 +4951,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiBrain />,
@@ -5036,7 +5036,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <RiHandCoinLine />,
@@ -5111,7 +5111,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaWifi />,
@@ -5201,7 +5201,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImTarget />,
@@ -5306,7 +5306,7 @@ export const data = [
       {
         icon: <ImEarth />,
         color: "hof",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImMagnet />,
@@ -5386,7 +5386,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaWifi />,
@@ -5470,7 +5470,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <TbEngine />,
@@ -5845,7 +5845,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImMagnet />,
@@ -6095,7 +6095,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -6200,7 +6200,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWhistle />,
@@ -6370,7 +6370,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -6460,7 +6460,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -6635,7 +6635,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -7095,7 +7095,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWhistle />,
@@ -7170,7 +7170,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -7265,7 +7265,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImMagnet />,
@@ -7355,7 +7355,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaTools />,
@@ -7440,7 +7440,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <MdOutlineSportsKabaddi />,
@@ -7550,7 +7550,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "silver",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiHandcuffs />,
@@ -7705,7 +7705,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaHatWizard />,
@@ -7890,7 +7890,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -8251,7 +8251,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <TbEngine />,
@@ -8336,7 +8336,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImTarget />,
@@ -8431,7 +8431,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "gold",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <ImDribbble />,
@@ -8511,7 +8511,7 @@ export const data = [
       {
         icon: <GiBodyBalance />,
         color: "hof",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <FaHatWizard />,
@@ -12419,7 +12419,7 @@ const offBadgesData = [
   },
   {
     value: <GiBodyBalance />,
-    info: "Acrobatic Finisher",
+    info: "Acrobatic/Finesse Finisher",
   },
   {
     value: <GiWreckingBall />,
@@ -12481,7 +12481,7 @@ const otherBadgesData = [
   },
   {
     value: <ImEarth />,
-    info: "Offensive Gravity",
+    info: "Off-Ball Gravity",
   },
   {
     value: <ImDribbble />,
@@ -12596,7 +12596,7 @@ export const showAllBadgeInfo = (
       {
         icon: <GiBodyBalance />,
         color: "bronze",
-        explanation: "Acrobatic Finisher",
+        explanation: "Acrobatic/Finesse Finisher",
       },
       {
         icon: <GiWreckingBall />,
@@ -12626,7 +12626,7 @@ export const showAllBadgeInfo = (
       {
         icon: <ImEarth />,
         color: "gold",
-        explanation: "Offensive Gravity",
+        explanation: "Off-Ball Gravity",
       },
       {
         icon: <ImDribbble />,

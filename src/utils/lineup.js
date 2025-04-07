@@ -49,8 +49,8 @@ export function getTSColorDisplay(player) {
 export function getBadgeColor(tier) {
   switch (tier) {
     case "goat":
-      // return "bg-rose-600";
-      return "bg-cyan-200";
+      return "bg-rose-600";
+      // return "bg-cyan-200";
     case "hof":
       return "bg-purple-400";
     case "gold":
