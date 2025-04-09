@@ -2,14 +2,14 @@ import { Fragment } from "react";
 
 // Table is a table component with filtering and dynamic rendering
 function Table({
-  data,              // Array of player data to display
-  config,            // Column configuration array
-  keyFn,             // Function to generate unique keys for rows
-  posSelection,      // Selected position filter (optional)
-  teamSelection,     // Selected team filter (optional)
-  badgeSelection,    // Selected badge filter (optional)
+  data, // Array of player data to display
+  config, // Column configuration array
+  keyFn, // Function to generate unique keys for rows
+  posSelection, // Selected position filter (optional)
+  teamSelection, // Selected team filter (optional)
+  badgeSelection, // Selected badge filter (optional)
+  updatePlayerCallback,
 }) {
-
   // Render the table headers
   const renderedHeaders = config.map((column) => {
     if (column.header) {
@@ -28,7 +28,7 @@ function Table({
   // Fallbacks for filter values (normalize to safe defaults)
   const selectedTeam = teamSelection?.value ?? "All Teams";
   const selectedPos = posSelection?.value ?? "All Positions";
-  const selectedBadge = badgeSelection?.value ?? "All Badges";
+  const selectedBadge = badgeSelection?.value ?? 0;
 
   // Apply all filters (team, position, badge) in a single pass
   const filteredData = data.filter((player) => {
@@ -43,11 +43,9 @@ function Table({
         : player.position.includes(selectedPos);
 
     const badgeMatches =
-      selectedBadge === "All Badges" || selectedBadge === undefined
+      selectedBadge === 0 || selectedBadge === undefined
         ? true
-        : player.badges?.some((badge) =>
-            badge.explanation?.includes(selectedBadge)
-          );
+        : player.badges.some((badge) => badge.id === selectedBadge);
 
     // Only include player if they match all selected filters
     return teamMatches && posMatches && badgeMatches;
@@ -57,7 +55,7 @@ function Table({
   const renderedRows = filteredData.map((rowData) => {
     const renderedCells = config.map((column) => (
       <td className="text-center" key={column.label}>
-        {column.render(rowData)}
+        {column.render(rowData, updatePlayerCallback)}
       </td>
     ));
 

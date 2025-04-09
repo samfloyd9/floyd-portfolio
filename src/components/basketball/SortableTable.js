@@ -25,7 +25,9 @@ function SortableTable(props) {
       header: () => (
         <th
           // Highlight the sorted column
-          className={`${column.label === sortBy && 'bg-gray-400'} cursor-pointer hover:bg-gray-400`}
+          className={`${
+            column.label === sortBy && "bg-gray-400"
+          } cursor-pointer hover:bg-gray-400`}
           onClick={() => setSortColumn(column.label)} // Trigger sort on click
         >
           <div className="flex items-center justify-center">
@@ -38,7 +40,14 @@ function SortableTable(props) {
   });
 
   // Render the table with the updated config and sorted data
-  return <Table {...props} data={sortedData} config={updatedConfig} />;
+  return (
+    <Table
+      {...props}
+      data={sortedData}
+      config={updatedConfig}
+      updatePlayerCallback={props.updatePlayerCallback}
+    />
+  );
 }
 
 // Return appropriate arrow icons based on sort state

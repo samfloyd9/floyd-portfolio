@@ -1,6 +1,6 @@
 import { getTSColorDisplay, getBadgeColor } from "../utils/lineup";
-
 import { FaCheck } from "react-icons/fa";
+import { TbSwitchHorizontal } from "react-icons/tb";
 
 export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
   {
@@ -43,7 +43,7 @@ export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
   },
   {
     label: "Player",
-    render: (player) => (
+    render: (player, updatePlayerCallback) => (
       <div className="text-start flex flex-row items-center">
         <img
           className="max-h-12 mr-4 rounded-lg"
@@ -51,14 +51,17 @@ export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
           alt={player.name}
         />
         <div className="group relative">
-          <div
-            // className={`rounded-xl p-2 ${player.teamColor} ${player.teamColor2}`}
-            className="text-sm lg:text-lg"
-          >
+          <div className="text-sm lg:text-lg flex items-center">
             {player.name}
-            {/* <span className="pointer-events-none absolute -bottom-7 z-20 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
-              {player.nickname}
-            </span> */}
+            {player.alt && (
+              <button
+                onClick={() => updatePlayerCallback(player)}
+                className="ml-2.5 border rounded p-1 text-blue-500 hover:text-blue-700 hover:bg-gray-300"
+                title="Swap to alternate season"
+              >
+                <TbSwitchHorizontal />
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -78,7 +81,9 @@ export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
   },
   {
     label: "Year",
-    render: (player) => <div className="text-xs lg:text-lg">{player.year}</div>,
+    render: (player) => (
+      <div className="text-xs lg:text-lg text-nowrap">{player.year}</div>
+    ),
     sortValue: (player) => player.year,
   },
   {
@@ -153,8 +158,7 @@ export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
     render: function (player) {
       const bunchOfBadges = player.badges.map((badge) => {
         const isHighlighted =
-          badgeSelection?.value !== "All Badges" &&
-          badgeSelection?.value === badge.explanation;
+          badgeSelection?.value !== 0 && badgeSelection?.value === badge.id;
 
         return (
           <div

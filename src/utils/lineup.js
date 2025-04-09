@@ -7,29 +7,27 @@ export function calculateLineupTotal(lineup, key) {
 
 // Convert average (score out of 10) into a letter grade
 export function getChemistryLetterGrade(score) {
-  const avg = score / 5;
-  if (avg >= 9.5) return "A+";
-  if (avg >= 8.5) return "A";
-  if (avg >= 7.5) return "B+";
-  if (avg >= 6.5) return "B";
-  if (avg >= 5.5) return "C+";
-  if (avg >= 4.5) return "C";
-  if (avg >= 3.5) return "D+";
-  if (avg >= 2.5) return "D";
+  if (score >= 9.5) return "A+";
+  if (score >= 8.5) return "A";
+  if (score >= 7.5) return "B+";
+  if (score >= 6.5) return "B";
+  if (score >= 5.5) return "C+";
+  if (score >= 4.5) return "C";
+  if (score >= 3.5) return "D+";
+  if (score >= 2.5) return "D";
   return "F";
 }
 
 // Assign a color based on average chemistry score
 export function getChemistryColor(score) {
-  const avg = score / 5;
-  if (avg >= 9.5) return "bg-cyan-300";
-  if (avg >= 8.5) return "bg-green-400";
-  if (avg >= 7.5) return "bg-lime-400";
-  if (avg >= 6.5) return "bg-yellow-300";
-  if (avg >= 5.5) return "bg-yellow-400";
-  if (avg >= 4.5) return "bg-orange-400";
-  if (avg >= 3.5) return "bg-orange-500";
-  if (avg >= 2.5) return "bg-red-400";
+  if (score >= 9.5) return "bg-cyan-300";
+  if (score >= 8.5) return "bg-green-400";
+  if (score >= 7.5) return "bg-lime-400";
+  if (score >= 6.5) return "bg-yellow-300";
+  if (score >= 5.5) return "bg-yellow-400";
+  if (score >= 4.5) return "bg-orange-400";
+  if (score >= 3.5) return "bg-orange-500";
+  if (score >= 2.5) return "bg-red-400";
   return "bg-red-600";
 }
 
@@ -49,7 +47,7 @@ export function getTSColorDisplay(player) {
 export function getBadgeColor(tier) {
   switch (tier) {
     case "goat":
-      return "bg-rose-600";
+      return "bg-rose-500";
       // return "bg-cyan-200";
     case "hof":
       return "bg-purple-400";

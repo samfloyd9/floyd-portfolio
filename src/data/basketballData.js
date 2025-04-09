@@ -48,7 +48,8 @@ const lakersCurrentLogo =
 const lakersCurrentLogoStyling = "h-14 -top-1 left-0";
 const losAngelesLakers = "Los Angeles Lakers";
 const minneapolisLakers = "Minneapolis Lakers";
-const lakersThrowbackLogo = "https://loodibee.com/wp-content/uploads/minneapolis-lakers-1948-1960.png";
+const lakersThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/minneapolis-lakers-1948-1960.png";
 const lakersThrowbackLogoStyling = "h-16 -top-1 -left-1";
 const minneapolisPrimary = "bg-blue-400";
 const minneapolisSecondary = "text-white";
@@ -86,17 +87,21 @@ const warriorsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612744/2022/06/gsw-logo-1920.svg";
 const warriorsCurrentLogoStyling = "h-16 -top-1.5 -left-2";
 const goldenStateWarriors = "Golden State Warriors";
-const philadelphiaWarriors = "Philadelphia Warriors"
-const warriorsThrowbackLogo = "https://res.cloudinary.com/vistaprint/images/f_auto,q_auto/v1705418084/ideas-and-advice-prod/en-us/Cb02u6k4eyzy3zwkxmivf37hj-1/Cb02u6k4eyzy3zwkxmivf37hj-1.png?_i=AA";
+const philadelphiaWarriors = "Philadelphia Warriors";
+const warriorsThrowbackLogo =
+  "https://res.cloudinary.com/vistaprint/images/f_auto,q_auto/v1705418084/ideas-and-advice-prod/en-us/Cb02u6k4eyzy3zwkxmivf37hj-1/Cb02u6k4eyzy3zwkxmivf37hj-1.png?_i=AA";
 const warriorsThrowbackLogoStyling = "h-16 -top-1.5 -left-2";
 
-const warriorsAltLogo = "https://1000logos.net/wp-content/uploads/2018/03/Golden-State-Warriors-Logo-1997.png";
+const warriorsAltLogo =
+  "https://1000logos.net/wp-content/uploads/2018/03/Golden-State-Warriors-Logo-1997.png";
 const warriorsAltLogoStyling = "h-14 top-0 -left-6";
 
-const warriorsOldSchoolLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KGOLW-1963.gif";
+const warriorsOldSchoolLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KGOLW-1963.gif";
 const warriorsOldSchoolLogoStyling = "h-12 top-1 left-0";
 
-const warriorsAltThrowbackLogo = "https://loodibee.com/wp-content/uploads/san-francisco-warriors-1969-1971.png";
+const warriorsAltThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/san-francisco-warriors-1969-1971.png";
 const warriorsAltThrowbackLogoStyling = "h-16 -top-1.5 -left-2";
 // --------------------- SUNS ---------------------- //
 const spursPrimary = "bg-black";
@@ -106,7 +111,8 @@ const spursCurrentLogo =
   "https://seekvectors.com/files/download/San%20Antonio%20Spurs%20Logo-01.png";
 const spursCurrentLogoStyling = "h-16 -top-2 -left-1.5";
 const sanAntonioSpurs = "San Antonio Spurs";
-const spursThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/01/San-Antonio-Spurs-Logo-1989-700x394.png";
+const spursThrowbackLogo =
+  "https://1000logos.net/wp-content/uploads/2018/01/San-Antonio-Spurs-Logo-1989-700x394.png";
 const spursThrowbackLogoStyling = "h-7 top-2 left-1.5";
 
 // --------------------- SUNS ---------------------- //
@@ -117,7 +123,8 @@ const timberwolvesCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Minnesota-Timberwolves-Logo-2017-Present.png";
 const timberwolvesCurrentLogoStyling = "h-12 top-0.5 -left-4";
 const minnesotaTimberwolves = "Minnesota Timberwolves";
-const timberwolvesThrowbackLogo = "https://images.squarespace-cdn.com/content/v1/5e8b9cb09666a61f4584fa8f/1589520318300-Q2JQB48T39PB4R5RVNKD/MinnesotaTimberwolves_LogoDesign3.png";
+const timberwolvesThrowbackLogo =
+  "https://images.squarespace-cdn.com/content/v1/5e8b9cb09666a61f4584fa8f/1589520318300-Q2JQB48T39PB4R5RVNKD/MinnesotaTimberwolves_LogoDesign3.png";
 const timberwolvesThrowbackLogoStyling = "h-12 top-0 left-0";
 
 // --------------------- JAZZ ---------------------- //
@@ -130,13 +137,16 @@ const jazzCurrentLogoStyling = "h-14 -top-1.5 left-1";
 const utahJazz = "Utah Jazz";
 const newOrleansJazz = "New Orleans Jazz";
 
-const jazzAltLogo = "https://i.namu.wiki/i/vZVwdb2rjDHHUKTFBNWvUT8UvKPkhDne6emshp8pJm44K4duBqOvjFP_4UMgaKvIQJdKhlTku_KSw8Rn2oF-GA.svg";
+const jazzAltLogo =
+  "https://i.namu.wiki/i/vZVwdb2rjDHHUKTFBNWvUT8UvKPkhDne6emshp8pJm44K4duBqOvjFP_4UMgaKvIQJdKhlTku_KSw8Rn2oF-GA.svg";
 const jazzAltLogoStyling = "h-10 top-0.5 -left-0.5";
 
-const jazzAltThrowbackLogo = "https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_19973688.png";
+const jazzAltThrowbackLogo =
+  "https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_19973688.png";
 const jazzAltThrowbackLogoStyling = "h-10 top-0.5 -left-0.5";
 
-const jazzThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Utah-Jazz-Logo-1980-1996.png";
+const jazzThrowbackLogo =
+  "https://logos-world.net/wp-content/uploads/2020/05/Utah-Jazz-Logo-1980-1996.png";
 const jazzThrowbackLogoStyling = "h-10 top-0.5 -left-0.5";
 // --------------------- TRAIL BLAZERS ---------------------- //
 const trailblazersPrimary = "bg-red-600";
@@ -147,10 +157,12 @@ const trailblazersCurrentLogo =
 const trailblazersCurrentLogoStyling = "h-11 top-1 left-1";
 const portlandTrailblazers = "Portland Trailblazers";
 
-const trailblazersThrowbackLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Portland-Trail-Blazers-Logo-1970_01.png/1200px-Portland-Trail-Blazers-Logo-1970_01.png";
+const trailblazersThrowbackLogo =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Portland-Trail-Blazers-Logo-1970_01.png/1200px-Portland-Trail-Blazers-Logo-1970_01.png";
 const trailblazersThrowbackLogoStyling = "h-[72px] top-0 left-1";
 
-const trailblazersAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/sco/thumb/7/74/Portland_Trail_Blazers.svg/640px-Portland_Trail_Blazers.svg.png";
+const trailblazersAltThrowbackLogo =
+  "https://upload.wikimedia.org/wikipedia/sco/thumb/7/74/Portland_Trail_Blazers.svg/640px-Portland_Trail_Blazers.svg.png";
 const trailblazersAltThrowbackLogoStyling = "h-12 top-1 left-0";
 
 // --------------------- GRIZZLIES ---------------------- //
@@ -163,10 +175,12 @@ const grizzliesCurrentLogoStyling = "h-14 top-0.5 -left-1.5";
 const memphisGrizzlies = "Memphis Grizzlies";
 const vancouverGrizzlies = "Vancouver Grizzlies";
 
-const grizzliesThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/06/Vancouver-Grizzlies-Logo-2001.png";
+const grizzliesThrowbackLogo =
+  "https://1000logos.net/wp-content/uploads/2018/06/Vancouver-Grizzlies-Logo-2001.png";
 const grizzliesThrowbackLogoStyling = "h-10 top-1 -left-2";
 
-const grizzliesAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Vancouver_Grizzlies_logo.svg/1200px-Vancouver_Grizzlies_logo.svg.png";
+const grizzliesAltThrowbackLogo =
+  "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Vancouver_Grizzlies_logo.svg/1200px-Vancouver_Grizzlies_logo.svg.png";
 const grizzliesAltThrowbackLogoStyling = "h-10 top-0.5 -left-1.5";
 
 // --------------------- THUNDER ---------------------- //
@@ -187,14 +201,15 @@ const supersonicsLogoStyling = "h-12 top-0.5 -left-4";
 
 const seattleSupersonics = "Seattle Supersonics";
 
-const supersonicsAltLogo = "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1995-500x333.png";
+const supersonicsAltLogo =
+  "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1995-500x333.png";
 const supersonicsAltLogoStyling = "h-16 -top-1 -left-5";
 const supersonicsAltPrimary = "bg-green-900";
 const supersonicsAltSecondary = "text-white";
 const supersonicsAltThird = "red";
 
-
-const supersonicsThrowbackLogo = "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1975-500x333.png";
+const supersonicsThrowbackLogo =
+  "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1975-500x333.png";
 const supersonicsThrowbackLogoStyling = "h-16 -top-1.5 -left-4";
 
 // --------------------- MAVERICKS ---------------------- //
@@ -219,13 +234,16 @@ const rocketsCurrentLogo =
 const rocketsCurrentLogoStyling = "h-14 -top-0.5 left-0.5";
 const houstonRockets = "Houston Rockets";
 
-const rocketsThrowbackLogo = "https://loodibee.com/wp-content/uploads/houston-rockets-1995-2003.png";
+const rocketsThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/houston-rockets-1995-2003.png";
 const rocketsThrowbackLogoStyling = "h-[72px] -top-2 -left-1";
 
-const rocketsAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/fr/thumb/0/09/Houston_Rockets_logo_1972.png/244px-Houston_Rockets_logo_1972.png";
+const rocketsAltThrowbackLogo =
+  "https://upload.wikimedia.org/wikipedia/fr/thumb/0/09/Houston_Rockets_logo_1972.png/244px-Houston_Rockets_logo_1972.png";
 const rocketsAltThrowbackLogoStyling = "h-12 top-0.5 left-0.5";
 
-const rocketsAltLogo = "https://seeklogo.com/images/H/houston-rockets-logo-1AD80DE2AF-seeklogo.com.png";
+const rocketsAltLogo =
+  "https://seeklogo.com/images/H/houston-rockets-logo-1AD80DE2AF-seeklogo.com.png";
 const rocketsAltLogoStyling = "h-14 top-0 left-1";
 
 // --------------------- CLIPPERS ---------------------- //
@@ -260,16 +278,20 @@ const nuggetsCurrentLogo =
 const nuggetsCurrentLogoStyling = "h-10 top-1 left-1";
 const denverNuggets = "Denver Nuggets";
 
-const nuggetsThrowbackLogo = "https://images.seeklogo.com/logo-png/45/2/denver-nuggets-logo-png_seeklogo-459214.png";
+const nuggetsThrowbackLogo =
+  "https://images.seeklogo.com/logo-png/45/2/denver-nuggets-logo-png_seeklogo-459214.png";
 const nuggetsThrowbackLogoStyling = "h-14 -top-1 left-0";
 
-const nuggetsAltThrowbackLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KDENN-1994.gif";
+const nuggetsAltThrowbackLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KDENN-1994.gif";
 const nuggetsAltThrowbackLogoStyling = "h-12 top-0 left-1";
 
-const nuggetsAltLogo = "https://content.sportslogos.net/logos/6/229/full/denver_nuggets_logo_primary_20044394.png";
+const nuggetsAltLogo =
+  "https://content.sportslogos.net/logos/6/229/full/denver_nuggets_logo_primary_20044394.png";
 const nuggetsAltLogoStyling = "h-8 top-1 left-1";
 
-const nuggetsOldSchoolLogo = "https://lh3.googleusercontent.com/proxy/AWyP3I8bjz-CHZtFbG-SkyKfo0NClwYqMZTY5Kn98JjdsClL__siivhXRAyruK6f6at3_dZ4CEDSNR2qcOZ7oq6Fv93atijerw-qAH2dTW1CHxJztfP7KoPJ3KBzU9aXH2ARMPNuJQ";
+const nuggetsOldSchoolLogo =
+  "https://lh3.googleusercontent.com/proxy/AWyP3I8bjz-CHZtFbG-SkyKfo0NClwYqMZTY5Kn98Jjdnate thurmondsClL__siivhXRAyruK6f6at3_dZ4CEDSNR2qcOZ7oq6Fv93atijerw-qAH2dTW1CHxJztfP7KoPJ3KBzU9aXH2ARMPNuJQ";
 const nuggetsOldSchoolLogoStyling = "h-10 top-1 left-1";
 
 // --------------------- PELICANS ---------------------- //
@@ -282,7 +304,8 @@ const pelicansCurrentLogoStyling = "h-14 -top-0.5 -left-1";
 const newOrleansPelicans = "New Orleans Pelicans";
 const newOrleansHornets = "New Orleans Hornets";
 
-const pelicansThrowbackLogo = "https://basketballjerseyarchive.com/static/logos/vuXMJedmPFcUryi/new-orleans-pelicans-2008-2013-logo.png";
+const pelicansThrowbackLogo =
+  "https://basketballjerseyarchive.com/static/logos/vuXMJedmPFcUryi/new-orleans-pelicans-2008-2013-logo.png";
 const pelicansThrowbackLogoStyling = "h-12 top-1 left-1";
 const pelicansAltPrimary = "bg-blue-500";
 const pelicansAltSecondary = "text-yellow-500";
@@ -301,13 +324,16 @@ const kingsCurrentLogo =
 const kingsCurrentLogoStyling = "h-11 top-0 left-1";
 const sacramentoKings = "Sacramento Kings";
 const cincinnatiRoyals = "Cincinnati Royals";
-const kingsOldSchoolLogo = "https://logos-world.net/wp-content/uploads/2020/05/Cincinnati-Royals-Logo-1958-1971.png";
+const kingsOldSchoolLogo =
+  "https://logos-world.net/wp-content/uploads/2020/05/Cincinnati-Royals-Logo-1958-1971.png";
 const kingsOldSchoolLogoStyling = "h-12 top-0 -left-5";
 
-const kingsThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Sacramento-Kings-Logo-1995-2016.png";
+const kingsThrowbackLogo =
+  "https://logos-world.net/wp-content/uploads/2020/05/Sacramento-Kings-Logo-1995-2016.png";
 const kingsThrowbackLogoStyling = "h-14 -top-1 -left-7";
 
-const kingsAltLogo = "https://www.statmuse.com/_image?href=https%3A%2F%2Fcdn.statmuse.com%2Fimg%2Fnba%2Fplayers%2Fold_nba_sac_1986_1994--wtq4da1g.png&w=250&h=250&f=webp";
+const kingsAltLogo =
+  "https://www.statmuse.com/_image?href=https%3A%2F%2Fcdn.statmuse.com%2Fimg%2Fnba%2Fplayers%2Fold_nba_sac_1986_1994--wtq4da1g.png&w=250&h=250&f=webp";
 const kingsAltLogoStyling = "h-11 top-0.5 left-1.5";
 
 // --------------------- CELTICS ---------------------- //
@@ -319,9 +345,11 @@ const celticsCurrentLogo =
   "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19759952.png";
 const celticsCurrentLogoStyling = "h-11 top-1.5 left-1.5";
 const bostonCeltics = "Boston Celtics";
-const celticsThrowbackLogo = "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19517260.png";
+const celticsThrowbackLogo =
+  "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19517260.png";
 const celticsThrowbackLogoStyling = "h-11 top-1.5 left-1.5";
-const celticsAltLogo = "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png";
+const celticsAltLogo =
+  "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19977628.png";
 const celticsAltLogoStyling = "h-11 top-1.5 left-1.5";
 
 // --------------------- PISTONS ---------------------- //
@@ -333,13 +361,16 @@ const pistonsCurrentLogo =
 const pistonsCurrentLogoStyling = "h-11 top-1.5 -left-3";
 const detroitPistons = "Detroit Pistons";
 
-const pistonsThrowbackLogo = "https://loodibee.com/wp-content/uploads/detroit-pistons-1957-1971.png";
+const pistonsThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/detroit-pistons-1957-1971.png";
 const pistonsThrowbackLogoStyling = "h-16 -top-0.5 -left-0.5";
 
-const pistonsAltThrowbackLogo = "https://upload.wikimedia.org/wikipedia/commons/4/4e/Logo_of_the_Detroit_Pistons_%282005%E2%80%932017%29.png";
+const pistonsAltThrowbackLogo =
+  "https://upload.wikimedia.org/wikipedia/commons/4/4e/Logo_of_the_Detroit_Pistons_%282005%E2%80%932017%29.png";
 const pistonsAltThrowbackLogoStyling = "h-11 top-1 left-0";
 
-const pistonsAltLogo = "https://content.sportslogos.net/logos/6/223/full/detroit_pistons_logo_primary_19976102.png";
+const pistonsAltLogo =
+  "https://content.sportslogos.net/logos/6/223/full/detroit_pistons_logo_primary_19976102.png";
 const pistonsAltLogoStyling = "h-11 top-0.5 left-1";
 
 // --------------------- 76ers ---------------------- //
@@ -356,16 +387,18 @@ const sixersCurrentLogo =
 const sixersCurrentLogoStyling = "h-11 top-1 -left-3.5";
 // const sixersCurrentLogoSize = "";
 const philadelphiaSeventySixers = "Philadelphia 76ers";
-const syracuseNationals = "Syracuse Nationals"
+const syracuseNationals = "Syracuse Nationals";
 
 const nationalsPrimary = "bg-red-700";
 const nationalsSecondary = "blue-700";
 const nationalsThird = "white";
 
-const sixersOldSchoolLogo = "https://loodibee.com/wp-content/uploads/syracuse-nationals-1949-1963.png";
+const sixersOldSchoolLogo =
+  "https://loodibee.com/wp-content/uploads/syracuse-nationals-1949-1963.png";
 const sixersOldSchoolLogoStyling = "h-16 -top-1 left-0";
 
-const sixersAltLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KPHI7-1998.gif";
+const sixersAltLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KPHI7-1998.gif";
 const sixersAltLogoStyling = "h-14 top-1 left-1";
 
 // --------------------- CAVALIERS ---------------------- //
@@ -379,16 +412,19 @@ const cavaliersThrowbackLogo =
 const cavaliersThrowbackLogoStyling = "h-8 top-1 -left-0";
 const clevelandCavaliers = "Cleveland Cavaliers";
 
-const cavaliersAltLogo = "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-1983.png";
+const cavaliersAltLogo =
+  "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-1983.png";
 const cavaliersAltLogoStyling = "h-8 top-1 left-2";
 const cavaliersThrowbackPrimary = "bg-blue-700";
 const cavaliersThrowbackSecondary = "text-orange-600";
 const cavaliersThrowbackThird = "white";
 
-const cavaliersOldSchoolLogo = "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-1970.png";
+const cavaliersOldSchoolLogo =
+  "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-1970.png";
 const cavaliersOldSchoolLogoStyling = "h-8 -top-1 left-2";
 
-const cavaliersCurrentLogo = "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-2017.png";
+const cavaliersCurrentLogo =
+  "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-2017.png";
 const cavaliersCurrentLogoStyling = "h-16 -top-1 -left-8";
 // --------------------- HORNETS ---------------------- //
 const hornetsPrimary = "bg-cyan-400";
@@ -399,10 +435,12 @@ const hornetsThrowbackLogo =
 const hornetsThrowbackLogoStyling = "h-14 top-1 left-1";
 const charlotteHornets = "Charlotte Hornets";
 // const newOrleansHornets = "New Orleans Hornets";
-const hornetsCurrentLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Charlotte_Hornets_%282014%29.svg/1200px-Charlotte_Hornets_%282014%29.svg.png";
+const hornetsCurrentLogo =
+  "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Charlotte_Hornets_%282014%29.svg/1200px-Charlotte_Hornets_%282014%29.svg.png";
 const hornetsCurrentLogoStyling = "h-12 top-1 left-1";
 
-const cougarsLogo = "https://sportsteamhistory.com/wp-content/uploads/2020/03/carolina_cougars_1971-1974.png";
+const cougarsLogo =
+  "https://sportsteamhistory.com/wp-content/uploads/2020/03/carolina_cougars_1971-1974.png";
 const cougarsLogoStyling = "h-12 top-1 left-1";
 
 const cougarsPrimary = "bg-green-600";
@@ -418,7 +456,8 @@ const magicCurrentLogo =
   "https://content.sportslogos.net/logos/6/217/full/orlando_magic_logo_primary_20017625.png";
 const magicCurrentLogoStyling = "h-11 top-1 left-1";
 
-const magicThrowbackLogo = "https://static.cdnlogo.com/logos/o/33/orlando-magic.png";
+const magicThrowbackLogo =
+  "https://static.cdnlogo.com/logos/o/33/orlando-magic.png";
 const magicThrowbackLogoStyling = "h-20 -top-3 -left-1.5";
 
 // --------------------- HAWKS ---------------------- //
@@ -429,18 +468,22 @@ const hawksCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/07/Atlanta-Hawks-Logo.png";
 const hawksCurrentLogoStyling = "h-11 top-1 -left-3";
 const atlantaHawks = "Atlanta Hawks";
-const stLouisHawks = "St. Louis Hawks"
+const stLouisHawks = "St. Louis Hawks";
 
-const hawksAltLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KATLH-2008.gif";
+const hawksAltLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KATLH-2008.gif";
 const hawksAltLogoStyling = "h-16 -top-1 left-0";
 
-const hawksAltThrowbackLogo = "https://content.sportslogos.net/logos/6/220/full/atlanta_hawks_logo_primary_19712182.png";
+const hawksAltThrowbackLogo =
+  "https://content.sportslogos.net/logos/6/220/full/atlanta_hawks_logo_primary_19712182.png";
 const hawksAltThrowbackLogoStyling = "h-11 top-1 -left-0.5";
 
-const hawksThrowbackLogo = "https://www.ajc.com/resizer/ywbYPp1GRuBc-aWgZKwCBPGp4Gw=/arc-anglerfish-arc2-prod-ajc/public/4GLQOGNQ6JBENE64BRXBXPBKJM.png";
+const hawksThrowbackLogo =
+  "https://www.ajc.com/resizer/ywbYPp1GRuBc-aWgZKwCBPGp4Gw=/arc-anglerfish-arc2-prod-ajc/public/4GLQOGNQ6JBENE64BRXBXPBKJM.png";
 const hawksThrowbackLogoStyling = "h-11 top-1 -left-0.5";
 
-const hawksOldSchoolLogo = "https://lh6.googleusercontent.com/proxy/sTiz0hf1xB4Fw0drm0cceGTEKJ267OA4X_ILnkaghRvoASHKolrwdoydJx1mgqIteCoudBZdbLvY7GE9GBo_3qtt6VS1XjL4G3ojdGvGhdv2Yhk79Ph-sYqmCzGpTo8fRtV_FefIIQ";
+const hawksOldSchoolLogo =
+  "https://lh6.googleusercontent.com/proxy/sTiz0hf1xB4Fw0drm0cceGTEKJ267OA4X_ILnkaghRvoASHKolrwdoydJx1mgqIteCoudBZdbLvY7GE9GBo_3qtt6VS1XjL4G3ojdGvGhdv2Yhk79Ph-sYqmCzGpTo8fRtV_FefIIQ";
 const hawksOldSchoolLogoStyling = "h-12 top-1 left-0.5";
 // --------------------- HEAT ---------------------- //
 const heatPrimary = "bg-black";
@@ -450,7 +493,8 @@ const heatCurrentLogo =
   "https://logodownload.org/wp-content/uploads/2019/06/miami-heat-logo-3.png";
 const heatCurrentLogoStyling = "h-14 top-1 left-2";
 const miamiHeat = "Miami Heat";
-const heatThrowbackLogo = "https://seeklogo.com/images/M/miami-heat-1988-1999-logo-51CCA09C8B-seeklogo.com.png";
+const heatThrowbackLogo =
+  "https://seeklogo.com/images/M/miami-heat-1988-1999-logo-51CCA09C8B-seeklogo.com.png";
 const heatThrowbackLogoStyling = "h-14 top-1 left-2";
 // --------------------- RAPTORS ---------------------- //
 const raptorsPrimary = "bg-red-600";
@@ -461,13 +505,16 @@ const raptorsCurrentLogo =
 const raptorsCurrentLogoStyling = "h-12 top-0 left-0";
 const torontoRaptors = "Toronto Raptors";
 
-const raptorsAltLogo = "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Toronto_Raptors_logo.svg/800px-Toronto_Raptors_logo.svg.png";
+const raptorsAltLogo =
+  "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Toronto_Raptors_logo.svg/800px-Toronto_Raptors_logo.svg.png";
 const raptorsAltLogoStyling = "h-12 top-0 left-0";
 
-const raptorsThrowbackLogo = "https://logos-world.net/wp-content/uploads/2020/05/Toronto-Raptors-Logo-1996-2008.png";
+const raptorsThrowbackLogo =
+  "https://logos-world.net/wp-content/uploads/2020/05/Toronto-Raptors-Logo-1996-2008.png";
 const raptorsThrowbackLogoStyling = "h-12 top-0 -left-2.5";
 
-const raptorsAltThrowbackLogo = "https://www.buffalorising.com/wp-content/uploads/2020/10/Toronto-Raptors-emblem.png";
+const raptorsAltThrowbackLogo =
+  "https://www.buffalorising.com/wp-content/uploads/2020/10/Toronto-Raptors-emblem.png";
 const raptorsAltThrowbackLogoStyling = "h-12 top-0 -left-2.5";
 
 // --------------------- PACERS ---------------------- //
@@ -479,10 +526,12 @@ const pacersCurrentLogo =
 const pacersCurrentLogoStyling = "h-14 top-0 left-0";
 const indianaPacers = "Indiana Pacers";
 
-const pacersThrowbackLogo = "https://loodibee.com/wp-content/uploads/indiana-pacers-1967-1976.png";
+const pacersThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/indiana-pacers-1967-1976.png";
 const pacersThrowbackLogoStyling = "h-16 -top-1 -left-1.5";
 
-const pacersAltThrowbackLogo = "https://a.espncdn.com/guid/547fc042-3e02-4795-9637-9ab84322b625/logos/primary_logo_on_primary_color.png";
+const pacersAltThrowbackLogo =
+  "https://a.espncdn.com/guid/547fc042-3e02-4795-9637-9ab84322b625/logos/primary_logo_on_primary_color.png";
 const pacersAltThrowbackLogoStyling = "h-12 top-0 left-0";
 // --------------------- BUCKS ---------------------- //
 const bucksPrimary = "bg-green-800";
@@ -493,13 +542,16 @@ const bucksCurrentLogo =
 const bucksCurrentLogoStyling = "h-14 top-0 left-0";
 const milwaukeeBucks = "Milwuakee Bucks";
 
-const bucksThrowbackLogo = "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19698490.png";
+const bucksThrowbackLogo =
+  "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19698490.png";
 const bucksThrowbackLogoStyling = "h-14 top-0 -left-0.5";
 
-const bucksAltThrowbackLogo = "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19946491.png";
+const bucksAltThrowbackLogo =
+  "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_19946491.png";
 const bucksAltThrowbackLogoStyling = "h-14 top-0.5 left-0";
 
-const bucksAltLogo = "https://basketballjerseyarchive.com/static/logos/21ekAeEzhoJ2uqS/milwaukee-bucks-2006-2015-logo.png";
+const bucksAltLogo =
+  "https://basketballjerseyarchive.com/static/logos/21ekAeEzhoJ2uqS/milwaukee-bucks-2006-2015-logo.png";
 const bucksAltLogoStyling = "h-14 top-0.5 left-1";
 
 // --------------------- KNICKS ---------------------- //
@@ -511,10 +563,12 @@ const knicksCurrentLogo =
 const knicksCurrentLogoStyling = "h-11 top-1 left-0";
 const newYorkKnicks = "New York Knicks";
 
-const knicksThrowbackLogo = "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1964.png?im=Resize=(480)";
+const knicksThrowbackLogo =
+  "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1964.png?im=Resize=(480)";
 const knicksThrowbackLogoStyling = "h-16 -top-1 -left-4";
 
-const knicksAltThrowbackLogo = "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1983.png";
+const knicksAltThrowbackLogo =
+  "https://cdn.nba.com/teams/uploads/sites/1610612752/2024/07/1983.png";
 const knicksAltThrowbackLogoStyling = "h-16 -top-1 -left-4";
 
 // --------------------- NETS ---------------------- //
@@ -530,18 +584,22 @@ const newYorkNets = "New York Nets";
 const netsAltPrimary = "bg-blue-900";
 const netsAltSecondary = "text-white";
 const netsAltThird = "red-500";
-const newJerseyNets = "New Jersey Nets"
+const newJerseyNets = "New Jersey Nets";
 
-const netsThrowbackLogo = "https://loodibee.com/wp-content/uploads/new-jersey-nets-1978-1990.png";
+const netsThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/new-jersey-nets-1978-1990.png";
 const netsThrowbackLogoStyling = "h-14 -top-0.5 -left-0.5";
 
-const netsAltThrowbackLogo = "https://loodibee.com/wp-content/uploads/new-jersey-nets-1990-1997-300x300.png";
+const netsAltThrowbackLogo =
+  "https://loodibee.com/wp-content/uploads/new-jersey-nets-1990-1997-300x300.png";
 const netsAltThrowbackLogoStyling = "h-14 top-0.5 left-0";
 
-const netsAltLogo = "https://basketballjerseyarchive.com/static/logos/XGt9nHgoRMjWLGp/brooklyn-nets-1997-2012-logo.png";
+const netsAltLogo =
+  "https://basketballjerseyarchive.com/static/logos/XGt9nHgoRMjWLGp/brooklyn-nets-1997-2012-logo.png";
 const netsAltLogoStyling = "h-11 top-0.5 left-1";
 
-const netsOldSchoolLogo = "https://lh3.googleusercontent.com/proxy/86tCgwFJyS_TdpohAvxjf_OqIN2VgWQA7wQ9wMNq96Th5E7clWay2eSciWi8SRVGOZDbmFDCL1F_V7DiQs5-uObv1A8W02iSzva749bZjkmBpXpy__6UFpY512q_xsc0wx3n18qJ32K_8UQ";
+const netsOldSchoolLogo =
+  "https://sportslogohistory.com/wp-content/uploads/2017/12/new_york_nets_1973-1977.png";
 const netsOldSchoolLogoStyling = "h-11 top-0.5 left-0.5";
 // --------------------- WIZARDS ---------------------- //
 const wizardsPrimary = "bg-blue-700";
@@ -549,14 +607,16 @@ const wizardsSecondary = "text-red-500";
 const wizardsThird = "white";
 const wizardsCurrentLogo =
   // "https://1000logos.net/wp-content/uploads/2018/06/Baltimore-Bullets-Logo-1974-700x394.png";
-"https://1000logos.net/wp-content/uploads/2018/05/Washington_Wizards_Logo.png";
+  "https://1000logos.net/wp-content/uploads/2018/05/Washington_Wizards_Logo.png";
 const wizardsCurrentLogoStyling = "h-12 top-1 -left-3";
 
-const wizardsThrowbackLogo = 'https://1000logos.net/wp-content/uploads/2018/06/Baltimore-Bullets-Logo-1974-700x394.png';
-const wizardsThrowbackLogoStyling = 'h-10 top-0 left-0';
+const wizardsThrowbackLogo =
+  "https://1000logos.net/wp-content/uploads/2018/06/Baltimore-Bullets-Logo-1974-700x394.png";
+const wizardsThrowbackLogoStyling = "h-10 top-0 left-0";
 
-const wizardsAltLogo = 'https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KWASW-1998.gif';
-const wizardsAltLogoStyling = 'h-14 top-0 left-0';
+const wizardsAltLogo =
+  "https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KWASW-1998.gif";
+const wizardsAltLogoStyling = "h-14 top-0 left-0";
 
 // const wizardsAltThrowbackLogo = 'https://i1.wp.com/www.retroseasons.com/retroimages/0-logo-KWASW-1998.gif';
 // const wizardsAltThrowbackLogoStyling = 'h-10 top-0 left-0';
@@ -597,41 +657,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWreckingBall />,
         color: "goat",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <TbEngine />,
         color: "goat",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "goat",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <RiTeamFill />,
-        color: "goat",
+        color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 9.5,
@@ -662,6 +730,104 @@ export const data = [
       "https://i.pinimg.com/474x/b9/80/ea/b980ea57d849c33f2e7f39ce03e4264e.jpg",
     teamLogoSrc: cavaliersThrowbackLogo,
     teamLogoStyling: cavaliersThrowbackLogoStyling,
+    // -------------------------------- Alternate Season -------------------------------- //
+    alt: {
+      name: "LeBron James",
+      position: "SF",
+      year: "2012-13",
+      team: "MIA",
+      franchise: "MIA",
+      fullTeamName: miamiHeat,
+      teamColor: heatPrimary,
+      teamColor2: heatSecondary,
+      teamColor3: heatThird,
+      cardColor: "ruby",
+      pts75: 33.3,
+      ts: +3.3,
+      reb75: 3.3,
+      ast75: 3.3,
+      stk75: 3.3,
+      tov75: 3.3,
+      bpm: 3.3,
+      badges: [
+        {
+          icon: <MdOutlineSportsKabaddi />,
+          color: "goat",
+          explanation: "Tough Shot Maker",
+          id: 2,
+        },
+        {
+          icon: <GiWreckingBall />,
+          color: "goat",
+          explanation: "Contact Finisher",
+          id: 8,
+        },
+        {
+          icon: <MdSportsHandball />,
+          color: "hof",
+          explanation: "Lob/Putback/Dunk Master",
+          id: 3,
+        },
+        {
+          icon: <TbEngine />,
+          color: "goat",
+          explanation: "Offensive Engine",
+          id: 10,
+        },
+        {
+          icon: <RiHandCoinLine />,
+          color: "goat",
+          explanation: "Dime Dropper",
+          id: 11,
+        },
+        {
+          icon: <RiTeamFill />,
+          color: "goat",
+          explanation: "Switchable Specialist",
+          id: 17,
+        },
+        {
+          icon: <GiHandcuffs />,
+          color: "hof",
+          explanation: "Perimeter Handcuffs",
+          id: 15,
+        },
+        {
+          icon: <SiAdblock />,
+          color: "gold",
+          explanation: "Shot Block Artist",
+          id: 16,
+        },
+      ],
+      teamScoring: 9.5,
+      teamEfficiency: 8,
+      teamSpacing: 6.5,
+      teamFinishing: 10,
+      teamPassing: 9.5,
+      teamCreation: 10,
+      teamOffRebounding: 6,
+      //
+      teamInteriorDef: 7,
+      teamPerimeterDef: 7,
+      teamSwitchability: 10,
+      teamDefIntangibles: 8,
+      teamDefPlaymaking: 8,
+      teamDefRebounding: 7.5,
+      //
+      teamOffChemRating: -2,
+      teamDefChemRating: 1.5,
+      teamTotalChemRating: -0.5,
+      teamOffImpact: 5.75,
+      teamDefImpact: 1.65,
+      teamTotalImpact: 7.4,
+      //
+      plyrPictureSrc:
+        "https://www.basketball-reference.com/req/202106291/images/headshots/jamesle01.jpg",
+      plyrCardPictureSrc:
+        "https://i.pinimg.com/474x/3e/56/52/3e56522aeae0f18bb828f2b90fd1c2c8---nba-finals-nba-finals-game.jpg",
+      teamLogoSrc: heatCurrentLogo,
+      teamLogoStyling: heatCurrentLogoStyling,
+    }
   },
   {
     name: "Michael Jordan",
@@ -686,41 +852,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "goat",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <TbEngine />,
         color: "hof",
-        explanation: "Offensiive Engine",
+        explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <GiHandcuffs />,
         color: "goat",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "goat",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 10,
@@ -775,41 +949,49 @@ export const data = [
         icon: <FaTools />,
         color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiBodyBalance />,
         color: "goat",
         explanation: "Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "goat",
-        explanation: "Unblockable Finisher",
+        explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "goat",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "goat",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 9,
@@ -837,8 +1019,105 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/abdulka01.jpg",
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/e6/83/39/e68339332b644fed9091cc813e346b65.jpg",
-      teamLogoSrc: bucksThrowbackLogo,
-      teamLogoStyling: bucksThrowbackLogoStyling,
+    teamLogoSrc: bucksThrowbackLogo,
+    teamLogoStyling: bucksThrowbackLogoStyling,
+    alt: {
+      name: "Kareem Abdul-Jabbar",
+      altName: "K. Abdul-Jabbar",
+      position: "C",
+      year: "1979-80",
+      team: "LAL",
+      franchise: "LAL",
+      fullTeamName: losAngelesLakers,
+      teamColor: lakersPrimary,
+      teamColor2: lakersSecondary,
+      teamColor3: lakersThird,
+      cardColor: PURPLE,
+      pts75: 39.0,
+      ts: +7.0,
+      reb75: 18.6,
+      ast75: 5.2,
+      stk75: null,
+      tov75: null,
+      bpm: null,
+      badges: [
+        {
+          icon: <FaTools />,
+          color: "goat",
+          explanation: "Post Move Technician",
+          id: 9,
+        },
+        {
+          icon: <GiBodyBalance />,
+          color: "goat",
+          explanation: "Finesse Finisher",
+          id: 7,
+        },
+        {
+          icon: <MdOutlineSportsKabaddi />,
+          color: "goat",
+          explanation: "Tough Shot Maker",
+          id: 2,
+        },
+        {
+          icon: <RiHandCoinLine />,
+          color: "gold",
+          explanation: "Dime Dropper",
+          id: 11,
+        },
+        {
+          icon: <ImMagnet />,
+          color: "hof",
+          explanation: "Rebound Magnet",
+          id: 22,
+        },
+        {
+          icon: <FaLock />,
+          color: "hof",
+          explanation: "Lockdown Post Defender",
+          id: 14,
+        },
+        {
+          icon: <SiAdblock />,
+          color: "hof",
+          explanation: "Shot Block Artist",
+          id: 16,
+        },
+        {
+          icon: <FaAnchor />,
+          color: "hof",
+          explanation: "Defensive Anchor",
+          id: 18,
+        },
+      ],
+      teamScoring: 9,
+      teamEfficiency: 9,
+      teamSpacing: 4.5,
+      teamFinishing: 10,
+      teamPassing: 6.5,
+      teamCreation: 7,
+      teamOffRebounding: 9,
+      //
+      teamInteriorDef: 9,
+      teamPerimeterDef: 2,
+      teamSwitchability: 1.5,
+      teamDefIntangibles: 8,
+      teamDefPlaymaking: 7.5,
+      teamDefRebounding: 9,
+      //
+      teamOffChemRating: 0,
+      teamDefChemRating: 1.7,
+      teamTotalChemRating: 1.7,
+      teamOffImpact: 3.86,
+      teamDefImpact: 2.37,
+      teamTotalImpact: 6.2,
+      plyrPictureSrc:
+        "https://www.basketball-reference.com/req/202106291/images/headshots/abdulka01.jpg",
+      plyrCardPictureSrc:
+        "https://cdn.bleacherreport.net/images_root/slides/photos/000/571/977/1137385_original.jpg?1292553467",
+        teamLogoSrc: lakersCurrentLogo,
+        teamLogoStyling: lakersCurrentLogoStyling,
+    },
   },
   {
     name: "Wilt Chamberlain",
@@ -863,41 +1142,49 @@ export const data = [
         icon: <FaTools />,
         color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "goat",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "goat",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "goat",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <FaLock />,
         color: "goat",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 6,
@@ -928,6 +1215,103 @@ export const data = [
     // "https://media.tumblr.com/e5b8990f17d46f920d6279da2b9eeb10/tumblr_inline_mjyy7mshLc1qz4rgp.jpg",
     teamLogoSrc: sixersCurrentLogo,
     teamLogoStyling: sixersCurrentLogoStyling,
+    alt: {
+      name: "Wilt Chamberlain",
+      position: "C",
+      year: "1961-62",
+      team: "PHW",
+      franchise: "GSW",
+      fullTeamName: "Philadelphia 76ers",
+      teamColor: warriorsPrimary,
+      teamColor2: warriorsSecondary,
+      teamColor3: warriorsThird,
+      cardColor: BLUE,
+      pts75: 50.3,
+      ts: +4.9,
+      reb75: 22.4,
+      ast75: 2.2,
+      stk75: null,
+      tov75: null,
+      bpm: null,
+      badges: [
+        {
+          icon: <FaTools />,
+          color: "goat",
+          explanation: "Post Move Technician",
+          id: 9,
+        },
+        {
+          icon: <MdSportsHandball />,
+          color: "goat",
+          explanation: "Lob/Putback/Dunk Master",
+          id: 3,
+        },
+        {
+          icon: <GiBodyBalance />,
+          color: "goat",
+          explanation: "Finesse Finisher",
+          id: 7,
+        },
+        {
+          icon: <GiWhistle />,
+          color: "goat",
+          explanation: "Foul Drawer",
+          id: 6,
+        },
+        {
+          icon: <ImMagnet />,
+          color: "goat",
+          explanation: "Rebound Magnet",
+          id: 22,
+        },
+        {
+          icon: <SiAdblock />,
+          color: "hof",
+          explanation: "Shot Block Artist",
+          id: 16,
+        },
+        {
+          icon: <FaAnchor />,
+          color: "hof",
+          explanation: "Defensive Anchor",
+          id: 18,
+        },
+        {
+          icon: <FaLock />,
+          color: "hof",
+          explanation: "Lockdown Post Defender",
+          id: 14,
+        },
+      ],
+      teamScoring: 6,
+      teamEfficiency: 10,
+      teamSpacing: 4,
+      teamFinishing: 10,
+      teamPassing: 8.5,
+      teamCreation: 7,
+      teamOffRebounding: 10,
+      //
+      teamInteriorDef: 10,
+      teamPerimeterDef: 5.5,
+      teamSwitchability: 4,
+      teamDefIntangibles: 8,
+      teamDefPlaymaking: 10,
+      teamDefRebounding: 10,
+      //
+      teamOffChemRating: 1,
+      teamDefChemRating: 2,
+      teamTotalChemRating: 3,
+      teamOffImpact: 2.63,
+      teamDefImpact: 3.5,
+      teamTotalImpact: 6.1,
+      plyrPictureSrc:
+        "https://www.basketball-reference.com/req/202106291/images/headshots/chambwi01.jpg",
+      plyrCardPictureSrc:
+        "https://imageio.forbes.com/specials-images/imageserve/515025540/Wilt-Chamberlain-Standing-by-Trophy-Display/960x0.jpg?height=1067&width=711&fit=bounds",
+      // "https://media.tumblr.com/e5b8990f17d46f920d6279da2b9eeb10/tumblr_inline_mjyy7mshLc1qz4rgp.jpg",
+      teamLogoSrc: warriorsOldSchoolLogo,
+      teamLogoStyling: warriorsOldSchoolLogoStyling,
+    },
   },
   {
     name: "Stephen Curry",
@@ -951,42 +1335,50 @@ export const data = [
       {
         icon: <ImTarget />,
         color: "goat",
-        explanation: "Deep Range Deadeye",
+        explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "goat",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImEarth />,
         color: "goat",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <ImDribbble />,
-        color: "hof",  
+        color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 9,
@@ -1040,41 +1432,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "goat",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "goat",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "goat",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "goat",
         explanation: "High Energy Defender",
+        id: 21,
       },
       {
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
     ],
     teamScoring: 7.5,
@@ -1128,41 +1528,49 @@ export const data = [
         icon: <FaTools />,
         color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "goat",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <SiAdblock />,
         color: "goat",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaLock />,
         color: "goat",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8,
@@ -1203,7 +1611,7 @@ export const data = [
     teamColor: lakersPrimary,
     teamColor2: lakersSecondary,
     teamColor3: lakersThird,
-    cardColor: "amethyst",
+    cardColor: PURPLE,
     pts75: 23.3,
     ts: +6.4,
     reb75: 9,
@@ -1214,43 +1622,51 @@ export const data = [
     badges: [
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
+      },
+      {
+        icon: <MdOutlineSportsKabaddi />,
+        color: "goat",
+        explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
-      },
-      {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
-        explanation: "Tough Shot Maker",
+        id: 9,
       },
       {
         icon: <TbEngine />,
-        color: "hof",
+        color: "goat",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
-        color: "hof",
+        color: "goat",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
-        icon: <RiTeamFill />,
+        icon: <GiMonsterGrasp />,
         color: "gold",
-        explanation: "Switchable Specialist",
+        explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 6,
@@ -1302,43 +1718,51 @@ export const data = [
     badges: [
       {
         icon: <ImTarget />,
-        color: "hof",
+        color: "goat",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <RiHandCoinLine />,
-        color: "hof",
+        color: "goat",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 9,
@@ -1390,43 +1814,51 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImEarth />,
         color: "hof",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 9,
@@ -1478,43 +1910,51 @@ export const data = [
     badges: [
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
-        color: "hof",
+        color: "goat",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <FaAnchor />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Anchor",
+        id: 18,
+      },
+      {
+        icon: <GiBrain />,
+        color: "goat",
+        explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
-      },
-      {
-        icon: <GiBrain />,
-        color: "hof",
-        explanation: "High IQ Defender",
+        id: 16,
       },
     ],
     teamScoring: 7,
@@ -1565,44 +2005,52 @@ export const data = [
     bpm: null,
     badges: [
       {
-        icon: <ImTarget />,
-        color: "hof",
-        explanation: "Deadeye Shooter",
-      },
-      {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
+        id: 5,
+      },
+      {
+        icon: <GiBodyBalance />,
+        color: "goat",
+        explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
+      },
+      {
+        icon: <GiMonsterGrasp />,
+        color: "goat",
+        explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
-      },
-      {
-        icon: <GiMonsterGrasp />,
-        color: "hof",
-        explanation: "Pick Pocket/Interceptor",
+        id: 15,
       },
     ],
     teamScoring: 9,
@@ -1654,43 +2102,51 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
-        color: "hof",
+        color: "goat",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiWhistle />,
-        color: "hof",
+        color: "goat",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImEarth />,
-        color: "hof",
+        color: "goat",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
-        color: "gold",
+        color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 9.5,
@@ -1742,43 +2198,51 @@ export const data = [
     badges: [
       {
         icon: <ImTarget />,
-        color: "hof",
+        color: "goat",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImEarth />,
         color: "hof",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -1830,43 +2294,51 @@ export const data = [
     badges: [
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImTarget />,
-        color: "hof",
+        color: "goat",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <RiTeamFill />,
         color: "gold",
         explanation: "Switchable Specialist",
+        id: 17,
       },
     ],
     teamScoring: 10,
@@ -1920,41 +2392,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "goat",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "goat",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "goat",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "goat",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <FaLock />,
         color: "goat",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "goat",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 2,
@@ -2008,41 +2488,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 9,
@@ -2096,41 +2584,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.5,
@@ -2184,41 +2680,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 9,
@@ -2273,41 +2777,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImEarth />,
         color: "gold",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "hof",
         explanation: "High Energy Defender",
+        id: 21,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 9,
@@ -2361,41 +2873,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.5,
@@ -2449,36 +2969,43 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <ImBug />,
@@ -2537,41 +3064,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImEarth />,
         color: "gold",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
     ],
     teamScoring: 10,
@@ -2625,36 +3160,43 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <ImBug />,
@@ -2713,41 +3255,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8,
@@ -2801,41 +3351,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
     ],
     teamScoring: 7,
@@ -2889,21 +3447,25 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <ImBug />,
@@ -2914,16 +3476,19 @@ export const data = [
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "hof",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 7,
@@ -2977,41 +3542,49 @@ export const data = [
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -3065,41 +3638,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 7,
@@ -3153,41 +3734,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "gold",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 7.5,
@@ -3241,41 +3830,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 9,
@@ -3329,41 +3926,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImEarth />,
         color: "hof",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8,
@@ -3417,41 +4022,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 9,
@@ -3479,8 +4092,8 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/hayesel01.jpg",
     plyrCardPictureSrc:
       "https://i.pinimg.com/736x/e8/b5/d5/e8b5d50019de40ae6a3a35b2c2fa903b.jpg",
-      teamLogoSrc: wizardsThrowbackLogo,
-      teamLogoStyling: wizardsThrowbackLogoStyling,
+    teamLogoSrc: wizardsThrowbackLogo,
+    teamLogoStyling: wizardsThrowbackLogoStyling,
   },
   {
     name: "Patrick Ewing",
@@ -3505,41 +4118,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 9,
@@ -3593,41 +4214,49 @@ export const data = [
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 9,
@@ -3681,41 +4310,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8,
@@ -3769,41 +4406,49 @@ export const data = [
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 7.75,
@@ -3857,41 +4502,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -3945,36 +4598,43 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <TbEngine />,
         color: "silver",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "silver",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -3994,7 +4654,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4028,41 +4688,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -4082,7 +4750,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4090,7 +4758,7 @@ export const data = [
       "https://www.basketball-reference.com/req/202106291/images/headshots/mikange01.jpg",
     plyrCardPictureSrc:
       "https://cdn.britannica.com/25/61925-004-8BFA94EF/George-Mikan.jpg",
-      // "https://i.pinimg.com/736x/58/98/d2/5898d23e3ca6c4a92a19c91d04dad504.jpg",
+    // "https://i.pinimg.com/736x/58/98/d2/5898d23e3ca6c4a92a19c91d04dad504.jpg",
     teamLogoSrc: lakersThrowbackLogo,
     teamLogoStyling: lakersThrowbackLogoStyling,
   },
@@ -4117,41 +4785,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "gold",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -4171,7 +4847,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4205,41 +4881,49 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.75,
@@ -4259,7 +4943,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4295,41 +4979,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <RiTeamFill />,
         color: "gold",
         explanation: "Switchable Specialist",
+        id: 17,
       },
     ],
     teamScoring: 8.75,
@@ -4349,7 +5041,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4385,41 +5077,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -4439,7 +5139,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4475,41 +5175,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "gold",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 8.75,
@@ -4529,7 +5237,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4565,41 +5273,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiBrain />,
         color: "silver",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -4619,7 +5335,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4655,41 +5371,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 8.75,
@@ -4709,7 +5433,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4745,36 +5469,43 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <ImBug />,
@@ -4799,7 +5530,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4837,41 +5568,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -4891,7 +5630,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -4927,41 +5666,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImEarth />,
         color: "gold",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiHandcuffs />,
         color: "silver",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
     ],
     teamScoring: 8.75,
@@ -4981,7 +5728,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5017,41 +5764,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -5071,7 +5826,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5107,41 +5862,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
     ],
     teamScoring: 8.75,
@@ -5161,7 +5924,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5197,41 +5960,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiWhistle />,
         color: "silver",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -5251,7 +6022,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5287,41 +6058,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <ImEarth />,
         color: "hof",
         explanation: "Off-Ball Gravity",
+        id: 12,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -5341,7 +6120,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5377,41 +6156,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "silver",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <RiTeamFill />,
         color: "gold",
         explanation: "Switchable Specialist",
+        id: 17,
       },
     ],
     teamScoring: 8.75,
@@ -5431,7 +6218,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5466,36 +6253,43 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <ImBug />,
@@ -5520,7 +6314,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5556,41 +6350,49 @@ export const data = [
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -5610,7 +6412,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5646,41 +6448,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -5700,7 +6510,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5736,31 +6546,37 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <ImBug />,
@@ -5771,6 +6587,7 @@ export const data = [
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -5790,7 +6607,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5826,41 +6643,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImMagnet />,
         color: "silver",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiHandcuffs />,
         color: "silver",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
     ],
     teamScoring: 8.75,
@@ -5880,7 +6705,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -5916,16 +6741,19 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <ImBug />,
@@ -5936,21 +6764,25 @@ export const data = [
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "hof",
         explanation: "High Energy Defender",
+        id: 21,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
     ],
     teamScoring: 8.75,
@@ -5970,7 +6802,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6006,41 +6838,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "hof",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 8.75,
@@ -6060,7 +6900,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6096,41 +6936,49 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImDribbble />,
         color: "hof",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -6150,7 +6998,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6186,41 +7034,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWhistle />,
         color: "silver",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <TbEngine />,
         color: "silver",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.75,
@@ -6240,7 +7096,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6276,41 +7132,49 @@ export const data = [
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
     ],
     teamScoring: 8.75,
@@ -6330,7 +7194,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6366,41 +7230,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -6420,7 +7292,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6456,36 +7328,43 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImMagnet />,
         color: "silver",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.75,
@@ -6505,7 +7384,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6541,41 +7420,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.75,
@@ -6595,7 +7482,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6631,36 +7518,43 @@ export const data = [
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <RiHandCoinLine />,
         color: "silver",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <ImBug />,
@@ -6685,7 +7579,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6721,41 +7615,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -6775,7 +7677,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6811,41 +7713,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "hof",
         explanation: "High Energy Defender",
+        id: 21,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -6865,7 +7775,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6901,41 +7811,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <FaTools />,
         color: "silver",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "hof",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "gold",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 8.75,
@@ -6955,7 +7873,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -6991,41 +7909,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <RiHandCoinLine />,
         color: "silver",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -7045,7 +7971,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7081,41 +8007,49 @@ export const data = [
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
     ],
     teamScoring: 8.75,
@@ -7135,7 +8069,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7171,41 +8105,49 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -7225,7 +8167,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7261,41 +8203,49 @@ export const data = [
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -7315,7 +8265,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7351,41 +8301,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaTools />,
         color: "hof",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -7405,7 +8363,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7441,41 +8399,49 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
     ],
     teamScoring: 8.75,
@@ -7495,7 +8461,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7531,41 +8497,49 @@ export const data = [
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWhistle />,
         color: "silver",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiBodyBalance />,
         color: "silver",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "gold",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 8.75,
@@ -7585,7 +8559,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7621,36 +8595,43 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImMagnet />,
         color: "gold",
         explanation: "Rebound Magnet",
+        id: 22,
       },
     ],
     teamScoring: 8.75,
@@ -7670,7 +8651,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7706,41 +8687,49 @@ export const data = [
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <MdSportsHandball />,
         color: "gold",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -7760,7 +8749,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7796,41 +8785,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <RiTeamFill />,
         color: "hof",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -7850,7 +8847,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7886,36 +8883,43 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiWhistle />,
         color: "gold",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "bronze",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -7935,7 +8939,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -7971,36 +8975,43 @@ export const data = [
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <ImBug />,
@@ -8025,7 +9036,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8061,36 +9072,43 @@ export const data = [
         icon: <GiWreckingBall />,
         color: "gold",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <FaAnchor />,
         color: "hof",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "hof",
         explanation: "High IQ Defender",
+        id: 20,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <GiEmbrassedEnergy />,
         color: "gold",
         explanation: "High Energy Defender",
+        id: 21,
       },
     ],
     teamScoring: 8.75,
@@ -8110,7 +9128,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8146,41 +9164,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "hof",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <GiWreckingBall />,
         color: "hof",
         explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "gold",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImMagnet />,
         color: "hof",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "gold",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaLock />,
         color: "gold",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
       {
         icon: <FaAnchor />,
         color: "gold",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -8200,7 +9226,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8237,41 +9263,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiWhistle />,
         color: "hof",
         explanation: "Foul Drawer",
+        id: 6,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
         color: "gold",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -8291,7 +9325,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8327,41 +9361,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaHatWizard />,
         color: "hof",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImTarget />,
         color: "gold",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <TbEngine />,
         color: "gold",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "gold",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiBrain />,
         color: "gold",
         explanation: "High IQ Defender",
+        id: 20,
       },
     ],
     teamScoring: 8.75,
@@ -8381,7 +9423,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8417,41 +9459,49 @@ export const data = [
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
+        id: 1,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaWifi />,
         color: "hof",
         explanation: "Limitless Range",
+        id: 4,
       },
       {
         icon: <GiBodyBalance />,
         color: "gold",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
+        id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "hof",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
       {
         icon: <RiTeamFill />,
         color: "gold",
         explanation: "Switchable Specialist",
+        id: 17,
       },
     ],
     teamScoring: 8.75,
@@ -8471,7 +9521,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8507,41 +9557,49 @@ export const data = [
         icon: <MdOutlineSportsKabaddi />,
         color: "hof",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <GiBodyBalance />,
         color: "hof",
         explanation: "Acrobatic/Finesse Finisher",
+        id: 7,
       },
       {
         icon: <FaHatWizard />,
         color: "gold",
         explanation: "Middy Magician",
+        id: 5,
       },
       {
         icon: <FaTools />,
         color: "gold",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <TbEngine />,
         color: "hof",
         explanation: "Offensive Engine",
+        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <ImDribbble />,
         color: "gold",
         explanation: "Houdini Handles",
+        id: 13,
       },
       {
         icon: <GiMonsterGrasp />,
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -8561,7 +9619,7 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
@@ -8597,41 +9655,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -8651,14 +9717,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/reedwi01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/reedwi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/736x/61/37/b1/6137b11b1d801df07fa840bc9c2f8e36.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/736x/61/37/b1/6137b11b1d801df07fa840bc9c2f8e36.jpg",
     teamLogoSrc: knicksCurrentLogo,
     teamLogoStyling: knicksCurrentLogoStyling,
   },
@@ -8685,41 +9753,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -8739,14 +9815,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/stojape01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/stojape01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/736x/48/12/78/481278e38c3f66f4be8ca87eb3359cee.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/736x/48/12/78/481278e38c3f66f4be8ca87eb3359cee.jpg",
     teamLogoSrc: kingsCurrentLogo,
     teamLogoStyling: kingsCurrentLogoStyling,
   },
@@ -8773,41 +9851,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -8827,14 +9913,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/johnske02.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/johnske02.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://heavy.com/wp-content/uploads/2024/11/GettyImages-1921633603.jpg?quality=65&strip=all&w=385",
+    plyrCardPictureSrc:
+      "https://heavy.com/wp-content/uploads/2024/11/GettyImages-1921633603.jpg?quality=65&strip=all&w=385",
     teamLogoSrc: sunsCurrentLogo,
     teamLogoStyling: sunsCurrentLogoStyling,
   },
@@ -8861,41 +9949,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -8915,14 +10011,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/lucasje01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/lucasje01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/manage/2022/02/GettyImages-98147478-scaled.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/manage/2022/02/GettyImages-98147478-scaled.jpg",
     // "https://render.fineartamerica.com/images/rendered/default/poster/6.5/8/break/images-medium/2-jerry-lucas-legendary-basketball-star-everett.jpg",
     teamLogoSrc: kingsOldSchoolLogo,
     teamLogoStyling: kingsOldSchoolLogoStyling,
@@ -8950,41 +10048,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9004,14 +10110,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/cartevi01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/cartevi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://www.elitegamingleagues.com/wp-content/uploads/2024/08/image_4b09bc3e-432f-4282-a1d4-5e362cd95584_720x.webp",
+    plyrCardPictureSrc:
+      "https://www.elitegamingleagues.com/wp-content/uploads/2024/08/image_4b09bc3e-432f-4282-a1d4-5e362cd95584_720x.webp",
     teamLogoSrc: raptorsThrowbackLogo,
     teamLogoStyling: raptorsThrowbackLogoStyling,
   },
@@ -9038,41 +10146,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9092,14 +10208,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hillgr01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/hillgr01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://townsquare.media/site/44/files/2023/11/attachment-GettyImages-1637346.jpg?w=630&q=75",
+    plyrCardPictureSrc:
+      "https://townsquare.media/site/44/files/2023/11/attachment-GettyImages-1637346.jpg?w=630&q=75",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -9126,41 +10244,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9180,14 +10306,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/nancela01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/nancela01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/suns/sites/suns/files/slam_dunk_84_03.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/teams/legacy/www.nba.com/suns/sites/suns/files/slam_dunk_84_03.jpg",
     teamLogoSrc: sunsCurrentLogo,
     teamLogoStyling: sunsCurrentLogoStyling,
   },
@@ -9214,41 +10342,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9268,14 +10404,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/pricema01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/pricema01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/736x/f1/14/77/f11477566410c7cb376f29df2db4a653.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/736x/f1/14/77/f11477566410c7cb376f29df2db4a653.jpg",
     teamLogoSrc: cavaliersAltLogo,
     teamLogoStyling: cavaliersAltLogoStyling,
   },
@@ -9302,41 +10440,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9356,14 +10502,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/goberru01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/goberru01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.amomama.com/0adbc0dd91111b8524fb9eee8068659a.jpeg",
+    plyrCardPictureSrc:
+      "https://cdn.amomama.com/0adbc0dd91111b8524fb9eee8068659a.jpeg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -9390,41 +10538,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9444,14 +10600,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/billuch01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/billuch01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.vox-cdn.com/uploads/chorus_image/image/38311270/20131105_kkt_ai5_151.0.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.vox-cdn.com/uploads/chorus_image/image/38311270/20131105_kkt_ai5_151.0.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -9478,41 +10636,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9532,14 +10698,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/jonessa01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/jonessa01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://goldenrankings.com/Basketball%20Pictures/NBA%20Finals/1960/sam-jones.jpg",
+    plyrCardPictureSrc:
+      "https://goldenrankings.com/Basketball%20Pictures/NBA%20Finals/1960/sam-jones.jpg",
     teamLogoSrc: celticsCurrentLogo,
     teamLogoStyling: celticsCurrentLogoStyling,
   },
@@ -9566,41 +10734,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9620,14 +10796,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/dantlad01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/dantlad01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/teams/uploads/sites/1610612762/2023/11/GettyImages-499320108.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/teams/uploads/sites/1610612762/2023/11/GettyImages-499320108.jpg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -9654,41 +10832,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9708,14 +10894,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/jonesbo01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/jonesbo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://media.gettyimages.com/id/499320452/photo/landover-md-bobby-jones-of-the-denver-nuggets-looks-on-against-the-washington-bullets-during.jpg?s=612x612&w=0&k=20&c=n_7Fkmcg-5Z2Yp4GOuG-KwDnQwlG0ijB0s3m4_aAKyI=",
+    plyrCardPictureSrc:
+      "https://media.gettyimages.com/id/499320452/photo/landover-md-bobby-jones-of-the-denver-nuggets-looks-on-against-the-washington-bullets-during.jpg?s=612x612&w=0&k=20&c=n_7Fkmcg-5Z2Yp4GOuG-KwDnQwlG0ijB0s3m4_aAKyI=",
     teamLogoSrc: nuggetsOldSchoolLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -9742,41 +10930,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9796,14 +10992,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/architi01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/architi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/236x/82/15/68/821568b756b8b89457959856935020e1.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/236x/82/15/68/821568b756b8b89457959856935020e1.jpg",
     teamLogoSrc: kingsAltLogo,
     teamLogoStyling: kingsAltLogoStyling,
   },
@@ -9830,41 +11028,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9884,12 +11090,13 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/gasolma01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/gasolma01.jpg",
     // PlayerCard
     plyrCardPictureSrc: "https://pbs.twimg.com/media/GFNA0qxWUAAxdog.jpg",
     teamLogoSrc: grizzliesCurrentLogo,
@@ -9918,41 +11125,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -9972,14 +11187,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/worthja01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/worthja01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://media.gettyimages.com/id/1301565577/photo/james-worthy-small-forward-and-power-forward-for-the-los-angeles-lakers-prepares-to-shoot-a.jpg?s=612x612&w=0&k=20&c=okLC1CeD7z5ov6XdEdtuZz107GmNwdwsaWulwek9e9w=",
+    plyrCardPictureSrc:
+      "https://media.gettyimages.com/id/1301565577/photo/james-worthy-small-forward-and-power-forward-for-the-los-angeles-lakers-prepares-to-shoot-a.jpg?s=612x612&w=0&k=20&c=okLC1CeD7z5ov6XdEdtuZz107GmNwdwsaWulwek9e9w=",
     teamLogoSrc: lakersCurrentLogo,
     teamLogoStyling: lakersCurrentLogoStyling,
   },
@@ -10006,41 +11223,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10060,14 +11285,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hornaje01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/hornaje01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://media.gettyimages.com/id/533091524/photo/phoenix-suns-jeff-hornacek-in-action-vs-los-angeles-lakers-at-the-forum-inglewood-ca-credit.jpg?s=612x612&w=0&k=20&c=qmO9v7KeIjxUpnuWg8lgymljZY8QfBurs01HUmxf_8g=",
+    plyrCardPictureSrc:
+      "https://media.gettyimages.com/id/533091524/photo/phoenix-suns-jeff-hornacek-in-action-vs-los-angeles-lakers-at-the-forum-inglewood-ca-credit.jpg?s=612x612&w=0&k=20&c=qmO9v7KeIjxUpnuWg8lgymljZY8QfBurs01HUmxf_8g=",
     teamLogoSrc: sunsAltLogo,
     teamLogoStyling: sunsAltLogoStyling,
   },
@@ -10094,41 +11321,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10148,14 +11383,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/mullich01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/mullich01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://a.espncdn.com/photo/2020/0501/r694836_864x1296_2-3.jpg",
+    plyrCardPictureSrc:
+      "https://a.espncdn.com/photo/2020/0501/r694836_864x1296_2-3.jpg",
     teamLogoSrc: warriorsThrowbackLogo,
     teamLogoStyling: warriorsThrowbackLogoStyling,
   },
@@ -10182,41 +11419,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10236,14 +11481,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/isselda01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/isselda01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://images.squarespace-cdn.com/content/v1/5361973ee4b0482b3e2dd960/00de6197-7388-4d95-bf8e-621d2696bf5e/dan+issel5.jpg",
+    plyrCardPictureSrc:
+      "https://images.squarespace-cdn.com/content/v1/5361973ee4b0482b3e2dd960/00de6197-7388-4d95-bf8e-621d2696bf5e/dan+issel5.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -10270,41 +11517,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10324,14 +11579,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/derozde01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/derozde01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://images.complex.com/complex/image/upload/v1723878217/sanity-new/gcd1isd5icolkmjwdagg.jpg-134288337.jpg",
+    plyrCardPictureSrc:
+      "https://images.complex.com/complex/image/upload/v1723878217/sanity-new/gcd1isd5icolkmjwdagg.jpg-134288337.jpg",
     teamLogoSrc: raptorsCurrentLogo,
     teamLogoStyling: raptorsCurrentLogoStyling,
   },
@@ -10358,41 +11615,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10412,14 +11677,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/aldrila01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/aldrila01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/legacy/photos/463404129.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/teams/legacy/www.nba.com/blazers/sites/blazers/files/legacy/photos/463404129.jpg",
     teamLogoSrc: trailblazersCurrentLogo,
     teamLogoStyling: trailblazersCurrentLogoStyling,
   },
@@ -10446,41 +11713,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10500,14 +11775,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/vandeki01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/vandeki01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://pm1.aminoapps.com/7232/cbf061d720fe03b9f47225839532b63bc56e587dr1-346-500v2_00.jpg",
+    plyrCardPictureSrc:
+      "https://pm1.aminoapps.com/7232/cbf061d720fe03b9f47225839532b63bc56e587dr1-346-500v2_00.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -10534,41 +11811,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10588,14 +11873,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hardati01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/hardati01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://external-preview.redd.it/1xwrgmigjPFI8AZuzE7Nig_cwqAby5_T1PrWj2xiUKE.jpg?auto=webp&s=120e6cab6aeb632231129173a018cb8c318f8756",
+    plyrCardPictureSrc:
+      "https://external-preview.redd.it/1xwrgmigjPFI8AZuzE7Nig_cwqAby5_T1PrWj2xiUKE.jpg?auto=webp&s=120e6cab6aeb632231129173a018cb8c318f8756",
     teamLogoSrc: warriorsThrowbackLogo,
     teamLogoStyling: warriorsThrowbackLogoStyling,
   },
@@ -10622,41 +11909,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10676,14 +11971,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/cunnibi01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/cunnibi01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://from-way-downtown.com/wp-content/uploads/2021/11/img_1273.jpg?w=1568",
+    plyrCardPictureSrc:
+      "https://from-way-downtown.com/wp-content/uploads/2021/11/img_1273.jpg?w=1568",
     teamLogoSrc: cougarsLogo,
     teamLogoStyling: cougarsLogoStyling,
   },
@@ -10710,41 +12007,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10764,14 +12069,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/mikkeve01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/mikkeve01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://images.findagrave.com/photos/2013/325/120671417_138514884678.jpg?size=photos250",
+    plyrCardPictureSrc:
+      "https://images.findagrave.com/photos/2013/325/120671417_138514884678.jpg?size=photos250",
     teamLogoSrc: lakersCurrentLogo,
     teamLogoStyling: lakersCurrentLogoStyling,
   },
@@ -10798,41 +12105,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10852,14 +12167,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/laniebo01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/laniebo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://assets.sbnation.com/assets/961384/Bob_Lanier_72_home.jpg",
+    plyrCardPictureSrc:
+      "https://assets.sbnation.com/assets/961384/Bob_Lanier_72_home.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -10886,41 +12203,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -10940,14 +12265,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/willide01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/willide01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://lh3.googleusercontent.com/proxy/kf3zXwCIvoB6Opey34g6p1qp-flf4KqsVG5681OIROAoh9kH70GigiJJhdbPdTT7lkSk8SMOMwFImYF1JGjJ9NjTVHzOoX1GTQ",
+    plyrCardPictureSrc:
+      "https://cdn.bleacherreport.net/images_root/slides/photos/000/388/717/98853194_original.jpg?1284143465",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
@@ -10974,41 +12301,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11028,12 +12363,13 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/hudsolo01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/hudsolo01.jpg",
     // PlayerCard
     plyrCardPictureSrc: "https://i.redd.it/t55959ja9wob1.jpg",
     teamLogoSrc: hawksCurrentLogo,
@@ -11062,41 +12398,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11116,14 +12460,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/johnsne01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/johnsne01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://miro.medium.com/v2/resize:fit:299/1*hmYRYZ9-VASSMLQurxeM4A.jpeg",
+    plyrCardPictureSrc:
+      "https://miro.medium.com/v2/resize:fit:299/1*hmYRYZ9-VASSMLQurxeM4A.jpeg",
     teamLogoSrc: warriorsOldSchoolLogo,
     teamLogoStyling: warriorsOldSchoolLogoStyling,
   },
@@ -11150,41 +12496,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11204,14 +12558,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/wallara01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/wallara01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://media.gettyimages.com/id/1695394/photo/east-rutherford-nj-rasheed-wallace-of-the-portland-trail-blazers-smiles-during-the-nba-game.jpg?s=612x612&w=0&k=20&c=BuAps7M23GpeXG1dNyiImbiklULlLHKFfwdW0eCAnF4=",
+    plyrCardPictureSrc:
+      "https://media.gettyimages.com/id/1695394/photo/east-rutherford-nj-rasheed-wallace-of-the-portland-trail-blazers-smiles-during-the-nba-game.jpg?s=612x612&w=0&k=20&c=BuAps7M23GpeXG1dNyiImbiklULlLHKFfwdW0eCAnF4=",
     teamLogoSrc: trailblazersCurrentLogo,
     teamLogoStyling: trailblazersCurrentLogoStyling,
   },
@@ -11238,41 +12594,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11292,14 +12656,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/westppa01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/westppa01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://minutemedia-ressh.cloudinary.com/image/upload/v1695294154/shape/cover/sport/2bc71822d47a8b46fb36ae4d97a5554115c41ba394f58f390b3119b677dff1ff.jpg",
+    plyrCardPictureSrc:
+      "https://minutemedia-ressh.cloudinary.com/image/upload/v1695294154/shape/cover/sport/2bc71822d47a8b46fb36ae4d97a5554115c41ba394f58f390b3119b677dff1ff.jpg",
     teamLogoSrc: sunsThrowbackLogo,
     teamLogoStyling: sunsThrowbackLogoStyling,
   },
@@ -11326,41 +12692,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11380,14 +12754,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/englial01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/englial01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/denver-nuggets-alex-english-scott-cunningham.jpg",
+    plyrCardPictureSrc:
+      "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/denver-nuggets-alex-english-scott-cunningham.jpg",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -11414,41 +12790,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11468,18 +12852,20 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/lowryky01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/lowryky01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.hoopsrumors.com/files/2017/05/USATSI_10007349_168380616_lowres.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.hoopsrumors.com/files/2017/05/USATSI_10007349_168380616_lowres.jpg",
     teamLogoSrc: raptorsCurrentLogo,
     teamLogoStyling: raptorsCurrentLogoStyling,
   },
-    {
+  {
     name: "Nate Thurmond",
     position: "C",
     year: "0000-00",
@@ -11502,41 +12888,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11556,14 +12950,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/thurmna01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/thurmna01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/465782518_9061177107248115_675755627296593274_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=LaAd0GskMfMQ7kNvgEMhDpb&_nc_oc=Adm2mp05k5oW4sJv8YIt45A_7WmKkM7iv0ryXgbNc2K2tt9OSVlRme3e0t3-AotIKPVnxmDizLvbo56XxyFuaLFn&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=I_-DyJEVgP0SPnzCN8Av0A&oh=00_AYGeRCQmZo1pHvFq5Nr5kVKtpOj3aNBVuZjr3_OkI25EwQ&oe=67F47A14",
+    plyrCardPictureSrc:
+      "https://pbs.twimg.com/media/CnhCYawWgAAhc8t?format=jpg&name=4096x4096",
     teamLogoSrc: warriorsAltThrowbackLogo,
     teamLogoStyling: warriorsAltThrowbackLogoStyling,
   },
@@ -11590,41 +12986,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11644,14 +13048,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/iversal01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/iversal01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/474x/3e/11/1d/3e111d226cdf794a9348178f26823c9c.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/474x/3e/11/1d/3e111d226cdf794a9348178f26823c9c.jpg",
     teamLogoSrc: sixersAltLogo,
     teamLogoStyling: sixersAltLogoStyling,
   },
@@ -11678,41 +13084,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11732,14 +13146,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/anthoca01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/anthoca01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://imageio.forbes.com/specials-images/imageserve/646b9b77976ffbea12b502f7/Denver-Nuggets-v-Los-Angeles-Lakers--Game-2/0x0.jpg?crop=1998,2996,x0,y0,safe&height=1066&width=711&fit=bounds",
+    plyrCardPictureSrc:
+      "https://imageio.forbes.com/specials-images/imageserve/646b9b77976ffbea12b502f7/Denver-Nuggets-v-Los-Angeles-Lakers--Game-2/0x0.jpg?crop=1998,2996,x0,y0,safe&height=1066&width=711&fit=bounds",
     teamLogoSrc: nuggetsCurrentLogo,
     teamLogoStyling: nuggetsCurrentLogoStyling,
   },
@@ -11766,41 +13182,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11820,14 +13244,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/johnsde01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/johnsde01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/suns/sites/suns/files/2s80s.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/teams/legacy/www.nba.com/suns/sites/suns/files/2s80s.jpg",
     teamLogoSrc: sunsThrowbackLogo,
     teamLogoStyling: sunsThrowbackLogoStyling,
   },
@@ -11854,41 +13280,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11908,18 +13342,20 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/eatonma01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/eatonma01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://people.com/thmb/L7Cp7PQ7YkSnqf4dt8vbUJalVHU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(678x19:680x21)/Mark-Eaton--0a4a4552eafe43e39dd975d1648d2329.jpg",
+    plyrCardPictureSrc:
+      "https://people.com/thmb/L7Cp7PQ7YkSnqf4dt8vbUJalVHU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(678x19:680x21)/Mark-Eaton--0a4a4552eafe43e39dd975d1648d2329.jpg",
     teamLogoSrc: jazzCurrentLogo,
     teamLogoStyling: jazzCurrentLogoStyling,
   },
-    {
+  {
     name: "Klay Thompson",
     position: "SG",
     year: "0000-00",
@@ -11942,41 +13378,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -11996,14 +13440,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/thompkl01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/thompkl01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://i.pinimg.com/474x/ce/84/38/ce843800d2b0dc28095cf7299c963567.jpg",
+    plyrCardPictureSrc:
+      "https://i.pinimg.com/474x/ce/84/38/ce843800d2b0dc28095cf7299c963567.jpg",
     teamLogoSrc: warriorsCurrentLogo,
     teamLogoStyling: warriorsCurrentLogoStyling,
   },
@@ -12030,41 +13476,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -12084,18 +13538,20 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/maravpe01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/maravpe01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://cdn.nba.com/teams/legacy/www.nba.com/magic/sites/magic/files/sg7_1.jpg",
+    plyrCardPictureSrc:
+      "https://cdn.nba.com/teams/legacy/www.nba.com/magic/sites/magic/files/sg7_1.jpg",
     teamLogoSrc: jazzThrowbackLogo,
     teamLogoStyling: jazzThrowbackLogoStyling,
   },
-      {
+  {
     name: "Draymond Green",
     position: "PF",
     year: "0000-00",
@@ -12118,41 +13574,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -12172,18 +13636,20 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/greendr01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/greendr01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://www.usatoday.com/gcdn/presto/2019/10/02/USAT/0d38cd04-4bce-475b-8fd0-65210a6aa7ea-USP_NBA__Playoffs-Golden_State_Warriors_at_Portlan.JPG",
+    plyrCardPictureSrc:
+      "https://www.usatoday.com/gcdn/presto/2019/10/02/USAT/0d38cd04-4bce-475b-8fd0-65210a6aa7ea-USP_NBA__Playoffs-Golden_State_Warriors_at_Portlan.JPG",
     teamLogoSrc: warriorsCurrentLogo,
     teamLogoStyling: warriorsCurrentLogoStyling,
   },
-      {
+  {
     name: "Joe Dumars",
     position: "SG",
     year: "0000-00",
@@ -12206,41 +13672,49 @@ export const data = [
         icon: <MdSportsHandball />,
         color: "bronze",
         explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
         color: "bronze",
         explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <FaTools />,
         color: "bronze",
         explanation: "Post Move Technician",
+        id: 9,
       },
       {
         icon: <ImMagnet />,
         color: "bronze",
         explanation: "Rebound Magnet",
+        id: 22,
       },
       {
         icon: <SiAdblock />,
         color: "bronze",
         explanation: "Shot Block Artist",
+        id: 16,
       },
       {
         icon: <FaAnchor />,
         color: "bronze",
         explanation: "Defensive Anchor",
+        id: 18,
       },
       {
         icon: <RiTeamFill />,
         color: "bronze",
         explanation: "Switchable Specialist",
+        id: 17,
       },
       {
         icon: <FaLock />,
         color: "bronze",
         explanation: "Lockdown Post Defender",
+        id: 14,
       },
     ],
     teamScoring: 8.75,
@@ -12260,14 +13734,16 @@ export const data = [
     //
     teamOffChemRating: 0,
     teamDefChemRating: 0.65,
-    teamTotalChemRating: 0.65,
+    teamTotalChemRating: 1.45,
     teamOffImpact: 3.37,
     teamDefImpact: 0.5,
     teamTotalImpact: 3.9,
     // Headshot
-    plyrPictureSrc: "https://www.basketball-reference.com/req/202106291/images/headshots/dumarjo01.jpg",
+    plyrPictureSrc:
+      "https://www.basketball-reference.com/req/202106291/images/headshots/dumarjo01.jpg",
     // PlayerCard
-    plyrCardPictureSrc: "https://michigansportshof.org/mshof/wp-content/uploads/2019/01/joe-dumars.jpg",
+    plyrCardPictureSrc:
+      "https://michigansportshof.org/mshof/wp-content/uploads/2019/01/joe-dumars.jpg",
     teamLogoSrc: pistonsCurrentLogo,
     teamLogoStyling: pistonsCurrentLogoStyling,
   },
@@ -12293,42 +13769,50 @@ export const data = [
   //     {
   //       icon: <MdSportsHandball />,
   //       color: "bronze",
-  //       explanation: "Lob/Putback/Dunk Master",
+  //           explanation: "Lob/Putback/Dunk Master",
+  // id: 3,
   //     },
   //     {
   //       icon: <MdOutlineSportsKabaddi />,
   //       color: "bronze",
-  //       explanation: "Tough Shot Maker",
+  //           explanation: "Tough Shot Maker",
+  // id: 2,
   //     },
   //     {
   //       icon: <FaTools />,
   //       color: "bronze",
-  //       explanation: "Post Move Technician",
+  //           explanation: "Post Move Technician",
+  // id: 9,
   //     },
   //     {
   //       icon: <ImMagnet />,
   //       color: "bronze",
-  //       explanation: "Rebound Magnet",
+  //           explanation: "Rebound Magnet",
+  // id: 22,
   //     },
   //     {
   //       icon: <SiAdblock />,
   //       color: "bronze",
-  //       explanation: "Shot Block Artist",
+  //           explanation: "Shot Block Artist",
+  // id: 16,
   //     },
   //     {
   //       icon: <FaAnchor />,
   //       color: "bronze",
-  //       explanation: "Defensive Anchor",
+  //           explanation: "Defensive Anchor",
+  // id: 18,
   //     },
   //     {
   //       icon: <RiTeamFill />,
   //       color: "bronze",
-  //       explanation: "Switchable Specialist",
+  //           explanation: "Switchable Specialist",
+  // id: 17,
   //     },
   //     {
   //       icon: <FaLock />,
   //       color: "bronze",
-  //       explanation: "Lockdown Post Defender",
+  //           explanation: "Lockdown Post Defender",
+  // id: 14,
   //     },
   //   ],
   //   teamScoring: 8.75,
@@ -12348,7 +13832,7 @@ export const data = [
   //   //
   //   teamOffChemRating: 0,
   //   teamDefChemRating: 0.65,
-  //   teamTotalChemRating: 0.65,
+  //   teamTotalChemRating: 1.45,
   //   teamOffImpact: 3.37,
   //   teamDefImpact: 0.5,
   //   teamTotalImpact: 3.9,
@@ -12358,337 +13842,254 @@ export const data = [
   //   plyrCardPictureSrc: "",
   //   teamLogoSrc: "***",
   //   teamLogoStyling: "***",
+  // alt: {
+  //   name: "NEW PLAYER",
+  //   position: "",
+  //   year: "0000-00",
+  //   team: "ABV",
+  //   franchise: "SAC",
+  //   fullTeamName: "***",
+  //   teamColor: "***",
+  //   teamColor2: "***",
+  //   teamColor3: "***",
+  //   cardColor: "***",
+  //   pts75: 0.0,
+  //   ts: +0,
+  //   reb75: 0.0,
+  //   ast75: 0.0,
+  //   stk75: 0.0,
+  //   tov75: 0.0,
+  //   bpm: 0.0,
+  //   badges: [
+  //     {
+  //       icon: <MdSportsHandball />,
+  //       color: "bronze",
+  //           explanation: "Lob/Putback/Dunk Master",
+  // id: 3,
+  //     },
+  //     {
+  //       icon: <MdOutlineSportsKabaddi />,
+  //       color: "bronze",
+  //           explanation: "Tough Shot Maker",
+  // id: 2,
+  //     },
+  //     {
+  //       icon: <FaTools />,
+  //       color: "bronze",
+  //           explanation: "Post Move Technician",
+  // id: 9,
+  //     },
+  //     {
+  //       icon: <ImMagnet />,
+  //       color: "bronze",
+  //           explanation: "Rebound Magnet",
+  // id: 22,
+  //     },
+  //     {
+  //       icon: <SiAdblock />,
+  //       color: "bronze",
+  //           explanation: "Shot Block Artist",
+  // id: 16,
+  //     },
+  //     {
+  //       icon: <FaAnchor />,
+  //       color: "bronze",
+  //           explanation: "Defensive Anchor",
+  // id: 18,
+  //     },
+  //     {
+  //       icon: <RiTeamFill />,
+  //       color: "bronze",
+  //           explanation: "Switchable Specialist",
+  // id: 17,
+  //     },
+  //     {
+  //       icon: <FaLock />,
+  //       color: "bronze",
+  //           explanation: "Lockdown Post Defender",
+  // id: 14,
+  //     },
+  //   ],
+  //   teamScoring: 8.75,
+  //   teamEfficiency: 5.5,
+  //   teamSpacing: 7.5,
+  //   teamFinishing: 9.75,
+  //   teamPassing: 7.5,
+  //   teamCreation: 7,
+  //   teamOffRebounding: 5,
+  //   //
+  //   teamInteriorDef: 3,
+  //   teamPerimeterDef: 8.5,
+  //   teamSwitchability: 4.5,
+  //   teamDefIntangibles: 7,
+  //   teamDefPlaymaking: 7.75,
+  //   teamDefRebounding: 7,
+  //   //
+  //   teamOffChemRating: 0,
+  //   teamDefChemRating: 0.65,
+  //   teamTotalChemRating: 1.45,
+  //   teamOffImpact: 3.37,
+  //   teamDefImpact: 0.5,
+  //   teamTotalImpact: 3.9,
+  //   // Headshot
+  //   plyrPictureSrc: "",
+  //   // PlayerCard
+  //   plyrCardPictureSrc: "",
+  //   teamLogoSrc: "***",
+  //   teamLogoStyling: "***",
+  // }
   // },
 ];
 
-const modalData = [
+const offensiveBadges = [
   {
-    value: "Pts",
-    info: "Points Per 75 Possessions",
+    icon: <ImTarget />,
+    color: "hof",
+    explanation: "Deadeye Shooter",
+    id: 1,
   },
   {
-    value: "rTS%",
-    info: "Relative True Shooting Percentage",
+    icon: <MdOutlineSportsKabaddi />,
+    color: "hof",
+    explanation: "Tough Shot Maker",
+    id: 2,
   },
   {
-    value: "Reb",
-    info: "Rebounds Per 75 Possessions",
+    icon: <MdSportsHandball />,
+    color: "hof",
+    explanation: "Lob/Putback/Dunk Master",
+    id: 3,
   },
   {
-    value: "Ast",
-    info: "Assists Per 75 Possessions",
+    icon: <FaWifi />,
+    color: "hof",
+    explanation: "Limitless Range",
+    id: 4,
   },
   {
-    value: "Stk",
-    info: "Steals and Blocks Per 75 Possessions",
+    icon: <FaHatWizard />,
+    color: "hof",
+    explanation: "Middy Magician",
+    id: 5,
   },
   {
-    value: "Tov",
-    info: "Turnovers Per 75 Possessions",
+    icon: <GiWhistle />,
+    color: "hof",
+    explanation: "Foul Drawer",
+    id: 6,
   },
   {
-    value: "BPM",
-    info: "Box Plus Minus",
-  },
-];
-
-const offBadgesData = [
-  {
-    value: <ImTarget />,
-    info: "Dead Eye Shooter",
+    icon: <GiBodyBalance />,
+    color: "bronze",
+    explanation: "Acrobatic/Finesse Finisher",
+    id: 7,
   },
   {
-    value: <MdOutlineSportsKabaddi />,
-    info: "Tough Shot Maker",
+    icon: <GiWreckingBall />,
+    color: "gold",
+    explanation: "Contact Finisher",
+    id: 8,
   },
   {
-    value: <MdSportsHandball />,
-    info: "Lob/Putback/Dunk Master",
-  },
-  {
-    value: <FaWifi />,
-    info: "Limitless Range",
-  },
-  {
-    value: <FaHatWizard />,
-    info: "Middy Magician",
-  },
-  {
-    value: <GiWhistle />,
-    info: "Foul Drawer",
-  },
-  {
-    value: <GiBodyBalance />,
-    info: "Acrobatic/Finesse Finisher",
-  },
-  {
-    value: <GiWreckingBall />,
-    info: "Contact Finisher",
-  },
-  {
-    value: <FaTools />,
-    info: "Post Move Technician",
+    icon: <FaTools />,
+    color: "gold",
+    explanation: "Post Move Technician",
+    id: 9,
   },
 ];
-
-const defBadgesData = [
-  {
-    value: <FaLock />,
-    info: "Lockdown Post Defender",
-  },
-  {
-    value: <GiHandcuffs />,
-    info: "Perimeter Handcuffs",
-  },
-  {
-    value: <ImBug />,
-    info: "Defensive Pest",
-  },
-  {
-    value: <SiAdblock />,
-    info: "Shot Block Artist",
-  },
-  {
-    value: <RiTeamFill />,
-    info: "Switchable Specialist",
-  },
-  {
-    value: <FaAnchor />,
-    info: "Defensive Anchor",
-  },
-  {
-    value: <GiMonsterGrasp />,
-    info: "Pick Pocket/Interceptor",
-  },
-  {
-    value: <GiBrain />,
-    info: "High IQ Defender",
-  },
-  {
-    value: <GiEmbrassedEnergy />,
-    info: "High Energy Defender",
-  },
-];
-
-const otherBadgesData = [
-  {
-    value: <TbEngine />,
-    info: "Offensive Engine",
-  },
-  {
-    value: <RiHandCoinLine />,
-    info: "Dime Dropper",
-  },
-  {
-    value: <ImEarth />,
-    info: "Off-Ball Gravity",
-  },
-  {
-    value: <ImDribbble />,
-    info: "Houdini Handles",
-  },
-  {
-    value: <ImMagnet />,
-    info: "Rebound Magent",
-  },
-];
-
-const showModalList = modalData.map((option) => {
-  return (
-    <div key={option.value} className="flex flex-row mb-5">
-      <div className="font-bold underline mr-2">{option.value}:</div>
-      <div>{option.info}</div>
-    </div>
-  );
-});
-
-const showOffBadges = offBadgesData.map((option) => {
-  return (
-    <div key={option.info} className="flex flex-row">
-      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
-      <div>{option.info}</div>
-    </div>
-  );
-});
-
-const showDefBadges = defBadgesData.map((option) => {
-  return (
-    <div key={option.info} className="flex flex-row">
-      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
-      <div>{option.info}</div>
-    </div>
-  );
-});
-
-const showOtherBadges = otherBadgesData.map((option) => {
-  return (
-    <div key={option.info} className="flex flex-row">
-      <div className="mb-3 mr-3 rounded p-1 bg-gray-300">{option.value}</div>
-      <div>{option.info}</div>
-    </div>
-  );
-});
-
-export const showAllBadgeInfo = (
-  <div className="flex flex-col text-xs lg:flex-row">
-    <div className="flex flex-col">{showModalList}</div>
-    <div className="ml-10">{showOffBadges}</div>
-    <div className="ml-10">{showDefBadges}</div>
-    <div className="ml-10">
-      <div className="mb-5">{showOtherBadges}</div>
-      <div className="flex flex-col">
-        <div className="flex flex-row">
-          <div className="mb-1.5 mr-3 rounded px-2 bg-purple-600">H</div>
-          <div>Hall of Fame</div>
-        </div>
-        <div className="flex flex-row">
-          <div className="mb-1.5 mr-3 rounded px-2 bg-yellow-300">G</div>
-          <div>Gold</div>
-        </div>
-        <div className="flex flex-row">
-          <div className="mb-1.5 mr-3 rounded px-2 bg-gray-300">S</div>
-          <div>Silver</div>
-        </div>
-        <div className="flex flex-row">
-          <div className="mb-1.5 mr-3 rounded px-2 bg-yellow-600">B</div>
-          <div>Bronze</div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 // *****************************************************************
+
+const playmakingBadges = [
+  {
+    icon: <TbEngine />,
+    color: "gold",
+    explanation: "Offensive Engine",
+    id: 10,
+  },
+  {
+    icon: <RiHandCoinLine />,
+    color: "gold",
+    explanation: "Dime Dropper",
+    id: 11,
+  },
+  {
+    icon: <ImEarth />,
+    color: "gold",
+    explanation: "Off-Ball Gravity",
+    id: 12,
+  },
+  {
+    icon: <ImDribbble />,
+    color: "gold",
+    explanation: "Houdini Handles",
+    id: 13,
+  },
+];
+
 // *****************************************************************
+
+const defensiveBadges = [
+  {
+    icon: <FaLock />,
+    color: "gold",
+    explanation: "Lockdown Post Defender",
+    id: 14,
+  },
+  {
+    icon: <GiHandcuffs />,
+    color: "gold",
+    explanation: "Perimeter Handcuffs",
+    id: 15,
+  },
+  {
+    icon: <SiAdblock />,
+    color: "gold",
+    explanation: "Shot Block Artist",
+    id: 16,
+  },
+  {
+    icon: <RiTeamFill />,
+    color: "gold",
+    explanation: "Switchable Specialist",
+    id: 17,
+  },
+  {
+    icon: <FaAnchor />,
+    color: "gold",
+    explanation: "Defensive Anchor",
+    id: 18,
+  },
+  {
+    icon: <GiMonsterGrasp />,
+    color: "gold",
+    explanation: "Pick Pocket/Interceptor",
+    id: 19,
+  },
+  {
+    icon: <GiBrain />,
+    color: "gold",
+    explanation: "High IQ Defender",
+    id: 20,
+  },
+  {
+    icon: <GiEmbrassedEnergy />,
+    color: "gold",
+    explanation: "High Energy Defender",
+    id: 21,
+  },
+];
+
 // *****************************************************************
 
-    const offensiveBadges = [
-      {
-        icon: <ImTarget />,
-        color: "hof",
-        explanation: "Deadeye Shooter",
-      },
-      {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
-        explanation: "Tough Shot Maker",
-      },
-      {
-        icon: <MdSportsHandball />,
-        color: "hof",
-        explanation: "Lob/Putback/Dunk Master",
-      },
-      {
-        icon: <FaWifi />,
-        color: "hof",
-        explanation: "Limitless Range",
-      },
-      {
-        icon: <FaHatWizard />,
-        color: "hof",
-        explanation: "Middy Magician",
-      },
-      {
-        icon: <GiWhistle />,
-        color: "hof",
-        explanation: "Foul Drawer",
-      },
-      {
-        icon: <GiBodyBalance />,
-        color: "bronze",
-        explanation: "Acrobatic/Finesse Finisher",
-      },
-      {
-        icon: <GiWreckingBall />,
-        color: "gold",
-        explanation: "Contact Finisher",
-      },
-      {
-        icon: <FaTools />,
-        color: "gold",
-        explanation: "Post Move Technician",
-      },
-    ];
-
-    // *****************************************************************
-
-    const playmakingBadges = [
-      {
-        icon: <TbEngine />,
-        color: "gold",
-        explanation: "Offensive Engine",
-      },
-      {
-        icon: <RiHandCoinLine />,
-        color: "gold",
-        explanation: "Dime Dropper",
-      },
-      {
-        icon: <ImEarth />,
-        color: "gold",
-        explanation: "Off-Ball Gravity",
-      },
-      {
-        icon: <ImDribbble />,
-        color: "gold",
-        explanation: "Houdini Handles",
-      },
-    ];
-
-    // *****************************************************************
-
-    const defensiveBadges = [
-      {
-        icon: <FaLock />,
-        color: "gold",
-        explanation: "Lockdown Post Defender",
-      },
-      {
-        icon: <GiHandcuffs />,
-        color: "gold",
-        explanation: "Perimeter Handcuffs",
-      },
-      {
-        icon: <SiAdblock />,
-        color: "gold",
-        explanation: "Shot Block Artist",
-      },
-      {
-        icon: <RiTeamFill />,
-        color: "gold",
-        explanation: "Switchable Specialist",
-      },
-      {
-        icon: <FaAnchor />,
-        color: "gold",
-        explanation: "Defensive Anchor",
-      },
-      {
-        icon: <GiMonsterGrasp />,
-        color: "gold",
-        explanation: "Pick Pocket/Interceptor",
-      },
-      {
-        icon: <GiBrain />,
-        color: "gold",
-        explanation: "High IQ Defender",
-      },
-      {
-        icon: <GiEmbrassedEnergy />,
-        color: "gold",
-        explanation: "High Energy Defender",
-      },
-    ];
-
-    // *****************************************************************
-
-    const reboundingBadges = [
-      {
-        icon: <ImMagnet />,
-        color: "gold",
-        explanation: "Rebound Magnet",
-      },
-    ];
+const reboundingBadges = [
+  {
+    icon: <ImMagnet />,
+    color: "gold",
+    explanation: "Rebound Magnet",
+    id: 22,
+  },
+];
 
 // Other Badges
 // import { ImAidKit } from "react-icons/im"; // Injured or Injury

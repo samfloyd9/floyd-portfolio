@@ -38,6 +38,8 @@ function PlayerCard({ playerData, handleDelete }) {
     "Joel Embiid": "mt-2",
     "Jerry Lucas": "mt-7",
     "Tony Parker": "mt-3.5",
+    "James Worthy": "mt-2.5",
+    "Nate Thurmond": "mt-2.5",
   };
 
   const imageOffset = specialPlayerOffsets[playerData.name] || "";

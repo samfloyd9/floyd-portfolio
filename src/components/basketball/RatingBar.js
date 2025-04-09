@@ -4,9 +4,9 @@
 function RatingBar({ label, value }) {
   // Calculates the width of the inner bar based on a 0–10 scale average
   const widthLogic = (data) => {
-    const average = data / 5; // Each stat is out of 10 across 5 players
-    const percent = Math.min(Math.round((average / 10) * 100), 100); // cap at 100%
-    return `w-[${percent}%]`;
+    const average = data / 5;
+    const percent = Math.min((average / 10) * 100, 100); // e.g., 80
+    return `${percent}%`; // returns a string like "80%"
   };
 
   // Returns a Tailwind background color class based on performance
@@ -39,10 +39,9 @@ function RatingBar({ label, value }) {
       <div className="bg-gray-200 w-48 h-5 ml-auto rounded-md">
         {/* Inner colored bar */}
         <div
-          className={`${widthLogic(value)} h-5 ${teamRatingColor(
-            value
-          )} rounded-md`}
-        ></div>
+          style={{ width: widthLogic(value) }} // ✅ Dynamic style for width
+          className={`${teamRatingColor(value)} h-5 rounded-md`}
+        />
       </div>
     </div>
   );

@@ -7,9 +7,10 @@ import HomePage from "./pages/HomePage";
 import MediaPage from "./pages/MediaPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
-import { showAllBadgeInfo } from "./data/basketballData";
+// import { showAllBadgeInfo } from "./data/basketballData";
 import BankingPage from "./pages/BankingPage";
 import ParcheesiPage from "./pages/ParcheesiPage";
+import BadgeInfoPanel from "./components/basketball/BadgeInfoPanel";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -28,7 +29,7 @@ function App() {
 
   const modal = (
     <Modal onClose={handleClose} actionBar={actionBar}>
-      {showAllBadgeInfo}
+      <BadgeInfoPanel />
     </Modal>
   );
 
