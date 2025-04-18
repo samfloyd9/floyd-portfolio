@@ -6,6 +6,7 @@ import Dropdown from "../components/shared/Dropdown";
 import React from "react";
 import FootballLineup from "../components/football/FootballLineup";
 import { FaCheck } from "react-icons/fa";
+import { offPosOptions, defPosOptions, teamOptions } from "../constants/footballFilters";
 
 function FootballPage({ setShowModal }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,78 +27,6 @@ function FootballPage({ setShowModal }) {
   const unit = [
     { label: "Offense", value: "OFF" },
     { label: "Defense", value: "DEF" },
-  ];
-
-  // posOptions
-
-  const offPosOptions = [
-    { label: "All Positions", value: "All Positions" },
-
-    { label: "Quarterback", value: "QB" },
-    { label: "Running Back", value: "RB" },
-    { label: "Fullback", value: "FB" },
-
-    { label: "Tight End", value: "TE" },
-    { label: "Wide Reciever", value: "WR" },
-
-    { label: "Left Tackle", value: "LT" },
-    { label: "Left Guard", value: "LG" },
-    { label: "Center", value: "C" },
-    { label: "Right Guard", value: "RG" },
-    { label: "Right Tackle", value: "RT" },
-  ];
-
-  const defPosOptions = [
-    { label: "All Positions", value: "All Positions" },
-
-    { label: "Right Defensive End", value: "RDE" },
-    { label: "Left Defensive End", value: "LDE" },
-    { label: "Right Defensive Tackle", value: "RDT" },
-    { label: "Left Defensive Tackle", value: "LDT" },
-
-    { label: "Left Outside Linebacker", value: "LOLB" },
-    { label: "Right Outside Linebacker", value: "ROLB" },
-    { label: "Middle Linebacker", value: "MLB" },
-
-    { label: "Cornerback", value: "CB" },
-    { label: "Strong Safety", value: "SS" },
-    { label: "Free Safety", value: "FS" },
-  ];
-
-  const teamOptions = [
-    { label: "All Teams", value: "All Teams" },
-    { label: "Dallas Cowboys", value: "DAL" },
-    { label: "New England Patriots", value: "NWE" },
-    { label: "Pittsburgh Steelers", value: "PIT" },
-    { label: "Green Bay Packers", value: "GNB" },
-    { label: "Kansas City Chiefs", value: "KAN" },
-    { label: "Philadelphia Eagles", value: "PHI" },
-    { label: "Miami Dolphins", value: "MIA" },
-    { label: "New York Giants", value: "NYG" },
-    { label: "Las Vegas Raiders", value: "LV" },
-    { label: "Arizona Cardinals", value: "ARI" },
-    { label: "Baltimore Ravens", value: "BAL" },
-    { label: "Washington Redskins", value: "WAS" },
-    { label: "Buffalo Bills", value: "BUF" },
-    { label: "New York Jets", value: "NYJ" },
-    { label: "Los Angeles Rams", value: "LAR" },
-    { label: "Los Angeles Chargers", value: "LAC" },
-    { label: "Minnesota Vikings", value: "MIN" },
-    { label: "Detroit Lions", value: "DET" },
-    { label: "Atlanta Falcons", value: "ATL" },
-    { label: "San Fransisco 49ers", value: "SF" },
-    { label: "Chicago Bears", value: "CHI" },
-    { label: "New Orleans Saints", value: "NO" },
-    { label: "Cleveland Browns", value: "CLE" },
-    { label: "Seattle Seahawks", value: "SEA" },
-    { label: "Houston Texans", value: "HOU" },
-    { label: "Indianapolis Colts", value: "IND" },
-    { label: "Tennessee Titans", value: "TEN" },
-    { label: "Tampa Bay Buccaneers", value: "TB" },
-    { label: "Carolina Panthers", value: "CAR" },
-    { label: "Denver Broncos", value: "DEN" },
-    { label: "Cincinnati Bengals", value: "CIN" },
-    { label: "Jacksonville Jaguars", value: "JAX" },
   ];
 
   const [offPlaySelection, setOffPlaySelection] = useState({
@@ -139,6 +68,7 @@ function FootballPage({ setShowModal }) {
     { label: "Wildcat Pro", rbTotal: 2, teTotal: 1, wrTotal: 2 },
     { label: "Wildcat Unbalanced", rbTotal: 2, teTotal: 2, wrTotal: 1 },
 
+    { label: "Shotgun Empty", rbTotal: 0, teTotal: 1, wrTotal: 4 },
     // Single Back and Shotgun
   ];
 
@@ -215,6 +145,12 @@ function FootballPage({ setShowModal }) {
       template: "Select a WR from the list",
     },
   ]);
+
+  // const [reciever5, setReciever5] = useState([
+  //   {
+  //     template: "Select a WR from the list",
+  //   },
+  // ]);
 
   const [tightEnd1, setTightEnd1] = useState([
     {
@@ -380,9 +316,6 @@ function FootballPage({ setShowModal }) {
     const centerFilteredLineup = footballData.filter(function (player) {
       return player.position === "C";
     });
-    // const centerFilteredLineup = footballData.filter((player) =>
-    //   player.position.includes("C")
-    // );
 
     const rightGuardFilteredLineup = footballData.filter((player) =>
       player.position.includes("RG")
@@ -610,6 +543,19 @@ function FootballPage({ setShowModal }) {
     );
     const randomFourthReceiver = receiverFourthFilteredLineup[randomReceiverFourthIndex]; // IMPORTANT
 
+
+  
+    // const receiverFifthFilteredLineup = receiverFourthFilteredLineup.filter(
+    //   function (player) {
+    //     return player.name !== randomFourthReceiver.name;
+    //   }
+    // );
+
+    // const randomReceiverFifthIndex = Math.floor(
+    //   Math.random() * receiverFifthFilteredLineup.length
+    // );
+    // const randomFifthReceiver = receiverFifthFilteredLineup[randomReceiverFifthIndex]; // IMPORTANT
+
     // ---------------------------------
 
 
@@ -669,6 +615,7 @@ function FootballPage({ setShowModal }) {
       setReciever2([randomAltReceiver]);
       setReciever3([randomThirdReceiver]);
       setReciever4([randomFourthReceiver]);
+      // setReciever5([randomFifthReceiver]);
 
       setTightEnd1([randomTightEnd]);
       setTightEnd2([randomAltTightEnd]);
@@ -1414,8 +1361,22 @@ function FootballPage({ setShowModal }) {
     },
     {
       label: "Team",
-      render: (player) => <div className="text-sm">{player.team}</div>,
+      render: (player) => <div className="flex items-center justify-center"><img alt="pic" src={player.teamLogo} className={`${player.teamLogoStyling}`}/></div>,
       sortValue: (player) => player.team,
+    },
+    {
+      label: "Playstyle",
+      render: (player) => <div className="text-xs">{player.teamPlayStyle}</div>,
+      sortValue: (player) => player.teamPlayStyle,
+    },
+    {
+      label: "---Key Stats---",
+      render: (player) => <div className="text-xs flex flex-col"><div className="text-nowrap">{player.keyStats || "Stats"}</div><div className="text-nowrap">{player.keyStatsTwo}</div></div>,
+    },
+    {
+      label: "OVR",
+      render: (player) => <div className="text-sm">{player.overallRating}</div>,
+      sortValue: (player) => player.overallRating,
     },
     {
       label: "AV",
@@ -1423,11 +1384,6 @@ function FootballPage({ setShowModal }) {
         <div className="text-sm">{player.aproximateValuePeak}</div>
       ),
       sortValue: (player) => player.aproximateValuePeak,
-    },
-    {
-      label: "OVR",
-      render: (player) => <div className="text-sm">{player.overallRating}</div>,
-      sortValue: (player) => player.overallRating,
     },
   ];
 
@@ -1458,8 +1414,18 @@ function FootballPage({ setShowModal }) {
     }
   };
 
+  // Numbers
+  // https://t3.ftcdn.net/jpg/00/34/24/96/360_F_34249698_Oun7sm6fNLKUXpAtzgue06sTMyHSxwgB.jpg
+
+  // No Numbers
+  // https://t4.ftcdn.net/jpg/00/26/36/27/360_F_26362713_mLZxa11IVoNFxszpgEkY0LfDA0ubFTrs.jpg
+  // https://newschannel9.com/resources/media2/16x9/725/1320/0x38/90/7f093588-b7f2-4aed-b0a3-95f80aa5174a-GettyImages183361396.jpg
+
+  // With Lights
+  // https://t4.ftcdn.net/jpg/01/00/00/31/360_F_100003169_uMg5nB171ogYAB4eYfks8GxNsvZfEYqy.jpg
+
   return (
-    <div className="flex h-screen justify-between content-between items-between">
+    <div className="flex h-screen justify-between content-between items-between bg-[url('https://t3.ftcdn.net/jpg/00/34/24/96/360_F_34249698_Oun7sm6fNLKUXpAtzgue06sTMyHSxwgB.jpg')] bg-cover bg-no-repeat bg-center">
       {isOpen && (
         <div className="absolute top-0 left-0 lg:w-1/3 w-screen gap-2 pt-4 bg-white z-50">
           <div className="flex flex-row gap-3 items-center w-full mb-4 px-4">
@@ -1510,7 +1476,7 @@ function FootballPage({ setShowModal }) {
       )}
 
       <div
-        className={`flex items-start mt-11 justify-center content-center w-full lg:bg-white`}
+        className={`flex items-start mt-11 justify-center content-center w-full`}
       >
         <FootballLineup
           offensiveLine={offensiveLine}

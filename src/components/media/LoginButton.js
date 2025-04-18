@@ -11,7 +11,7 @@ function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setList
         >
           Login with TMDB
         </button>
-        <p className="text-lg font-bold text-gray-600">Login to create lists and rate movies!!!</p>
+        {/* <p className="text-md font-bold text-gray-600">Login to create lists and rate movies!!!</p> */}
         </div>
       ) : (
         // Show Logout Button when logged in
@@ -22,7 +22,7 @@ function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setList
           >
             Logout
           </button>
-          <p className="text-lg font-bold text-gray-600">Successfully Logged in with TMDB</p>
+          {/* <p className="text-sm font-bold text-gray-600">Successfully Logged in with TMDB</p> */}
         </div>
       )}
 

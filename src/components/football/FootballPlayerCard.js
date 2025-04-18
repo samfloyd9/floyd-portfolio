@@ -80,7 +80,7 @@ function FootballPlayerCard({ playerData, handleDelete }) {
       {playerData.hasOwnProperty("teamPlayStyle") && (
         <div>
           <div
-            className={`shadow-md rounded-xl border border-gray-300 ${bgImageLogic(
+            className={`shadow-md rounded-xl border border-black ${bgImageLogic(
               playerData
             )} px-0 py-1.5 m-0.5 flex w-24 justify-center`}
           >
@@ -91,7 +91,7 @@ function FootballPlayerCard({ playerData, handleDelete }) {
       {playerData.hasOwnProperty("template") && (
         <div>
           <div
-            className={`shadow-md rounded-xl border border-gray-300 p-2 m-0.5 flex w-24 justify-center`}
+            className={`shadow-md rounded-xl border bg-white border-gray-300 p-2 m-0.5 flex w-24 justify-center`}
           >
             {playerTemplate}
           </div>

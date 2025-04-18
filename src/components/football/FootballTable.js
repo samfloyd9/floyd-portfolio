@@ -13,7 +13,7 @@ function Table({
       return <Fragment key={column.label}>{column.header()}</Fragment>;
     }
     return (
-      <th className="mx-2" key={column.label}>
+      <th className="mx-4 text-nowrap" key={column.label}>
         {column.label}
       </th>
     );
@@ -56,28 +56,6 @@ function Table({
   const defPosFilteredSecond = defTeamFilteredFirst.filter((player) =>
     player.position.includes(posSelection.value)
   );
-
-  // console.log(posFilteredData);
-  // console.log(teamFilteredData);
-  // console.log(posFilteredSecond);
-  // console.log(posSelection, teamSelection)
-  // console.log(posSelection.value, teamSelection.value)
-
-  // const renderedRows = data.map((rowData) => {
-  //   const renderedCells = config.map((column) => {
-  //     return (
-  //       <td className="text-center" key={column.label}>
-  //         {column.render(rowData)}
-  //       </td>
-  //     );
-  //   });
-
-  //   return (
-  //     <tr key={keyFn(rowData)} className="border-b">
-  //       {renderedCells}
-  //     </tr>
-  //   );
-  // });
 
   const renderedOffensiveRows = offFilteredData.map((rowData) => {
     const renderedOffensiveCells = config.map((column) => {

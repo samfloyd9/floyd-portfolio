@@ -88,38 +88,38 @@ function FootballLineup({
               options={unit}
             />
           </div>
-        <div className="flex flex-row gap-5">
-          <Button
-            onClick={handleSidebarView}
-            className="rounded-lg hover:bg-green-300 bg-green-200 shadow-md flex justify-center"
-          >
-            + Add Player
-          </Button>
-
-          <div className="group pointer relative rounded-lg">
+          <div className="flex flex-row gap-5">
             <Button
-              onClick={handleRandomLineup}
-              className="rounded-lg text-3xl hover:bg-gray-200 bg-white shadow-md flex justify-center"
+              onClick={handleSidebarView}
+              className="rounded-lg hover:bg-green-300 bg-green-200 shadow-md flex justify-center"
             >
-              <GiPerspectiveDiceSixFacesRandom />
+              + Add Player
             </Button>
-            <span className="pointer-events-none pointer absolute -bottom-7 z-20 -left-9 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
-              Random Lineup
-            </span>
-          </div>
 
-          <div className="group pointer relative rounded-lg">
-            <Button
-              onClick={handleReset}
-              className="rounded-lg hover:bg-gray-200 text-2xl bg-white shadow-md flex justify-center"
-            >
-              <GrPowerReset />
-            </Button>
-            <span className="pointer-events-none pointer absolute -bottom-7 z-20 -left-7 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
-              Reset Lineup
-            </span>
+            <div className="group pointer relative rounded-lg">
+              <Button
+                onClick={handleRandomLineup}
+                className="rounded-lg text-3xl hover:bg-gray-200 bg-white shadow-md flex justify-center"
+              >
+                <GiPerspectiveDiceSixFacesRandom />
+              </Button>
+              <span className="pointer-events-none pointer absolute -bottom-7 z-20 -left-9 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+                Random Lineup
+              </span>
+            </div>
+
+            <div className="group pointer relative rounded-lg">
+              <Button
+                onClick={handleReset}
+                className="rounded-lg hover:bg-gray-200 text-2xl bg-white shadow-md flex justify-center"
+              >
+                <GrPowerReset />
+              </Button>
+              <span className="pointer-events-none pointer absolute -bottom-7 z-20 -left-7 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+                Reset Lineup
+              </span>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -411,6 +411,21 @@ function FootballLineup({
             />
           )}
 
+        {(unitSelection.label === "Offense" ||
+          unitSelection.label === undefined) &&
+          offPlaySelection.label === "Shotgun Empty" && (
+            <OffFormations
+              offensiveLine={offensiveLine}
+              quarterback={quarterback}
+              reciever1={reciever1}
+              reciever2={reciever2}
+              reciever3={reciever3}
+              reciever4={reciever4}
+              tightEnd1={tightEnd1}
+              offPlaySelection={offPlaySelection}
+            />
+          )}
+
         {unitSelection.label === "Defense" &&
           (defPlaySelection.label === "3-4" ||
             defPlaySelection.label === undefined) && (
@@ -430,7 +445,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "4-3" && (
             <DefFormations
               rightDefensiveTackle={rightDefensiveTackle}
@@ -448,8 +463,7 @@ function FootballLineup({
             />
           )}
 
-
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "3-3-5" && (
             <DefFormations
               noseTackle={noseTackle}
@@ -467,7 +481,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "4-4" && (
             <DefFormations
               rightDefensiveTackle={rightDefensiveTackle}
@@ -485,7 +499,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "46" && (
             <DefFormations
               noseTackle={noseTackle}
@@ -503,7 +517,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "5-2" && (
             <DefFormations
               noseTackle={noseTackle}
@@ -521,7 +535,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "Nickle" && (
             <DefFormations
               rightDefensiveTackle={rightDefensiveTackle}
@@ -539,7 +553,7 @@ function FootballLineup({
             />
           )}
 
-          {unitSelection.label === "Defense" &&
+        {unitSelection.label === "Defense" &&
           defPlaySelection.label === "Dime" && (
             <DefFormations
               rightDefensiveTackle={rightDefensiveTackle}

@@ -19,13 +19,13 @@ function Sidebar() {
   ];
 
   // Dynamic styling logic based on current path
-  const sideBarColorLogic = (currentPath) => {
-    if (currentPath === "/") {
-      return "bg-black text-white border-white";
-    } else {
-      return "bg-white text-black";
-    }
-  };
+  // const sideBarColorLogic = (currentPath) => {
+  //   if (currentPath === "/") {
+  //     return "bg-black text-white border-white";
+  //   } else {
+  //     return "bg-white text-black";
+  //   }
+  // };
 
   // Render all links
   const renderedLinks = links.map((link) => (
@@ -33,33 +33,65 @@ function Sidebar() {
       key={link.label}
       to={link.path}
       onClick={() => setIsOpen(false)} // Close menu when a link is clicked (mobile)
-      className={`mb-2 ${sideBarColorLogic(currentPath)} orbitron-regular`}
-      activeClassName={`font-bold border-l-4 border-blue-500 pl-2 ${sideBarColorLogic(currentPath)}`}
+      className={`orbitron-regular ${
+        currentPath === "/basketball" ||
+        currentPath === "/" ||
+        currentPath === "/football" ||
+        currentPath === "/media"
+          ? "lg:text-white"
+          : ""
+      }`}
+      activeClassName={`font-bold border-l-4 border-blue-500 ${
+        currentPath === "/basketball" ||
+        currentPath === "/football" ||
+        currentPath === "/" ||
+        currentPath === "/media"
+          ? "lg:text-white lg:border-white"
+          : ""
+      } pl-2`}
     >
       {link.label}
     </Link>
   ));
 
+  // https://t3.ftcdn.net/jpg/00/27/12/58/360_F_27125854_8zajMPMcyyrqZ7dtgRhdzXlxUuFrKgkJ.jpg
+
   return (
     <div
-      className={`sticky top-0 z-30 py-2 mt-0 ${sideBarColorLogic(currentPath)}`}
+      className={`sticky top-0 z-30 py-2 mt-0 ${
+        currentPath === "/basketball"
+          ? "bg-[url('https://t4.ftcdn.net/jpg/00/00/42/23/360_F_422353_a45FYznatYUREgymaj24NocvrA6uh9.jpg')] bg-center border-b border-black"
+          : ""
+      } ${currentPath === "/" ? "bg-black text-white" : ""} ${currentPath === "/media" ? "bg-gray-800" : ""} ${
+        currentPath === "/football"
+          ? "bg-[url('https://img.pixers.pics/pho_wat(s3:700/FO/27/12/58/54/700_FO27125854_928970de62904503935980f5d18b793b.jpg,700,467,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,417,jpg)/stickers-football-texture.jpg.jpg')] border-b border-black"
+          : ""
+      }`}
     >
       {/* Desktop Nav - visible on lg+ screens */}
-      <div className="hidden lg:flex flex-row justify-center gap-12">
+      <div className={`hidden lg:flex flex-row justify-center items-center gap-12`}>
         {renderedLinks}
       </div>
 
       {/* Mobile Toggle Button */}
-      <div className="relative flex lg:hidden justify-between items-center px-4">
+      <div
+        className={`relative flex lg:hidden justify-between items-center px-4 ${
+          currentPath === "/football" || currentPath === "/basketball" || currentPath === '/'
+            ? "text-white"
+            : "text-black"
+        }`}
+      >
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
           <HiOutlineMenu className="text-2xl" />
         </button>
-        <span className="font-bold orbitron-regular text-lg">Menu</span>
+        <span className={`font-bold orbitron-regular text-lg`}>Menu</span>
       </div>
 
       {/* Mobile Dropdown Overlay Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md z-20 lg:hidden flex flex-col px-4 pt-2 gap-2">
+        <div
+          className={`absolute top-full left-0 w-full bg-white shadow-md z-20 lg:hidden flex flex-col px-4 pt-2 gap-2 text-black`}
+        >
           {renderedLinks}
         </div>
       )}
@@ -68,50 +100,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-
-
-// import Link from "./Link";
-// import useNavigation from "../../hooks/use-navigation";
-
-// function Sidebar() {
-//   const { currentPath } = useNavigation();
-
-//   const links = [
-//     { label: "Home", path: "/" },
-//     { label: "Banking", path: "/jsm_banking" },
-//     { label: "Basketball", path: "/basketball" },
-//     { label: "Football", path: "/football" },
-//     { label: "Movies/TV", path: "/media" },
-//     { label: "Parcheesi", path: "/parcheesi" },
-//   ];
-
-//   const sideBarColorLogic = (currentPath) => {
-//     if (currentPath === '/') {
-//       return 'bg-black text-white border-white';
-//     } else {
-//       return 'bg-white';
-//     }
-//   }
-
-//   const renderedLinks = links.map((link) => {
-//     return (
-//       <Link
-//         key={link.label}
-//         to={link.path}
-//         className={`mb-2 ${sideBarColorLogic(currentPath)} orbitron-regular`}
-//         activeClassName={`font-bold border-l-4 border-blue-500 pl-2 ${sideBarColorLogic(currentPath)}`}
-//       >
-//         {link.label}
-//       </Link>
-//     );
-//   });
-
-//   return (
-//     <div className={`sticky top-0 flex flex-row justify-around items-center ${sideBarColorLogic(currentPath)} py-2 gap-2 z-20 mt-0 lg:gap-24 lg:justify-center`}>
-//       {renderedLinks}
-//     </div>
-//   );
-// }
-
-// export default Sidebar;

@@ -21,8 +21,8 @@ const dolphinsCurrentLogoStyling = "h-9 top-0 -left-1";
 const jetsPrimary = "black";
 const jetsSecondary = "white";
 const jetsAlternate = "black";
-const jetsCurrentLogo = "https://static.www.nfl.com/image/upload/f_auto/league/vdqo4iiufmdrimkaxslj";
-const jetsCurrentLogoStyling = "h-10 -top-1.5 -left-0.5";
+const jetsCurrentLogo = "https://i1.wp.com/www.retroseasons.com/retroimages/2020-New_York_Jets_logo-2.png";
+const jetsCurrentLogoStyling = "h-8 top-0.5 left-0.5";
 
 // -----------------------------------------------
 
@@ -134,7 +134,7 @@ const packersPrimary = "black";
 const packersSecondary = "white";
 const packersAlternate = "black";
 const packersCurrentLogo = "https://static.www.nfl.com/image/private/f_auto/league/gppfvr7n8gljgjaqux2x";
-const packersCurrentLogoStyling = "h-9 top-0 left-0";
+const packersCurrentLogoStyling = "h-9 -top-0.5 left-0";
 
 const lionsPrimary = "black";
 const lionsSecondary = "white";
@@ -262,7 +262,7 @@ export const footballData = [
     unit: 'OFF',
     team: 'NWE',
     fullTeamName: newEnglandPatriots,
-    aproximateValue: 199,
+    aproximateValue: 326,
     aproximateValuePeak: 23, 
     overallRating: 99,
     teamPlayStyle: 'Field General',
@@ -274,6 +274,8 @@ export const footballData = [
     teamLogo: patriotsCurrentLogo,
     teamLogoStyling: patriotsCurrentLogoStyling,
     cardColor: 'sapphire',
+    keyStats: "52 TDs | 4904 Yds",
+    keyStatsTwo: "14 Int/Fmb",
   },
   {
     name: 'Jim Brown',
@@ -285,7 +287,7 @@ export const footballData = [
     team: 'CLE',
     fullTeamName: clevelandBrowns,
     aproximateValue: 98,
-    aproximateValuePeak: 22, 
+    aproximateValuePeak: 21, 
     overallRating: 99,
     teamPlayStyle: 'Power Back',
     plyrHeadshotSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WXAl1a0GoEsTDXumkeN0LBodjKdqKhAgZw&s',
@@ -296,6 +298,8 @@ export const footballData = [
     teamLogo: brownsCurrentLogo,
     teamLogoStyling: brownsCurrentLogoStyling,
     cardColor: 'citrine',
+    keyStats: "21 TDs | 1911 Yds",
+    keyStatsTwo: "6 Fmb",
   },
   {
     name: 'Lawrence Taylor',
@@ -1688,3 +1692,83 @@ export const footballData = [
     cardColor: 'diamond',
   },
 ];
+
+// Quarterbacks (QB)
+// Pocket Passer – excels from the pocket, precision and decision-making.
+
+// Scrambler – mobile and elusive, extends plays with legs.
+
+// Dual Threat – can run or pass effectively.
+
+// Game Manager – low-risk, high-efficiency type.
+
+// Gunslinger – aggressive, high-risk/high-reward passer.
+
+// Running Backs (RB/FB)
+// Power Back – breaks tackles, goal-line threat.
+
+// Elusive Back – shifty, jukes, makes defenders miss.
+
+// Receiving Back – lines up wide, excels in passing game.
+
+// All-Purpose Back – balanced skill set.
+
+// Blocking Back (FB) – specializes in lead blocking and protection.
+
+// Wide Receivers / Tight Ends (WR / TE)
+// Deep Threat – vertical speed, stretches the field.
+
+// Possession Receiver – reliable hands, short/mid-range focus.
+
+// Route Technician – sharp, deceptive route runner.
+
+// YAC Monster – excels at gaining yards after catch.
+
+// Red Zone Target (TE) – physical mismatch, end zone go-to.
+
+// Blocking TE – extra lineman in disguise, contributes to run game.
+
+// Offensive Line (OL)
+// Pass Protector – excels in pass sets and mirroring.
+
+// Run Blocker – mauler, opens gaps in the run game.
+
+// Balanced Lineman – good at both, no glaring weaknesses.
+
+// Anchor – strong base, rarely moved off spot (esp. centers).
+
+// Defensive Line (DL)
+// Pass Rusher – specializes in sacks, QB pressure.
+
+// Run Stuffer – clogs lanes, takes on double teams.
+
+// Disruptor – shoots gaps, quick first step.
+
+// Versatile DL – lines up inside or out.
+
+// Linebackers (LB)
+// Coverage LB – good in zones or man vs TE/RB.
+
+// Run Stopper – attacks gaps, high tackle numbers.
+
+// Blitzer – excels on delayed or designed blitzes.
+
+// Sideline-to-Sideline – elite range and motor.
+
+// Cornerbacks (CB)
+// Man Coverage – sticky in one-on-one coverage.
+
+// Zone Specialist – excels at reads and anticipation.
+
+// Ball Hawk – high INT or PBU rates.
+
+// Press Corner – physical at line, reroutes WRs.
+
+// Safeties (FS/SS)
+// Center Fielder – deep zone responsibility, coverage IQ.
+
+// Box Safety – strong vs run, physical.
+
+// Hybrid Safety – can cover and hit, nickel-type flexibility.
+
+// Playmaker – forces turnovers, big hits

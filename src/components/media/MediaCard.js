@@ -1,7 +1,7 @@
 import { MdAdd } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 
-import TvFavoriteButton from "./TvFavoriteButton";
+import FavoriteButton from "./FavoriteButton";
 import RatingControl from "./RatingControl";
 
 import { useState } from "react";
@@ -19,6 +19,9 @@ function MediaCard({
   accountId,
   sessionId,
   refreshFavoriteTvShows,
+  refreshFavoriteMovies,
+  refreshWatchlistMovies,
+  refreshWatchlistTvShows,
 }) {
   const [showRatingEdit, setShowRatingEdit] = useState(false);
 
@@ -40,7 +43,7 @@ function MediaCard({
   if (!selectedMedia) return null;
 
   const movieCard = (
-    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md">
+    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md bg-white">
       <div className="flex flex-row">
         {detailedMedia.map((movie) => (
           <div
@@ -55,6 +58,7 @@ function MediaCard({
                   : `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
               }
               className="rounded-md shadow-md w-[342px]"
+              loading="lazy"
             />
             <div className="flex flex-row w-full justify-between content-between items-center mt-2">
               <div className="w-1/4">
@@ -92,6 +96,13 @@ function MediaCard({
                   >
                     <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
                   </button>
+                  <FavoriteButton
+                    sessionId={sessionId}
+                    accountId={accountId}
+                    mediaId={movie.id}
+                    mediaType={"movie"} // or hardcoded: "movie" or "tv"
+                    refreshFavorites={refreshFavoriteMovies}
+                  />
                 </div>
               </div>
 
@@ -137,7 +148,7 @@ function MediaCard({
   );
 
   const tvCard = (
-    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md">
+    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md bg-white">
       <div className="flex flex-row">
         {tvShow.map((show) => (
           <div
@@ -152,6 +163,7 @@ function MediaCard({
                   : `https://image.tmdb.org/t/p/w342/${show.poster_path}`
               }
               className="rounded-md shadow-md w-[342px]"
+              loading="lazy"
             />
             <div className="flex flex-row w-full justify-between content-between items-center mt-2">
               <div className="w-1/4">
@@ -192,11 +204,12 @@ function MediaCard({
                   >
                     <CiEdit className="text-3xl" />
                   </button>
-                  <TvFavoriteButton
+                  <FavoriteButton
                     sessionId={sessionId}
                     accountId={accountId}
-                    tvId={show.id}
-                    refreshFavoriteTvShows={refreshFavoriteTvShows}
+                    mediaId={show.id}
+                    mediaType={"tv"} // or hardcoded: "movie" or "tv"
+                    refreshFavorites={refreshFavoriteTvShows}
                   />
                 </div>
               </div>
@@ -208,7 +221,7 @@ function MediaCard({
   );
 
   const personCard = (
-    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md">
+    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md bg-white">
       <div className="flex flex-row">
         {person.map((person) => (
           <div
@@ -223,42 +236,28 @@ function MediaCard({
                   : `https://image.tmdb.org/t/p/h632/${person.profile_path}`
               }
               className="rounded-md shadow-md w-[h-632px]"
+              loading="lazy"
             />
-            <div className="flex flex-row w-full justify-between content-between items-center mt-2">
-              <div className="w-1/4">
-                <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md">
-                  10
-                </div>
-              </div>
-
-              <div className="w-1/2">
-                <div className="flex flex-row justify-center items-center">
-                  <div className="">
-                    <h1 className="">{handleTitleLength(person.name)}</h1>
-                    <h2 className="text-sm text-gray-600">
-                      {handleTitleLength(person.known_for_department)}
-                    </h2>
+            <div className="flex flex-row w-full justify-center content-center items-center mt-2">
+              <div className="flex flex-row justify-center items-center">
+                <div className="">
+                  <h1 className="">{handleTitleLength(person.name)}</h1>
+                  <div className="flex justify-center">
+                    <p className="text-sm">
+                      (
+                      {person.birthday === null || person.birthday === ""
+                        ? "Unknown"
+                        : person.birthday.slice(0, -6)}{" "}
+                      -{" "}
+                      {person.deathday === null || person.deathday === ""
+                        ? "Current"
+                        : person.deathday.slice(0, -6)}
+                      )
+                    </p>
                   </div>
-                </div>
-                <div className="flex justify-center">
-                  <p className="text-sm">
-                    (
-                    {person.birthday === null || person.birthday === ""
-                      ? "Unknown"
-                      : person.birthday.slice(0, -6)}{" "}
-                    -{" "}
-                    {person.deathday === null || person.deathday === ""
-                      ? "Current"
-                      : person.deathday.slice(0, -6)}
-                    )
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col w-1/4 justify-end items-end">
-                <div className="gap-2 flex flex-row">
-                  <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
-                  <CiEdit className="text-3xl border-2 shadow-md rounded-md" />
+                  <h2 className="text-sm text-gray-600">
+                    {handleTitleLength(person.known_for_department)}
+                  </h2>
                 </div>
               </div>
             </div>

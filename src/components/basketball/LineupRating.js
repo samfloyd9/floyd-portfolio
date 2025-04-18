@@ -41,7 +41,7 @@ function LineupRating({ lineup, submitLineup }) {
         lineup[2].hasOwnProperty("name") &&
         lineup[3].hasOwnProperty("name") &&
         lineup[4].hasOwnProperty("name") && (
-          <div>
+          <div className="">
             {/* OFFENSIVE STATS */}
             <div className="font-bold underline text-lg">Offense</div>
             {offensiveStats.map(({ label, key }) => (

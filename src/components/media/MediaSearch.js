@@ -1,10 +1,13 @@
 import { MdAdd } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
-import LoginButton from "./LoginButton"
-import { addToList, getMoviesInList, favoriteMedia } from "../../api/tmdbapi";
-import TvFavoriteButton from "./TvFavoriteButton";
+import LoginButton from "./LoginButton";
+import FavoriteButton from "./FavoriteButton";
+import WatchlistButton from "./WatchlistButton";
+import { useEffect } from "react";
+
 
 function MediaSearch({
+  term,
   setTerm,
   input,
   setInput,
@@ -25,9 +28,19 @@ function MediaSearch({
   handleAddToList,
   handleSelectList,
   accountId,
-  refreshFavoriteTvShows
+  refreshFavoriteTvShows,
+  refreshFavoriteMovies,
+  refreshWatchlistMovies,
+  refreshWatchlistTvShows,
+  mediaTypeFilter,
+  setMediaTypeFilter,
+  setMediaList,
+  setMediaPages,
 }) {
   const totalSearchPages = mediaPages?.total_pages;
+
+  const API_TOKEN =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MTc4ODdhMTFmZTM2ZDZjZTcyZjdhNGI2ZThkMzBiMCIsIm5iZiI6MTczMDQzMDIzOS4zMjQxNjk5LCJzdWIiOiI2NzI0M2YzOGYwOGFiNWQzZjIwMzc5NjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TsJfsPyERUBu2TYy9qusAPDY3weAZdFaU6UrUCJ4HS4";
 
   const onSubmit = (term) => {
     let inputStr = term;
@@ -42,16 +55,73 @@ function MediaSearch({
     event.preventDefault();
 
     onSubmit(input);
-    setInput("");
+    // setInput("");
+  };
+
+  const handleFilterChange = (type) => {
+    setMediaTypeFilter(type);
+    setCurrentSearchPage(1); // 🔁 Reset to first page when switching filters
   };
 
   const handleReset = () => {
-    setTerm([]);
+    setTerm("");
+    setInput("");
+    setCurrentSearchPage(1);
+    setMediaList([]); // ✅ clear current results
+    setMediaPages(null); // ✅ reset pagination
   };
+
+  // const handleReset = () => {
+  //   setTerm('');
+  //   // setInput("");
+  // };
 
   const handleChange = (event) => {
     setInput(event.target.value);
   };
+
+  useEffect(() => {
+    if (term) {
+      const fetchData = async () => {
+        let endpoint = "";
+
+        if (mediaTypeFilter === "movie") {
+          endpoint = "https://api.themoviedb.org/3/search/movie";
+        } else if (mediaTypeFilter === "tv") {
+          endpoint = "https://api.themoviedb.org/3/search/tv";
+        } else if (mediaTypeFilter === "person") {
+          endpoint = "https://api.themoviedb.org/3/search/person";
+        } else {
+          endpoint = "https://api.themoviedb.org/3/search/multi";
+        }
+
+        const response = await fetch(
+          `${endpoint}?query=${term}&include_adult=false&language=en-US&page=${currentSearchPage}`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${API_TOKEN}`,
+              accept: "application/json",
+            },
+          }
+        );
+
+        const data = await response.json();
+        setMediaList([data.results]);
+        setMediaPages(data);
+      };
+
+      fetchData();
+    }
+  }, [term, currentSearchPage, mediaTypeFilter]);
+
+  const truncateText = (text, maxLength = 25) => {
+    if (!text) return "";
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  };
+
+  // console.log("Current Filter:", mediaTypeFilter);
+  // console.log("Results to show:", mediaList[0]);
 
   return (
     <div>
@@ -87,6 +157,22 @@ function MediaSearch({
               </div>
             </div>
           </form>
+          <div className="flex gap-2 items-center mt-2">
+            {/* <label className="font-semibold">Filter by:</label> */}
+            {["all", "movie", "tv", "person"].map((type) => (
+              <button
+                key={type}
+                onClick={() => handleFilterChange(type)} // ✅ not setMediaTypeFilter directly
+                className={`px-3 py-1 rounded-md border ${
+                  mediaTypeFilter === type
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-200 hover:bg-gray-300"
+                }`}
+              >
+                {type.charAt(0).toUpperCase() + type?.slice(1)}
+              </button>
+            ))}
+          </div>
         </div>
         {mediaList[0]?.length > 0 && (
           <div className="flex gap-2">
@@ -128,11 +214,11 @@ function MediaSearch({
         }`}
       >
         {mediaList[0] &&
-          mediaList[0]?.map((media) => {
-            if (media.media_type === "movie") {
+          mediaList[0].map((media) => {
+            if (media.media_type === "movie" || mediaTypeFilter === 'movie') {
               return (
                 <div key={media.id} className="text-black">
-                  <div className="flex flex-row w-[200px] gap-2 shadow-xl p-1.5 rounded-md">
+                  <div className="flex flex-row w-[200px] gap-2 shadow-xl p-1.5 rounded-md bg-white">
                     <img
                       // src={`https://image.tmdb.org/t/p/w154/${media.poster_path}`}
                       src={
@@ -144,11 +230,12 @@ function MediaSearch({
                       }
                       alt={media.title}
                       className="w-min rounded-sm shadow-lg max-h-24"
+                      loading="lazy"
                     />
                     <div className="flex flex-col items-start justify-center w-full">
-                      <p className="text-xs">{media.title}</p>
+                      <p className="text-xs">{truncateText(media.title)}</p>
                       <p className="text-xs text-gray-600">
-                        ({media.release_date.slice(0, -6)})
+                        ({media.release_date?.slice(0, -6)})
                       </p>
                     </div>
 
@@ -160,13 +247,31 @@ function MediaSearch({
                         >
                           <MdAdd className="text-lg border-2 shadow-md rounded-md" />
                         </button>
+                        {media.id && (mediaTypeFilter === "movie" || media.media_type === "movie") && (
+                        <FavoriteButton
+                          sessionId={sessionId}
+                          accountId={accountId}
+                          mediaId={media.id}
+                          mediaType={"movie"} // or hardcoded: "movie" or "tv"
+                          refreshFavorites={refreshFavoriteMovies}
+                        />
+                        )}
+                        {media.id && (mediaTypeFilter === "movie" || media.media_type === "movie") && (
+                        <WatchlistButton
+                          sessionId={sessionId}
+                          accountId={accountId}
+                          mediaId={media.id}
+                          mediaType={"movie"} // or "tv"
+                          refreshWatchlist={refreshWatchlistMovies} // optional
+                        />
+                        )}
                         <button className="right-0 bottom-0 absolute">
                           <IoInformationCircleOutline
                             className="text-lg border-2 shadow-md rounded-md hover:bg-gray-300"
                             onClick={() =>
                               setSelectedMedia({
                                 id: media.id,
-                                media_type: media.media_type,
+                                media_type: "movie",
                               })
                             }
                           />
@@ -211,10 +316,10 @@ function MediaSearch({
                   )}
                 </div>
               );
-            } else if (media.media_type === "person") {
+            } else if (media.media_type === "person" || mediaTypeFilter === 'person') {
               return (
                 <div key={media.id}>
-                  <div className="flex flex-row w-[200px] gap-2 items-center shadow-xl p-1.5 rounded-md">
+                  <div className="flex flex-row w-[200px] gap-2 items-center shadow-xl p-1.5 rounded-md bg-white">
                     <img
                       // https://media.istockphoto.com/id/1345388323/vector/human-silhouette-isolated-vector-icon.jpg?s=612x612&w=0&k=20&c=a1wg9LYywdqDUG-t9rifrf16XEdWZbWe7ajuYxJTxEI=
                       // src={`https://image.tmdb.org/t/p/w185/${media.profile_path}`}
@@ -227,9 +332,10 @@ function MediaSearch({
                       }
                       alt={media.name}
                       className="w-min rounded-sm shadow-lg max-h-24"
+                      loading="lazy"
                     />
                     <div className="flex flex-col items-start justify-center w-full">
-                      <p className="text-sm">{media.name}</p>
+                      <p className="text-sm">{truncateText(media.name)}</p>
                       <p className="text-xs text-gray-600">
                         {media.known_for_department}
                       </p>
@@ -243,7 +349,7 @@ function MediaSearch({
                             onClick={() =>
                               setSelectedMedia({
                                 id: media.id,
-                                media_type: media.media_type,
+                                media_type: "person",
                               })
                             }
                           />
@@ -253,10 +359,10 @@ function MediaSearch({
                   </div>
                 </div>
               );
-            } else if (media.media_type === "tv") {
+            } else if (media.media_type === "tv" || mediaTypeFilter === 'tv') {
               return (
                 <div key={media.id}>
-                  <div className="flex flex-row w-[200px] gap-2 items-center shadow-xl p-1.5 rounded-md">
+                  <div className="flex flex-row w-[200px] gap-2 items-center shadow-xl p-1.5 rounded-md bg-white">
                     <img
                       // src={`https://image.tmdb.org/t/p/w154/${media.poster_path}`}
                       src={
@@ -268,11 +374,12 @@ function MediaSearch({
                       }
                       alt={media.name}
                       className="w-min rounded-sm shadow-lg max-h-24"
+                      loading="lazy"
                     />
                     <div className="flex flex-col items-start justify-center w-full">
-                      <p className="text-sm">{media.name}</p>
+                      <p className="text-sm">{truncateText(media.name)}</p>
                       <p className="text-xs text-gray-600">
-                        ({media.first_air_date.slice(0, -6)})
+                        ({media.first_air_date?.slice(0, -6)})
                       </p>
                     </div>
 
@@ -284,19 +391,31 @@ function MediaSearch({
                             onClick={() =>
                               setSelectedMedia({
                                 id: media.id,
-                                media_type: media.media_type,
+                                media_type: "tv",
                               })
                             }
                           />
                         </button>
                         <div className="right-6 -bottom-12 absolute">
-                          <TvFavoriteButton
+                        {media.id && (mediaTypeFilter === "tv" || media.media_type === "tv") && (
+                          <FavoriteButton
                             sessionId={sessionId}
                             accountId={accountId}
-                            tvId={media.id}
-                            refreshFavoriteTvShows={refreshFavoriteTvShows}
+                            mediaId={media.id}
+                            mediaType={"tv"} // or hardcoded: "movie" or "tv"
+                            refreshFavorites={refreshFavoriteTvShows}
                           />
+                        )}
                         </div>
+                        {media.id && (mediaTypeFilter === "tv" || media.media_type === "tv") && (
+                        <WatchlistButton
+                          sessionId={sessionId}
+                          accountId={accountId}
+                          mediaId={media.id}
+                          mediaType={"tv"} // or "tv"
+                          refreshWatchlist={refreshWatchlistTvShows} // optional
+                        />
+                        )}
                       </div>
                     </div>
                   </div>

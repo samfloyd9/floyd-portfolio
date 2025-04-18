@@ -58,7 +58,7 @@ function PlayerCard({ playerData, handleDelete }) {
       <div
         className={`p-1 absolute top-0 right-0 rounded-md ${playerData.teamColor} ${playerData.teamColor2} ${positionStyleLogic(
           playerData
-        )} text-md border-${playerData.teamColor3} border-2 border-solid`}
+        )} text-md ${playerData.teamColor3} border-2 border-solid`}
       >
         {playerData.position}
       </div>
@@ -75,7 +75,7 @@ function PlayerCard({ playerData, handleDelete }) {
       {/* Year + Name badge */}
       <div className="mt-2">
         <div
-          className={`p-1.5 absolute bottom-0 -right-1 ${playerData.teamColor} text-sm ${playerData.teamColor2} rounded-md border-${playerData.teamColor3} border-2 border-solid p-1 text-black z-10 whitespace-nowrap`}
+          className={`p-1.5 absolute bottom-0 -right-1 ${playerData.teamColor} text-sm ${playerData.teamColor2} rounded-md ${playerData.teamColor3} border-2 border-solid p-1 text-black z-10 whitespace-nowrap`}
         >
           {cardTitle}
         </div>

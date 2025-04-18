@@ -44,7 +44,7 @@ export const config = (lineup, handleAddPlayerToLineup, badgeSelection) => [
   {
     label: "Player",
     render: (player, updatePlayerCallback) => (
-      <div className="text-start flex flex-row items-center">
+      <div className="text-start flex flex-row items-center mr-2 lg:mr-0">
         <img
           className="max-h-12 mr-4 rounded-lg"
           src={player.plyrPictureSrc}

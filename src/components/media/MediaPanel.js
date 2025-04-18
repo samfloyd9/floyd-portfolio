@@ -140,7 +140,7 @@ function MediaPanel({
   // ----------------------------------------------------------------------------------------
 
   const moviePanel = (
-    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-start items-start p-3 overflow-y-scroll">
+    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-start items-start p-3 overflow-y-scroll bg-white">
       <div>
         {detailedMedia.map((movie) => (
           <div
@@ -252,6 +252,7 @@ function MediaPanel({
                     : `https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`
                 }
                 className="rounded-md shadow-md mt-5 mb-5 w-[300px]"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-row justify-between content-between items-center gap-1.5">
@@ -266,12 +267,14 @@ function MediaPanel({
                       <img
                         alt="pic"
                         src={`https://image.tmdb.org/t/p/w45/${company.logo_path}`}
+                        loading="lazy"
                       />
                     ) : (
                       <img
                         alt="pic"
                         src="https://media.istockphoto.com/id/1227217409/vector/old-classic-film-camera-vector-icon-template.jpg?s=612x612&w=0&k=20&c=rxxNWwbwUJAOPWWmVSFwFaLJcnfB4bA5j5-KAFtWTjA="
                         className="w-16"
+                        loading="lazy"
                       />
                     )}
                     <div className="text-xs">{company.name}</div>
@@ -309,6 +312,7 @@ function MediaPanel({
                       }
                       alt="cast pic"
                       className="rounded-sm shadow-sm w-[45px]"
+                      loading="lazy"
                     />
                     <div className="flex flex-col">
                       <div
@@ -393,6 +397,7 @@ function MediaPanel({
                       className={`${
                         crew?.profile_path === null ? "w-[45px]" : ""
                       } rounded-sm shadow-sm`}
+                      loading="lazy"
                     />
                     <div className="flex flex-col">
                       <div className="text-sm">{crew.name}</div>
@@ -442,7 +447,7 @@ function MediaPanel({
   );
 
   const tvPanel = (
-    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-start items-center p-3 overflow-y-scroll">
+    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-start items-center p-3 overflow-y-scroll bg-white">
       {tvShow.map((show) => (
         <div key={show.id} className="">
           <div className="flex flex-col justify-center items-center">
@@ -540,6 +545,7 @@ function MediaPanel({
                   ? "https://img.freepik.com/free-vector/shiny-film-negative-cinema-background-with-text-space_1017-52787.jpg?semt=ais_hybrid"
                   : `https://image.tmdb.org/t/p/w300/${show.backdrop_path}`
               }
+              loading="lazy"
               className="rounded-md shadow-sm mt-5 mb-5 w-[300px]"
             />
           </div>
@@ -566,12 +572,14 @@ function MediaPanel({
                     <img
                       alt="pic"
                       src={`https://image.tmdb.org/t/p/w45/${company.logo_path}`}
+                      loading="lazy"
                     />
                   ) : (
                     <img
                       alt="pic"
                       src="https://media.istockphoto.com/id/1227217409/vector/old-classic-film-camera-vector-icon-template.jpg?s=612x612&w=0&k=20&c=rxxNWwbwUJAOPWWmVSFwFaLJcnfB4bA5j5-KAFtWTjA="
                       className="w-16"
+                      loading="lazy"
                     />
                   )}
                   <div className="text-xs">{company.name}</div>
@@ -588,12 +596,14 @@ function MediaPanel({
                     <img
                       alt="pic"
                       src={`https://image.tmdb.org/t/p/w45/${company.logo_path}`}
+                      loading="lazy"
                     />
                   ) : (
                     <img
                       alt="pic"
                       src="https://media.istockphoto.com/id/1227217409/vector/old-classic-film-camera-vector-icon-template.jpg?s=612x612&w=0&k=20&c=rxxNWwbwUJAOPWWmVSFwFaLJcnfB4bA5j5-KAFtWTjA="
                       className="w-16"
+                      loading="lazy"
                     />
                   )}
                   <div className="text-xs">{company.name}</div>
@@ -633,6 +643,7 @@ function MediaPanel({
                                   : `https://image.tmdb.org/t/p/w92/${season.poster_path}`
                               }
                               className="rounded-md w-[92px] h-auto"
+                              loading="lazy"
                             />
                           </div>
                           <div className="flex flex-col gap-1 w-full">
@@ -702,6 +713,7 @@ function MediaPanel({
                         }
                         alt="cast pic"
                         className="rounded-sm shadow-sm w-[45px]"
+                        loading="lazy"
                       />
                       <div className="flex flex-col">
                         <div
@@ -788,6 +800,7 @@ function MediaPanel({
                         className={`${
                           crew?.profile_path === null ? "w-[45px]" : ""
                         } rounded-sm shadow-sm`}
+                        loading="lazy"
                       />
                       <div className="flex flex-col">
                         <div className="text-sm">{crew.name}</div>
@@ -837,7 +850,7 @@ function MediaPanel({
     </div>
   );
   const personPanel = (
-    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-center items-center content-center p-3 overflow-y-scroll">
+    <div className="w-full h-full min-h-[625px] max-h-[650px] border-2 border-gray-500 shadow-xl rounded-md flex flex-col justify-center items-center content-center p-3 overflow-y-scroll bg-white">
       {person.map((person) => (
         <div
           className="flex flex-col justify-center content-center items-center"
@@ -880,6 +893,7 @@ function MediaPanel({
 
   return (
     <>
+      {/* <div className="relative"><button className="absolute bg-red-500">X</button></div> */}
       {detailedMedia.length > 0 && selectedMedia.media_type === "movie" && moviePanel}
       {tvShow.length > 0 && selectedMedia.media_type === "tv" && tvPanel}
       {person.length > 0 && selectedMedia.media_type === "person" && personPanel}

@@ -18,22 +18,16 @@ function OffFormations({
 }) {
   const ghostPlayer = (
     <div>
-      <div className={`border-white p-2 m-0.5 flex w-24 justify-center`}>
-        <div className="bg-white text-white px-1.5 min-h-28 text-xs flex content-center justify-center text-center items-center">
-          GHOST
-        </div>
+      <div className={`p-2 m-0.5 flex w-24 justify-center`}>
+        <div className="px-1.5 min-h-28 text-xs flex content-center justify-center text-center items-center"></div>
       </div>
     </div>
   );
 
   const altGhostPlayer = (
     <div>
-      <div
-        className={`border-white px-[1px] py-0.5 m-0.5 flex w-12 justify-center`}
-      >
-        <div className="bg-white text-white px-0.5 min-h-14 text-xs flex content-center justify-center text-center items-center">
-          GHOST
-        </div>
+      <div className={`px-[1px] py-0.5 m-0.5 flex w-12 justify-center`}>
+        <div className="px-0.5 min-h-14 text-xs flex content-center justify-center text-center items-center"></div>
       </div>
     </div>
   );
@@ -84,22 +78,22 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full">
+          <div className="flex   w-full">
             <FootballPlayerCardList data={reciever2} />
           </div>
           <>{ghostPlayer}</>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="mt-14">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -121,7 +115,7 @@ function OffFormations({
           <div className="flex justify-center items-center content-center">
             <AltPlayerCardList data={tightEnd2} />
           </div>
-          <div className="1`justify-center items-center content-center">
+          <div className="`justify-center items-center content-center">
             <AltPlayerCardList data={offensiveLine} />
           </div>
           <div className="flex justify-center items-center content-center mt-8">
@@ -158,24 +152,22 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white justify-start w-full">
-            {ghostPlayer}
-          </div>
+          <div className="flex   justify-start w-full">{ghostPlayer}</div>
           <div className="">
             <FootballPlayerCardList data={tightEnd2} />
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="mt-14">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -236,26 +228,26 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full">
+          <div className="flex   w-full">
             <FootballPlayerCardList data={reciever2} />
           </div>
-          <div className="bg-white w-full flex justify-end">
+          <div className="  w-full flex justify-end">
             <>{ghostPlayer}</>
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
 
-          <div className="bg-white w-full mt-14 flex justify-end">
+          <div className="  w-full mt-14 flex justify-end">
             <FootballPlayerCardList data={reciever3} />
           </div>
 
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -323,7 +315,7 @@ function OffFormations({
           <div className="">
             <FootballPlayerCardList data={tightEnd2} />
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="">
@@ -334,7 +326,7 @@ function OffFormations({
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -396,18 +388,18 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full">
+          <div className="flex   w-full">
             <FootballPlayerCardList data={reciever2} />
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col items-center content-center mx-auto bg-white">
+        <div className="flex flex-col items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -500,22 +492,22 @@ function OffFormations({
 
         <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
           <div className="flex flex-row justify-between w-full">
-            <div className="flex bg-white justify-start w-full">
+            <div className="flex   justify-start w-full">
               <FootballPlayerCardList data={reciever1} />
             </div>
             {ghostPlayer}
-            <div className="bg-white">
+            <div className=" ">
               <FootballPlayerCardList data={offensiveLine} />
             </div>
             <div className="">
               <FootballPlayerCardList data={tightEnd1} />
             </div>
-            <div className="bg-white w-full content-end flex justify-end">
+            <div className="  w-full content-end flex justify-end">
               {ghostPlayer}
             </div>
           </div>
 
-          <div className="flex flex-col items-center content-center mx-auto bg-white">
+          <div className="flex flex-col items-center content-center mx-auto  ">
             <div className="">
               <FootballPlayerCardList data={quarterback} />
             </div>
@@ -585,22 +577,22 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full">
+          <div className="flex   w-full">
             <FootballPlayerCardList data={reciever2} />
           </div>
           <>{ghostPlayer}</>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="mt-14">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -659,24 +651,22 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white justify-start w-full">
-            {ghostPlayer}
-          </div>
+          <div className="flex   justify-start w-full">{ghostPlayer}</div>
           <div className="mt-14">
             <FootballPlayerCardList data={tightEnd2} />
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <FootballPlayerCardList data={reciever1} />
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14 items-center content-center mx-auto bg-white">
+        <div className="flex flex-col -mt-14 items-center content-center mx-auto  ">
           <div className="">
             <FootballPlayerCardList data={quarterback} />
           </div>
@@ -723,7 +713,7 @@ function OffFormations({
           </div>
         </div>
 
-        <div className="flex flex-col items-center content-center mx-auto bg-white gap-3 -mt-52 sm:-mt-16">
+        <div className="flex flex-col items-center content-center mx-auto   gap-3 -mt-52 sm:-mt-16">
           <div className="ml-60">
             <AltPlayerCardList data={runningback2} />
           </div>
@@ -737,17 +727,17 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full mt-32">
+          <div className="flex   w-full mt-32">
             <FootballPlayerCardList data={reciever2} />
           </div>
           {ghostPlayer}
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <div className="flex flex-row justify-between">
               <div>
                 <FootballPlayerCardList data={reciever1} />
@@ -759,7 +749,7 @@ function OffFormations({
           </div>
         </div>
 
-        <div className="flex flex-col items-center content-center mx-auto bg-white gap-8 -mt-32">
+        <div className="flex flex-col items-center content-center mx-auto   gap-8 -mt-32">
           <div className="ml-[500px]">
             <FootballPlayerCardList data={runningback2} />
           </div>
@@ -804,7 +794,7 @@ function OffFormations({
           </div>
         </div>
 
-        <div className="flex flex-col items-center content-center mx-auto bg-white gap-3 -mt-52 sm:-mt-16">
+        <div className="flex flex-col items-center content-center mx-auto   gap-3 -mt-52 sm:-mt-16">
           <div className="ml-60">
             <AltPlayerCardList data={fullBack} />
           </div>
@@ -818,19 +808,19 @@ function OffFormations({
 
       <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
         <div className="flex flex-row justify-between w-full">
-          <div className="flex bg-white w-full mt-32">
+          <div className="flex   w-full mt-32">
             <FootballPlayerCardList data={runningback2} />
           </div>
           <div className="mt-16">
             <FootballPlayerCardList data={tightEnd2} />
           </div>
-          <div className="bg-white">
+          <div className=" ">
             <FootballPlayerCardList data={offensiveLine} />
           </div>
           <div className="">
             <FootballPlayerCardList data={tightEnd1} />
           </div>
-          <div className="bg-white w-full content-end flex justify-end">
+          <div className="  w-full content-end flex justify-end">
             <div className="flex flex-row justify-between">
               <div>
                 <FootballPlayerCardList data={reciever1} />
@@ -839,12 +829,98 @@ function OffFormations({
           </div>
         </div>
 
-        <div className="flex flex-col items-center content-center mx-auto bg-white gap-8 -mt-32">
+        <div className="flex flex-col items-center content-center mx-auto   gap-8 -mt-32">
           <div className="ml-[500px]">
             <FootballPlayerCardList data={fullBack} />
           </div>
           <div className="">
             <FootballPlayerCardList data={runningback1} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
+  // flex justify-center items-center content-center mt-8
+
+  const shotgun = (
+    <>
+      <div className="sm:contents md:contents lg:hidden xl:hidden 2xl:hidden">
+        <div className="flex flex-row w-full justify-center items-center content-center">
+          <div className="justify-center items-center content-center">
+            <AltPlayerCardList data={offensiveLine} />
+          </div>
+        </div>
+
+        <div className="flex flex-row">
+          <div className="flex w-1/3 justify-between items-start sm:-mt-16">
+            <div className="">
+              <AltPlayerCardList data={reciever2} />
+            </div>
+            <div className="">
+              <AltPlayerCardList data={reciever3} />
+            </div>
+            <>{altGhostPlayer}</>
+          </div>
+
+          <div className="w-1/3"></div>
+
+          <div className="flex w-1/3 items-center justify-between sm:-mt-16">
+            {/* <div className="flex justify-between w-full"> */}
+              <div className="">
+                <AltPlayerCardList data={tightEnd1} />
+              </div>
+              <div className="">
+                <AltPlayerCardList data={reciever1} />
+              </div>
+              <div className="">
+                <AltPlayerCardList data={reciever4} />
+              </div>
+            {/* </div> */}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center -mt-20 sm:-mt-4 md:-mt-4 content-center mx-auto ">
+          <div className="mt-20">
+            <AltPlayerCardList data={quarterback} />
+          </div>
+        </div>
+      </div>
+
+      {/* --------------------------------------------------------------------------------------- */}
+
+      <div className="hidden sm:hidden md:hidden lg:contents xl:contents 2xl:contents">
+        <div className="flex flex-row justify-between w-full">
+          <div className="flex   w-full justify-between">
+            <div className="mt-14">
+              <FootballPlayerCardList data={reciever2} />
+            </div>
+            <div className="">
+              <FootballPlayerCardList data={reciever3} />
+            </div>
+            <>{ghostPlayer}</>
+          </div>
+
+          <div className=" ">
+            <FootballPlayerCardList data={offensiveLine} />
+          </div>
+
+          <div className="  w-full flex justify-end lg:gap-6">
+            <div className="">
+              <FootballPlayerCardList data={tightEnd1} />
+            </div>
+            <div className="mt-14">
+              <FootballPlayerCardList data={reciever4} />
+            </div>
+            <div className="mt-14">
+              <FootballPlayerCardList data={reciever1} />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col mt-24 items-center content-center mx-auto  ">
+          <div className="">
+            <FootballPlayerCardList data={quarterback} />
           </div>
         </div>
       </div>
@@ -863,7 +939,7 @@ function OffFormations({
 
       {/* {offPlaySelection.label === "Wing-T Wide" && wingTWide}
       {offPlaySelection.label === "Wing-T Tight" && wingTTight} */}
-{/* 
+      {/* 
       {offPlaySelection.label === "Pistol Spread" && pistolSpread}
       {offPlaySelection.label === "Pistol Bunch" && pistolBunch}
       {offPlaySelection.label === "Pistol Strong" && pistolStrong}
@@ -879,6 +955,7 @@ function OffFormations({
 
       {offPlaySelection.label === "Wildcat Pro" && wildcatPro}
       {offPlaySelection.label === "Wildcat Unbalanced" && wildcatUnbalanced}
+      {offPlaySelection.label === "Shotgun Empty" && shotgun}
     </div>
   );
 }

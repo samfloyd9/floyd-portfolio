@@ -54,7 +54,7 @@ function Table({
   // Render table rows based on the filtered data
   const renderedRows = filteredData.map((rowData) => {
     const renderedCells = config.map((column) => (
-      <td className="text-center" key={column.label}>
+      <td className="text-center bg-white" key={column.label}>
         {column.render(rowData, updatePlayerCallback)}
       </td>
     ));

@@ -39,10 +39,10 @@ function App() {
       {showModal && modal}
       <>
         <Route path="/">
-          <div className="h-screen">
+          {/* <div className="flex flex-col"> */}
             <Sidebar />
             <HomePage />
-          </div>
+          {/* </div> */}
         </Route>
 
         <Route path="/media">

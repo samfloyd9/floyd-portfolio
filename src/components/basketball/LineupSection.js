@@ -74,7 +74,7 @@ function LineupSection({ lineup, setLineup }) {
         lineup[3].hasOwnProperty("name") &&
         lineup[4].hasOwnProperty("name") && (
           <div className="flex flex-col items-center gap-5 lg:flex-row lg:justify-center">
-            <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
+            <div className="bg-white border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
               <div className="font-bold underline mr-6">Team Chemistry:</div>
               <div
                 className={`px-2.5 py-2 border ${getChemistryColor(
@@ -84,7 +84,7 @@ function LineupSection({ lineup, setLineup }) {
                 {getChemistryLetterGrade(lineupTotalChemistryRatingNumber)}
               </div>
             </div>
-            <div className="border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
+            <div className="bg-white border border-gray-400 h-fit w-fit rounded-md flex flex-row justify-center items-center content-center py-2 px-3">
               <div className="font-bold underline mr-6">Ovr Lineup Rating:</div>
               <div className="px-2.5 py-2 border bg-green-300 rounded-lg">
                 {lineupTotalImpactRatingNumber.toFixed(1)}

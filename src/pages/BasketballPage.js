@@ -136,7 +136,7 @@ function TablePage({ setShowModal }) {
   };
 
   return (
-    <div className="flex justify-center content-center mb-5 mt-0 lg:mt-5">
+    <div className="flex justify-center content-center pb-5 pt-5 mt-0 bg-[url('https://myaffordablefloors.com/wp-content/uploads/2017/10/Fotolia_101397676_Subscription_Monthly_M.jpg')]">
       <div className="flex flex-col">
         <div className="flex flex-row justify-center">
           <FilterOptions
@@ -151,8 +151,8 @@ function TablePage({ setShowModal }) {
             teamSelection={teamSelection}
           />
         </div>
-        <div className="flex justify-start overflow-y-scroll overflow-x-scroll mx-auto w-[45%] shadow-lg mb-4 h-72 sm:w-3/4 md:w-3/4 lg:h-96 lg:w-fit">
-          <div>
+        <div className="flex bg-white justify-start overflow-y-scroll overflow-x-scroll mx-auto w-2/5 shadow-lg mb-4 h-72 sm:w-3/4 md:w-3/4 lg:h-96 lg:w-fit">
+          <div className="bg-white">
             <SortableTable
               config={config(lineup, handleAddPlayerToLineup, badgeSelection)}
               data={data}

@@ -9,15 +9,22 @@ import MediaCard from "./MediaCard";
 import MediaSearch from "./MediaSearch";
 import MediaLists from "./MediaLists";
 import { useState, useEffect } from "react";
-import { getUserLists, getAccountId, addToList, getMoviesInList, getFavoriteTvShows } from "../../api/tmdbapi";
+import {
+  getUserLists,
+  getAccountId,
+  addToList,
+  getMoviesInList,
+  getFavoriteMedia,
+  getWatchlistMedia,
+} from "../../api/tmdbapi";
+import FeaturedMedia from "./FeaturedMedia";
 
 function Testing() {
   const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0";
+  const API_TOKEN =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MTc4ODdhMTFmZTM2ZDZjZTcyZjdhNGI2ZThkMzBiMCIsIm5iZiI6MTczMDQzMDIzOS4zMjQxNjk5LCJzdWIiOiI2NzI0M2YzOGYwOGFiNWQzZjIwMzc5NjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TsJfsPyERUBu2TYy9qusAPDY3weAZdFaU6UrUCJ4HS4";
 
-  const [selectedMedia, setSelectedMedia] = useState({
-    id: 11,
-    media_type: "movie",
-  });
+  const [selectedMedia, setSelectedMedia] = useState(null);
 
   const [term, setTerm] = useState("");
   const [input, setInput] = useState("");
@@ -38,8 +45,16 @@ function Testing() {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const [favoriteTvShows, setFavoriteTvShows] = useState([]);
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
+
+  const [watchlistMovies, setWatchlistMovies] = useState([]);
+  const [watchlistTvShows, setWatchlistTvShows] = useState([]);
+
+  const [mediaTypeFilter, setMediaTypeFilter] = useState("all"); // all | movie | tv | person
 
   const [movies, setMovies] = useState({});
+
+  const [toggleFeaturedMedia, setToggleFeaturedMedia] = useState(true);
 
   const [sessionId, setSessionId] = useState(
     localStorage.getItem("tmdb_session_id")
@@ -47,10 +62,6 @@ function Testing() {
   const [accountId, setAccountId] = useState(
     localStorage.getItem("tmdb_account_id")
   );
-  // const [lists, setLists] = useState({
-  //   movies: [],
-  //   tvShows: [],
-  // });
 
   const [lists, setLists] = useState([]);
 
@@ -101,28 +112,63 @@ function Testing() {
     }
   }, [selectedMedia]);
 
-  // Search Query
-  useEffect(() => {
-    if (term) {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(
-            `https://api.themoviedb.org/3/search/multi?query=${term}&include_adult=false&language=en-US&page=${currentSearchPage}`,
-            getOptions
-          );
-          const responseData = await response.json();
-          setMediaList([responseData.results]);
-          setMediaPages(responseData);
-          console.log("mediaList:", [responseData.results]);
-          console.log("mediaPages:", responseData);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
-      };
+  // // Search Query
+  // useEffect(() => {
+  //   if (term) {
+  //     const fetchData = async () => {
+  //       try {
+  //         const response = await fetch(
+  //           `https://api.themoviedb.org/3/search/multi?query=${term}&include_adult=false&language=en-US&page=${currentSearchPage}`,
+  //           getOptions
+  //         );
+  //         const responseData = await response.json();
+  //         setMediaList([responseData.results]);
+  //         setMediaPages(responseData);
+  //         console.log("mediaList:", [responseData.results]);
+  //         console.log("mediaPages:", responseData);
+  //       } catch (error) {
+  //         console.error("Error fetching data:", error);
+  //       }
+  //     };
 
-      fetchData();
-    }
-  }, [term, currentSearchPage]);
+  //     fetchData();
+  //   }
+  // }, [term, currentSearchPage]);
+
+  // useEffect(() => {
+  //   if (term) {
+  //     const fetchData = async () => {
+  //       let endpoint = "";
+
+  //       if (mediaTypeFilter === "movie") {
+  //         endpoint = "https://api.themoviedb.org/3/search/movie";
+  //       } else if (mediaTypeFilter === "tv") {
+  //         endpoint = "https://api.themoviedb.org/3/search/tv";
+  //       } else if (mediaTypeFilter === "person") {
+  //         endpoint = "https://api.themoviedb.org/3/search/person";
+  //       } else {
+  //         endpoint = "https://api.themoviedb.org/3/search/multi";
+  //       }
+
+  //       const response = await fetch(
+  //         `${endpoint}?query=${term}&include_adult=true&language=en-US&page=${currentSearchPage}`,
+  //         {
+  //           method: "GET",
+  //           headers: {
+  //             Authorization: `Bearer ${API_TOKEN}`,
+  //             accept: "application/json",
+  //           },
+  //         }
+  //       );
+
+  //       const data = await response.json();
+  //       setMediaList([data.results]);
+  //       setMediaPages(data);
+  //     };
+
+  //     fetchData();
+  //   }
+  // }, [term, currentSearchPage, mediaTypeFilter]);
 
   // Credits for movies
   useEffect(() => {
@@ -256,25 +302,24 @@ function Testing() {
     setSelectedMovie(mediaId);
     setShowWatchlistModal(true);
   };
-  
 
   const handleSelectList = async (listId) => {
     console.log("Adding to List ID:", listId);
-  
+
     const success = await addToList(sessionId, listId, selectedMovie);
-  
+
     if (success) {
-      alert('Movie added to collection!');
-  
+      alert("Movie added to collection!");
+
       const updatedMovies = await getMoviesInList(listId);
       setMovies((prevMovies) => ({
         ...prevMovies,
-        [listId]: updatedMovies, // ✅ Update UI immediately
+        [listId]: updatedMovies, // Update UI immediately
       }));
     } else {
       alert(`Failed to add movie`);
     }
-  
+
     setShowWatchlistModal(false);
     setSelectedMovie(null);
   };
@@ -292,13 +337,43 @@ function Testing() {
     }
   }, [sessionId, accountId]);
 
+  useEffect(() => {
+    if (sessionId && accountId) {
+      getWatchlistMedia(sessionId, accountId, "movie").then(setWatchlistMovies);
+    }
+  }, [sessionId, accountId]);
+
+  useEffect(() => {
+    if (sessionId && accountId) {
+      getWatchlistMedia(sessionId, accountId, "tv").then(setWatchlistTvShows);
+    }
+  }, [sessionId, accountId]);
+
   const refreshFavoriteTvShows = () => {
-    getFavoriteTvShows(sessionId, accountId).then(setFavoriteTvShows);
+    getFavoriteMedia(sessionId, accountId, "tv").then(setFavoriteTvShows);
+  };
+
+  const refreshFavoriteMovies = () => {
+    getFavoriteMedia(sessionId, accountId, "movie").then(setFavoriteMovies);
+  };
+
+  const refreshWatchlistMovies = () => {
+    getWatchlistMedia(sessionId, accountId, "movie").then(setWatchlistMovies);
+  };
+
+  const refreshWatchlistTvShows = () => {
+    getWatchlistMedia(sessionId, accountId, "tv").then(setWatchlistTvShows);
+  };
+
+  const handleShowFeaturedMedia = () => {
+    setToggleFeaturedMedia(!toggleFeaturedMedia);
+    setSelectedMedia(null);
   };
 
   return (
-    <div>
+    <div className="bg-violet-950 px-5 pb-5">
       <MediaSearch
+        term={term}
         setTerm={setTerm}
         input={input}
         setInput={setInput}
@@ -323,7 +398,34 @@ function Testing() {
         selectedMovie={selectedMovie}
         setSelectedMovie={setSelectedMovie}
         refreshFavoriteTvShows={refreshFavoriteTvShows}
+        refreshFavoriteMovies={refreshFavoriteMovies}
+        refreshWatchlistMovies={refreshWatchlistMovies}
+        refreshWatchlistTvShows={refreshWatchlistTvShows}
+        mediaTypeFilter={mediaTypeFilter}
+        setMediaTypeFilter={setMediaTypeFilter}
+        setMediaPages={setMediaPages}
+        setMediaList={setMediaList}
       />
+
+      <button
+        className="border p-2 shadow-lg bg-gray-300 hover:bg-gray-500 text-black rounded-md"
+        onClick={handleShowFeaturedMedia}
+      >
+        Featured Movies
+      </button>
+      {toggleFeaturedMedia && mediaList?.length === 0 && !selectedMedia && (
+        <FeaturedMedia
+          sessionId={sessionId}
+          accountId={accountId}
+          handleAddToList={handleAddToList}
+          refreshFavoriteMovies={refreshFavoriteMovies}
+          refreshFavoriteTvShows={refreshFavoriteTvShows}
+          refreshWatchlistMovies={refreshWatchlistMovies}
+          refreshWatchlistTvShows={refreshWatchlistTvShows}
+          setSelectedMedia={setSelectedMedia}
+        />
+      )}
+
       <div className="flex flex-row items-center gap-5">
         <MediaCard
           detailedMedia={detailedMedia}
@@ -338,6 +440,9 @@ function Testing() {
           accountId={accountId}
           sessionId={sessionId}
           refreshFavoriteTvShows={refreshFavoriteTvShows}
+          refreshFavoriteMovies={refreshFavoriteMovies}
+          refreshWatchlistMovies={refreshWatchlistMovies}
+          refreshWatchlistTvShows={refreshWatchlistTvShows}
         />
         <MediaPanel
           detailedMedia={detailedMedia}
@@ -361,7 +466,17 @@ function Testing() {
         setSelectedMedia={setSelectedMedia}
         favoriteTvShows={favoriteTvShows}
         setFavoriteTvShows={setFavoriteTvShows}
+        favoriteMovies={favoriteMovies}
+        setFavoriteMovies={setFavoriteMovies}
         refreshFavoriteTvShows={refreshFavoriteTvShows}
+        refreshFavoriteMovies={refreshFavoriteMovies}
+        refreshWatchlistMovies={refreshWatchlistMovies}
+        refreshWatchlistTvShows={refreshWatchlistTvShows}
+        watchlistMovies={watchlistMovies}
+        setWatchlistMovies={setWatchlistMovies}
+        watchlistTvShows={watchlistTvShows}
+        setWatchlistTvShows={setWatchlistTvShows}
+        handleAddToList={handleAddToList}
       />
     </div>
   );

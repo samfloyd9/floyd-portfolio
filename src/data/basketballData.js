@@ -1,33 +1,33 @@
-// Imports for Shooting/Scoring Badges
-import { ImTarget } from "react-icons/im"; // Deadeye Shooter
-import { MdOutlineSportsKabaddi } from "react-icons/md"; // Tough Shot Maker
-import { MdSportsHandball } from "react-icons/md"; // Lob/Putback/Dunk Master
-import { FaWifi } from "react-icons/fa"; // Limitless 3-Pt Range
-import { FaHatWizard } from "react-icons/fa"; // Middy Magician
-import { GiWhistle } from "react-icons/gi"; // Foul Drawer
-import { GiBodyBalance } from "react-icons/gi"; // Acrobatic/Finesse Finisher
-import { GiWreckingBall } from "react-icons/gi"; // Contact Finisher
-import { FaTools } from "react-icons/fa"; // Post Move Technician
+// React Icons Imports with Badge Descriptions
 
-// Imports for Passing/Playmaking Badges
-import { TbEngine } from "react-icons/tb"; // Offensive Engine
-import { RiHandCoinLine } from "react-icons/ri"; // Dime Dropper
-import { ImEarth } from "react-icons/im"; // Off-Ball Gravity
-import { ImDribbble } from "react-icons/im"; // Houdini Handles
+// Deadeye Shooter | Off-Ball Gravity | Houdini Handles | Defensive Pest | Rebound Magnet
+import { ImTarget, ImEarth, ImDribbble, ImBug, ImMagnet } from "react-icons/im";
 
-// Imports for Defensive Badges
-import { FaLock } from "react-icons/fa"; // Lockdown Post Defender
-import { GiHandcuffs } from "react-icons/gi"; // Perimeter Handcuffs
-import { ImBug } from "react-icons/im"; // Defensive Pest
-import { SiAdblock } from "react-icons/si"; // Shot Block Artist
-import { RiTeamFill } from "react-icons/ri"; // Switchable Specialsit
-import { FaAnchor } from "react-icons/fa"; // Defensive Anchor
-import { GiMonsterGrasp } from "react-icons/gi"; // Pick Pocket/Interceptor
-import { GiBrain } from "react-icons/gi"; // High IQ Defender
-import { GiEmbrassedEnergy } from "react-icons/gi"; // High Energy Defender
+// Tough Shot Maker | Lob/Putback/Dunk Master
+import { MdOutlineSportsKabaddi, MdSportsHandball } from "react-icons/md";
 
-// Rebounding Badge
-import { ImMagnet } from "react-icons/im"; // Rebound Magnet
+// Limitless 3-Pt Range | Middy Magician | Post Move Technician | Lockdown Post Defender | Defensive Anchor
+import { FaWifi, FaHatWizard, FaTools, FaLock, FaAnchor } from "react-icons/fa";
+
+// Offensive Engine
+import { TbEngine } from "react-icons/tb";
+
+// Dime Dropper | Switchable Specialist
+import { RiHandCoinLine, RiTeamFill } from "react-icons/ri";
+
+// Shot Block Artist
+import { SiAdblock } from "react-icons/si";
+
+// Foul Drawer | Acrobatic/Finesse Finisher | Contact Finisher | Perimeter Handcuffs | Pick Pocket/Interceptor | High IQ Defender | High Energy Defender
+import {
+  GiWhistle,
+  GiBodyBalance,
+  GiWreckingBall,
+  GiHandcuffs,
+  GiMonsterGrasp,
+  GiBrain,
+  GiEmbrassedEnergy,
+} from "react-icons/gi";
 
 // Card Border Colors
 const RED = "ruby";
@@ -42,7 +42,7 @@ const LIGHT_BLUE = "aqua";
 // --------------------- LAKERS ---------------------- //
 const lakersPrimary = "bg-purple-700";
 const lakersSecondary = "text-yellow-400";
-const lakersThird = "white";
+const lakersThird = "border-white";
 const lakersCurrentLogo =
   "https://cdn.iconscout.com/icon/free/png-256/free-los-angeles-lakers-logo-icon-download-in-svg-png-gif-file-formats--nba-basketball-pack-logos-icons-1593200.png?f=webp&w=256";
 const lakersCurrentLogoStyling = "h-14 -top-1 left-0";
@@ -53,11 +53,11 @@ const lakersThrowbackLogo =
 const lakersThrowbackLogoStyling = "h-16 -top-1 -left-1";
 const minneapolisPrimary = "bg-blue-400";
 const minneapolisSecondary = "text-white";
-const minneapolisThird = "yellow-400";
+const minneapolisThird = "border-yellow-400";
 // --------------------- SUNS ---------------------- //
 const sunsPrimary = "bg-orange-600";
 const sunsSecondary = "text-purple-900";
-const sunsThird = "white";
+const sunsThird = "border-white";
 const sunsCurrentLogo =
   "https://logodownload.org/wp-content/uploads/2021/07/phoenix-suns-logo-1.png";
 const sunsCurrentLogoStyling = "h-12 top-0.5 -left-1";
@@ -82,7 +82,7 @@ const sunsAltThrowbackLogoStyling = "h-12 top-0.5 -left-3";
 // --------------------- WARRIORS ---------------------- //
 const warriorsPrimary = "bg-blue-600";
 const warriorsSecondary = "text-yellow-300";
-const warriorsThird = "white";
+const warriorsThird = "border-white";
 const warriorsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612744/2022/06/gsw-logo-1920.svg";
 const warriorsCurrentLogoStyling = "h-16 -top-1.5 -left-2";
@@ -106,7 +106,7 @@ const warriorsAltThrowbackLogoStyling = "h-16 -top-1.5 -left-2";
 // --------------------- SUNS ---------------------- //
 const spursPrimary = "bg-black";
 const spursSecondary = "text-gray-300";
-const spursThird = "white";
+const spursThird = "border-white";
 const spursCurrentLogo =
   "https://seekvectors.com/files/download/San%20Antonio%20Spurs%20Logo-01.png";
 const spursCurrentLogoStyling = "h-16 -top-2 -left-1.5";
@@ -118,7 +118,7 @@ const spursThrowbackLogoStyling = "h-7 top-2 left-1.5";
 // --------------------- SUNS ---------------------- //
 const timberwolvesPrimary = "bg-black";
 const timberwolvesSecondary = "text-green-300";
-const timberwolvesThird = "blue-500";
+const timberwolvesThird = "border-blue-500";
 const timberwolvesCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Minnesota-Timberwolves-Logo-2017-Present.png";
 const timberwolvesCurrentLogoStyling = "h-12 top-0.5 -left-4";
@@ -130,7 +130,7 @@ const timberwolvesThrowbackLogoStyling = "h-12 top-0 left-0";
 // --------------------- JAZZ ---------------------- //
 const jazzPrimary = "bg-purple-700";
 const jazzSecondary = "text-cyan-300";
-const jazzThird = "green-700";
+const jazzThird = "border-green-700";
 const jazzCurrentLogo =
   "https://i1.wp.com/www.retroseasons.com/retroimages/Utah_Jazz_logo.png";
 const jazzCurrentLogoStyling = "h-14 -top-1.5 left-1";
@@ -151,7 +151,7 @@ const jazzThrowbackLogoStyling = "h-10 top-0.5 -left-0.5";
 // --------------------- TRAIL BLAZERS ---------------------- //
 const trailblazersPrimary = "bg-red-600";
 const trailblazersSecondary = "text-black";
-const trailblazersThird = "white-400";
+const trailblazersThird = "border-white-400";
 const trailblazersCurrentLogo =
   "https://i.pinimg.com/originals/7d/07/ea/7d07eaa72e74a2def63540ac7d55ba0f.png";
 const trailblazersCurrentLogoStyling = "h-11 top-1 left-1";
@@ -168,7 +168,7 @@ const trailblazersAltThrowbackLogoStyling = "h-12 top-1 left-0";
 // --------------------- GRIZZLIES ---------------------- //
 const grizzliesPrimary = "bg-blue-800";
 const grizzliesSecondary = "text-blue-300";
-const grizzliesThird = "yellow-500";
+const grizzliesThird = "border-yellow-500";
 const grizzliesCurrentLogo =
   "https://cdn.iconscout.com/icon/free/png-256/free-memphis-grizzlies-logo-icon-download-in-svg-png-gif-file-formats--nba-basketball-game-sport-ball-pack-logos-icons-1593220.png?f=webp&w=256";
 const grizzliesCurrentLogoStyling = "h-14 top-0.5 -left-1.5";
@@ -186,7 +186,7 @@ const grizzliesAltThrowbackLogoStyling = "h-10 top-0.5 -left-1.5";
 // --------------------- THUNDER ---------------------- //
 const thunderPrimary = "bg-blue-600";
 const thunderSecondary = "text-white";
-const thunderThird = "orange-400";
+const thunderThird = "border-orange-400";
 const thunderCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Oklahoma-City-Thunder-logo.png";
 const thunderCurrentLogoStyling = "h-12 -top-0.5 -left-4";
@@ -194,7 +194,7 @@ const oklahomaCityThunder = "Oklahoma City Thunder";
 
 const supersonicsPrimary = "bg-green-700";
 const supersonicsSecondary = "text-yellow-500";
-const supersonicsThird = "white";
+const supersonicsThird = "border-white";
 const supersonicsLogo =
   "https://logos-world.net/wp-content/uploads/2024/12/Seattle-SuperSonics-Logo.png";
 const supersonicsLogoStyling = "h-12 top-0.5 -left-4";
@@ -206,7 +206,7 @@ const supersonicsAltLogo =
 const supersonicsAltLogoStyling = "h-16 -top-1 -left-5";
 const supersonicsAltPrimary = "bg-green-900";
 const supersonicsAltSecondary = "text-white";
-const supersonicsAltThird = "red";
+const supersonicsAltThird = "border-red";
 
 const supersonicsThrowbackLogo =
   "https://1000logos.net/wp-content/uploads/2018/06/Oklahoma-City-Thunder-Logo-1975-500x333.png";
@@ -215,7 +215,7 @@ const supersonicsThrowbackLogoStyling = "h-16 -top-1.5 -left-4";
 // --------------------- MAVERICKS ---------------------- //
 const mavericksPrimary = "bg-blue-600";
 const mavericksSecondary = "text-gray-300";
-const mavericksThird = "blue-800";
+const mavericksThird = "border-blue-800";
 const mavericksCurrentLogo =
   "https://www.mavs.com/wp-content/themes/mavs/images/logo.svg";
 const mavericksCurrentLogoStyling = "h-11 top-1 left-1";
@@ -228,7 +228,7 @@ const mavericksThrowbackLogoStyling = "h-20 top-0 left-0.5";
 // --------------------- ROCKETS ---------------------- //
 const rocketsPrimary = "bg-red-600";
 const rocketsSecondary = "text-yellow-300";
-const rocketsThird = "white";
+const rocketsThird = "border-white";
 const rocketsCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-houston-rockets-logo-2020.png";
 const rocketsCurrentLogoStyling = "h-14 -top-0.5 left-0.5";
@@ -249,7 +249,7 @@ const rocketsAltLogoStyling = "h-14 top-0 left-1";
 // --------------------- CLIPPERS ---------------------- //
 const clippersPrimary = "bg-blue-600";
 const clippersSecondary = "text-white";
-const clippersThird = "red-500";
+const clippersThird = "border-red-500";
 const clippersCurrentLogo =
   "https://i.pinimg.com/originals/31/2c/6d/312c6d65630d08a85549bd5dee6dd7c6.png";
 const clippersCurrentLogoStyling = "h-11 top-1 left-1";
@@ -257,7 +257,7 @@ const losAngelesClippers = "Los Angeles Clippers";
 
 const bravesPrimary = "bg-orange-400";
 const bravesSecondary = "text-black";
-const bravesThird = "white";
+const bravesThird = "border-white";
 const bravesLogo =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Buffalo_Braves_%28black_and_orange_varient%29_logo.svg/1200px-Buffalo_Braves_%28black_and_orange_varient%29_logo.svg.png";
 const bravesLogoStyling = "h-14 top-1 left-1";
@@ -265,14 +265,14 @@ const buffaloBraves = "Buffalo Braves";
 
 const bravesAltPrimary = "bg-blue-400";
 const bravesAltSecondary = "text-white";
-const bravesAltThird = "black";
+const bravesAltThird = "border-black";
 const bravesAltLogo =
   "https://1000logos.net/wp-content/uploads/2018/06/Buffalo-Braves-Logo-500x313.png";
 const bravesAltLogoStyling = "h-11 top-1 -left-5";
 // --------------------- NUGGETS ---------------------- //
 const nuggetsPrimary = "bg-blue-600";
 const nuggetsSecondary = "text-yellow-300";
-const nuggetsThird = "red-600";
+const nuggetsThird = "border-red-600";
 const nuggetsCurrentLogo =
   "https://logodownload.org/wp-content/uploads/2021/07/denver-nuggets-logo.png";
 const nuggetsCurrentLogoStyling = "h-10 top-1 left-1";
@@ -291,13 +291,13 @@ const nuggetsAltLogo =
 const nuggetsAltLogoStyling = "h-8 top-1 left-1";
 
 const nuggetsOldSchoolLogo =
-  "https://lh3.googleusercontent.com/proxy/AWyP3I8bjz-CHZtFbG-SkyKfo0NClwYqMZTY5Kn98Jjdnate thurmondsClL__siivhXRAyruK6f6at3_dZ4CEDSNR2qcOZ7oq6Fv93atijerw-qAH2dTW1CHxJztfP7KoPJ3KBzU9aXH2ARMPNuJQ";
-const nuggetsOldSchoolLogoStyling = "h-10 top-1 left-1";
+  "https://1000logos.net/wp-content/uploads/2018/06/Denver-Nuggets-Logo-1976.png";
+const nuggetsOldSchoolLogoStyling = "h-11 top-1 -left-4";
 
 // --------------------- PELICANS ---------------------- //
 const pelicansPrimary = "bg-blue-900";
 const pelicansSecondary = "text-yellow-500";
-const pelicansThird = "red-700";
+const pelicansThird = "border-red-700";
 const pelicansCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-new-orleans-pelicans-logo.png";
 const pelicansCurrentLogoStyling = "h-14 -top-0.5 -left-1";
@@ -309,15 +309,15 @@ const pelicansThrowbackLogo =
 const pelicansThrowbackLogoStyling = "h-12 top-1 left-1";
 const pelicansAltPrimary = "bg-blue-500";
 const pelicansAltSecondary = "text-yellow-500";
-const pelicansAltThird = "blue-800";
+const pelicansAltThird = "border-blue-800";
 // --------------------- KINGS ---------------------- //
 const kingsPrimary = "bg-purple-700";
 const kingsSecondary = "text-white";
-const kingsThird = "white";
+const kingsThird = "border-white";
 
 const royalsPrimary = "bg-blue-800";
 const royalsSecondary = "text-white";
-const royalsThird = "red-500";
+const royalsThird = "border-red-500";
 
 const kingsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612758/2022/04/Kings-Primary.svg";
@@ -340,7 +340,7 @@ const kingsAltLogoStyling = "h-11 top-0.5 left-1.5";
 
 const celticsPrimary = "bg-green-700";
 const celticsSecondary = "text-white";
-const celticsThird = "black";
+const celticsThird = "border-black";
 const celticsCurrentLogo =
   "https://content.sportslogos.net/logos/6/213/full/boston_celtics_logo_primary_19759952.png";
 const celticsCurrentLogoStyling = "h-11 top-1.5 left-1.5";
@@ -355,7 +355,7 @@ const celticsAltLogoStyling = "h-11 top-1.5 left-1.5";
 // --------------------- PISTONS ---------------------- //
 const pistonsPrimary = "bg-blue-600";
 const pistonsSecondary = "text-red-500";
-const pistonsThird = "white";
+const pistonsThird = "border-white";
 const pistonsCurrentLogo =
   "https://1000logos.net/wp-content/uploads/2017/08/Detroit-Pistons-logo.png";
 const pistonsCurrentLogoStyling = "h-11 top-1.5 -left-3";
@@ -376,11 +376,11 @@ const pistonsAltLogoStyling = "h-11 top-0.5 left-1";
 // --------------------- 76ers ---------------------- //
 const sixersPrimary = "bg-blue-600";
 const sixersSecondary = "text-white";
-const sixersThird = "red-500";
+const sixersThird = "border-red-500";
 
 const sixersAltPrimary = "bg-black";
 const sixersAltSecondary = "text-white";
-const sixersAltThird = "red-500";
+const sixersAltThird = "border-red-500";
 
 const sixersCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/05/Philadelphia-76ers-logo.png";
@@ -391,7 +391,7 @@ const syracuseNationals = "Syracuse Nationals";
 
 const nationalsPrimary = "bg-red-700";
 const nationalsSecondary = "blue-700";
-const nationalsThird = "white";
+const nationalsThird = "border-white";
 
 const sixersOldSchoolLogo =
   "https://loodibee.com/wp-content/uploads/syracuse-nationals-1949-1963.png";
@@ -404,7 +404,7 @@ const sixersAltLogoStyling = "h-14 top-1 left-1";
 // --------------------- CAVALIERS ---------------------- //
 const cavaliersPrimary = "bg-red-900";
 const cavaliersSecondary = "text-white";
-const cavaliersThird = "yellow-400";
+const cavaliersThird = "border-yellow-400";
 // const cavaliersCurrentLogo = "";
 // const cavaliersCurrentLogoStyling = "h-12 top-0 left-0";
 const cavaliersThrowbackLogo =
@@ -417,7 +417,7 @@ const cavaliersAltLogo =
 const cavaliersAltLogoStyling = "h-8 top-1 left-2";
 const cavaliersThrowbackPrimary = "bg-blue-700";
 const cavaliersThrowbackSecondary = "text-orange-600";
-const cavaliersThrowbackThird = "white";
+const cavaliersThrowbackThird = "border-white";
 
 const cavaliersOldSchoolLogo =
   "https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-1970.png";
@@ -429,7 +429,7 @@ const cavaliersCurrentLogoStyling = "h-16 -top-1 -left-8";
 // --------------------- HORNETS ---------------------- //
 const hornetsPrimary = "bg-cyan-400";
 const hornetsSecondary = "text-blue-700";
-const hornetsThird = "purple-700";
+const hornetsThird = "border-purple-700";
 const hornetsThrowbackLogo =
   "https://content.sportslogos.net/logos/6/256/full/charlotte_hornets_logo_primary_19896932.png";
 const hornetsThrowbackLogoStyling = "h-14 top-1 left-1";
@@ -445,12 +445,12 @@ const cougarsLogoStyling = "h-12 top-1 left-1";
 
 const cougarsPrimary = "bg-green-600";
 const cougarsSecondary = "text-white";
-const cougarsThird = "blue-600";
+const cougarsThird = "border-blue-600";
 
 // --------------------- MAGIC ---------------------- //
 const magicPrimary = "bg-blue-600";
 const magicSecondary = "text-white";
-const magicThird = "black";
+const magicThird = "border-black";
 const orlandoMagic = "Orlando Magic";
 const magicCurrentLogo =
   "https://content.sportslogos.net/logos/6/217/full/orlando_magic_logo_primary_20017625.png";
@@ -463,7 +463,7 @@ const magicThrowbackLogoStyling = "h-20 -top-3 -left-1.5";
 // --------------------- HAWKS ---------------------- //
 const hawksPrimary = "bg-red-600";
 const hawksSecondary = "text-yellow-300";
-const hawksThird = "white";
+const hawksThird = "border-white";
 const hawksCurrentLogo =
   "https://logos-world.net/wp-content/uploads/2020/07/Atlanta-Hawks-Logo.png";
 const hawksCurrentLogoStyling = "h-11 top-1 -left-3";
@@ -483,12 +483,12 @@ const hawksThrowbackLogo =
 const hawksThrowbackLogoStyling = "h-11 top-1 -left-0.5";
 
 const hawksOldSchoolLogo =
-  "https://lh6.googleusercontent.com/proxy/sTiz0hf1xB4Fw0drm0cceGTEKJ267OA4X_ILnkaghRvoASHKolrwdoydJx1mgqIteCoudBZdbLvY7GE9GBo_3qtt6VS1XjL4G3ojdGvGhdv2Yhk79Ph-sYqmCzGpTo8fRtV_FefIIQ";
-const hawksOldSchoolLogoStyling = "h-12 top-1 left-0.5";
+  "https://logos-world.net/wp-content/uploads/2020/05/St.-Louis-Hawks-Logo-1957-1968.png";
+const hawksOldSchoolLogoStyling = "h-12 top-1 -left-6";
 // --------------------- HEAT ---------------------- //
 const heatPrimary = "bg-black";
 const heatSecondary = "text-red-500";
-const heatThird = "white";
+const heatThird = "border-white";
 const heatCurrentLogo =
   "https://logodownload.org/wp-content/uploads/2019/06/miami-heat-logo-3.png";
 const heatCurrentLogoStyling = "h-14 top-1 left-2";
@@ -499,7 +499,7 @@ const heatThrowbackLogoStyling = "h-14 top-1 left-2";
 // --------------------- RAPTORS ---------------------- //
 const raptorsPrimary = "bg-red-600";
 const raptorsSecondary = "text-white";
-const raptorsThird = "black";
+const raptorsThird = "border-black";
 const raptorsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612761/2021/09/Toronto-Raptors.svg";
 const raptorsCurrentLogoStyling = "h-12 top-0 left-0";
@@ -520,7 +520,7 @@ const raptorsAltThrowbackLogoStyling = "h-12 top-0 -left-2.5";
 // --------------------- PACERS ---------------------- //
 const pacersPrimary = "bg-blue-700";
 const pacersSecondary = "text-yellow-400";
-const pacersThird = "white";
+const pacersThird = "border-white";
 const pacersCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo.png";
 const pacersCurrentLogoStyling = "h-14 top-0 left-0";
@@ -536,7 +536,7 @@ const pacersAltThrowbackLogoStyling = "h-12 top-0 left-0";
 // --------------------- BUCKS ---------------------- //
 const bucksPrimary = "bg-green-800";
 const bucksSecondary = "text-yellow-500";
-const bucksThird = "black";
+const bucksThird = "border-black";
 const bucksCurrentLogo =
   "https://loodibee.com/wp-content/uploads/nba-milwaukee-bucks-logo.png";
 const bucksCurrentLogoStyling = "h-14 top-0 left-0";
@@ -557,7 +557,7 @@ const bucksAltLogoStyling = "h-14 top-0.5 left-1";
 // --------------------- KNICKS ---------------------- //
 const knicksPrimary = "bg-blue-600";
 const knicksSecondary = "text-orange-600";
-const knicksThird = "white";
+const knicksThird = "border-white";
 const knicksCurrentLogo =
   "https://content.sportslogos.net/logos/6/216/full/new_york_knicks_logo_primary_19938358.png";
 const knicksCurrentLogoStyling = "h-11 top-1 left-0";
@@ -574,7 +574,7 @@ const knicksAltThrowbackLogoStyling = "h-16 -top-1 -left-4";
 // --------------------- NETS ---------------------- //
 const netsPrimary = "bg-black";
 const netsSecondary = "text-gray-200";
-const netsThird = "white";
+const netsThird = "border-white";
 const netsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612751/2024/07/BKN_Primary.svg";
 const netsCurrentLogoStyling = "h-11 top-0.5 left-0.5";
@@ -583,7 +583,7 @@ const brooklynNets = "Brooklyn Nets";
 const newYorkNets = "New York Nets";
 const netsAltPrimary = "bg-blue-900";
 const netsAltSecondary = "text-white";
-const netsAltThird = "red-500";
+const netsAltThird = "border-red-500";
 const newJerseyNets = "New Jersey Nets";
 
 const netsThrowbackLogo =
@@ -604,7 +604,7 @@ const netsOldSchoolLogoStyling = "h-11 top-0.5 left-0.5";
 // --------------------- WIZARDS ---------------------- //
 const wizardsPrimary = "bg-blue-700";
 const wizardsSecondary = "text-red-500";
-const wizardsThird = "white";
+const wizardsThird = "border-white";
 const wizardsCurrentLogo =
   // "https://1000logos.net/wp-content/uploads/2018/06/Baltimore-Bullets-Logo-1974-700x394.png";
   "https://1000logos.net/wp-content/uploads/2018/05/Washington_Wizards_Logo.png";
@@ -626,7 +626,7 @@ const washingtonBullets = "Washington Bullets";
 // --------------------- BULLS ---------------------- //
 const bullsPrimary = "bg-red-600";
 const bullsSecondary = "text-black-300";
-const bullsThird = "white";
+const bullsThird = "border-white";
 const bullsCurrentLogo =
   "https://cdn.nba.com/teams/uploads/sites/1610612741/2021/10/bulls-svg.svg";
 const bullsCurrentLogoStyling = "h-11 top-0 left-1";
@@ -827,7 +827,7 @@ export const data = [
         "https://i.pinimg.com/474x/3e/56/52/3e56522aeae0f18bb828f2b90fd1c2c8---nba-finals-nba-finals-game.jpg",
       teamLogoSrc: heatCurrentLogo,
       teamLogoStyling: heatCurrentLogoStyling,
-    }
+    },
   },
   {
     name: "Michael Jordan",
@@ -1115,8 +1115,8 @@ export const data = [
         "https://www.basketball-reference.com/req/202106291/images/headshots/abdulka01.jpg",
       plyrCardPictureSrc:
         "https://cdn.bleacherreport.net/images_root/slides/photos/000/571/977/1137385_original.jpg?1292553467",
-        teamLogoSrc: lakersCurrentLogo,
-        teamLogoStyling: lakersCurrentLogoStyling,
+      teamLogoSrc: lakersCurrentLogo,
+      teamLogoStyling: lakersCurrentLogoStyling,
     },
   },
   {
@@ -2486,39 +2486,39 @@ export const data = [
     badges: [
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
         id: 5,
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
         id: 7,
       },
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
         id: 2,
       },
       {
         icon: <GiWhistle />,
-        color: "gold",
+        color: "hof",
         explanation: "Foul Drawer",
         id: 6,
       },
       {
-        icon: <TbEngine />,
+        icon: <RiHandCoinLine />,
         color: "gold",
-        explanation: "Offensive Engine",
-        id: 10,
+        explanation: "Dime Dropper",
+        id: 11,
       },
       {
         icon: <GiHandcuffs />,
@@ -3062,7 +3062,7 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
         id: 2,
       },
@@ -3074,7 +3074,7 @@ export const data = [
       },
       {
         icon: <GiWhistle />,
-        color: "hof",
+        color: "goat",
         explanation: "Foul Drawer",
         id: 6,
       },
@@ -3086,7 +3086,7 @@ export const data = [
       },
       {
         icon: <TbEngine />,
-        color: "hof",
+        color: "goat",
         explanation: "Offensive Engine",
         id: 10,
       },
@@ -3104,7 +3104,7 @@ export const data = [
       },
       {
         icon: <ImDribbble />,
-        color: "gold",
+        color: "hof",
         explanation: "Houdini Handles",
         id: 13,
       },
@@ -4338,7 +4338,7 @@ export const data = [
       },
       {
         icon: <ImDribbble />,
-        color: "hof",
+        color: "goat",
         explanation: "Houdini Handles",
         id: 13,
       },
@@ -6055,28 +6055,28 @@ export const data = [
     bpm: 9.2,
     badges: [
       {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
-        explanation: "Tough Shot Maker",
-        id: 2,
-      },
-      {
         icon: <GiWhistle />,
-        color: "hof",
+        color: "goat",
         explanation: "Foul Drawer",
         id: 6,
       },
       {
         icon: <FaTools />,
-        color: "hof",
+        color: "goat",
         explanation: "Post Move Technician",
         id: 9,
       },
       {
         icon: <GiWreckingBall />,
-        color: "hof",
+        color: "goat",
         explanation: "Contact Finisher",
         id: 8,
+      },
+      {
+        icon: <MdOutlineSportsKabaddi />,
+        color: "hof",
+        explanation: "Tough Shot Maker",
+        id: 2,
       },
       {
         icon: <ImEarth />,
@@ -6964,7 +6964,7 @@ export const data = [
       },
       {
         icon: <ImDribbble />,
-        color: "hof",
+        color: "goat",
         explanation: "Houdini Handles",
         id: 13,
       },
@@ -7032,7 +7032,7 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
@@ -7136,7 +7136,7 @@ export const data = [
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "gold",
+        color: "hof",
         explanation: "Tough Shot Maker",
         id: 2,
       },
@@ -7258,13 +7258,13 @@ export const data = [
       },
       {
         icon: <GiHandcuffs />,
-        color: "hof",
+        color: "goat",
         explanation: "Perimeter Handcuffs",
         id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
-        color: "hof",
+        color: "goat",
         explanation: "Pick Pocket/Interceptor",
         id: 19,
       },
@@ -7326,13 +7326,13 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
         id: 7,
       },
@@ -7350,7 +7350,7 @@ export const data = [
       },
       {
         icon: <FaHatWizard />,
-        color: "gold",
+        color: "hof",
         explanation: "Middy Magician",
         id: 5,
       },
@@ -7418,7 +7418,7 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
         id: 2,
       },
@@ -7436,7 +7436,7 @@ export const data = [
       },
       {
         icon: <GiWreckingBall />,
-        color: "gold",
+        color: "hof",
         explanation: "Contact Finisher",
         id: 8,
       },
@@ -7448,13 +7448,13 @@ export const data = [
       },
       {
         icon: <TbEngine />,
-        color: "hof",
+        color: "goat",
         explanation: "Offensive Engine",
         id: 10,
       },
       {
         icon: <RiHandCoinLine />,
-        color: "hof",
+        color: "goat",
         explanation: "Dime Dropper",
         id: 11,
       },
@@ -7540,19 +7540,13 @@ export const data = [
       },
       {
         icon: <GiHandcuffs />,
-        color: "hof",
+        color: "goat",
         explanation: "Perimeter Handcuffs",
         id: 15,
       },
       {
-        icon: <GiMonsterGrasp />,
-        color: "hof",
-        explanation: "Pick Pocket/Interceptor",
-        id: 19,
-      },
-      {
         icon: <GiBrain />,
-        color: "hof",
+        color: "goat",
         explanation: "High IQ Defender",
         id: 20,
       },
@@ -7560,6 +7554,12 @@ export const data = [
         icon: <ImBug />,
         color: "hof",
         explanation: "Defensive Pest",
+      },
+      {
+        icon: <GiMonsterGrasp />,
+        color: "gold",
+        explanation: "Pick Pocket/Interceptor",
+        id: 19,
       },
     ],
     teamScoring: 8.75,
@@ -7612,16 +7612,16 @@ export const data = [
     bpm: 4.8,
     badges: [
       {
+        icon: <MdOutlineSportsKabaddi />,
+        color: "goat",
+        explanation: "Tough Shot Maker",
+        id: 2,
+      },
+      {
         icon: <ImTarget />,
         color: "hof",
         explanation: "Deadeye Shooter",
         id: 1,
-      },
-      {
-        icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
-        explanation: "Tough Shot Maker",
-        id: 2,
       },
       {
         icon: <FaHatWizard />,
@@ -7717,39 +7717,39 @@ export const data = [
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
         id: 22,
+      },
+      {
+        icon: <FaAnchor />,
+        color: "goat",
+        explanation: "Defensive Anchor",
+        id: 18,
+      },
+      {
+        icon: <FaLock />,
+        color: "goat",
+        explanation: "Lockdown Post Defender",
+        id: 14,
+      },
+      {
+        icon: <GiBrain />,
+        color: "goat",
+        explanation: "High IQ Defender",
+        id: 20,
+      },
+      {
+        icon: <GiEmbrassedEnergy />,
+        color: "goat",
+        explanation: "High Energy Defender",
+        id: 21,
       },
       {
         icon: <SiAdblock />,
         color: "hof",
         explanation: "Shot Block Artist",
         id: 16,
-      },
-      {
-        icon: <FaAnchor />,
-        color: "hof",
-        explanation: "Defensive Anchor",
-        id: 18,
-      },
-      {
-        icon: <FaLock />,
-        color: "hof",
-        explanation: "Lockdown Post Defender",
-        id: 14,
-      },
-      {
-        icon: <GiBrain />,
-        color: "hof",
-        explanation: "High IQ Defender",
-        id: 20,
-      },
-      {
-        icon: <GiEmbrassedEnergy />,
-        color: "hof",
-        explanation: "High Energy Defender",
-        id: 21,
       },
       {
         icon: <GiMonsterGrasp />,
@@ -7821,37 +7821,37 @@ export const data = [
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
         id: 22,
       },
       {
         icon: <FaLock />,
-        color: "hof",
+        color: "goat",
         explanation: "Lockdown Post Defender",
         id: 14,
       },
       {
         icon: <SiAdblock />,
-        color: "hof",
+        color: "goat",
         explanation: "Shot Block Artist",
         id: 16,
       },
       {
         icon: <FaAnchor />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Anchor",
         id: 18,
       },
       {
         icon: <GiBrain />,
-        color: "hof",
+        color: "goat",
         explanation: "High IQ Defender",
         id: 20,
       },
       {
         icon: <GiEmbrassedEnergy />,
-        color: "gold",
+        color: "hof",
         explanation: "High Energy Defender",
         id: 21,
       },
@@ -7937,7 +7937,7 @@ export const data = [
       },
       {
         icon: <RiHandCoinLine />,
-        color: "silver",
+        color: "gold",
         explanation: "Dime Dropper",
         id: 11,
       },
@@ -8005,7 +8005,7 @@ export const data = [
     badges: [
       {
         icon: <FaWifi />,
-        color: "hof",
+        color: "goat",
         explanation: "Limitless Range",
         id: 4,
       },
@@ -8114,16 +8114,16 @@ export const data = [
         id: 2,
       },
       {
-        icon: <MdSportsHandball />,
-        color: "gold",
-        explanation: "Lob/Putback/Dunk Master",
-        id: 3,
-      },
-      {
         icon: <FaWifi />,
         color: "gold",
         explanation: "Limitless Range",
         id: 4,
+      },
+      {
+        icon: <MdSportsHandball />,
+        color: "gold",
+        explanation: "Lob/Putback/Dunk Master",
+        id: 3,
       },
       {
         icon: <ImTarget />,
@@ -8218,6 +8218,18 @@ export const data = [
         id: 22,
       },
       {
+        icon: <RiTeamFill />,
+        color: "goat",
+        explanation: "Switchable Specialist",
+        id: 17,
+      },
+      {
+        icon: <GiBrain />,
+        color: "goat",
+        explanation: "High IQ Defender",
+        id: 20,
+      },
+      {
         icon: <GiHandcuffs />,
         color: "hof",
         explanation: "Perimeter Handcuffs",
@@ -8230,20 +8242,8 @@ export const data = [
         id: 16,
       },
       {
-        icon: <RiTeamFill />,
-        color: "hof",
-        explanation: "Switchable Specialist",
-        id: 17,
-      },
-      {
-        icon: <GiBrain />,
-        color: "hof",
-        explanation: "High IQ Defender",
-        id: 20,
-      },
-      {
         icon: <GiMonsterGrasp />,
-        color: "gold",
+        color: "hof",
         explanation: "Pick Pocket/Interceptor",
         id: 19,
       },
@@ -8397,7 +8397,7 @@ export const data = [
     badges: [
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
         id: 7,
       },
@@ -8593,7 +8593,7 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
@@ -8632,6 +8632,12 @@ export const data = [
         color: "gold",
         explanation: "Rebound Magnet",
         id: 22,
+      },
+      {
+        icon: <SiAdblock />,
+        color: "bronze",
+        explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -8807,7 +8813,7 @@ export const data = [
       },
       {
         icon: <RiTeamFill />,
-        color: "hof",
+        color: "goat",
         explanation: "Switchable Specialist",
         id: 17,
       },
@@ -8881,21 +8887,15 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
         id: 7,
-      },
-      {
-        icon: <GiWreckingBall />,
-        color: "hof",
-        explanation: "Contact Finisher",
-        id: 8,
       },
       {
         icon: <FaHatWizard />,
@@ -8905,9 +8905,15 @@ export const data = [
       },
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "gold",
+        color: "hof",
         explanation: "Tough Shot Maker",
         id: 2,
+      },
+      {
+        icon: <GiWreckingBall />,
+        color: "gold",
+        explanation: "Contact Finisher",
+        id: 8,
       },
       {
         icon: <GiWhistle />,
@@ -8920,6 +8926,12 @@ export const data = [
         color: "bronze",
         explanation: "Pick Pocket/Interceptor",
         id: 19,
+      },
+      {
+        icon: <SiAdblock />,
+        color: "bronze",
+        explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -9003,19 +9015,19 @@ export const data = [
       },
       {
         icon: <GiHandcuffs />,
-        color: "hof",
+        color: "goat",
         explanation: "Perimeter Handcuffs",
         id: 15,
       },
       {
         icon: <GiMonsterGrasp />,
-        color: "hof",
+        color: "goat",
         explanation: "Pick Pocket/Interceptor",
         id: 19,
       },
       {
         icon: <ImBug />,
-        color: "hof",
+        color: "goat",
         explanation: "Defensive Pest",
       },
     ],
@@ -9075,6 +9087,12 @@ export const data = [
         id: 8,
       },
       {
+        icon: <FaTools />,
+        color: "silver",
+        explanation: "Post Move Technician",
+        id: 9,
+      },
+      {
         icon: <RiHandCoinLine />,
         color: "hof",
         explanation: "Dime Dropper",
@@ -9082,7 +9100,7 @@ export const data = [
       },
       {
         icon: <ImMagnet />,
-        color: "hof",
+        color: "goat",
         explanation: "Rebound Magnet",
         id: 22,
       },
@@ -9162,7 +9180,7 @@ export const data = [
     badges: [
       {
         icon: <MdSportsHandball />,
-        color: "hof",
+        color: "goat",
         explanation: "Lob/Putback/Dunk Master",
         id: 3,
       },
@@ -9261,33 +9279,27 @@ export const data = [
     badges: [
       {
         icon: <MdOutlineSportsKabaddi />,
-        color: "hof",
+        color: "goat",
         explanation: "Tough Shot Maker",
         id: 2,
       },
       {
         icon: <FaHatWizard />,
-        color: "hof",
+        color: "goat",
         explanation: "Middy Magician",
         id: 5,
       },
       {
         icon: <GiWhistle />,
-        color: "hof",
+        color: "goat",
         explanation: "Foul Drawer",
         id: 6,
       },
       {
         icon: <GiBodyBalance />,
-        color: "hof",
+        color: "goat",
         explanation: "Acrobatic/Finesse Finisher",
         id: 7,
-      },
-      {
-        icon: <TbEngine />,
-        color: "hof",
-        explanation: "Offensive Engine",
-        id: 10,
       },
       {
         icon: <RiHandCoinLine />,
@@ -9306,6 +9318,12 @@ export const data = [
         color: "gold",
         explanation: "Pick Pocket/Interceptor",
         id: 19,
+      },
+      {
+        icon: <SiAdblock />,
+        color: "gold",
+        explanation: "Shot Block Artist",
+        id: 16,
       },
     ],
     teamScoring: 8.75,
@@ -10905,7 +10923,7 @@ export const data = [
     plyrCardPictureSrc:
       "https://media.gettyimages.com/id/499320452/photo/landover-md-bobby-jones-of-the-denver-nuggets-looks-on-against-the-washington-bullets-during.jpg?s=612x612&w=0&k=20&c=n_7Fkmcg-5Z2Yp4GOuG-KwDnQwlG0ijB0s3m4_aAKyI=",
     teamLogoSrc: nuggetsOldSchoolLogo,
-    teamLogoStyling: nuggetsCurrentLogoStyling,
+    teamLogoStyling: nuggetsOldSchoolLogoStyling,
   },
   {
     name: "Tiny Archibald",
