@@ -1,9 +1,9 @@
-import Testing from '../components/media/Testing'
+import Media from '../components/media/Media'
 
 function MediaPage() {
   return (
     <div className="">
-      <Testing />
+      <Media />
     </div>
   );
 }

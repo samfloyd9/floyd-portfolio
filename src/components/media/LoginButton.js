@@ -7,7 +7,7 @@ function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setList
         <div className="flex flex-row items-center gap-4 ">
         <button
           onClick={getRequestToken}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          className="px-4 py-2 bg-orange-400 text-md text-nowrap text-white rounded-md hover:bg-orange-500"
         >
           Login with TMDB
         </button>
@@ -18,7 +18,7 @@ function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setList
         <div className="flex flex-row items-center gap-4 ">
           <button
             onClick={logout}
-            className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+            className="px-4 py-2 bg-orange-400 text-white rounded-md hover:bg-red-600"
           >
             Logout
           </button>

@@ -96,12 +96,10 @@ function FeaturedMedia({
     });
   };
 
-  // console.log('mediaType:', mediaType);
-
   return (
-    <div className="p-4 max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto">
       {/* Media Type Selector */}
-      <div className="flex justify-center gap-3 mb-4">
+      <div className="flex justify-center gap-3 mb-3">
         {["movie", "tv"].map((type) => (
           <button
             key={type}
@@ -112,8 +110,8 @@ function FeaturedMedia({
             }}
             className={`px-4 py-1 rounded font-semibold capitalize transition ${
               mediaType === type
-                ? "bg-blue-700 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
+                ? "bg-purple-500 text-white"
+                : "bg-gray-200 hover:bg-gray-400"
             }`}
           >
             {type}
@@ -122,7 +120,7 @@ function FeaturedMedia({
       </div>
 
       {/* Category Buttons */}
-      <div className="flex flex-wrap gap-2 justify-center mb-4">
+      <div className="flex flex-wrap gap-2 justify-center mb-3">
         {categoryOptions[mediaType].map(({ label, value }) => (
           <button
             key={value}
@@ -132,8 +130,8 @@ function FeaturedMedia({
             }}
             className={`px-4 py-1 rounded-md font-medium transition ${
               category === value
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
+                ? "bg-purple-500 text-white"
+                : "bg-gray-200 hover:bg-gray-400"
             }`}
           >
             {label}
@@ -155,10 +153,10 @@ function FeaturedMedia({
 
         {/* Current */}
         {current?.poster_path ? (
-          <div className="text-center bg-white px-5 py-2 rounded">
-            <h2 className="text-2xl font-bold mb-2">
+          <div className="text-center bg-white px-2.5 py-2 rounded">
+            {/* <h2 className="text-2xl font-bold mb-2">
               {current.title || current.name}
-            </h2>
+            </h2> */}
             <img
               src={`https://image.tmdb.org/t/p/w342${current.poster_path}`}
               alt={current.title || current.name}
@@ -231,22 +229,22 @@ function FeaturedMedia({
       </div>
 
       {/* Manual Nav */}
-      <div className="flex justify-center gap-4 mt-4">
+      {/* <div className="flex justify-center gap-4 mt-3">
         <button
           onClick={() => handleManualNav(currentIndex - 1)}
           disabled={currentIndex === 0}
-          className="px-3 py-1 bg-gray-300 hover:bg-gray-400 rounded disabled:opacity-40"
+          className="px-3 py-1 bg-gray-200 hover:bg-gray-400 rounded disabled:opacity-40"
         >
           Prev
         </button>
         <button
           onClick={() => handleManualNav(currentIndex + 1)}
           disabled={currentIndex >= items.length - 1}
-          className="px-3 py-1 bg-gray-300 hover:bg-gray-400 rounded disabled:opacity-40"
+          className="px-3 py-1 bg-gray-200 hover:bg-gray-400 rounded disabled:opacity-40"
         >
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

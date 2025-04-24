@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { MdAdd } from "react-icons/md";
 import FavoriteButton from "./FavoriteButton";
-import WatchlistButton from "./WatchlistButton";
 import RatingControl from "./RatingControl";
 
 function FavoriteSection({
@@ -18,6 +17,8 @@ function FavoriteSection({
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
+
+  const [showRatingEdit, setShowRatingEdit] = useState({});
 
   const loadItems = async (pageNum = 1, append = false) => {
     try {
@@ -57,11 +58,6 @@ function FavoriteSection({
     loadItems(nextPage, true);
   };
 
-  //   <button
-  //   onClick={() => loadItems(1, false)}
-  //   className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-  // >Refresh</button>
-
   return (
     <div className="mt-4">
       {items.length > 0 ? (
@@ -84,59 +80,61 @@ function FavoriteSection({
                   loading="lazy"
                 />
                 <div className="flex justify-between items-center mt-2">
-                  <div className="max-w-[150px]">
-                    <p className="text-sm font-semibold truncate">
+                  <div className="w-full">
+                    <p className="text-md font-semibold truncate">
                       {item.title || item.name}
                     </p>
                     <p className="text-xs text-gray-500">
-                      (
                       {(item.release_date || item.first_air_date || "").slice(
                         0,
                         4
                       )}
-                      )
                     </p>
                   </div>
-                  <RatingControl
-                    sessionId={sessionId}
-                    mediaId={item.id}
-                    mediaType={mediaType}
-                    showRatingEdit={false}
-                  />
                 </div>
-                <div className="flex justify-end gap-2 mt-2">
-                  <button
+                <div className="flex flex-row justify-between items-end">
+                  <div className="flex justify-center gap-2 mt-2">
+                    <button
+                      onClick={() =>
+                        setSelectedMedia({
+                          id: item.id,
+                          media_type: mediaType,
+                        })
+                      }
+                    >
+                      <IoInformationCircleOutline className="text-[26px] border rounded hover:bg-gray-300 shadow-md" />
+                    </button>
+                    {mediaType === "movie" && (
+                      <button
+                        className=""
+                        onClick={() => handleAddToList(item.id)}
+                      >
+                        <MdAdd className="text-[26px] border-2 shadow-md rounded-md hover:bg-gray-300" />
+                      </button>
+                    )}
+                    <FavoriteButton
+                      sessionId={sessionId}
+                      accountId={accountId}
+                      mediaId={item.id}
+                      mediaType={mediaType}
+                      refreshFavorites={refreshFunction}
+                    />
+                  </div>
+                  <div
                     onClick={() =>
-                      setSelectedMedia({
-                        id: item.id,
-                        media_type: mediaType,
-                      })
+                      setShowRatingEdit((prev) => ({
+                        ...prev,
+                        [item.id]: !prev[item.id],
+                      }))
                     }
                   >
-                    <IoInformationCircleOutline className="text-xl border rounded hover:bg-gray-300" />
-                  </button>
-                  {mediaType === "movie" && (
-                    <button
-                      className=""
-                      onClick={() => handleAddToList(item.id)}
-                    >
-                      <MdAdd className="text-lg border-2 shadow-md rounded-md" />
-                    </button>
-                  )}
-                  <FavoriteButton
-                    sessionId={sessionId}
-                    accountId={accountId}
-                    mediaId={item.id}
-                    mediaType={mediaType}
-                    refreshFavorites={refreshFunction}
-                  />
-                  <WatchlistButton
-                    sessionId={sessionId}
-                    accountId={accountId}
-                    mediaId={item.id}
-                    mediaType={mediaType}
-                    refreshWatchlist={refreshFunction}
-                  />
+                    <RatingControl
+                      sessionId={sessionId}
+                      mediaId={item.id}
+                      mediaType={mediaType}
+                      showRatingEdit={!!showRatingEdit[item.id]}
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -151,7 +149,7 @@ function FavoriteSection({
           <button
             onClick={handleLoadMore}
             disabled={loading}
-            className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="px-4 py-2 text-white bg-orange-400 hover:bg-orange-500 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
             {loading ? "Loading..." : "Load More"}
           </button>

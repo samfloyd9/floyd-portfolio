@@ -58,11 +58,11 @@ function WatchlistButton({ sessionId, accountId, mediaId, mediaType, refreshWatc
   return (
     <button
       onClick={toggleWatchlist}
-      className={`flex items-center px-1 py-0.5 rounded ${
+      className={`flex items-center px-1.5 my-0.5 rounded ${
         inWatchlist ? "bg-green-500" : "bg-gray-300"
       }`}
     >
-      <FaBookmark className="text-sm" />
+      <FaBookmark className="text-[14px]" />
     </button>
   );
 }

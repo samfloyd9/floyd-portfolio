@@ -65,11 +65,11 @@ function FavoriteButton({
   return (
     <button
       onClick={toggleFavorite}
-      className={`flex items-center px-1 py-0.5 rounded ${
+      className={`flex items-center px-1 my-0.5 rounded ${
         isFavorited ? "bg-yellow-500" : "bg-gray-300"
       }`}
     >
-      <FaStar className="text-sm" />
+      <FaStar className="text-[16px]" />
     </button>
   );
 }

@@ -2,7 +2,7 @@ import { MdOutlineSettings } from "react-icons/md";
 
 function BankingPage() {
   return (
-    <div className="flex justify-center items-center content-center flex-col h-screen w-2/3 mx-auto">
+    <div className="flex justify-center items-center content-center flex-col w-2/3 mx-auto">
       <div className="border border-1 rounded-md border-gray-200 border-solid px-14 py-10 flex flex-col justify-center shadow-lg">
         <div className="mb-10 flex flex-col justify-center items-center content-center">
           <a

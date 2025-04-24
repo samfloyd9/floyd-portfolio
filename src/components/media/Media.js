@@ -19,7 +19,7 @@ import {
 } from "../../api/tmdbapi";
 import FeaturedMedia from "./FeaturedMedia";
 
-function Testing() {
+function Media() {
   const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0";
   const API_TOKEN =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MTc4ODdhMTFmZTM2ZDZjZTcyZjdhNGI2ZThkMzBiMCIsIm5iZiI6MTczMDQzMDIzOS4zMjQxNjk5LCJzdWIiOiI2NzI0M2YzOGYwOGFiNWQzZjIwMzc5NjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TsJfsPyERUBu2TYy9qusAPDY3weAZdFaU6UrUCJ4HS4";
@@ -55,6 +55,7 @@ function Testing() {
   const [movies, setMovies] = useState({});
 
   const [toggleFeaturedMedia, setToggleFeaturedMedia] = useState(true);
+  const [toggleMediaLists, setToggleMediaLists] = useState(true);
 
   const [sessionId, setSessionId] = useState(
     localStorage.getItem("tmdb_session_id")
@@ -370,8 +371,13 @@ function Testing() {
     setSelectedMedia(null);
   };
 
+  const handleShowMediaLists = () => {
+    setToggleMediaLists(!toggleMediaLists);
+    // setSelectedMedia(null);
+  };
+
   return (
-    <div className="bg-violet-950 px-5 pb-5">
+    <div className="bg-violet-950 px-5 pb-5 min-h-screen">
       <MediaSearch
         term={term}
         setTerm={setTerm}
@@ -381,6 +387,7 @@ function Testing() {
         mediaPages={mediaPages}
         currentSearchPage={currentSearchPage}
         setCurrentSearchPage={setCurrentSearchPage}
+        selectedMedia={selectedMedia}
         setSelectedMedia={setSelectedMedia}
         logout={logout}
         getRequestToken={getRequestToken}
@@ -390,7 +397,6 @@ function Testing() {
         movies={movies}
         setMovies={setMovies}
         accountId={accountId}
-        selectedMedia={selectedMedia}
         showWatchlistModal={showWatchlistModal}
         setShowWatchlistModal={setShowWatchlistModal}
         handleAddToList={handleAddToList}
@@ -405,14 +411,12 @@ function Testing() {
         setMediaTypeFilter={setMediaTypeFilter}
         setMediaPages={setMediaPages}
         setMediaList={setMediaList}
+        toggleFeaturedMedia={toggleFeaturedMedia}
+        setToggleFeaturedMedia={setToggleFeaturedMedia}
+        toggleMediaLists={toggleMediaLists}
+        setToggleMediaLists={setToggleMediaLists}
       />
 
-      <button
-        className="border p-2 shadow-lg bg-gray-300 hover:bg-gray-500 text-black rounded-md"
-        onClick={handleShowFeaturedMedia}
-      >
-        Featured Movies
-      </button>
       {toggleFeaturedMedia && mediaList?.length === 0 && !selectedMedia && (
         <FeaturedMedia
           sessionId={sessionId}
@@ -426,7 +430,42 @@ function Testing() {
         />
       )}
 
-      <div className="flex flex-row items-center gap-5">
+      {!toggleFeaturedMedia && !toggleMediaLists && term === "" && selectedMedia === null && (
+        <div>
+          <div className="text-center text-gray-400 mt-10 text-lg">
+            Select a section to display:
+          </div>
+          <div className="flex flex-row gap-4 ">
+            <button
+              className={`px-1.5 py-1 text-black shadow-lg bg-gray-300 hover:bg-gray-400 rounded-md ${
+                toggleFeaturedMedia && !selectedMedia
+                  ? "bg-purple-500 text-white hover:bg-purple-600"
+                  : "bg-gray-300"
+              }`}
+              onClick={handleShowFeaturedMedia}
+            >
+              Featured
+            </button>
+
+            <div>or</div>
+
+            <button
+              className={`px-1.5 py-1 text-black shadow-lg hover:bg-gray-400 rounded-md ${
+                toggleMediaLists
+                  ? "bg-purple-500 text-white hover:bg-purple-600"
+                  : "bg-gray-300"
+              }`}
+              onClick={handleShowMediaLists}
+            >
+              Favorites/Watchlists
+            </button>
+          </div>
+          <div>or</div>
+          <div>Search for 'Movies' and 'TV Shows' as well as 'Cast' and 'Crew' members!</div>
+        </div>
+      )}
+
+      <div className="flex flex-row items-center gap-5 mt-4">
         <MediaCard
           detailedMedia={detailedMedia}
           tvShow={tvShow}
@@ -452,6 +491,12 @@ function Testing() {
           person={person}
           selectedMedia={selectedMedia}
           setSelectedMedia={setSelectedMedia}
+          accountId={accountId}
+          sessionId={sessionId}
+          refreshFavoriteTvShows={refreshFavoriteTvShows}
+          refreshFavoriteMovies={refreshFavoriteMovies}
+          refreshWatchlistMovies={refreshWatchlistMovies}
+          refreshWatchlistTvShows={refreshWatchlistTvShows}
         />
       </div>
       <MediaLists
@@ -477,9 +522,10 @@ function Testing() {
         watchlistTvShows={watchlistTvShows}
         setWatchlistTvShows={setWatchlistTvShows}
         handleAddToList={handleAddToList}
+        toggleMediaLists={toggleMediaLists}
       />
     </div>
   );
 }
 
-export default Testing;
+export default Media;

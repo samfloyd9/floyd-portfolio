@@ -62,7 +62,7 @@ function Sidebar() {
         currentPath === "/basketball"
           ? "bg-[url('https://t4.ftcdn.net/jpg/00/00/42/23/360_F_422353_a45FYznatYUREgymaj24NocvrA6uh9.jpg')] bg-center border-b border-black"
           : ""
-      } ${currentPath === "/" ? "bg-black text-white" : ""} ${currentPath === "/media" ? "bg-gray-800" : ""} ${
+      } ${currentPath === "/" ? "bg-black text-white" : ""} ${currentPath === "/media" ? "bg-gradient-to-br from-purple-700 to-purple-950" : ""} ${
         currentPath === "/football"
           ? "bg-[url('https://img.pixers.pics/pho_wat(s3:700/FO/27/12/58/54/700_FO27125854_928970de62904503935980f5d18b793b.jpg,700,467,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,417,jpg)/stickers-football-texture.jpg.jpg')] border-b border-black"
           : ""

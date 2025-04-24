@@ -1,8 +1,8 @@
 import { MdAdd } from "react-icons/md";
-import { CiEdit } from "react-icons/ci";
 
 import FavoriteButton from "./FavoriteButton";
 import RatingControl from "./RatingControl";
+import WatchlistButton from "./WatchlistButton";
 
 import { useState } from "react";
 
@@ -22,6 +22,7 @@ function MediaCard({
   refreshFavoriteMovies,
   refreshWatchlistMovies,
   refreshWatchlistTvShows,
+  setSelectedMedia,
 }) {
   const [showRatingEdit, setShowRatingEdit] = useState(false);
 
@@ -29,21 +30,21 @@ function MediaCard({
     setShowRatingEdit(!showRatingEdit);
   };
 
-  const handleTitleLength = (title) => {
-    if (title.length > 24) {
-      return <p className="text-sm">{title}</p>;
-    } else if (title.length <= 24) {
-      return <p className="text-lg">{title}</p>;
-    } else if (title.length > 36) {
-      return <p className="text-xs">{title}</p>;
-    }
-  };
+  // const handleTitleLength = (title) => {
+  //   if (title.length > 24) {
+  //     return <p className="text-sm">{title}</p>;
+  //   } else if (title.length <= 24) {
+  //     return <p className="text-lg">{title}</p>;
+  //   } else if (title.length > 36) {
+  //     return <p className="text-xs">{title}</p>;
+  //   }
+  // };
 
   // If nothing is selected, don't render anything
   if (!selectedMedia) return null;
 
   const movieCard = (
-    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md bg-white">
+    <div className="flex justify-center border-gray-400 border-2 text-black items-center text-center w-fit h-full p-2 shadow-xl rounded-md bg-white">
       <div className="flex flex-row">
         {detailedMedia.map((movie) => (
           <div
@@ -60,42 +61,41 @@ function MediaCard({
               className="rounded-md shadow-md w-[342px]"
               loading="lazy"
             />
-            <div className="flex flex-row w-full justify-between content-between items-center mt-2">
-              <div className="w-1/4">
+            <div className="flex flex-row w-full justify-between content-between items-center mt-1.5">
+              <div className="flex justify-start">
                 {/* <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md"></div> */}
-                <RatingControl
-                  sessionId={sessionId}
-                  mediaId={movie.id}
-                  mediaType={"movie"} // "movie" or "tv"
-                  showRatingEdit={showRatingEdit}
-                />
+                <div
+                  onClick={() =>
+                    setShowRatingEdit((prev) => ({
+                      ...prev,
+                      [movie.id]: !prev[movie.id],
+                    }))
+                  }
+                >
+                  <RatingControl
+                    sessionId={sessionId}
+                    mediaId={movie.id}
+                    mediaType={"movie"}
+                    showRatingEdit={!!showRatingEdit[movie.id]}
+                  />
+                </div>
               </div>
 
-              <div className="w-1/2">
+              {/* <div className="w-full px-1.5">
                 <div className="flex flex-row justify-center items-center">
-                  <h1 className="font-bold">
-                    <div>{handleTitleLength(movie.title)}</div>
+                  <h1 className="font-bold w-full truncate">
+                    {movie.title}
                   </h1>
                 </div>
                 <div className="flex justify-center mt-1">
-                  <p className="">({movie.release_date.slice(0, -6)})</p>
+                  <p className="text-gray-600">
+                    {movie.release_date.slice(0, -6)}
+                  </p>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex flex-col w-1/4 justify-end items-end">
-                <div className="gap-2 flex flex-row">
-                  <button
-                    // className="right-5 bottom-0 absolute"
-                    onClick={handleShowRatingEdit}
-                  >
-                    <CiEdit className="text-3xl hover:bg-gray-300" />
-                  </button>
-                  <button
-                    // className="right-5 bottom-0 absolute"
-                    onClick={() => handleAddToList(movie.id)}
-                  >
-                    <MdAdd className="text-3xl border-2 shadow-md rounded-md" />
-                  </button>
+              <div className="flex flex-col justify-end items-end">
+                <div className="gap-2.5 flex flex-row">
                   <FavoriteButton
                     sessionId={sessionId}
                     accountId={accountId}
@@ -103,6 +103,19 @@ function MediaCard({
                     mediaType={"movie"} // or hardcoded: "movie" or "tv"
                     refreshFavorites={refreshFavoriteMovies}
                   />
+                  <WatchlistButton
+                    sessionId={sessionId}
+                    accountId={accountId}
+                    mediaId={movie.id}
+                    mediaType={"movie"}
+                    refreshWatchlist={refreshWatchlistMovies}
+                  />
+                  <button
+                    // className="right-5 bottom-0 absolute"
+                    onClick={() => handleAddToList(movie.id)}
+                  >
+                    <MdAdd className="text-3xl border hover:bg-gray-300 shadow-md rounded-md bg-white" />
+                  </button>
                 </div>
               </div>
 
@@ -148,7 +161,7 @@ function MediaCard({
   );
 
   const tvCard = (
-    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-5 shadow-xl rounded-md bg-white">
+    <div className="flex justify-center border-gray-500 border-2 text-black items-center text-center w-fit h-full p-2 shadow-xl rounded-md bg-white">
       <div className="flex flex-row">
         {tvShow.map((show) => (
           <div
@@ -166,22 +179,29 @@ function MediaCard({
               loading="lazy"
             />
             <div className="flex flex-row w-full justify-between content-between items-center mt-2">
-              <div className="w-1/4">
-                {/* <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md">
-                  10
-                </div> */}
-                <RatingControl
-                  sessionId={sessionId}
-                  mediaId={show.id}
-                  mediaType={"tv"} // "movie" or "tv"
-                  showRatingEdit={showRatingEdit}
-                />
+              <div className="flex justify-start">
+                {/* <div className="bg-green-300 w-fit px-3 py-2 rounded-md shadow-md"></div> */}
+                <div
+                  onClick={() =>
+                    setShowRatingEdit((prev) => ({
+                      ...prev,
+                      [show.id]: !prev[show.id],
+                    }))
+                  }
+                >
+                  <RatingControl
+                    sessionId={sessionId}
+                    mediaId={show.id}
+                    mediaType={"tv"}
+                    showRatingEdit={!!showRatingEdit[show.id]}
+                  />
+                </div>
               </div>
 
-              <div className="w-1/2">
+              {/* <div className="w-1/2">
                 <div className="flex flex-row justify-center items-center">
                   <h1 className="font-bold">
-                    <div>{handleTitleLength(show.name)}</div>
+                    <div>{show.name}</div>
                   </h1>
                 </div>
                 <div className="flex justify-center mt-1">
@@ -193,16 +213,12 @@ function MediaCard({
                     )
                   </p>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex flex-col w-1/4 justify-end items-end">
-                <div className="gap-2 flex flex-row">
-                  <button
-                    // className="right-5 bottom-0 absolute"
-                    onClick={handleShowRatingEdit}
-                    className="hover:bg-gray-300"
-                  >
-                    <CiEdit className="text-3xl" />
+              <div className="flex flex-col justify-end items-end">
+                <div className="gap-2.5 flex flex-row">
+                  <button>
+                    <MdAdd className="text-3xl border-white bg-white text-white" />
                   </button>
                   <FavoriteButton
                     sessionId={sessionId}
@@ -210,6 +226,13 @@ function MediaCard({
                     mediaId={show.id}
                     mediaType={"tv"} // or hardcoded: "movie" or "tv"
                     refreshFavorites={refreshFavoriteTvShows}
+                  />
+                  <WatchlistButton
+                    sessionId={sessionId}
+                    accountId={accountId}
+                    mediaId={show.id}
+                    mediaType={"tv"}
+                    refreshWatchlist={refreshWatchlistTvShows}
                   />
                 </div>
               </div>
@@ -241,9 +264,9 @@ function MediaCard({
             <div className="flex flex-row w-full justify-center content-center items-center mt-2">
               <div className="flex flex-row justify-center items-center">
                 <div className="">
-                  <h1 className="">{handleTitleLength(person.name)}</h1>
+                  <h1 className="font-bold">{person.name}</h1>
                   <div className="flex justify-center">
-                    <p className="text-sm">
+                    <p className="text-sm text-gray-500">
                       (
                       {person.birthday === null || person.birthday === ""
                         ? "Unknown"
@@ -255,8 +278,8 @@ function MediaCard({
                       )
                     </p>
                   </div>
-                  <h2 className="text-sm text-gray-600">
-                    {handleTitleLength(person.known_for_department)}
+                  <h2 className="text-sm text-gray-700">
+                    {person.known_for_department}
                   </h2>
                 </div>
               </div>

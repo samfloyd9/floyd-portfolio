@@ -11,6 +11,7 @@ import FootballPage from "./pages/FootballPage";
 import BankingPage from "./pages/BankingPage";
 import ParcheesiPage from "./pages/ParcheesiPage";
 import BadgeInfoPanel from "./components/basketball/BadgeInfoPanel";
+import PicturesPage from "./pages/PicturesPage";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -63,9 +64,10 @@ function App() {
         </Route>
 
         <Route path="/jsm_banking">
-          <div className="h-screen">
-            <Sidebar />
+          <Sidebar />
+          <div className="flex flex-col gap-5 w-full">
             <BankingPage />
+            <PicturesPage />
           </div>
         </Route>
 
@@ -81,3 +83,20 @@ function App() {
 }
 
 export default App;
+
+// import 'bulma/css/bulma.css';
+// import './styles.css';
+// import React from 'react';
+// import { createRoot } from 'react-dom/client';
+// import App from './App';
+// import { Provider } from 'react-redux';
+// import { store } from './store';
+
+// const element = document.getElementById('root');
+// const root = createRoot(element);
+
+// root.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>
+// );

@@ -18,6 +18,8 @@ function WatchlistSection({
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
 
+  const [showRatingEdit, setShowRatingEdit] = useState({});
+
   const fetchItems = async (pageNum = 1, append = false) => {
     try {
       setLoading(true);
@@ -62,7 +64,7 @@ function WatchlistSection({
       {items.length > 0 && (
         <>
           <div className="flex flex-wrap gap-1.5 mt-2">
-            {items
+            {/* {items
               .sort((a, b) => b.vote_average - a.vote_average)
               .map((item) => (
                 <div
@@ -136,7 +138,83 @@ function WatchlistSection({
                     />
                   </div>
                 </div>
-              ))}
+              ))} */}
+              {items
+            .sort((a, b) => b.vote_average - a.vote_average)
+            .map((item) => (
+              <div
+                key={item.id}
+                className="border p-2 rounded-md max-w-[216px] shadow bg-white"
+              >
+                <img
+                  src={
+                    item.poster_path
+                      ? `https://image.tmdb.org/t/p/w200${item.poster_path}`
+                      : `https://via.placeholder.com/200x300?text=No+Image`
+                  }
+                  alt={item.title || item.name}
+                  className="rounded w-[200px] h-[300px] object-cover"
+                  loading="lazy"
+                />
+                <div className="flex justify-between items-center mt-2">
+                  <div className="w-full">
+                    <p className="text-md font-semibold truncate">
+                      {item.title || item.name}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {(item.release_date || item.first_air_date || "").slice(
+                        0,
+                        4
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-row justify-between items-end">
+                  <div className="flex justify-center gap-2 mt-2">
+                    <button
+                      onClick={() =>
+                        setSelectedMedia({
+                          id: item.id,
+                          media_type: mediaType,
+                        })
+                      }
+                    >
+                      <IoInformationCircleOutline className="text-[26px] border rounded hover:bg-gray-300 shadow-md" />
+                    </button>
+                    {mediaType === "movie" && (
+                      <button
+                        className=""
+                        onClick={() => handleAddToList(item.id)}
+                      >
+                        <MdAdd className="text-[26px] border-2 shadow-md rounded-md hover:bg-gray-300" />
+                      </button>
+                    )}
+                    <WatchlistButton
+                      sessionId={sessionId}
+                      accountId={accountId}
+                      mediaId={item.id}
+                      mediaType={mediaType}
+                      refreshWatchlist={() => fetchItems(1, false)}
+                    />
+                  </div>
+                  <div
+                    onClick={() =>
+                      setShowRatingEdit((prev) => ({
+                        ...prev,
+                        [item.id]: !prev[item.id],
+                      }))
+                    }
+                  >
+                    <RatingControl
+                      sessionId={sessionId}
+                      mediaId={item.id}
+                      mediaType={mediaType}
+                      showRatingEdit={!!showRatingEdit[item.id]}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Load More Button */}
@@ -145,7 +223,7 @@ function WatchlistSection({
               <button
                 onClick={handleLoadMore}
                 disabled={loading}
-                className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-md disabled:bg-gray-400"
+                className="px-4 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-md disabled:bg-gray-400"
               >
                 {loading ? "Loading..." : "Load More"}
               </button>

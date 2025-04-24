@@ -204,28 +204,12 @@ export const getFavoriteMedia = async (sessionId, accountId, mediaType, page = 1
       `https://api.themoviedb.org/3/account/${accountId}/favorite/${typePath}?api_key=${API_KEY}&session_id=${sessionId}&page=${page}`
     );
     const data = await response.json();
-    return data; // return { results: [], total_pages: N }
+    return data;
   } catch (error) {
     console.error(`Error fetching favorite ${mediaType}:`, error);
     return { results: [], total_pages: 1 };
   }
 };
-
-
-// export const getFavoriteMedia = async (sessionId, accountId, mediaType) => {
-//   const typePath = mediaType === "movie" ? "movies" : mediaType;
-
-//   try {
-//     const response = await fetch(
-//       `https://api.themoviedb.org/3/account/${accountId}/favorite/${typePath}?api_key=${API_KEY}&session_id=${sessionId}`
-//     );
-//     const data = await response.json();
-//     return data.results || [];
-//   } catch (error) {
-//     console.error(`Error fetching favorite ${mediaType}:`, error);
-//     return [];
-//   }
-// };
 
 export const rateMedia = async (sessionId, mediaId, mediaType, ratingValue) => {
   try {
@@ -302,18 +286,65 @@ export const getWatchlistMedia = async (sessionId, accountId, mediaType, page = 
   }
 };
 
+export const getKnownForCredits = async (personId) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/person/${personId}/combined_credits?api_key=${API_KEY}`
+  );
+  const data = await res.json();
+  return data.cast || [];
+};
 
-// export const getWatchlistMedia = async (sessionId, accountId, mediaType) => {
-//   const typePath = mediaType === "movie" ? "movies" : "tv";
+export const getSearchEndpoint = (type) => {
+  if (type === "movie") return "https://api.themoviedb.org/3/search/movie";
+  if (type === "tv") return "https://api.themoviedb.org/3/search/tv";
+  if (type === "person") return "https://api.themoviedb.org/3/search/person";
+  return "https://api.themoviedb.org/3/search/multi";
+};
 
-//   try {
-//     const response = await fetch(
-//       `https://api.themoviedb.org/3/account/${accountId}/watchlist/${typePath}?api_key=${API_KEY}&session_id=${sessionId}`
-//     );
-//     const data = await response.json();
-//     return data.results || [];
-//   } catch (error) {
-//     console.error(`Error fetching watchlist for ${mediaType}:`, error);
-//     return [];
-//   }
-// };
+export const fetchFilteredResults = async (
+  term,
+  type,
+  apiToken,
+  desiredCount = 20,
+  page = 1,
+  validItems = []
+) => {
+  const endpoint = getSearchEndpoint(type);
+  const res = await fetch(
+    `${endpoint}?query=${term}&include_adult=false&language=en-US&page=${page}`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+        accept: "application/json",
+      },
+    }
+  );
+
+  const data = await res.json();
+
+  const filtered = data.results.filter((item) => {
+    if ((item.media_type === "movie" || type === "movie") && !item.poster_path) return false;
+    if ((item.media_type === "tv" || type === "tv") && !item.poster_path) return false;
+    if ((item.media_type === "person" || type === "person") && !item.profile_path) return false;
+    return true;
+  });
+
+  const combined = [...validItems, ...filtered];
+
+  if (combined.length >= desiredCount || page >= data.total_pages) {
+    return {
+      results: combined.slice(0, desiredCount),
+      total_pages: data.total_pages, // you can override this if you want a new page system
+    };
+  }
+
+  return await fetchFilteredResults(
+    term,
+    type,
+    apiToken,
+    desiredCount,
+    page + 1,
+    combined
+  );
+};
