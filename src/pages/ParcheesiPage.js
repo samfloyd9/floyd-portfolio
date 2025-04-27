@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Dice from "../components/parcheesi/Dice";
 import DiceSelection from "../components/parcheesi/DiceSelection";
@@ -14,28 +14,83 @@ import {
 import ParcheesiVersion2 from "../components/parcheesi/ParcheesiVersion2";
 import OptionsMenu from "../components/parcheesi/OptionsMenu";
 
+import {
+  movePawn,
+  updateUsedDice,
+  updateAvailableDice,
+  mustExitNest,
+  hasAvailableMoves,
+  getBlockadeSpaces,
+  startingSpaces,
+  isSafeSpace,
+} from "../utils/gameLogic";
+
 function ParcheesiPage() {
   const [pawns, setPawns] = useState([
-    { id: "R1", position: 32, color: "red", location: "onTrack" },
-    { id: "R2", position: 30, color: "red", location: "onTrack" },
-    { id: "R3", position: 63, color: "red", location: "onTrack" },
-    { id: "R4", position: 12, color: "red", location: "onTrack" },
+    { id: "R1", position: 107, color: "red", location: "home" },
+    { id: "R2", position: 106, color: "red", location: "home" },
+    { id: "R3", position: 105, color: "red", location: "home" },
+    { id: "R4", position: 104, color: "red", location: "home" },
 
-    { id: "B1", position: 61, color: "blue", location: "onTrack" },
-    { id: "B2", position: 67, color: "blue", location: "onTrack" },
-    { id: "B3", position: 29, color: "blue", location: "onTrack" },
-    { id: "B4", position: 21, color: "blue", location: "onTrack" },
+    { id: "B1", position: 303, color: "blue", location: "home" },
+    { id: "B2", position: 302, color: "blue", location: "home" },
+    { id: "B3", position: 301, color: "blue", location: "home" },
+    { id: "B4", position: 308, color: "blue", location: "home" },
 
-    { id: "G1", position: 44, color: "green", location: "onTrack" },
-    { id: "G2", position: 2, color: "green", location: "onTrack" },
-    { id: "G3", position: 7, color: "green", location: "onTrack" },
-    { id: "G4", position: 58, color: "green", location: "onTrack" },
+    { id: "G1", position: 202, color: "green", location: "home" },
+    { id: "G2", position: 208, color: "green", location: "home" },
+    { id: "G3", position: 201, color: "green", location: "home" },
+    { id: "G4", position: 208, color: "green", location: "home" },
 
-    { id: "Y1", position: 11, color: "yellow", location: "onTrack" },
-    { id: "Y2", position: 19, color: "yellow", location: "onTrack" },
-    { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
-    { id: "Y4", position: 13, color: "yellow", location: "onTrack" },
+    { id: "Y1", position: 406, color: "yellow", location: "home" },
+    { id: "Y2", position: 408, color: "yellow", location: "home" },
+    { id: "Y3", position: 404, color: "yellow", location: "home" },
+    { id: "Y4", position: 408, color: "yellow", location: "home" },
   ]);
+
+  // const [pawns, setPawns] = useState([
+  //   { id: "R1", position: 32, color: "red", location: "onTrack" },
+  //   { id: "R2", position: 30, color: "red", location: "onTrack" },
+  //   { id: "R3", position: 63, color: "red", location: "onTrack" },
+  //   { id: "R4", position: 12, color: "red", location: "onTrack" },
+
+  //   { id: "B1", position: 61, color: "blue", location: "onTrack" },
+  //   { id: "B2", position: 67, color: "blue", location: "onTrack" },
+  //   { id: "B3", position: 29, color: "blue", location: "onTrack" },
+  //   { id: "B4", position: 22, color: "blue", location: "onTrack" },
+
+  //   { id: "G1", position: 44, color: "green", location: "onTrack" },
+  //   { id: "G2", position: 2, color: "green", location: "onTrack" },
+  //   { id: "G3", position: 7, color: "green", location: "onTrack" },
+  //   { id: "G4", position: 58, color: "green", location: "onTrack" },
+
+  //   { id: "Y1", position: 11, color: "yellow", location: "onTrack" },
+  //   { id: "Y2", position: 19, color: "yellow", location: "onTrack" },
+  //   { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
+  //   { id: "Y4", position: 13, color: "yellow", location: "onTrack" },
+  // ]);
+
+  // const [pawns, setPawns] = useState([
+  //   { id: "R1", position: null, color: "red", location: "nest" },
+  //   { id: "R2", position: null, color: "red", location: "nest" },
+  //   { id: "R3", position: null, color: "red", location: "nest" },
+  //   { id: "R4", position: null, color: "red", location: "nest" },
+
+  //   { id: "B1", position: null, color: "blue", location: "nest" },
+  //   { id: "B2", position: null, color: "blue", location: "nest" },
+  //   { id: "B3", position: null, color: "blue", location: "nest" },
+  //   { id: "B4", position: null, color: "blue", location: "nest" },
+
+  //   { id: "G1", position: null, color: "green", location: "nest" },
+  //   { id: "G2", position: null, color: "green", location: "nest" },
+  //   { id: "G3", position: null, color: "green", location: "nest" },
+  //   { id: "G4", position: null, color: "green", location: "nest" },
+
+  //   { id: "Y1", position: null, color: "yellow", location: "nest" },
+  //   { id: "Y2", position: null, color: "yellow", location: "nest" },
+  //   { id: "Y3", position: null, color: "yellow", location: "nest" },
+  //   { id: "Y4", position: null, color: "yellow", location: "nest" },
+  // ]);
 
   const [dice, setDice] = useState({
     dieOne: {
@@ -61,6 +116,7 @@ function ParcheesiPage() {
   const [gameStarted, setGameStarted] = useState(false);
   const [hasRolled, setHasRolled] = useState(false);
   const [doublesCount, setDoublesCount] = useState(0);
+  const [blockades, setBlockades] = useState([]);
 
   const playerOrder = ["yellow", "green", "red", "blue"]; // Turn cycle order
 
@@ -73,14 +129,13 @@ function ParcheesiPage() {
 
   const rollTwoDice = () => {
     if (hasRolled) return; // Prevent rolling again before turn ends
-
+  
     setRolling(true); // Start rolling animation
-
+  
     setTimeout(() => {
       const dieOneResult = Math.floor(Math.random() * 6) + 1;
       const dieTwoResult = Math.floor(Math.random() * 6) + 1;
-      // const bothDiceTotal = dieOneResult + dieTwoResult;
-
+  
       const dieImg = (dieResult) => {
         switch (dieResult) {
           case 1:
@@ -99,23 +154,54 @@ function ParcheesiPage() {
             return null;
         }
       };
-
+  
       setDice({
-        ...dice,
-        dieOne: { result: dieOneResult, dieImg: dieImg(dieOneResult) },
-        dieTwo: { result: dieTwoResult, dieImg: dieImg(dieTwoResult) },
+        dieOne: { result: dieOneResult, dieImg: dieImg(dieOneResult), index: "dieOne" },
+        dieTwo: { result: dieTwoResult, dieImg: dieImg(dieTwoResult), index: "dieTwo" },
       });
-
-      // setAvailableDice([dieOneResult, dieTwoResult, bothDiceTotal]); // Both dice are available to use
+  
       setAvailableDice({
-        ...dice,
-        both: { result: dieTwoResult + dieOneResult, index: "both" },
+        dieOne: { result: dieOneResult, index: "dieOne" },
+        dieTwo: { result: dieTwoResult, index: "dieTwo" },
+        both: { result: dieOneResult + dieTwoResult, index: "both" },
       });
-
-      setRolling(false); // Stop rolling animation
+  
+      setRolling(false);
       setHasRolled(true);
-    }, 2000); // Wait 1.5 seconds to show final dice
+  
+      // === New check after rolling ===
+      setTimeout(() => {
+        const canMove = hasAvailableMoves(pawns, currentPlayer, {
+          dieOne: { result: dieOneResult },
+          dieTwo: { result: dieTwoResult },
+          both: { result: dieOneResult + dieTwoResult },
+        });
+  
+        if (!canMove) {
+          setFirstPlayerMessage(`${currentPlayer.toUpperCase()} has no available moves... skipping turn.`);
+          setTimeout(() => {
+            setFirstPlayerMessage("");
+            endTurn();
+          }, 2000);
+        } else {
+          const forcedOut = mustExitNest(pawns, currentPlayer, {
+            dieOne: { result: dieOneResult },
+            dieTwo: { result: dieTwoResult },
+            both: { result: dieOneResult + dieTwoResult },
+          }, blockades);
+  
+          if (forcedOut) {
+            setFirstPlayerMessage(`${currentPlayer.toUpperCase()} must move a pawn out of the nest!`);
+            setTimeout(() => {
+              setFirstPlayerMessage("");
+            }, 3000);
+          }
+        }
+      }, 100);
+    }, 2000); // 2s dice animation
   };
+  
+
 
   const currentPlayerColor = (currentPlayer) => {
     if (currentPlayer === "red") {
@@ -147,28 +233,6 @@ function ParcheesiPage() {
         return null;
     }
   };
-
-  // const [pawns, setPawns] = useState([
-  //   { id: "R1", position: null, color: "red", location: "nest" },
-  //   { id: "R2", position: null, color: "red", location: "nest" },
-  //   { id: "R3", position: null, color: "red", location: "nest" },
-  //   { id: "R4", position: null, color: "red", location: "nest" },
-
-  //   { id: "B1", position: null, color: "blue", location: "nest" },
-  //   { id: "B2", position: null, color: "blue", location: "nest" },
-  //   { id: "B3", position: null, color: "blue", location: "nest" },
-  //   { id: "B4", position: null, color: "blue", location: "nest" },
-
-  //   { id: "G1", position: null, color: "green", location: "nest" },
-  //   { id: "G2", position: null, color: "green", location: "nest" },
-  //   { id: "G3", position: null, color: "green", location: "nest" },
-  //   { id: "G4", position: null, color: "green", location: "nest" },
-
-  //   { id: "Y1", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y2", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y3", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y4", position: null, color: "yellow", location: "nest" },
-  // ]);
 
   const rollForTurn = async () => {
     const players = ["red", "blue", "yellow", "green"];
@@ -304,139 +368,165 @@ function ParcheesiPage() {
   //   return blockades.includes(position); // If the space is in the blockade list, it's blocked
   // };
 
-  const homeColumnStarts = {
-    red: 34,
-    blue: 17,
-    yellow: 68,
-    green: 51,
-  };
+  // const startingSpaces = {
+  //   red: 39,
+  //   blue: 22,
+  //   yellow: 5,
+  //   green: 56,
+  // };
+
+  // const homeColumnStarts = {
+  //   red: 34,
+  //   blue: 17,
+  //   yellow: 68,
+  //   green: 51,
+  // };
 
   const confirmMove = () => {
-    if (!selectedPawn || !selectedDice) return; // Ensure selections exist
-    // if (hasRolled) return;
-
-    let newPosition = (selectedPawn.position + selectedDice.value) % 68;
-    let remainingMoves = selectedDice.value;
-
-    // if (isMoveBlocked(newPosition)) {
-    //   console.log("Move is blocked!");
-    //   return;
-    // }
-
-    if (newPosition === homeColumnStarts[selectedPawn.color]) {
-      remainingMoves -= newPosition - selectedPawn.position; // Subtract moves used to reach home column
-
-      setPawns((prevPawns) =>
-        prevPawns.map((pawn) =>
-          pawn.id === selectedPawn.id
-            ? {
-                ...pawn,
-                position: remainingMoves, // Move within home column
-                location: "homeColumn",
-              }
-            : pawn
-        )
-      );
-    } else {
-      // Normal movement
-      setPawns((prevPawns) =>
-        prevPawns.map((pawn) =>
-          pawn.id === selectedPawn.id
-            ? { ...pawn, position: newPosition }
-            : pawn
-        )
-      );
+    if (!selectedPawn || !selectedDice) return;
+  
+    // === Must exit nest if rolled a 5 and have pawns in nest ===
+    const forcedOut = mustExitNest(pawns, currentPlayer, availableDice, blockades);
+    if (
+      forcedOut &&
+      selectedPawn.location !== "nest" &&
+      (selectedDice.value === 5 || selectedDice.index === "both")
+    ) {
+      alert("You must move a pawn out of the nest with your 5 before any other moves.");
+      return;
     }
-
-    // setPawns((prevPawns) =>
-    //   prevPawns.map((pawn) =>
-    //     pawn.id === selectedPawn.id ? { ...pawn, position: newPosition } : pawn
-    //   )
-    // );
-
-    setUsedDice((prevUsed) => {
-      const updatedUsedDice = [...prevUsed, { index: selectedDice.index }];
-    
-      // If both dice are used, store all three in the array
-      if (
-        updatedUsedDice.some(die => die.index === "dieOne") &&
-        updatedUsedDice.some(die => die.index === "dieTwo")
-      ) {
-        return [{ index: "dieOne" }, { index: "dieTwo" }, { index: "both" }];
+  
+    // === Determine move destination ===
+    const destination =
+      selectedPawn.location === "onTrack"
+        ? (selectedPawn.position + selectedDice.value - 1) % 68 + 1
+        : startingSpaces[selectedPawn.color]; // If moving from nest
+  
+    // === Check for illegal 3-pawn stack ===
+    const pawnsOnDestination = pawns.filter(
+      (p) => p.position === destination && p.color === selectedPawn.color
+    );
+    if (pawnsOnDestination.length >= 2) {
+      alert("You can't move here — it would create an illegal 3-pawn stack.");
+      return;
+    }
+  
+    // === Check if movement is blocked by a blockade ===
+    if (selectedPawn.location === "onTrack") {
+      const path = [];
+      let steps = selectedDice.value;
+      let currentPos = selectedPawn.position;
+  
+      while (steps > 0) {
+        currentPos = (currentPos % 68) + 1;
+        path.push(currentPos);
+        steps--;
       }
-    
-      if (updatedUsedDice.some(die => die.index === "both")) {
-        return [{ index: "dieOne" }, { index: "dieTwo" }, { index: "both" }];
+  
+      const isBlocked = path.some((step) => blockades.includes(step));
+      if (isBlocked) {
+        alert("Move blocked by a blockade! Choose another move.");
+        return;
       }
-    
-      return updatedUsedDice;
-    });
-
-    setAvailableDice((prevDice) => {
-      let updatedDice = { ...prevDice }; // Make a copy of availableDice
-
-      if (selectedDice.index === "both") {
-        // If both dice were used, clear availableDice
-        return {};
-      } else {
-        // Remove the selected die from availableDice
-        delete updatedDice[selectedDice.index]; // Remove the selected die index from availableDice
-
-        // If the "both" option exists, remove it as one die has been selected
-        if (updatedDice.both) {
-          delete updatedDice.both; // Remove "both" if a single die was used
-        }
-
-        return updatedDice; // Return updated availableDice
-      }
-    });
-    
-    // const allDiceUsed =
-    //   (usedDice.some((die) => die.index === "dieOne") &&
-    //     usedDice.some((die) => die.index === "dieTwo")) ||
-    //   usedDice.some((die) => die.index === "both");
-
-    // const allDiceUsed =
-    //   (usedDice.some((die) => die.index === "dieOne") &&
-    //     usedDice.some((die) => die.index === "dieTwo") && usedDice.some((die) => die.index === "both"));
-
-    // const allDiceUsed = usedDice.length === 3;
-
-    // if (Object.keys(availableDice).length === 0) {
-    //   console.log("All dice used. Ending turn...");
-    //   endTurn();
-    // }
-
-    // Reset selections
+    }
+  
+    // === Capture Logic ===
+    const occupant = pawns.find(
+      (p) => p.position === destination && p.color !== selectedPawn.color
+    );
+  
+    if (occupant && isSafeSpace(destination)) {
+      alert("You can't capture a pawn on a safe space!");
+      return;
+    }
+  
+    let updatedPawns = [...pawns];
+    let captured = false;
+  
+    if (occupant && !isSafeSpace(destination)) {
+      // Capture opponent pawn
+      updatedPawns = updatedPawns.map((pawn) =>
+        pawn.id === occupant.id
+          ? { ...pawn, position: null, location: "nest" }
+          : pawn
+      );
+      captured = true;
+    }
+  
+    // === Perform move ===
+    const moveResult = movePawn(selectedPawn, selectedDice, updatedPawns, setPawns);
+  
+    if (!moveResult.success) {
+      alert(moveResult.reason);
+      return;
+    }
+  
+    // === Update dice usage ===
+    setUsedDice((prev) => updateUsedDice(prev, selectedDice));
+    setAvailableDice((prev) => updateAvailableDice(prev, selectedDice));
+  
+    // === Award Bonus 20 after capture ===
+    if (captured) {
+      setAvailableDice((prev) => ({
+        ...prev,
+        bonus20: { result: 20, index: "bonus" },
+      }));
+    }
+  
+    // === Cleanup after move ===
     setSelectedPawn(null);
     setSelectedDice(null);
-    setHasRolled(true);
+    setHasRolled(true); // Player already rolled this turn
   };
-
-  // useEffect(() => {
-  //   console.log("Checking availableDice after update:", availableDice);
   
-  //   if (Object.keys(availableDice).length === 0) {
-  //     console.log("All dice used. Ending turn...");
-  //     endTurn();
-  //   }
-  // }, [availableDice]); // Runs every time availableDice updates
+  
+  
+  
+  
 
   const endTurn = () => {
-    if (Object.keys(availableDice).length > 0) return;
     const currentIndex = playerOrder.indexOf(currentPlayer);
-    const nextPlayer = playerOrder[(currentIndex + 1) % playerOrder.length]; // Loop to the next player
-
-    setCurrentPlayer(nextPlayer); // Set the next turn
-    setAvailableDice({}); // Reset dice for next turn
-    setUsedDice([]); // Reset used dice
-    setHasRolled(false); // Allow rolling again
+    const nextPlayer = playerOrder[(currentIndex + 1) % playerOrder.length];
+  
+    setCurrentPlayer(nextPlayer);
+    setAvailableDice({});
+    setUsedDice([]);
+    setSelectedPawn(null);
+    setSelectedDice(null);
+    setHasRolled(false);
+    setDoublesCount(0); // reset doubles unless you handle 3x logic later
   };
 
-  console.log("availableDice:", availableDice);
-  console.log("usedDice:", usedDice);
-  console.log("currentPlayer:", currentPlayer);
-  console.log("theFuckingProblem:", Object.keys(availableDice), Object.keys(availableDice).length );
+  useEffect(() => {
+    if (gameStarted && Object.keys(availableDice).length === 0 && hasRolled) {
+      endTurn();
+    }
+  }, [availableDice]);
+
+  // const endTurn = () => {
+  //   if (Object.keys(availableDice).length > 0) return;
+  //   const currentIndex = playerOrder.indexOf(currentPlayer);
+  //   const nextPlayer = playerOrder[(currentIndex + 1) % playerOrder.length]; // Loop to the next player
+
+  //   setCurrentPlayer(nextPlayer); // Set the next turn
+  //   setAvailableDice({}); // Reset dice for next turn
+  //   setUsedDice([]); // Reset used dice
+  //   setHasRolled(false); // Allow rolling again
+  // };
+
+  // console.log("availableDice:", availableDice);
+  // console.log("usedDice:", usedDice);
+  // console.log("currentPlayer:", currentPlayer);
+  // console.log(
+  //   "theFuckingProblem:",
+  //   Object.keys(availableDice),
+  //   Object.keys(availableDice).length
+  // );
+
+  useEffect(() => {
+    const newBlockades = getBlockadeSpaces(pawns);
+    setBlockades(newBlockades);
+  }, [pawns]);
 
   return (
     <div className="flex flex-col justify-center content-center self-center items-center h-screen -mt-12">
@@ -450,6 +540,7 @@ function ParcheesiPage() {
             selectedPawn={selectedPawn}
             setSelectedPawn={setSelectedPawn}
             setSelectedDice={setSelectedDice}
+            blockades={blockades}
           />
         </div>
 

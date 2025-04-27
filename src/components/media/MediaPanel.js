@@ -190,7 +190,7 @@ function MediaPanel({
                 movie.tagline === "" || movie.tagline === null ? "mt-3" : ""
               }`}
             >
-              <div>Overview: </div>
+              <div className="font-bold">Overview: </div>
               <div>"{movie.overview}"</div>
             </div>
             <div className="flex flex-row justify-around w-full">
@@ -539,7 +539,7 @@ function MediaPanel({
                 show.tagline === "" || show.tagline === null ? "mt-3" : ""
               }`}
             >
-              <div>Overview: </div>
+              <div className="font-bold">Overview: </div>
               <div>"{show.overview}"</div>
             </div>
           </div>

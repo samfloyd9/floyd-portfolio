@@ -7,7 +7,8 @@ const ParcheesiVersion2 = ({
   currentPlayer,
   selectedPawn,
   setSelectedPawn,
-  setSelectedDice
+  setSelectedDice,
+  blockades,
 }) => {
   const [topQuad, setTopQuad] = useState([
     { id: 26, type: "regular", position: [0, 0] },
@@ -185,17 +186,61 @@ const ParcheesiVersion2 = ({
 
   return (
     <div className="grid grid-cols-3 grid-rows-3 bg-gray-300 border-4 border-black shadow-lg rounded-sm">
-      <Nest color="red" pawns={pawns} />
+      <Nest
+        color="red"
+        pawns={pawns}
+        handlePawnSelection={handlePawnSelection}
+        selectedPawn={selectedPawn}
+      />
       {/* Top Quadrant */}
       <div className="grid grid-cols-3 grid-rows-8 m-auto transform rotate-180 border border-black">
         {topQuad.map((space) => {
-          const pawnsHere = pawns.filter((p) => p.position === space.id); // Get all pawns on this space
+          const pawnsHere = pawns.filter((p) => {
+            if (
+              space.id >= 101 &&
+              space.id <= 107 &&
+              p.location === "homeColumn" &&
+              p.color === "red"
+            ) {
+              // Red home column spaces (101-107)
+              return p.position === space.id - 100;
+            }
+            if (
+              space.id >= 201 &&
+              space.id <= 207 &&
+              p.location === "homeColumn" &&
+              p.color === "blue"
+            ) {
+              // Blue home column spaces (201-207)
+              return p.position === space.id - 200;
+            }
+            if (
+              space.id >= 301 &&
+              space.id <= 307 &&
+              p.location === "homeColumn" &&
+              p.color === "yellow"
+            ) {
+              // Yellow home column spaces (301-307)
+              return p.position === space.id - 300;
+            }
+            if (
+              space.id >= 401 &&
+              space.id <= 407 &&
+              p.location === "homeColumn" &&
+              p.color === "green"
+            ) {
+              // Green home column spaces (401-407)
+              return p.position === space.id - 400;
+            }
+            return p.location === "onTrack" && p.position === space.id;
+          });
+
           return (
             <div
               key={space.id}
               className={`flex items-center justify-center border-black border w-16 h-6 ${determineSpaceType(
                 space.id
-              )}`}
+              )} ${blockades.includes(space.id) ? "bg-black text-white" : ""}`}
             >
               <div className="absolute">
                 {space.type === "safe" && (
@@ -210,7 +255,7 @@ const ParcheesiVersion2 = ({
               </div>
 
               <div className="absolute transform rotate-90">
-              {pawnsHere.map((pawn) => (
+                {pawnsHere.map((pawn) => (
                   <div
                     key={pawn.id}
                     className={`z-50 ${
@@ -232,18 +277,62 @@ const ParcheesiVersion2 = ({
           );
         })}
       </div>
-      <Nest color="blue" pawns={pawns} />
+      <Nest
+        color="blue"
+        pawns={pawns}
+        handlePawnSelection={handlePawnSelection}
+        selectedPawn={selectedPawn}
+      />
 
       {/* Left Quadrant */}
       <div className="grid grid-cols-3 grid-rows-8 bg-green-300 border transform rotate-90 border-black">
         {leftQuad.map((space) => {
-          const pawnsHere = pawns.filter((p) => p.position === space.id); // Get all pawns on this space
+          const pawnsHere = pawns.filter((p) => {
+            if (
+              space.id >= 101 &&
+              space.id <= 107 &&
+              p.location === "homeColumn" &&
+              p.color === "red"
+            ) {
+              // Red home column spaces (101-107)
+              return p.position === space.id - 100;
+            }
+            if (
+              space.id >= 201 &&
+              space.id <= 207 &&
+              p.location === "homeColumn" &&
+              p.color === "blue"
+            ) {
+              // Blue home column spaces (201-207)
+              return p.position === space.id - 200;
+            }
+            if (
+              space.id >= 301 &&
+              space.id <= 307 &&
+              p.location === "homeColumn" &&
+              p.color === "yellow"
+            ) {
+              // Yellow home column spaces (301-307)
+              return p.position === space.id - 300;
+            }
+            if (
+              space.id >= 401 &&
+              space.id <= 407 &&
+              p.location === "homeColumn" &&
+              p.color === "green"
+            ) {
+              // Green home column spaces (401-407)
+              return p.position === space.id - 400;
+            }
+            return p.location === "onTrack" && p.position === space.id;
+          });
+
           return (
             <div
               key={space.id}
               className={`flex items-center justify-center border-black border w-16 h-6 ${determineSpaceType(
                 space.id
-              )}`}
+              )} ${blockades.includes(space.id) ? "bg-black text-white" : ""}`}
             >
               <div className="absolute">
                 {space.type === "safe" && (
@@ -257,7 +346,7 @@ const ParcheesiVersion2 = ({
                 )}
               </div>
               <div className="absolute transform rotate-90">
-              {pawnsHere.map((pawn) => (
+                {pawnsHere.map((pawn) => (
                   <div
                     key={pawn.id}
                     className={`z-50 ${
@@ -284,7 +373,7 @@ const ParcheesiVersion2 = ({
         <div className="relative top-0 left-0 w-full h-full flex justify-center items-center z-50">
           <div className="absolute transform rotate-90 -top-8">
             {redHomePawns.map((pawn) => (
-              <div key={pawn.id} className="">
+              <div key={pawn.id} className="flex">
                 <Pawn color={pawn.color} />
               </div>
             ))}
@@ -323,60 +412,52 @@ const ParcheesiVersion2 = ({
       {/* Right Quadrant */}
       <div className="grid grid-cols-3 grid-rows-8 bg-blue-300 transform -rotate-90 border border-black">
         {rightQuad.map((space) => {
-          const pawnsHere = pawns.filter((p) => p.position === space.id); // Get all pawns on this space
-          return (
-            <div
-              key={space.id}
-              className={`flex items-center justify-center border-black border w-16 h-6 ${determineSpaceType(
-                space.id
-              )}`}
-            >
-              <div className="absolute">
-                {space.type === "safe" && (
-                  <div className="border-2 w-[24px] h-6 rounded-full border-black flex justify-center items-center">
-                    <div
-                      className={`border-2 w-[10px] h-[10px] rounded-full ${startSpaceStyling(
-                        space.id
-                      )}`}
-                    ></div>
-                  </div>
-                )}
-              </div>
-              <div className="absolute transform rotate-90">
-              {pawnsHere.map((pawn) => (
-                  <div
-                    key={pawn.id}
-                    className={`z-50 ${
-                      selectedPawn?.id === pawn.id
-                        ? "border-2 border-red-500"
-                        : "cursor-pointer"
-                    }`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      console.log("Pawn Clicked!", pawn);
-                      handlePawnSelection(pawn);
-                    }}
-                  >
-                    <Pawn color={pawn.color} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+          const pawnsHere = pawns.filter((p) => {
+            if (
+              space.id >= 101 &&
+              space.id <= 107 &&
+              p.location === "homeColumn" &&
+              p.color === "red"
+            ) {
+              // Red home column spaces (101-107)
+              return p.position === space.id - 100;
+            }
+            if (
+              space.id >= 201 &&
+              space.id <= 207 &&
+              p.location === "homeColumn" &&
+              p.color === "blue"
+            ) {
+              // Blue home column spaces (201-207)
+              return p.position === space.id - 200;
+            }
+            if (
+              space.id >= 301 &&
+              space.id <= 307 &&
+              p.location === "homeColumn" &&
+              p.color === "yellow"
+            ) {
+              // Yellow home column spaces (301-307)
+              return p.position === space.id - 300;
+            }
+            if (
+              space.id >= 401 &&
+              space.id <= 407 &&
+              p.location === "homeColumn" &&
+              p.color === "green"
+            ) {
+              // Green home column spaces (401-407)
+              return p.position === space.id - 400;
+            }
+            return p.location === "onTrack" && p.position === space.id;
+          });
 
-      <Nest color="green" pawns={pawns} />
-      {/* Bottom Quadrant */}
-      <div className="grid grid-cols-3 grid-rows-8 bg-yellow-300 transform border border-black">
-        {bottomQuad.map((space) => {
-          const pawnsHere = pawns.filter((p) => p.position === space.id); // Get all pawns on this space
           return (
             <div
               key={space.id}
               className={`flex items-center justify-center border-black border w-16 h-6 ${determineSpaceType(
                 space.id
-              )}`}
+              )} ${blockades.includes(space.id) ? "bg-black text-white" : ""}`}
             >
               <div className="absolute">
                 {space.type === "safe" && (
@@ -412,7 +493,103 @@ const ParcheesiVersion2 = ({
           );
         })}
       </div>
-      <Nest color="yellow" pawns={pawns} />
+
+      <Nest
+        color="green"
+        pawns={pawns}
+        handlePawnSelection={handlePawnSelection}
+        selectedPawn={selectedPawn}
+      />
+      {/* Bottom Quadrant */}
+      <div className="grid grid-cols-3 grid-rows-8 bg-yellow-300 transform border border-black">
+        {bottomQuad.map((space) => {
+          const pawnsHere = pawns.filter((p) => {
+            if (
+              space.id >= 101 &&
+              space.id <= 107 &&
+              p.location === "homeColumn" &&
+              p.color === "red"
+            ) {
+              // Red home column spaces (101-107)
+              return p.position === space.id - 100;
+            }
+            if (
+              space.id >= 201 &&
+              space.id <= 207 &&
+              p.location === "homeColumn" &&
+              p.color === "blue"
+            ) {
+              // Blue home column spaces (201-207)
+              return p.position === space.id - 200;
+            }
+            if (
+              space.id >= 301 &&
+              space.id <= 307 &&
+              p.location === "homeColumn" &&
+              p.color === "yellow"
+            ) {
+              // Yellow home column spaces (301-307)
+              return p.position === space.id - 300;
+            }
+            if (
+              space.id >= 401 &&
+              space.id <= 407 &&
+              p.location === "homeColumn" &&
+              p.color === "green"
+            ) {
+              // Green home column spaces (401-407)
+              return p.position === space.id - 400;
+            }
+            return p.location === "onTrack" && p.position === space.id;
+          });
+
+          return (
+            <div
+              key={space.id}
+              className={`flex items-center justify-center border-black border w-16 h-6 ${determineSpaceType(
+                space.id
+              )} ${blockades.includes(space.id) ? "bg-black text-white" : ""}`}
+            >
+              <div className="absolute">
+                {space.type === "safe" && (
+                  <div className="border-2 w-[24px] h-6 rounded-full border-black flex justify-center items-center">
+                    <div
+                      className={`border-2 w-[10px] h-[10px] rounded-full ${startSpaceStyling(
+                        space.id
+                      )}`}
+                    ></div>
+                  </div>
+                )}
+              </div>
+              <div className="absolute transform rotate-90">
+                {pawnsHere.map((pawn) => (
+                  <div
+                    key={pawn.id}
+                    className={`z-50 ${
+                      selectedPawn?.id === pawn.id
+                        ? "border-2 border-red-500"
+                        : "cursor-pointer"
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      console.log("Pawn Clicked!", pawn);
+                      handlePawnSelection(pawn);
+                    }}
+                  >
+                    <Pawn color={pawn.color} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <Nest
+        color="yellow"
+        pawns={pawns}
+        handlePawnSelection={handlePawnSelection}
+        selectedPawn={selectedPawn}
+      />
     </div>
   );
 };

@@ -140,7 +140,7 @@ function FavoriteSection({
             ))}
         </div>
       ) : (
-        <p className="text-gray-400 mt-4">No items found.</p>
+        <p className="text-gray-400 mt-4">No items found. Please login to favorite movies and shows.</p>
       )}
 
       {/* Load More Button */}

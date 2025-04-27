@@ -18,6 +18,7 @@ import {
   getWatchlistMedia,
 } from "../../api/tmdbapi";
 import FeaturedMedia from "./FeaturedMedia";
+import MovieRoulette from "./MovieRoulette";
 
 function Media() {
   const API_KEY = "917887a11fe36d6ce72f7a4b6e8d30b0";
@@ -33,6 +34,7 @@ function Media() {
   const [mediaPages, setMediaPages] = useState(null);
 
   const [detailedMedia, setDetailedMedia] = useState([]);
+  const [movies, setMovies] = useState({});
   const [tvShow, setTvShow] = useState([]);
   const [person, setPerson] = useState([]);
 
@@ -52,10 +54,9 @@ function Media() {
 
   const [mediaTypeFilter, setMediaTypeFilter] = useState("all"); // all | movie | tv | person
 
-  const [movies, setMovies] = useState({});
-
   const [toggleFeaturedMedia, setToggleFeaturedMedia] = useState(true);
   const [toggleMediaLists, setToggleMediaLists] = useState(true);
+  const [toggleMovieRoulette, setToggleMovieRoulette] = useState(false);
 
   const [sessionId, setSessionId] = useState(
     localStorage.getItem("tmdb_session_id")
@@ -369,11 +370,21 @@ function Media() {
   const handleShowFeaturedMedia = () => {
     setToggleFeaturedMedia(!toggleFeaturedMedia);
     setSelectedMedia(null);
+    // setTerm("");
+    // setInput("");
+    // setMediaList([]);
   };
 
   const handleShowMediaLists = () => {
     setToggleMediaLists(!toggleMediaLists);
-    // setSelectedMedia(null);
+  };
+
+  const handleShowMovieRoulette = () => {
+    setToggleMovieRoulette(!toggleMovieRoulette);
+    setSelectedMedia(null);
+    // setTerm("");
+    // setInput("");
+    // setMediaList([]);
   };
 
   return (
@@ -415,6 +426,8 @@ function Media() {
         setToggleFeaturedMedia={setToggleFeaturedMedia}
         toggleMediaLists={toggleMediaLists}
         setToggleMediaLists={setToggleMediaLists}
+        toggleMovieRoulette={toggleMovieRoulette}
+        setToggleMovieRoulette={setToggleMovieRoulette}
       />
 
       {toggleFeaturedMedia && mediaList?.length === 0 && !selectedMedia && (
@@ -430,40 +443,58 @@ function Media() {
         />
       )}
 
-      {!toggleFeaturedMedia && !toggleMediaLists && term === "" && selectedMedia === null && (
-        <div>
-          <div className="text-center text-gray-400 mt-10 text-lg">
-            Select a section to display:
-          </div>
-          <div className="flex flex-row gap-4 ">
-            <button
-              className={`px-1.5 py-1 text-black shadow-lg bg-gray-300 hover:bg-gray-400 rounded-md ${
-                toggleFeaturedMedia && !selectedMedia
-                  ? "bg-purple-500 text-white hover:bg-purple-600"
-                  : "bg-gray-300"
-              }`}
-              onClick={handleShowFeaturedMedia}
-            >
-              Featured
-            </button>
-
-            <div>or</div>
-
-            <button
-              className={`px-1.5 py-1 text-black shadow-lg hover:bg-gray-400 rounded-md ${
-                toggleMediaLists
-                  ? "bg-purple-500 text-white hover:bg-purple-600"
-                  : "bg-gray-300"
-              }`}
-              onClick={handleShowMediaLists}
-            >
-              Favorites/Watchlists
-            </button>
-          </div>
-          <div>or</div>
-          <div>Search for 'Movies' and 'TV Shows' as well as 'Cast' and 'Crew' members!</div>
-        </div>
+      {toggleMovieRoulette && mediaList?.length === 0 && !selectedMedia && (
+        <MovieRoulette 
+          setSelectedMedia={setSelectedMedia}
+          accountId={accountId}
+          sessionId={sessionId}
+          refreshFavoriteMovies={refreshFavoriteMovies}
+          refreshWatchlistMovies={refreshWatchlistMovies}
+          handleAddToList={handleAddToList}
+        />
       )}
+
+      {!toggleFeaturedMedia &&
+        !toggleMediaLists &&
+        !toggleMovieRoulette &&
+        term === "" &&
+        selectedMedia === null && (
+          <div className="w-full mt-20 p-8 rounded-md flex items-center justify-center">
+            <div className="flex flex-col justify-center w-fit items-center gap-7 p-8 bg-gradient-to-br from-violet-800 to-violet-950 rounded-lg">
+              <div className="text-center text-2xl font-bold text-orange-400">
+                Select a section to display:
+              </div>
+              <div className="flex flex-row gap-4 items-center justify-center">
+                <button
+                  className={`px-1.5 py-1 text-white bg-purple-500 shadow-lg hover:bg-purple-600 rounded-md`}
+                  onClick={handleShowFeaturedMedia}
+                >
+                  Featured
+                </button>
+                <button
+                  className={`px-1.5 py-1 text-white bg-purple-500 shadow-lg hover:bg-purple-600 rounded-md`}
+                  onClick={handleShowMediaLists}
+                >
+                  Favorites/Watchlists
+                </button>
+                <button
+                  className={`px-1.5 py-1 text-white bg-purple-500 shadow-lg hover:bg-purple-600 rounded-md`}
+                  onClick={handleShowMovieRoulette}
+                >
+                  Movie Finder
+                </button>
+              </div>
+              <div className="text-center text-white font-bold text-lg">OR</div>
+              <div className="text-center text-xl font-bold text-orange-400">
+                Search for 'Movies' and 'TV Shows' as well as 'Cast' and 'Crew'
+                members!
+              </div>
+              <div className="text-center text-lg text-white">
+                Login to favorite, add to watchlists and create lists!
+              </div>
+            </div>
+          </div>
+        )}
 
       <div className="flex flex-row items-center gap-5 mt-4">
         <MediaCard

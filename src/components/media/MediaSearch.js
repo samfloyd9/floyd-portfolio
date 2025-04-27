@@ -38,6 +38,8 @@ function MediaSearch({
   setToggleFeaturedMedia,
   setToggleMediaLists,
   toggleMediaLists,
+  toggleMovieRoulette,
+  setToggleMovieRoulette,
 }) {
   const totalSearchPages = mediaPages?.total_pages;
 
@@ -145,12 +147,25 @@ function MediaSearch({
 
   const handleShowFeaturedMedia = () => {
     setToggleFeaturedMedia(!toggleFeaturedMedia);
+    setToggleMovieRoulette(false);
     setSelectedMedia(null);
+    setMediaList([]);
+    setTerm("");
+    setInput("");
   };
 
   const handleShowMediaLists = () => {
     setToggleMediaLists(!toggleMediaLists);
     // setSelectedMedia(null);
+  };
+
+  const handleShowMovieRoulette = () => {
+    setToggleMovieRoulette(!toggleMovieRoulette);
+    setToggleFeaturedMedia(false);
+    setSelectedMedia(null);
+    setMediaList([]);
+    setTerm("");
+    setInput("");
   };
 
   // console.log("Current Filter:", mediaTypeFilter);
@@ -260,6 +275,20 @@ function MediaSearch({
               onClick={handleShowMediaLists}
             >
               Favorites/Watchlists
+            </button>
+
+
+
+
+            <button
+              className={`px-1.5 text-nowrap py-1 text-black shadow-lg hover:bg-gray-400 rounded-md ${
+                toggleMovieRoulette && !selectedMedia
+                  ? "bg-purple-500 text-white hover:bg-purple-600"
+                  : "bg-gray-300"
+              }`}
+              onClick={handleShowMovieRoulette}
+            >
+              Movie Finder
             </button>
           </div>
           <LoginButton
