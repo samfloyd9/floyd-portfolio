@@ -185,7 +185,7 @@ const ParcheesiVersion2 = ({
   };
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 bg-gray-300 border-4 border-black shadow-lg rounded-sm">
+    <div className="grid grid-cols-3 grid-rows-3 bg-gray-300 border-4 border-black shadow-lg rounded-sm w-[590px] h-[590px]">
       <Nest
         color="red"
         pawns={pawns}
@@ -369,41 +369,53 @@ const ParcheesiVersion2 = ({
         })}
       </div>
 
-      <div className="bg-red-400 w-full h-full flex flex-col justify-center items-center text-4xl border border-black">
-        <div className="relative top-0 left-0 w-full h-full flex justify-center items-center z-50">
-          <div className="absolute transform rotate-90 -top-8">
+      <div className="bg-red-500 w-full h-full flex flex-col justify-center items-center text-4xl border border-black">
+        <div className="relative flex justify-center items-center z-50">
+          {/* RED – Top Center */}
+          <div className="absolute top-[2%] left-1/2 transform -translate-x-1/2 flex gap-1">
             {redHomePawns.map((pawn) => (
-              <div key={pawn.id} className="flex">
+              <div key={pawn.id}>
                 <Pawn color={pawn.color} />
               </div>
             ))}
           </div>
-          <div className="absolute left-1">
-            {greenHomePawns.map((pawn) => (
-              <div key={pawn.id} className={`flex `}>
-                <Pawn color={pawn.color} />
-              </div>
-            ))}
-          </div>
-          <div className="absolute transform rotate-90 -bottom-8">
-            {yellowHomePawns.map((pawn) => (
-              <div key={pawn.id} className={`flex `}>
-                <Pawn color={pawn.color} />
-              </div>
-            ))}
-          </div>
-          <div className="absolute right-1">
+
+          {/* BLUE – Right Center */}
+          <div className="absolute right-[2%] top-1/2 transform -translate-y-1/2 flex flex-col gap-1">
             {blueHomePawns.map((pawn) => (
-              <div key={pawn.id} className={`flex `}>
+              <div key={pawn.id}>
                 <Pawn color={pawn.color} />
               </div>
             ))}
           </div>
-          <div className="shadow-lg rounded-lg bg-red-600 py-6 px-4">
-            <div className="shadow-lg rounded-lg bg-red-300 py-10 px-4">
-              <span className="font-[cursive] text-white bg-red-500 shadow-lg p-2 rounded-lg">
-                Home
-              </span>
+
+          {/* YELLOW – Bottom Center */}
+          <div className="absolute bottom-[2%] left-1/2 transform -translate-x-1/2 flex gap-1">
+            {yellowHomePawns.map((pawn) => (
+              <div key={pawn.id}>
+                <Pawn color={pawn.color} />
+              </div>
+            ))}
+          </div>
+
+          {/* GREEN – Left Center */}
+          <div className="absolute left-[2%] top-1/2 transform -translate-y-1/2 flex flex-col gap-1">
+            {greenHomePawns.map((pawn) => (
+              <div key={pawn.id}>
+                <Pawn color={pawn.color} />
+              </div>
+            ))}
+          </div>
+
+          <div className="shadow-lg rounded-lg bg-red-700 py-2 px-1.5">
+            <div className="shadow-lg rounded-lg bg-red-400 py-4 px-3">
+              <div className="shadow-lg rounded-lg bg-red-600 py-4 px-3">
+                <div className="shadow-lg rounded-lg bg-red-500 py-4 px-3">
+                  <div className="font-[cursive] text-white bg-red-600 shadow-lg py-4 px-2 rounded-lg">
+                    Home
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

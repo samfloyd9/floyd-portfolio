@@ -2,74 +2,86 @@ import { useState, useEffect } from "react";
 
 import Dice from "../components/parcheesi/Dice";
 import DiceSelection from "../components/parcheesi/DiceSelection";
-
-import {
-  GiInvertedDice1,
-  GiInvertedDice2,
-  GiInvertedDice3,
-  GiInvertedDice4,
-  GiInvertedDice5,
-  GiInvertedDice6,
-} from "react-icons/gi";
 import ParcheesiVersion2 from "../components/parcheesi/ParcheesiVersion2";
 import OptionsMenu from "../components/parcheesi/OptionsMenu";
 
+import { getDieImg } from "../utils/parcheesi/diceIcons";
+import { getPlayerBgColor } from "../utils/parcheesi/ui";
+import { findMaxRoll, reRollPlayers } from "../utils/parcheesi/turnOrder";
+
 import {
   movePawn,
-  updateUsedDice,
-  updateAvailableDice,
   mustExitNest,
   hasAvailableMoves,
   getBlockadeSpaces,
   startingSpaces,
   isSafeSpace,
-} from "../utils/gameLogic";
+} from "../utils/parcheesi/gameLogic";
+
+import {
+  determineDestination,
+  isNestEntryBlocked,
+  isValidCapture,
+  awardBonus20,
+  getAvailableDiceOptions,
+  cleanUpAfterMove,
+  validateChunkMove,
+} from "../utils/parcheesi/moveHelpers";
+
+import {
+  shouldForceLargerDie,
+  shouldUseOriginalBeforeBonus,
+} from "../utils/parcheesi/gameRules";
 
 function ParcheesiPage() {
-  const [pawns, setPawns] = useState([
-    { id: "R1", position: 107, color: "red", location: "home" },
-    { id: "R2", position: 106, color: "red", location: "home" },
-    { id: "R3", position: 105, color: "red", location: "home" },
-    { id: "R4", position: 104, color: "red", location: "home" },
-
-    { id: "B1", position: 303, color: "blue", location: "home" },
-    { id: "B2", position: 302, color: "blue", location: "home" },
-    { id: "B3", position: 301, color: "blue", location: "home" },
-    { id: "B4", position: 308, color: "blue", location: "home" },
-
-    { id: "G1", position: 202, color: "green", location: "home" },
-    { id: "G2", position: 208, color: "green", location: "home" },
-    { id: "G3", position: 201, color: "green", location: "home" },
-    { id: "G4", position: 208, color: "green", location: "home" },
-
-    { id: "Y1", position: 406, color: "yellow", location: "home" },
-    { id: "Y2", position: 408, color: "yellow", location: "home" },
-    { id: "Y3", position: 404, color: "yellow", location: "home" },
-    { id: "Y4", position: 408, color: "yellow", location: "home" },
-  ]);
-
+  // All pawns in home or homeColumn -----> Testing: Exact number and Bonus +10
   // const [pawns, setPawns] = useState([
-  //   { id: "R1", position: 32, color: "red", location: "onTrack" },
-  //   { id: "R2", position: 30, color: "red", location: "onTrack" },
-  //   { id: "R3", position: 63, color: "red", location: "onTrack" },
-  //   { id: "R4", position: 12, color: "red", location: "onTrack" },
+  //   { id: "R1", position: 108, color: "red", location: "home" },
+  //   { id: "R2", position: 1, color: "red", location: "homeColumn" },
+  //   { id: "R3", position: 2, color: "red", location: "homeColumn" },
+  //   { id: "R4", position: 3, color: "red", location: "homeColumn" },
+  //   // { id: "R4", position: 4, color: "red", location: "homeColumn" },
 
-  //   { id: "B1", position: 61, color: "blue", location: "onTrack" },
-  //   { id: "B2", position: 67, color: "blue", location: "onTrack" },
-  //   { id: "B3", position: 29, color: "blue", location: "onTrack" },
-  //   { id: "B4", position: 22, color: "blue", location: "onTrack" },
+  //   { id: "B1", position: 1, color: "blue", location: "homeColumn" },
+  //   { id: "B2", position: 2, color: "blue", location: "homeColumn" },
+  //   { id: "B3", position: 3, color: "blue", location: "homeColumn" },
+  //   { id: "B4", position: 4, color: "blue", location: "homeColumn" },
 
-  //   { id: "G1", position: 44, color: "green", location: "onTrack" },
-  //   { id: "G2", position: 2, color: "green", location: "onTrack" },
-  //   { id: "G3", position: 7, color: "green", location: "onTrack" },
-  //   { id: "G4", position: 58, color: "green", location: "onTrack" },
+  //   { id: "G1", position: 208, color: "green", location: "home" },
+  //   { id: "G2", position: 6, color: "green", location: "homeColumn" },
+  //   { id: "G3", position: 208, color: "green", location: "home" },
+  //   { id: "G4", position: 208, color: "green", location: "home" },
 
-  //   { id: "Y1", position: 11, color: "yellow", location: "onTrack" },
-  //   { id: "Y2", position: 19, color: "yellow", location: "onTrack" },
-  //   { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
-  //   { id: "Y4", position: 13, color: "yellow", location: "onTrack" },
+  //   { id: "Y1", position: 408, color: "yellow", location: "home" },
+  //   { id: "Y2", position: 6, color: "yellow", location: "homeColumn" },
+  //   { id: "Y3", position: 7, color: "yellow", location: "homeColumn" },
+  //   { id: "Y4", position: 7, color: "yellow", location: "homeColumn" },
   // ]);
 
+  // Pawns in each 'Section' -----> Testing: General Play - Captures Bonus +20 and Blockades
+  const [pawns, setPawns] = useState([
+    { id: "R1", position: 6, color: "red", location: "homeColumn" },
+    { id: "R2", position: 3, color: "red", location: "homeColumn" },
+    { id: "R3", position: 63, color: "red", location: "onTrack" },
+    { id: "R4", position: 33, color: "red", location: "onTrack" },
+
+    { id: "B1", position: 5, color: "blue", location: "homeColumn" },
+    { id: "B2", position: 4, color: "blue", location: "homeColumn" },
+    { id: "B3", position: 29, color: "blue", location: "onTrack" },
+    { id: "B4", position: 48, color: "blue", location: "onTrack" },
+
+    { id: "G1", position: 4, color: "green", location: "homeColumn" },
+    { id: "G2", position: 2, color: "green", location: "homeColumn" },
+    { id: "G3", position: 7, color: "green", location: "onTrack" },
+    { id: "G4", position: 25, color: "green", location: "onTrack" },
+
+    { id: "Y1", position: 1, color: "yellow", location: "homeColumn" },
+    { id: "Y2", position: 5, color: "yellow", location: "homeColumn" },
+    { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
+    { id: "Y4", position: 6, color: "yellow", location: "onTrack" },
+  ]);
+
+  // All Pawns Start in Nest -----> Testing: The '5' Rule
   // const [pawns, setPawns] = useState([
   //   { id: "R1", position: null, color: "red", location: "nest" },
   //   { id: "R2", position: null, color: "red", location: "nest" },
@@ -95,18 +107,19 @@ function ParcheesiPage() {
   const [dice, setDice] = useState({
     dieOne: {
       result: 1,
-      dieImg: <GiInvertedDice1 className="text-4xl" />,
+      dieImg: getDieImg(1),
       index: 1,
     },
     dieTwo: {
       result: 1,
-      dieImg: <GiInvertedDice1 className="text-4xl" />,
+      dieImg: getDieImg(1),
       index: 2,
     },
   });
 
   const [availableDice, setAvailableDice] = useState({}); // Stores dice values that can still be used
   const [rolling, setRolling] = useState(false);
+  const [tiedPlayers, setTiedPlayers] = useState([]);
   const [firstPlayerMessage, setFirstPlayerMessage] = useState("");
   const [selectedPawn, setSelectedPawn] = useState(null);
   const [selectedDice, setSelectedDice] = useState(null);
@@ -117,8 +130,8 @@ function ParcheesiPage() {
   const [hasRolled, setHasRolled] = useState(false);
   const [doublesCount, setDoublesCount] = useState(0);
   const [blockades, setBlockades] = useState([]);
-
-  const playerOrder = ["yellow", "green", "red", "blue"]; // Turn cycle order
+  const [gameOver, setGameOver] = useState(false);
+  const [winner, setWinner] = useState(null);
 
   const [initialRolls, setInitialRolls] = useState({
     red: { roll: null, icon: null },
@@ -128,110 +141,119 @@ function ParcheesiPage() {
   });
 
   const rollTwoDice = () => {
-    if (hasRolled) return; // Prevent rolling again before turn ends
-  
-    setRolling(true); // Start rolling animation
-  
+    if (gameOver) return;
+    if (hasRolled) return;
+
+    setRolling(true);
+
     setTimeout(() => {
       const dieOneResult = Math.floor(Math.random() * 6) + 1;
       const dieTwoResult = Math.floor(Math.random() * 6) + 1;
-  
-      const dieImg = (dieResult) => {
-        switch (dieResult) {
-          case 1:
-            return <GiInvertedDice1 className="text-4xl" />;
-          case 2:
-            return <GiInvertedDice2 className="text-4xl" />;
-          case 3:
-            return <GiInvertedDice3 className="text-4xl" />;
-          case 4:
-            return <GiInvertedDice4 className="text-4xl" />;
-          case 5:
-            return <GiInvertedDice5 className="text-4xl" />;
-          case 6:
-            return <GiInvertedDice6 className="text-4xl" />;
-          default:
-            return null;
-        }
-      };
-  
+
       setDice({
-        dieOne: { result: dieOneResult, dieImg: dieImg(dieOneResult), index: "dieOne" },
-        dieTwo: { result: dieTwoResult, dieImg: dieImg(dieTwoResult), index: "dieTwo" },
+        dieOne: {
+          result: dieOneResult,
+          dieImg: getDieImg(dieOneResult),
+          index: 1,
+        },
+        dieTwo: {
+          result: dieTwoResult,
+          dieImg: getDieImg(dieTwoResult),
+          index: 2,
+        },
       });
-  
-      setAvailableDice({
-        dieOne: { result: dieOneResult, index: "dieOne" },
-        dieTwo: { result: dieTwoResult, index: "dieTwo" },
-        both: { result: dieOneResult + dieTwoResult, index: "both" },
-      });
-  
+
+      const isDouble = dieOneResult === dieTwoResult;
+
+      const playerPawns = pawns.filter((p) => p.color === currentPlayer);
+      const allOutOfNest = playerPawns.every((p) => p.location !== "nest");
+
+      const isTripleDouble = isDouble && doublesCount === 3;
+
+      if (isTripleDouble) {
+        // Handle triple doubles penalty (closest pawn to homeColumn or home)
+        const candidates = playerPawns.filter(
+          (p) => p.location === "onTrack" || p.location === "homeColumn"
+        );
+
+        if (candidates.length > 0) {
+          const pawnToSendBack = candidates.reduce(
+            (closest, p) => {
+              const score =
+                p.location === "homeColumn"
+                  ? 100 - (p.position + 68)
+                  : 100 - p.position;
+              return score < closest.score ? { pawn: p, score } : closest;
+            },
+            { pawn: candidates[0], score: 100 - candidates[0].position }
+          ).pawn;
+
+          setPawns((prev) =>
+            prev.map((p) =>
+              p.id === pawnToSendBack.id
+                ? { ...p, position: null, location: "nest" }
+                : p
+            )
+          );
+
+          setFirstPlayerMessage(
+            `Triple doubles! ${pawnToSendBack.id} sent back to the nest.`
+          );
+          setTimeout(() => {
+            setFirstPlayerMessage("");
+            endTurn();
+          }, 2500);
+          return; // Triple doubles ends turn immediately!
+        } else {
+          // No candidates (should be extremely rare), just end turn
+          setFirstPlayerMessage(`Triple doubles! No pawn to send back.`);
+          setTimeout(() => {
+            setFirstPlayerMessage("");
+            endTurn();
+          }, 2500);
+          return;
+        }
+      }
+
+      const newDoublesCount = isDouble ? doublesCount + 1 : 0;
+      setDoublesCount(newDoublesCount);
+
+      const available = getAvailableDiceOptions(
+        dieOneResult,
+        dieTwoResult,
+        pawns,
+        currentPlayer
+      );
+      setAvailableDice(available);
+
       setRolling(false);
       setHasRolled(true);
-  
-      // === New check after rolling ===
+
+      // hasAvailableMoves(pawns, currentPlayer, availableDice, blockades);
+      // Check if player has no moves (like usual)
       setTimeout(() => {
-        const canMove = hasAvailableMoves(pawns, currentPlayer, {
-          dieOne: { result: dieOneResult },
-          dieTwo: { result: dieTwoResult },
-          both: { result: dieOneResult + dieTwoResult },
-        });
-  
+        const canMove = hasAvailableMoves(
+          pawns,
+          currentPlayer,
+          {
+            dieOne: { result: dieOneResult },
+            dieTwo: { result: dieTwoResult },
+            both: { result: dieOneResult + dieTwoResult },
+          },
+          blockades
+        );
+
         if (!canMove) {
-          setFirstPlayerMessage(`${currentPlayer.toUpperCase()} has no available moves... skipping turn.`);
+          setFirstPlayerMessage(
+            `${currentPlayer.toUpperCase()} has no available moves... skipping turn.`
+          );
           setTimeout(() => {
             setFirstPlayerMessage("");
             endTurn();
           }, 2000);
-        } else {
-          const forcedOut = mustExitNest(pawns, currentPlayer, {
-            dieOne: { result: dieOneResult },
-            dieTwo: { result: dieTwoResult },
-            both: { result: dieOneResult + dieTwoResult },
-          }, blockades);
-  
-          if (forcedOut) {
-            setFirstPlayerMessage(`${currentPlayer.toUpperCase()} must move a pawn out of the nest!`);
-            setTimeout(() => {
-              setFirstPlayerMessage("");
-            }, 3000);
-          }
         }
       }, 100);
-    }, 2000); // 2s dice animation
-  };
-  
-
-
-  const currentPlayerColor = (currentPlayer) => {
-    if (currentPlayer === "red") {
-      return "bg-red-300 border border-black p-2 rounded-md";
-    } else if (currentPlayer === "blue") {
-      return "bg-blue-300 border border-black p-2 rounded-md";
-    } else if (currentPlayer === "green") {
-      return "bg-green-300 border border-black p-2 rounded-md";
-    } else if (currentPlayer === "yellow") {
-      return "bg-yellow-300 border border-black p-2 rounded-md";
-    }
-  };
-
-  const getDieImage = (dieResult) => {
-    switch (dieResult) {
-      case 1:
-        return <GiInvertedDice1 className="text-4xl" />;
-      case 2:
-        return <GiInvertedDice2 className="text-4xl" />;
-      case 3:
-        return <GiInvertedDice3 className="text-4xl" />;
-      case 4:
-        return <GiInvertedDice4 className="text-4xl" />;
-      case 5:
-        return <GiInvertedDice5 className="text-4xl" />;
-      case 6:
-        return <GiInvertedDice6 className="text-4xl" />;
-      default:
-        return null;
-    }
+    }, 2000);
   };
 
   const rollForTurn = async () => {
@@ -247,7 +269,7 @@ function ParcheesiPage() {
       const roll = Math.floor(Math.random() * 6) + 1;
       newRolls[player] = {
         roll,
-        icon: getDieImage(roll), // Get the corresponding die icon
+        icon: getDieImg(roll), // Get the corresponding die icon
       };
 
       setInitialRolls((prevRolls) => ({
@@ -264,187 +286,269 @@ function ParcheesiPage() {
     determineWinner(newRolls);
   };
 
-  const determineWinner = (rolls) => {
-    const maxRoll = Math.max(...Object.values(rolls).map((roll) => roll.roll));
-
-    // Get all players who rolled the highest value
-    const highestPlayers = Object.keys(rolls).filter(
-      (player) => rolls[player].roll === maxRoll
-    );
+  const determineWinner = async (rolls) => {
+    const highestPlayers = findMaxRoll(rolls);
 
     if (highestPlayers.length === 1) {
+      setTiedPlayers([]);
       setCurrentPlayer(highestPlayers[0]);
       setGameStarted(true);
-      setFirstPlayerMessage(`${highestPlayers[0].toUpperCase()} goes first!`); // Show the message
+      setFirstPlayerMessage(`${highestPlayers[0].toUpperCase()} goes first!`);
 
-      // Hide the message after 5 seconds
       setTimeout(() => {
         setFirstPlayerMessage("");
       }, 5000);
     } else {
-      setFirstPlayerMessage("Tie! Re-rolling for:" + highestPlayers);
-      reRollTiedPlayers(highestPlayers, rolls); // Handle tie-breaking
+      setTiedPlayers(highestPlayers);
+      setFirstPlayerMessage(
+        "Tie! Re-rolling for: " + highestPlayers.join(", ")
+      );
+      const rerolled = await reRollPlayers(
+        highestPlayers,
+        getDieImg,
+        setCurrentRolling,
+        setInitialRolls
+      );
+      determineWinner(rerolled); // Recurse
     }
-  };
-
-  const reRollTiedPlayers = async (tiedPlayers, rolls) => {
-    let newRolls = { ...rolls };
-
-    // Roll each tied player one by one
-    for (let player of tiedPlayers) {
-      setCurrentRolling(player); // Show who's rolling
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // 1-second delay between each roll
-
-      // Re-roll the current tied player
-      const roll = Math.floor(Math.random() * 6) + 1;
-      newRolls[player] = {
-        roll,
-        icon: getDieImage(roll), // Get the corresponding die icon
-      };
-
-      setInitialRolls((prevRolls) => ({
-        ...prevRolls,
-        [player]: newRolls[player],
-      }));
-
-      // Wait 1 second before rolling the next player
-      await new Promise((resolve) => setTimeout(resolve, 100));
-    }
-
-    // Once all players have re-rolled, determine the new winner
-    determineWinner(newRolls);
   };
 
   const resetGame = () => {
     // Reset pawns to their nest positions
     const resetPawns = pawns.map((pawn) => ({
       ...pawn,
-      position: null, // Reset pawn position to the nest
+      position: null,
       location: "nest",
     }));
 
-    setAvailableDice({}); // Stores dice values that can still be used
-
+    setAvailableDice({});
     setRolling(false);
-
     setSelectedPawn(null);
     setSelectedDice(null);
-
-    setUsedDice([]); // Tracks which dice have been used
+    setUsedDice([]);
     setHasRolled(false);
-
-    // Reset the initial rolls and other state
+    setGameOver(false); // Ensure game isn't over
+    setWinner(null); // Clear any previous winner
+    setCurrentPlayer(null);
+    setCurrentRolling(null);
+    setGameStarted(false);
+    setFirstPlayerMessage("");
     setPawns(resetPawns);
+
     setInitialRolls({
       red: { roll: null, icon: null },
       blue: { roll: null, icon: null },
       yellow: { roll: null, icon: null },
       green: { roll: null, icon: null },
     });
-    setCurrentPlayer(null);
-    setCurrentRolling(null);
-    setGameStarted(false); // Reset the game state
-    setFirstPlayerMessage(""); // Clear the "first player" message
+
     setDice({
-      ...dice,
-      dieOne: { result: 1, dieImg: <GiInvertedDice1 className="text-4xl" /> },
-      dieTwo: { result: 1, dieImg: <GiInvertedDice1 className="text-4xl" /> },
+      dieOne: { result: 1, dieImg: getDieImg(1) },
+      dieTwo: { result: 1, dieImg: getDieImg(1) },
     });
   };
 
-  // const [blockades, setBlockades] = useState([]);
+  const checkTurnEndConditions = () => {
+    const playerPawns = pawns.filter((p) => p.color === currentPlayer);
 
-  // const updateBlockades = (pawns) => {
-  //   const blockadeSpaces = pawns
-  //     .filter((pawn, self) =>
-  //       self.filter((p) => p.position === pawn.position).length === 2
-  //     )
-  //     .map((pawn) => pawn.position);
+    const isMoveLegal = (pawn, dieValue) => {
+      if (pawn.location === "home") return false;
+      if (pawn.location === "nest") return dieValue === 5;
 
-  //   setBlockades([...new Set(blockadeSpaces)]); // Remove duplicates
-  // };
+      if (pawn.location === "onTrack") {
+        let steps = dieValue;
+        let currentPos = pawn.position;
 
-  // const isMoveBlocked = (position) => {
-  //   return blockades.includes(position); // If the space is in the blockade list, it's blocked
-  // };
+        while (steps > 0) {
+          currentPos = (currentPos % 68) + 1;
+          if (blockades.includes(currentPos)) return false;
+          steps--;
+        }
+        return true;
+      }
 
-  // const startingSpaces = {
-  //   red: 39,
-  //   blue: 22,
-  //   yellow: 5,
-  //   green: 56,
-  // };
+      if (pawn.location === "homeColumn") {
+        const pos = pawn.position + dieValue;
+        return pos === 8;
+      }
 
-  // const homeColumnStarts = {
-  //   red: 34,
-  //   blue: 17,
-  //   yellow: 68,
-  //   green: 51,
-  // };
+      return false;
+    };
+
+    const usableDice = Object.entries(availableDice).filter(([key, die]) =>
+      playerPawns.some((p) => isMoveLegal(p, die.result))
+    );
+
+    if (usableDice.length === 0) {
+      setFirstPlayerMessage(
+        `${currentPlayer.toUpperCase()} has no available moves.`
+      );
+      setTimeout(() => {
+        setFirstPlayerMessage("");
+        endTurn();
+      }, 1500);
+      return;
+    }
+
+    if (
+      shouldForceLargerDie(availableDice, pawns, currentPlayer, isMoveLegal)
+    ) {
+      setFirstPlayerMessage(
+        `${currentPlayer.toUpperCase()} must use the larger die.`
+      );
+      setTimeout(() => {
+        setFirstPlayerMessage("");
+        endTurn();
+      }, 1500);
+      return;
+    }
+
+    // If only bonus is usable but original dice are available → must use original
+    if (shouldUseOriginalBeforeBonus(availableDice, selectedDice)) {
+      setFirstPlayerMessage(
+        `${currentPlayer.toUpperCase()} cannot skip original dice.`
+      );
+      setTimeout(() => {
+        setFirstPlayerMessage("");
+        endTurn();
+      }, 1500);
+    }
+  };
 
   const confirmMove = () => {
-    if (!selectedPawn || !selectedDice) return;
+    if (!selectedPawn || !selectedDice || gameOver) return;
   
-    // === Must exit nest if rolled a 5 and have pawns in nest ===
-    const forcedOut = mustExitNest(pawns, currentPlayer, availableDice, blockades);
+    const forcedOut = mustExitNest(
+      pawns,
+      currentPlayer,
+      availableDice,
+      blockades
+    );
     if (
       forcedOut &&
       selectedPawn.location !== "nest" &&
       (selectedDice.value === 5 || selectedDice.index === "both")
     ) {
-      alert("You must move a pawn out of the nest with your 5 before any other moves.");
+      alert("You must move a pawn out of the nest first!");
       return;
     }
   
-    // === Determine move destination ===
-    const destination =
-      selectedPawn.location === "onTrack"
-        ? (selectedPawn.position + selectedDice.value - 1) % 68 + 1
-        : startingSpaces[selectedPawn.color]; // If moving from nest
+    const playerPawns = pawns.filter((p) => p.color === currentPlayer);
+    let updatedPawns = [...pawns];
+    let captured = false;
   
-    // === Check for illegal 3-pawn stack ===
-    const pawnsOnDestination = pawns.filter(
-      (p) => p.position === destination && p.color === selectedPawn.color
-    );
-    if (pawnsOnDestination.length >= 2) {
-      alert("You can't move here — it would create an illegal 3-pawn stack.");
-      return;
-    }
+    const isMoveLegal = (pawn, dieValue) => {
+      if (pawn.location === "home") return false;
+      if (pawn.location === "nest") return dieValue === 5;
   
-    // === Check if movement is blocked by a blockade ===
-    if (selectedPawn.location === "onTrack") {
-      const path = [];
-      let steps = selectedDice.value;
-      let currentPos = selectedPawn.position;
+      if (pawn.location === "onTrack") {
+        let steps = dieValue;
+        let currentPos = pawn.position;
   
-      while (steps > 0) {
-        currentPos = (currentPos % 68) + 1;
-        path.push(currentPos);
-        steps--;
+        while (steps > 0) {
+          currentPos = (currentPos % 68) + 1;
+          if (blockades.includes(currentPos)) return false;
+          steps--;
+        }
+        return true;
       }
   
-      const isBlocked = path.some((step) => blockades.includes(step));
-      if (isBlocked) {
-        alert("Move blocked by a blockade! Choose another move.");
+      if (pawn.location === "homeColumn") {
+        const pos = pawn.position + dieValue;
+        return pos === 8;
+      }
+  
+      return false;
+    };
+  
+    // === Priority Rule: original dice must be used before bonuses
+    const usableRegular = ["dieOne", "dieTwo", "both"].filter((key) => {
+      const die = availableDice[key];
+      return die && playerPawns.some((p) => isMoveLegal(p, die.result));
+    });
+  
+    const isBonusOrChunk =
+      selectedDice.index.startsWith("bonus") ||
+      selectedDice.index.startsWith("double") ||
+      selectedDice.index.startsWith("opp") ||
+      selectedDice.index.startsWith("combo_");
+  
+    if (
+      isBonusOrChunk &&
+      usableRegular.length > 0 &&
+      Object.keys(availableDice).length === 1
+    ) {
+      alert("You must use original dice before using a bonus or combo.");
+      return;
+    }
+  
+    let destination = determineDestination(
+      selectedPawn,
+      selectedDice.value,
+      startingSpaces
+    );
+  
+    // ✅ If the move is based on chunked dice (14-move mode), validate it step-by-step
+    if (selectedDice.chunks) {
+      const isValid = validateChunkMove(
+        selectedPawn,
+        selectedDice.chunks
+          .map((key) => availableDice[key]?.result)
+          .filter(Boolean),
+        pawns,
+        blockades
+      );
+  
+      if (!isValid) {
+        alert("This move crosses a blockade or enters an invalid space.");
         return;
       }
     }
   
-    // === Capture Logic ===
-    const occupant = pawns.find(
-      (p) => p.position === destination && p.color !== selectedPawn.color
-    );
+    if (selectedPawn.location === "nest") {
+      const { blocked, reason } = isNestEntryBlocked(
+        selectedPawn,
+        destination,
+        pawns,
+        blockades
+      );
   
+      if (blocked) {
+        alert(reason);
+        return;
+      }
+    }
+  
+    // ✅ Prevent captures if pawn is moving into homeColumn
+    let occupant = null;
+    if (
+      selectedPawn.location === "onTrack" &&
+      typeof destination === "number"
+    ) {
+      occupant = pawns.find(
+        (p) =>
+          p.position === destination &&
+          p.color !== selectedPawn.color &&
+          p.location === "onTrack"
+      );
+    }
+  
+    // ✅ Do not allow capturing on safe space
     if (occupant && isSafeSpace(destination)) {
       alert("You can't capture a pawn on a safe space!");
       return;
     }
   
-    let updatedPawns = [...pawns];
-    let captured = false;
+    // ✅ Do not allow capturing a blockade
+    if (occupant && blockades.includes(destination)) {
+      alert("You can't capture a blockade!");
+      return;
+    }
   
-    if (occupant && !isSafeSpace(destination)) {
-      // Capture opponent pawn
+    if (
+      occupant &&
+      isValidCapture(occupant, destination, selectedPawn.color, isSafeSpace)
+    ) {
       updatedPawns = updatedPawns.map((pawn) =>
         pawn.id === occupant.id
           ? { ...pawn, position: null, location: "nest" }
@@ -453,143 +557,195 @@ function ParcheesiPage() {
       captured = true;
     }
   
-    // === Perform move ===
-    const moveResult = movePawn(selectedPawn, selectedDice, updatedPawns, setPawns);
+    const moveResult = movePawn(
+      selectedPawn,
+      selectedDice,
+      updatedPawns,
+      setPawns
+    );
   
     if (!moveResult.success) {
       alert(moveResult.reason);
       return;
     }
   
-    // === Update dice usage ===
-    setUsedDice((prev) => updateUsedDice(prev, selectedDice));
-    setAvailableDice((prev) => updateAvailableDice(prev, selectedDice));
+    cleanUpAfterMove(
+      selectedDice,
+      pawns,
+      currentPlayer,
+      setUsedDice,
+      setAvailableDice
+    );
   
-    // === Award Bonus 20 after capture ===
     if (captured) {
-      setAvailableDice((prev) => ({
-        ...prev,
-        bonus20: { result: 20, index: "bonus" },
-      }));
+      setAvailableDice((prev) => awardBonus20(prev));
     }
   
-    // === Cleanup after move ===
+    if (moveResult.bonus10) {
+      setAvailableDice((prev) => {
+        const bonusKeys = Object.keys(prev).filter((k) =>
+          k.startsWith("bonus10")
+        );
+        const next = bonusKeys.length + 1;
+        return {
+          ...prev,
+          [`bonus10_${next}`]: { result: 10, index: `bonus10_${next}` },
+        };
+      });
+    }
+  
+    checkWinCondition();
+  
+    // === Check if all 14-move chunks used AND no pawns are in the nest
+    const isFourteenMove =
+      selectedDice.chunks &&
+      ["double1", "double2", "opp1", "opp2"].every((chunk) =>
+        selectedDice.chunks.includes(chunk)
+      );
+  
+    const allOutOfNest = playerPawns.every((p) => p.location !== "nest");
+  
+    if (isFourteenMove && allOutOfNest) {
+      setFirstPlayerMessage(
+        `${currentPlayer.toUpperCase()} gets a bonus roll for using all 14!`
+      );
+      setTimeout(() => {
+        setFirstPlayerMessage("");
+        rollTwoDice(); // reroll right away
+      }, 1500);
+      return; // prevent ending turn
+    }
+  
     setSelectedPawn(null);
     setSelectedDice(null);
-    setHasRolled(true); // Player already rolled this turn
+    setHasRolled(true);
   };
-  
-  
-  
   
   
 
   const endTurn = () => {
-    const currentIndex = playerOrder.indexOf(currentPlayer);
-    const nextPlayer = playerOrder[(currentIndex + 1) % playerOrder.length];
-  
+    const order = ["yellow", "green", "red", "blue"];
+    const currentIndex = order.indexOf(currentPlayer);
+    const nextIndex = (currentIndex + 1) % order.length;
+    const nextPlayer = order[nextIndex];
+
     setCurrentPlayer(nextPlayer);
-    setAvailableDice({});
-    setUsedDice([]);
     setSelectedPawn(null);
     setSelectedDice(null);
+    setAvailableDice({});
+    setUsedDice([]);
+    // setDice({});
     setHasRolled(false);
-    setDoublesCount(0); // reset doubles unless you handle 3x logic later
+    setDoublesCount(0); // Reset doubles chain
   };
-
-  useEffect(() => {
-    if (gameStarted && Object.keys(availableDice).length === 0 && hasRolled) {
-      endTurn();
-    }
-  }, [availableDice]);
-
-  // const endTurn = () => {
-  //   if (Object.keys(availableDice).length > 0) return;
-  //   const currentIndex = playerOrder.indexOf(currentPlayer);
-  //   const nextPlayer = playerOrder[(currentIndex + 1) % playerOrder.length]; // Loop to the next player
-
-  //   setCurrentPlayer(nextPlayer); // Set the next turn
-  //   setAvailableDice({}); // Reset dice for next turn
-  //   setUsedDice([]); // Reset used dice
-  //   setHasRolled(false); // Allow rolling again
-  // };
-
-  // console.log("availableDice:", availableDice);
-  // console.log("usedDice:", usedDice);
-  // console.log("currentPlayer:", currentPlayer);
-  // console.log(
-  //   "theFuckingProblem:",
-  //   Object.keys(availableDice),
-  //   Object.keys(availableDice).length
-  // );
 
   useEffect(() => {
     const newBlockades = getBlockadeSpaces(pawns);
     setBlockades(newBlockades);
   }, [pawns]);
 
+  useEffect(() => {
+    if (!gameOver && hasRolled) {
+      checkTurnEndConditions();
+    }
+  }, [availableDice]);
+
+  const checkWinCondition = () => {
+    const playerPawns = pawns.filter((p) => p.color === currentPlayer);
+    const homed = playerPawns.filter((p) => p.location === "home");
+
+    if (homed.length === 4) {
+      setWinner(currentPlayer);
+      setGameOver(true);
+    }
+  };
+
+  const currentPlayerColor = (currentPlayer) => {
+    if (currentPlayer === "red") {
+      return "bg-red-300";
+    } else if (currentPlayer === "blue") {
+      return "bg-blue-300";
+    } else if (currentPlayer === "green") {
+      return "bg-green-300";
+    } else if (currentPlayer === "yellow") {
+      return "bg-yellow-300";
+    }
+  };
+
   return (
-    <div className="flex flex-col justify-center content-center self-center items-center h-screen -mt-12">
-      <div className="font-[cursive] text-5xl mb-12">Parcheesi</div>
-      <div className="flex flex-row gap-24 justify-center content-center self-center items-center">
-        <div className="flex flex-col justify-center items-center">
-          <ParcheesiVersion2
-            pawns={pawns}
-            currentPlayer={currentPlayer}
-            setPawns={setPawns}
-            selectedPawn={selectedPawn}
-            setSelectedPawn={setSelectedPawn}
-            setSelectedDice={setSelectedDice}
-            blockades={blockades}
-          />
-        </div>
+    <div className="flex flex-col min-h-screen xl:h-screen items-center xl:justify-around bg-purple-200 sm:bg-white overflow-auto">
+      {/* <div className="font-[cursive] text-5xl">Parcheesi</div> */}
 
-        <div className="flex flex-col justify-center items-center self-center content-center gap-2 w-88 px-32 py-24 border-4 rounded-sm border-black p-10">
-          <div className="flex flex-col items-center justify-center self-center content-center">
-            {!gameStarted ? (
-              <div className="flex flex-col justify-center gap-2">
-                <button
-                  onClick={rollForTurn}
-                  className="bg-blue-500 text-white px-4 py-2 rounded w-full"
-                >
-                  Press to Start the Game!
-                </button>
+      <div className="flex flex-col mt-5 gap-5 xl:gap-0 xl:mt-0 xl:flex-row xl:justify-around items-center w-full overflow-auto">
+        <ParcheesiVersion2
+          pawns={pawns}
+          currentPlayer={currentPlayer}
+          setPawns={setPawns}
+          selectedPawn={selectedPawn}
+          setSelectedPawn={setSelectedPawn}
+          setSelectedDice={setSelectedDice}
+          blockades={blockades}
+        />
 
-                {Object.entries(initialRolls).map(
-                  ([player, { roll, icon }]) => (
-                    <div
-                      key={player}
-                      className={`text-lg border text-black bg-${player}-200 border-black rounded-md flex flex-row justify-center items-center p-3 ${
-                        currentRolling === player ? "animate-pulse" : ""
-                      }`}
-                    >
-                      <div className={`mr-6`}>
-                        {player.charAt(0).toUpperCase() + player.slice(1)}:{" "}
-                      </div>
-                      <div className="text-black">
-                        {icon ??
-                          (currentRolling === player ? " Rolling..." : "")}
-                      </div>
+        <div
+          className={`flex flex-col justify-center items-center gap-2 border-4 rounded-sm border-black py-5 px-2 xl:py-10 xl:px-5 w-[550px] ${getPlayerBgColor(
+            currentPlayer
+          )}`}
+        >
+          {gameOver && winner && (
+            <div className="text-3xl font-bold text-green-600 mb-4">
+              🎉 {winner.toUpperCase()} WINS THE GAME! 🎉
+            </div>
+          )}
+          {!gameStarted ? (
+            <div className="flex flex-col justify-center gap-2">
+              <button
+                onClick={rollForTurn}
+                className="bg-blue-500 text-white px-4 py-2 rounded w-full"
+              >
+                Press to Start the Game!
+              </button>
+
+              {Object.entries(initialRolls).map(([player, { roll, icon }]) => {
+                const isTied = tiedPlayers.includes(player);
+                const isInTieBreaker = tiedPlayers.length > 0;
+
+                return (
+                  <div
+                    key={player}
+                    className={`text-lg border border-black rounded-md flex justify-center items-center p-3
+        bg-${player}-200
+        ${currentRolling === player ? "animate-pulse" : ""}
+        ${isInTieBreaker && !isTied ? "opacity-30 grayscale" : ""}`}
+                  >
+                    <div className="mr-6">
+                      {player.charAt(0).toUpperCase() + player.slice(1)}:
                     </div>
-                  )
-                )}
-              </div>
-            ) : (
-              <>
-                {firstPlayerMessage && (
-                  <h2 className="text-xl font-bold">{firstPlayerMessage}</h2> // Display the message for 5 seconds
-                )}
-              </>
-            )}
-          </div>
-
-          <div className={`${currentPlayerColor(currentPlayer)} shadow-lg`}>
-            {currentPlayer !== null
-              ? `${currentPlayer.toUpperCase()}'s turn`
-              : ""}
-          </div>
+                    <div className="text-black">
+                      {icon ?? (currentRolling === player ? " Rolling..." : "")}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <>
+              {firstPlayerMessage && (
+                <h2 className="text-xl font-bold">{firstPlayerMessage}</h2> // Display the message for 5 seconds
+              )}
+            </>
+          )}
           {gameStarted && (
             <div className="flex flex-col gap-2 justify-center items-center">
+              <div
+                className={`${currentPlayerColor(
+                  currentPlayer
+                )} border border-black p-2 rounded-md shadow-lg`}
+              >
+                {currentPlayer !== null
+                  ? `${currentPlayer.toUpperCase()}'s turn`
+                  : ""}
+              </div>
               <button
                 className={`border p-2 bg-gray-200 rounded-md border-black shadow-md ${
                   hasRolled ? "cursor-not-allowed opacity-20" : ""
@@ -606,6 +762,11 @@ function ParcheesiPage() {
                 availableDice={availableDice}
                 usedDice={usedDice}
               />
+              {doublesCount > 1 && (
+                <div className="text-lg font-semibold text-purple-600">
+                  Doubles Rolled in a Row: {doublesCount}
+                </div>
+              )}
               <DiceSelection
                 dice={dice}
                 selectedDice={selectedDice}
@@ -614,6 +775,7 @@ function ParcheesiPage() {
                 availableDice={availableDice}
                 rolling={rolling}
                 setAvailableDice={setAvailableDice}
+                pawns={pawns}
               />
 
               {!selectedPawn && <p>Select a Pawn!</p>}
@@ -654,10 +816,3 @@ function ParcheesiPage() {
 }
 
 export default ParcheesiPage;
-
-/* <button
-    onClick={resetGame}
-    className="bg-red-500 text-white px-4 py-2 rounded mt-4"
-  >
-    Reset Game
-  </button> */

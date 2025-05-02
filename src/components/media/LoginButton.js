@@ -1,7 +1,7 @@
 function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setLists, lists, logout, getRequestToken }) {
 
   return (
-    <div className="flex flex-row justify-center items-center">
+    <div className="relative flex flex-row justify-center items-center">
       {/* Login Button - This will also trigger session ID retrieval after approval */}
       {!sessionId ? (
         <div className="flex flex-row items-center gap-4 ">
@@ -25,7 +25,6 @@ function LoginButton({ sessionId, setAccountId, accountId, setSessionId, setList
           {/* <p className="text-sm font-bold text-gray-600">Successfully Logged in with TMDB</p> */}
         </div>
       )}
-
       {/* {sessionId && (
         <p className="text-lg font-bold text-gray-300">
           Session ID: {sessionId}

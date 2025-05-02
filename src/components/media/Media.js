@@ -444,7 +444,7 @@ function Media() {
       )}
 
       {toggleMovieRoulette && mediaList?.length === 0 && !selectedMedia && (
-        <MovieRoulette 
+        <MovieRoulette
           setSelectedMedia={setSelectedMedia}
           accountId={accountId}
           sessionId={sessionId}
@@ -530,31 +530,41 @@ function Media() {
           refreshWatchlistTvShows={refreshWatchlistTvShows}
         />
       </div>
-      <MediaLists
-        sessionId={sessionId}
-        setSessionId={setSessionId}
-        accountId={accountId}
-        setAccountId={setAccountId}
-        lists={lists}
-        setLists={setLists}
-        movies={movies}
-        setMovies={setMovies}
-        setSelectedMedia={setSelectedMedia}
-        favoriteTvShows={favoriteTvShows}
-        setFavoriteTvShows={setFavoriteTvShows}
-        favoriteMovies={favoriteMovies}
-        setFavoriteMovies={setFavoriteMovies}
-        refreshFavoriteTvShows={refreshFavoriteTvShows}
-        refreshFavoriteMovies={refreshFavoriteMovies}
-        refreshWatchlistMovies={refreshWatchlistMovies}
-        refreshWatchlistTvShows={refreshWatchlistTvShows}
-        watchlistMovies={watchlistMovies}
-        setWatchlistMovies={setWatchlistMovies}
-        watchlistTvShows={watchlistTvShows}
-        setWatchlistTvShows={setWatchlistTvShows}
-        handleAddToList={handleAddToList}
-        toggleMediaLists={toggleMediaLists}
-      />
+      {toggleMediaLists && (
+        <>
+          {sessionId ? (
+            <MediaLists
+              sessionId={sessionId}
+              setSessionId={setSessionId}
+              accountId={accountId}
+              setAccountId={setAccountId}
+              lists={lists}
+              setLists={setLists}
+              movies={movies}
+              setMovies={setMovies}
+              setSelectedMedia={setSelectedMedia}
+              favoriteTvShows={favoriteTvShows}
+              setFavoriteTvShows={setFavoriteTvShows}
+              favoriteMovies={favoriteMovies}
+              setFavoriteMovies={setFavoriteMovies}
+              refreshFavoriteTvShows={refreshFavoriteTvShows}
+              refreshFavoriteMovies={refreshFavoriteMovies}
+              refreshWatchlistMovies={refreshWatchlistMovies}
+              refreshWatchlistTvShows={refreshWatchlistTvShows}
+              watchlistMovies={watchlistMovies}
+              setWatchlistMovies={setWatchlistMovies}
+              watchlistTvShows={watchlistTvShows}
+              setWatchlistTvShows={setWatchlistTvShows}
+              handleAddToList={handleAddToList}
+              toggleMediaLists={toggleMediaLists}
+            />
+          ) : (
+            <div className="flex flex-row items-center justify-center text-white mt-2">
+              Login with TMDB to favorite, and add to watchlists!
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }

@@ -255,7 +255,7 @@ function MediaSearch({
           </div>
         </div>
         <div className="flex items-center justify-end gap-5">
-        <div className="flex justify-around gap-5">
+          <div className="flex justify-around gap-5">
             <button
               className={`px-1.5 py-1 text-black shadow-lg bg-gray-300 hover:bg-gray-400 rounded-md ${
                 toggleFeaturedMedia && !selectedMedia
@@ -276,9 +276,6 @@ function MediaSearch({
             >
               Favorites/Watchlists
             </button>
-
-
-
 
             <button
               className={`px-1.5 text-nowrap py-1 text-black shadow-lg hover:bg-gray-400 rounded-md ${
@@ -326,13 +323,12 @@ function MediaSearch({
                       loading="lazy"
                     />
                     <div className="flex flex-col gap-2">
-                    <div className="flex flex-col items-start justify-center w-full">
-                      <p className="text-sm">{truncate(media.title)}</p>
-                      <p className="text-xs text-gray-600">
-                        ({media.release_date?.slice(0, -6)})
-                      </p>
-                    </div>
-
+                      <div className="flex flex-col items-start justify-center w-full">
+                        <p className="text-sm">{truncate(media.title)}</p>
+                        <p className="text-xs text-gray-600">
+                          ({media.release_date?.slice(0, -6)})
+                        </p>
+                      </div>
 
                       <div className="flex flex-row gap-1.5">
                         <button

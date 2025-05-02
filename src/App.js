@@ -72,7 +72,7 @@ function App() {
         </Route>
 
         <Route path="/parcheesi">
-          <div className="h-screen">
+          <div className="">
             <Sidebar />
             <ParcheesiPage />
           </div>
