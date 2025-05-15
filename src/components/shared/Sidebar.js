@@ -14,18 +14,10 @@ function Sidebar() {
     { label: "Movies/TV", path: "/media" },
     { label: "Basketball", path: "/basketball" },
     { label: "Football", path: "/football" },
+    // { label: "Baseball", path: "/baseball" },
     { label: "Parcheesi", path: "/parcheesi" },
-    { label: "Banking", path: "/jsm_banking" },
+    { label: "Misc Projects", path: "/misc" },
   ];
-
-  // Dynamic styling logic based on current path
-  // const sideBarColorLogic = (currentPath) => {
-  //   if (currentPath === "/") {
-  //     return "bg-black text-white border-white";
-  //   } else {
-  //     return "bg-white text-black";
-  //   }
-  // };
 
   // Render all links
   const renderedLinks = links.map((link) => (

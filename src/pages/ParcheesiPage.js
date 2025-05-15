@@ -59,50 +59,50 @@ function ParcheesiPage() {
   // ]);
 
   // Pawns in each 'Section' -----> Testing: General Play - Captures Bonus +20 and Blockades
-  const [pawns, setPawns] = useState([
-    { id: "R1", position: 6, color: "red", location: "homeColumn" },
-    { id: "R2", position: 3, color: "red", location: "homeColumn" },
-    { id: "R3", position: 63, color: "red", location: "onTrack" },
-    { id: "R4", position: 33, color: "red", location: "onTrack" },
+  // const [pawns, setPawns] = useState([
+  //   { id: "R1", position: 6, color: "red", location: "homeColumn" },
+  //   { id: "R2", position: 3, color: "red", location: "homeColumn" },
+  //   { id: "R3", position: 63, color: "red", location: "onTrack" },
+  //   { id: "R4", position: 33, color: "red", location: "onTrack" },
 
-    { id: "B1", position: 5, color: "blue", location: "homeColumn" },
-    { id: "B2", position: 4, color: "blue", location: "homeColumn" },
-    { id: "B3", position: 29, color: "blue", location: "onTrack" },
-    { id: "B4", position: 48, color: "blue", location: "onTrack" },
+  //   { id: "B1", position: 5, color: "blue", location: "homeColumn" },
+  //   { id: "B2", position: 4, color: "blue", location: "homeColumn" },
+  //   { id: "B3", position: 29, color: "blue", location: "onTrack" },
+  //   { id: "B4", position: 48, color: "blue", location: "onTrack" },
 
-    { id: "G1", position: 4, color: "green", location: "homeColumn" },
-    { id: "G2", position: 2, color: "green", location: "homeColumn" },
-    { id: "G3", position: 7, color: "green", location: "onTrack" },
-    { id: "G4", position: 25, color: "green", location: "onTrack" },
+  //   { id: "G1", position: 4, color: "green", location: "homeColumn" },
+  //   { id: "G2", position: 2, color: "green", location: "homeColumn" },
+  //   { id: "G3", position: 7, color: "green", location: "onTrack" },
+  //   { id: "G4", position: 25, color: "green", location: "onTrack" },
 
-    { id: "Y1", position: 1, color: "yellow", location: "homeColumn" },
-    { id: "Y2", position: 5, color: "yellow", location: "homeColumn" },
-    { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
-    { id: "Y4", position: 6, color: "yellow", location: "onTrack" },
-  ]);
+  //   { id: "Y1", position: 1, color: "yellow", location: "homeColumn" },
+  //   { id: "Y2", position: 5, color: "yellow", location: "homeColumn" },
+  //   { id: "Y3", position: 41, color: "yellow", location: "onTrack" },
+  //   { id: "Y4", position: 6, color: "yellow", location: "onTrack" },
+  // ]);
 
   // All Pawns Start in Nest -----> Testing: The '5' Rule
-  // const [pawns, setPawns] = useState([
-  //   { id: "R1", position: null, color: "red", location: "nest" },
-  //   { id: "R2", position: null, color: "red", location: "nest" },
-  //   { id: "R3", position: null, color: "red", location: "nest" },
-  //   { id: "R4", position: null, color: "red", location: "nest" },
+  const [pawns, setPawns] = useState([
+    { id: "R1", position: null, color: "red", location: "nest" },
+    { id: "R2", position: null, color: "red", location: "nest" },
+    { id: "R3", position: null, color: "red", location: "nest" },
+    { id: "R4", position: null, color: "red", location: "nest" },
 
-  //   { id: "B1", position: null, color: "blue", location: "nest" },
-  //   { id: "B2", position: null, color: "blue", location: "nest" },
-  //   { id: "B3", position: null, color: "blue", location: "nest" },
-  //   { id: "B4", position: null, color: "blue", location: "nest" },
+    { id: "B1", position: null, color: "blue", location: "nest" },
+    { id: "B2", position: null, color: "blue", location: "nest" },
+    { id: "B3", position: null, color: "blue", location: "nest" },
+    { id: "B4", position: null, color: "blue", location: "nest" },
 
-  //   { id: "G1", position: null, color: "green", location: "nest" },
-  //   { id: "G2", position: null, color: "green", location: "nest" },
-  //   { id: "G3", position: null, color: "green", location: "nest" },
-  //   { id: "G4", position: null, color: "green", location: "nest" },
+    { id: "G1", position: null, color: "green", location: "nest" },
+    { id: "G2", position: null, color: "green", location: "nest" },
+    { id: "G3", position: null, color: "green", location: "nest" },
+    { id: "G4", position: null, color: "green", location: "nest" },
 
-  //   { id: "Y1", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y2", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y3", position: null, color: "yellow", location: "nest" },
-  //   { id: "Y4", position: null, color: "yellow", location: "nest" },
-  // ]);
+    { id: "Y1", position: null, color: "yellow", location: "nest" },
+    { id: "Y2", position: null, color: "yellow", location: "nest" },
+    { id: "Y3", position: null, color: "yellow", location: "nest" },
+    { id: "Y4", position: null, color: "yellow", location: "nest" },
+  ]);
 
   const [dice, setDice] = useState({
     dieOne: {

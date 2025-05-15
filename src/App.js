@@ -1,17 +1,19 @@
+import { useState } from "react";
+
 import Sidebar from "./components/shared/Sidebar";
 import Route from "./components/shared/Route";
 import Modal from "./components/shared/Modal";
 import Button from "./components/shared/Button";
-import { useState } from "react";
+import BadgeInfoPanel from "./components/basketball/BadgeInfoPanel";
+
 import HomePage from "./pages/HomePage";
 import MediaPage from "./pages/MediaPage";
 import BasketballPage from "./pages/BasketballPage";
 import FootballPage from "./pages/FootballPage";
-// import { showAllBadgeInfo } from "./data/basketballData";
 import BankingPage from "./pages/BankingPage";
 import ParcheesiPage from "./pages/ParcheesiPage";
-import BadgeInfoPanel from "./components/basketball/BadgeInfoPanel";
 import PicturesPage from "./pages/PicturesPage";
+import BaseballPage from "./pages/BaseballPage";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -41,8 +43,8 @@ function App() {
       <>
         <Route path="/">
           {/* <div className="flex flex-col"> */}
-            <Sidebar />
-            <HomePage />
+          <Sidebar />
+          <HomePage />
           {/* </div> */}
         </Route>
 
@@ -57,13 +59,13 @@ function App() {
         </Route>
 
         <Route path="/football">
-        <div className="h-screen">
+          <div className="h-screen">
             <Sidebar />
             <FootballPage />
           </div>
         </Route>
 
-        <Route path="/jsm_banking">
+        <Route path="/misc">
           <Sidebar />
           <div className="flex flex-col gap-5 w-full">
             <BankingPage />
@@ -76,6 +78,11 @@ function App() {
             <Sidebar />
             <ParcheesiPage />
           </div>
+        </Route>
+
+        <Route path="/baseball">
+          <Sidebar />
+          <BaseballPage />
         </Route>
       </>
     </div>

@@ -1,12 +1,15 @@
 import { useState } from "react";
+
+import { data as playerData } from "../data/basketballData";
+
+import { config } from "../config/tableConfig";
+
 import SortableTable from "../components/basketball/SortableTable";
 import PlayerCardList from "../components/basketball/PlayerCardList";
 import LineupSection from "../components/basketball/LineupSection";
-import { data as playerData } from "../data/basketballData";
-import { config } from "../config/tableConfig";
 import FilterOptions from "../components/basketball/FilterOptions";
 
-function TablePage({ setShowModal }) {
+function BasketballPage({ setShowModal }) {
   const [data, setData] = useState(playerData);
 
   const [posSelection, setPosSelection] = useState({
@@ -175,4 +178,4 @@ function TablePage({ setShowModal }) {
   );
 }
 
-export default TablePage;
+export default BasketballPage;

@@ -243,7 +243,7 @@ const rocketsAltThrowbackLogo =
 const rocketsAltThrowbackLogoStyling = "h-12 top-0.5 left-0.5";
 
 const rocketsAltLogo =
-  "https://seeklogo.com/images/H/houston-rockets-logo-1AD80DE2AF-seeklogo.com.png";
+  "https://upload.wikimedia.org/wikipedia/en/2/28/Houston_Rockets.svg";
 const rocketsAltLogoStyling = "h-14 top-0 left-1";
 
 // --------------------- CLIPPERS ---------------------- //
